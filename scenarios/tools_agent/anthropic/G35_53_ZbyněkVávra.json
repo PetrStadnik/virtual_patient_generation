@@ -1,0 +1,777 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "53"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Vávra",
+            "given": [
+              "Zbyněk"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "G35",
+              "display": "Multiple sclerosis"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1752840f-f109-4d8c-8df2-f96e222d9aec",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Interferon beta-1a.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "L03AB07"
+            }
+          ],
+          "text": "Interferon beta-1a 44 mcg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "44 mcg subcutaneous three times weekly"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:936497d7-f429-47b2-a182-483c1bfd0e22",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Baclofen.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "M03BX01"
+            }
+          ],
+          "text": "Baclofen 20 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "20 mg oral three times daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e229d953-af54-48de-9442-1eb668292e2d",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Modafinil.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N06BA07"
+            }
+          ],
+          "text": "Modafinil 200 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "200 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3274c458-db91-4ef3-b28c-a08bf508ce6d",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Oxybutynin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "G04BD04"
+            }
+          ],
+          "text": "Oxybutynin 5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "5 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:47a14efa-5c73-420e-9ba5-23c91ba485a2",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Methylprednisolone.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "D07AA01"
+            }
+          ],
+          "text": "Methylprednisolone 1000 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1000 mg intravenous once daily for 5 days during relapses"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5a603bc4-e099-4b38-9a3f-4070e4ebbd1b",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">MRI brain with contrast</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "30800-7"
+            }
+          ],
+          "text": "MRI brain with contrast"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:34:32Z",
+        "valueString": "Multiple periventricular and juxtacortical T2/FLAIR hyperintense lesions consistent with demyelinating plaques. Two gadolinium-enhancing lesions identified in the right periventricular white matter, suggesting active inflammation. Increased T2 lesion burden compared to prior study.",
+        "note": [
+          {
+            "text": "Multiple periventricular and juxtacortical T2/FLAIR hyperintense lesions consistent with demyelinating plaques. Two gadolinium-enhancing lesions identified in the right periventricular white matter, suggesting active inflammation. Increased T2 lesion burden compared to prior study."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:803d0ca4-369b-4042-8ef2-597a5a669bc2",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cerebrospinal fluid oligoclonal bands</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "48668-8"
+            }
+          ],
+          "text": "Cerebrospinal fluid oligoclonal bands"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:34:32Z",
+        "valueString": "Positive — 6 oligoclonal bands detected in CSF, absent in paired serum, consistent with intrathecal immunoglobulin synthesis. Supportive of demyelinating disease.",
+        "note": [
+          {
+            "text": "Positive — 6 oligoclonal bands detected in CSF, absent in paired serum, consistent with intrathecal immunoglobulin synthesis. Supportive of demyelinating disease."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:894db38f-2c42-44a4-a34e-cf65241ed4ae",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52416-5"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:34:32Z",
+        "valueQuantity": {
+          "value": 78.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "78 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fb361bcf-b1ef-481c-8efd-648dae87e2d7",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Blood pressure panel</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "96607-7"
+            }
+          ],
+          "text": "Blood pressure panel"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:34:32Z",
+        "valueQuantity": {
+          "value": 122.0,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        },
+        "note": [
+          {
+            "text": "122/76 mmHg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e59aac40-d5b9-410e-b7d2-00193a9a0bfa",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Heart rate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:34:32Z",
+        "valueQuantity": {
+          "value": 72.0,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "note": [
+          {
+            "text": "72 bpm"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1e5c3e78-0290-4b11-ad1e-3230bc70d3b8",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "high",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CE01"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Urticaria and angioedema"
+              }
+            ],
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d7688637-bcc6-4b4a-a495-ad06c224c8fb",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Multiple sclerosis</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "G35"
+                }
+              ],
+              "text": "Multiple sclerosis"
+            },
+            "onsetAge": {
+              "value": 44,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7e1595bf-890d-483b-8c7b-a41e76b2d8bb",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Atherosclerotic heart disease</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I25.1"
+                }
+              ],
+              "text": "Atherosclerotic heart disease"
+            },
+            "onsetAge": {
+              "value": 67,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e9e09c37-baa8-4c4d-ac83-1047e6da9392",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sister: Systemic lupus erythematosus</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "SIS",
+              "display": "Sister"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "M32"
+                }
+              ],
+              "text": "Systemic lupus erythematosus"
+            },
+            "onsetAge": {
+              "value": 39,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:39f3ebed-13e1-4d2c-8aaf-1d444ca55733",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Lumbar puncture</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "277762005"
+            }
+          ],
+          "text": "Lumbar puncture"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2009",
+        "note": [
+          {
+            "text": "Performed at initial diagnosis (age 38) to confirm intrathecal immunoglobulin synthesis via oligoclonal band analysis. CSF findings consistent with MS."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0aae065c-c890-4814-afd5-b8694bfd30fe",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">MRI of brain</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "816077007"
+            }
+          ],
+          "text": "MRI of brain"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Serial MRI performed throughout disease course. Most recent scan demonstrates increased periventricular T2 lesion burden and two gadolinium-enhancing lesions indicating active demyelination."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a705d3f0-7ccf-4e4d-be48-54e0d066132a",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "in-progress",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Physical therapy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "410160006"
+            }
+          ],
+          "text": "Physical therapy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2022",
+        "note": [
+          {
+            "text": "Ongoing outpatient physiotherapy focused on gait rehabilitation, spasticity management, and balance training. Patient reports improved left leg stability and reduced fall frequency."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:176d937d-fcdf-46c0-86a2-cb92da0d048e",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 53-year-old male who presents with a quiet, deliberate manner — a noticeable contrast to the active, outdoorsy life he once led. He is of medium build, slightly thinner than his usual frame, with close-cropped salt-and-pepper hair and a neatly trimmed beard. He arrives to the clinic using a lightweight forearm crutch on his right side, explaining that his left leg has become noticeably weaker and less reliable over the past six months. He speaks thoughtfully, occasionally pausing mid-sentence to search for words — a frustration he openly acknowledges with a wry smile.\n\nA retired high school biology teacher, {patientName} spent three decades nurturing scientific curiosity in students and still volunteers as a tutor for underprivileged youth two afternoons a week. He lives with his wife of 26 years in a single-story home they had partially modified after his last relapse. He has two adult children who check in regularly; his son lives locally and accompanies him to major appointments. He used to be an avid cyclist and weekend hiker, but he has transitioned to gentle swimming and yoga to maintain mobility and manage fatigue.\n\n{patientName} reports persistent fatigue as his most debilitating symptom — describing it as a \"wall of exhaustion\" that descends without warning, especially in warm weather. He also experiences intermittent blurred vision in his right eye, urinary urgency, and occasional painful muscle spasms in both legs, particularly at night. He uses grab bars throughout his home bathroom and has adjusted his work and social schedule to maximize his productive morning hours before fatigue sets in.\n\nHe is a non-smoker and drinks alcohol only socially — one or two glasses of wine per month. He follows a predominantly Mediterranean diet on his wife's initiative, drinks 2–3 liters of water per day, and attends a weekly MS patient support group. {patientName} is generally well-informed about his condition, having researched it extensively, and is proactive about his follow-up appointments. He expresses concern about disease progression and is particularly anxious about losing his independence."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2cac903a-2d00-47e7-af6d-43c974fb85ca",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} was first diagnosed with relapsing-remitting multiple sclerosis at age 38 following an episode of right-sided optic neuritis with partial visual recovery. He experienced two subsequent clinical relapses — a sensory episode at age 42 and a motor relapse with left leg weakness at age 49 — the latter of which required inpatient corticosteroid treatment and left residual deficits. Over the past three years, his neurologist has noted gradual progression of disability independent of relapses, consistent with secondary progressive MS. He has been on interferon beta-1a since his initial diagnosis. He has no history of diabetes, hypertension, or cardiac disease. He underwent a lumbar puncture at the time of diagnosis, which confirmed oligoclonal bands in the CSF. Serial MRI studies have shown cumulative T2 lesion burden in the periventricular and juxtacortical white matter, with two gadolinium-enhancing lesions on the most recent scan. He has never smoked and has no history of substance use. He is not currently employed full-time due to fatigue management needs. No prior surgeries aside from a childhood appendectomy. He takes baclofen for spasticity, modafinil for fatigue, and oxybutynin for bladder urgency."
+          }
+        ]
+      }
+    }
+  ]
+}

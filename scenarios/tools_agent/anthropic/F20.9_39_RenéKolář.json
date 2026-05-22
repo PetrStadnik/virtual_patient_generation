@@ -1,0 +1,786 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "39"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Kolář",
+            "given": [
+              "René"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "F20.9",
+              "display": "Schizophrenia, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:809c9a07-6e93-4bdd-8ab6-b1e29d130c8c",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Risperidone.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N05AX08"
+            }
+          ],
+          "text": "Risperidone 4 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "4 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5ca73908-2b80-49d7-846c-af1a9480116e",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Valproic acid.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N03AG01"
+            }
+          ],
+          "text": "Valproic acid 500 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "500 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6bc0ee58-6ec3-4054-ad3e-5691e5c8bee2",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Lorazepam.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N05BA06"
+            }
+          ],
+          "text": "Lorazepam 1 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 mg oral as needed for acute agitation, up to twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:819f7361-3f05-447b-a0d3-02f742439502",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Benztropine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N04AC01"
+            }
+          ],
+          "text": "Benztropine 1 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e84eb70a-aaf6-44cd-a3ed-5001a666d61c",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Clozapine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N05AH02"
+            }
+          ],
+          "text": "Clozapine 200 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "200 mg oral once daily at bedtime"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6b52f28c-515e-4176-ad20-3df245013609",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Psychiatric evaluation</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52331-6"
+            }
+          ],
+          "text": "Psychiatric evaluation"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:47:15Z",
+        "valueString": "Positive symptoms: auditory hallucinations (commanding/commenting voices), persecutory and thought-withdrawal delusions. Negative symptoms: affective blunting, avolition, social withdrawal. GAF score estimated at 32. Disorganized and tangential thought process.",
+        "note": [
+          {
+            "text": "Positive symptoms: auditory hallucinations (commanding/commenting voices), persecutory and thought-withdrawal delusions. Negative symptoms: affective blunting, avolition, social withdrawal. GAF score estimated at 32. Disorganized and tangential thought process."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a933e5f8-caac-403b-aa65-2bc5bbe78e9a",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Complete blood count panel</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2"
+            }
+          ],
+          "text": "Complete blood count panel"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:47:15Z",
+        "valueString": "WBC 6.4 x10^9/L, Hemoglobin 13.9 g/dL, Hematocrit 41%, Platelets 218 x10^9/L — all within normal limits",
+        "note": [
+          {
+            "text": "WBC 6.4 x10^9/L, Hemoglobin 13.9 g/dL, Hematocrit 41%, Platelets 218 x10^9/L — all within normal limits"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8affa958-0909-4c5c-a94f-2c37f4291051",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Comprehensive metabolic panel</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24323-8"
+            }
+          ],
+          "text": "Comprehensive metabolic panel"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:47:15Z",
+        "valueString": "Fasting glucose 103 mg/dL (borderline), BUN 14 mg/dL, Creatinine 0.9 mg/dL, ALT 38 U/L, AST 32 U/L — mildly elevated glucose; otherwise within normal limits",
+        "note": [
+          {
+            "text": "Fasting glucose 103 mg/dL (borderline), BUN 14 mg/dL, Creatinine 0.9 mg/dL, ALT 38 U/L, AST 32 U/L — mildly elevated glucose; otherwise within normal limits"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1549fe2e-02eb-4222-b362-ed9a9e8f1289",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Prolactin [Mass/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2842-3"
+            }
+          ],
+          "text": "Prolactin [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:47:15Z",
+        "valueQuantity": {
+          "value": 28.4,
+          "unit": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL"
+        },
+        "note": [
+          {
+            "text": "28.4 ng/mL (mildly elevated; consistent with dopamine D2 blockade from antipsychotic therapy)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d1b90d19-51c8-4d02-a8cc-4eb78ea53fd8",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52416-5"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:47:15Z",
+        "valueQuantity": {
+          "value": 88.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "88 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b63bf650-e55e-4a7f-9520-49232386ddc8",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CE01"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Maculopapular rash"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f8e9bb4a-a787-4c7e-bcf3-43aae6da47cb",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Schizophrenia, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F20.9"
+                }
+              ],
+              "text": "Schizophrenia, unspecified"
+            },
+            "onsetAge": {
+              "value": 28,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:beafbd4e-b191-475e-ac19-afd360bde25d",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Major depressive disorder, single episode, moderate</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F32.1"
+                }
+              ],
+              "text": "Major depressive disorder, single episode, moderate"
+            },
+            "onsetAge": {
+              "value": 45,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bdef909c-5a9b-4d64-8203-45fd4d9bd356",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brother: Generalized anxiety disorder</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "BRO",
+              "display": "Brother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F41.1"
+                }
+              ],
+              "text": "Generalized anxiety disorder"
+            },
+            "onsetAge": {
+              "value": 30,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7f1ea024-dc75-4321-a27a-3754a747cf81",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandfather: Alcohol dependence</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRFTH",
+              "display": "Grandfather"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F10.2"
+                }
+              ],
+              "text": "Alcohol dependence"
+            },
+            "onsetAge": {
+              "value": 40,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fa4126b3-6d64-49dc-b40b-73d379f6f12d",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Inpatient psychiatric admission</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "183455007"
+            }
+          ],
+          "text": "Inpatient psychiatric admission"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2021",
+        "note": [
+          {
+            "text": "Multiple admissions (ages 22, 26, 31, 36) for acute psychotic exacerbations associated with medication non-adherence and cannabis use. Most recent admission lasted 18 days."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:06c300ef-21f0-4b92-a5f7-fed70891209e",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cognitive behavioral therapy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "302230009"
+            }
+          ],
+          "text": "Cognitive behavioral therapy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2019",
+        "note": [
+          {
+            "text": "CBT for psychosis (CBTp) completed in outpatient mental health setting over approximately 20 sessions. Modest improvement in insight and coping strategies reported."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ecd7fc5d-fbc2-43c0-8687-a6a73bb4bd68",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 39-year-old male who presents with a disheveled and unkempt appearance — his clothes are mismatched, his hair uncombed, and he carries a faint odor suggesting infrequent personal hygiene. He makes intermittent eye contact and sits rigidly during the interview, occasionally tilting his head as though listening to something in the room. His speech is tangential and sometimes loosely associated; he shifts abruptly from discussing neighborhood surveillance to recounting fragments of dreams and abstract philosophical musings.\n\n{patientName} has been living in a subsidized apartment in an urban neighborhood for the past four years, after previously cycling through his mother's home and several short-term shelters. He spends most of his days indoors, seldom leaving except to purchase food or cigarettes from a nearby corner store. He smokes approximately one pack of cigarettes per day and has a history of cannabis use, which he reports using \"to calm the noise.\" He drinks alcohol occasionally — usually cheap beer — and denies current use of illicit stimulants.\n\nPrior to the onset of his illness, {patientName} worked as a warehouse inventory clerk and had a close-knit group of friends from his high school days. He describes those years as \"the last time I felt normal.\" He briefly attended a community college but dropped out after his first episode of psychosis at age 22. He has had no sustained employment for over a decade. He spends time drawing intricate geometric patterns, which he says represent \"the structures only he can see,\" and occasionally watches television with the volume turned low.\n\nSocially, {patientName} has very limited relationships. He has a strained but persistent connection with his mother, who calls him weekly and occasionally brings groceries. He has no romantic partner and reports never having had a long-term relationship. He has one younger brother who lives out of state and with whom contact is rare. His case manager visits him biweekly and has been instrumental in keeping him engaged with the mental health system.\n\nDuring the current visit, {patientName} reports increased auditory hallucinations over the last three weeks — voices that comment on his actions and occasionally issue commands. He endorses a delusional belief that a local utility company has installed monitoring devices in his walls and that his thoughts are being \"extracted\" at night. He denies active suicidal ideation but appears to have significant affective blunting and anhedonia. His insight into his illness remains very limited."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1235e767-544b-4b8f-a00b-435b1223af5c",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} was first hospitalized at age 22 following an acute psychotic break during which he barricaded himself in his dormitory room, convinced that fellow students were poisoning his food. He was diagnosed with a first episode of psychosis and started on haloperidol, which was later transitioned to risperidone. He has had three subsequent inpatient psychiatric admissions over the years — at ages 26, 31, and 36 — each associated with medication non-adherence and cannabis use relapse.\n\n{patientName} has a documented history of treatment with multiple antipsychotics over the years, including haloperidol, risperidone, and olanzapine. His current regimen was recently adjusted due to breakthrough symptoms. He experienced significant weight gain and metabolic side effects with olanzapine and was partially switched. He has no documented history of seizures, head trauma, or neurological disorders. He has never undergone electroconvulsive therapy. He has received cognitive behavioral therapy for psychosis (CBTp) in an outpatient setting in the past with modest benefit.\n\nComorbidities include nicotine use disorder and a history of cannabis use disorder (currently in partial remission). He has mild obesity (BMI 29.4) and borderline hyperlipidemia noted at last metabolic panel. He has no known cardiac, hepatic, or renal disease. He is not diabetic but has had borderline fasting glucose in the past, likely related to prior antipsychotic use. He has a documented allergy to penicillin (rash). His immunizations are up to date per records from his community health center."
+          }
+        ]
+      }
+    }
+  ]
+}

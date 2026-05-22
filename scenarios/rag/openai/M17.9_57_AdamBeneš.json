@@ -1,0 +1,443 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "57"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Beneš",
+            "given": [
+              "Adam"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "M17.9",
+              "display": "Gonarthrosis, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9385a0c8-7b1b-4507-ad7c-fc98c381a52a",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for paracetamol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N02BE01"
+            }
+          ],
+          "text": "paracetamol 1000 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1000 mg oral up to three times daily as needed"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1751ab72-0a71-4b9c-8435-6c3c2663f12b",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for ibuprofen.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C01EB16"
+            }
+          ],
+          "text": "ibuprofen 400 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "400 mg oral three times daily as needed with food"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f09e3cd6-2077-430a-8b6d-eaca594de3fb",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Knee X-ray</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "28565-0"
+            }
+          ],
+          "text": "Knee X-ray"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T18:50:03Z",
+        "valueString": "Plain radiograph of the symptomatic knee shows chronic degenerative change consistent with gonarthrosis, including medial compartment joint-space narrowing and marginal osteophytes.",
+        "note": [
+          {
+            "text": "Plain radiograph of the symptomatic knee shows chronic degenerative change consistent with gonarthrosis, including medial compartment joint-space narrowing and marginal osteophytes."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ac74755e-35e6-4bc2-9fcc-c364fa80807d",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52416-5"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T18:50:03Z",
+        "valueQuantity": {
+          "value": 96.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "96 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2651055e-8742-4d51-89c8-b635702e01df",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Height</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "92996-8"
+            }
+          ],
+          "text": "Height"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T18:50:03Z",
+        "valueQuantity": {
+          "value": 176.0,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        },
+        "note": [
+          {
+            "text": "176 cm"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:286b46b4-0dc9-471d-841d-77bc612ed3a9",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Erythrocyte sedimentation rate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "30341-2"
+            }
+          ],
+          "text": "Erythrocyte sedimentation rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T18:50:03Z",
+        "valueString": "12 mm/h, not suggestive of marked systemic inflammation.",
+        "note": [
+          {
+            "text": "12 mm/h, not suggestive of marked systemic inflammation."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:aa9418d4-4253-423e-ac05-9ca162f1b8bf",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Gonarthrosis, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "M17.9"
+                }
+              ],
+              "text": "Gonarthrosis, unspecified"
+            },
+            "onsetAge": {
+              "value": 60,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:136b88c3-ae82-4911-b0a6-7941b8d0cdc6",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Knee joint injection</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "300024006"
+            }
+          ],
+          "text": "Knee joint injection"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2025",
+        "note": [
+          {
+            "text": "Single intra-articular injection performed for symptomatic relief after persistent knee pain despite simple analgesics."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:469e8daf-ac35-4a95-adc0-852b90671743",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 57-year-old man from the Czech Republic who comes in because of gradually worsening knee pain and stiffness consistent with gonarthrosis, with discomfort that is most noticeable during walking, climbing stairs, and after longer periods of activity; the presentation is kept focused on common mechanical joint symptoms because the supplied evidence does not describe unusual knee findings and specifically notes that rare or atypical symptoms should be considered only when supported [PMID:34991369]. He has a slight antalgic gait and prefers to sit with the affected knee extended when waiting in the clinic. He says the pain has slowly begun to limit his daily routines, and he has cut back on recreational walking.\n\nHe works a practical, physically active job in building maintenance, spending much of the day on his feet. Outside work, {patientName} enjoys weekend trips with his wife, light gardening, and meeting friends at a local pub. He lives with his spouse, and his adult daughter visits often. He is frustrated that knee discomfort now makes it harder to keep up with family activities.\n\nIn appearance, {patientName} is overweight and otherwise well appearing, with no signs suggesting an acute infection or systemic illness; this restrained description reflects the fact that the provided evidence does not support inflammatory, infectious, or upper-respiratory features for this case [PMID:32913861, PMID:34991369]. He describes pain as deep and aching, with brief morning stiffness and worsening after use, and says he sometimes hears or feels grinding in the knee during movement.\n\nHe has been trying to manage the pain by pacing activities, taking over-the-counter analgesics, and avoiding long walks. He is seeking help now because the symptoms are interfering with sleep after busy workdays and because he worries about losing mobility and independence."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:21a85dbf-4830-4af5-be1f-1954a26bbd70",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} reports several years of intermittent knee discomfort that has become more persistent over the last year, with no single major traumatic event recalled. He has no history suggesting an acute infectious process, urinary-source bacteremia, or unusual systemic complication; this negative framing is intentional because the provided evidence on osteomyelitis and urinary infections concerns rare scenarios not applicable here and should not be extrapolated into this patient without support [PMID:32913861, PMID:38148952].\n\nHe is overweight, has a mostly physically demanding work history, and has become less active as knee pain has worsened. He uses occasional over-the-counter pain medicine with partial relief. There is no known inflammatory arthritis diagnosis, and no prior knee surgery. He has not been hospitalized recently.\n\nSocially, {patientName} drinks alcohol socially on weekends and does not use illicit drugs. He is a former smoker who quit years ago. He wants to stay active enough to keep working and continue family outings. He has not previously had specialist orthopedic assessment for this problem."
+          }
+        ]
+      }
+    }
+  ]
+}

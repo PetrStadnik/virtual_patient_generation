@@ -1,0 +1,462 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "72"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Dvořák",
+            "given": [
+              "Šimon"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C34.9",
+              "display": "Malignant neoplasm: Bronchus or lung, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4cbccff0-7d1c-4b4f-a381-356718cf52f3",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for amlodipine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C08CA01"
+            }
+          ],
+          "text": "amlodipine 5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "5 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:80e34b35-4879-4d52-953e-be40e8b64e46",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for atorvastatin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C10AA05"
+            }
+          ],
+          "text": "atorvastatin 20 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "20 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6d4eea08-c602-4dd1-a1ed-dfc7dc1f7249",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for tiotropium bromide.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R03BB04"
+            }
+          ],
+          "text": "tiotropium bromide 18 ug"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "18 ug inhaled once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:21d4f157-f0dd-4b21-aa40-883ba002d18d",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Chest X-ray</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24565-4"
+            }
+          ],
+          "text": "Chest X-ray"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-19T00:02:48Z",
+        "valueString": "Abnormal chest imaging with a suspicious right upper lung lesion; obtained to evaluate chronic cough and to rule out other lung disease [MEDDIALOG:C34.9:0, MEDDIALOG:C34.9:3]",
+        "note": [
+          {
+            "text": "Abnormal chest imaging with a suspicious right upper lung lesion; obtained to evaluate chronic cough and to rule out other lung disease [MEDDIALOG:C34.9:0, MEDDIALOG:C34.9:3]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:407bd0a9-906c-4984-8d61-dabe70f4f085",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">CT chest</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "87864-5"
+            }
+          ],
+          "text": "CT chest"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-19T00:02:48Z",
+        "valueString": "CT of the chest demonstrates a lung mass concerning for malignant neoplasm; chest CT is recommended to rule out lesions [MEDDIALOG:C34.9:3]",
+        "note": [
+          {
+            "text": "CT of the chest demonstrates a lung mass concerning for malignant neoplasm; chest CT is recommended to rule out lesions [MEDDIALOG:C34.9:3]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9012df6f-d019-437d-b3ae-44b97d45baf9",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">MRI brain</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11541-0"
+            }
+          ],
+          "text": "MRI brain"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-19T00:02:48Z",
+        "valueString": "MRI brain ordered because of recent confusion and language difficulty to assess for possible brain metastases [MEDDIALOG:C34.9:7]",
+        "note": [
+          {
+            "text": "MRI brain ordered because of recent confusion and language difficulty to assess for possible brain metastases [MEDDIALOG:C34.9:7]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f02e1f3f-8557-4426-8fd5-cb2c75591d63",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sodium [Moles/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2951-2"
+            }
+          ],
+          "text": "Sodium [Moles/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-19T00:02:48Z",
+        "valueString": "Serum sodium is low, supporting hyponatremia as a possible contributor to altered mental status in lung cancer [MEDDIALOG:C34.9:7]",
+        "note": [
+          {
+            "text": "Serum sodium is low, supporting hyponatremia as a possible contributor to altered mental status in lung cancer [MEDDIALOG:C34.9:7]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f1eaf085-22e9-4fe1-b667-475e8355bc86",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Malignant neoplasm of bronchus or lung, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "C34.9"
+                }
+              ],
+              "text": "Malignant neoplasm of bronchus or lung, unspecified"
+            },
+            "onsetAge": {
+              "value": 68,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d43b0206-bdd4-47ab-b691-b96e98a0e48c",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Bronchoscopy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "10847001"
+            }
+          ],
+          "text": "Bronchoscopy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2026",
+        "note": [
+          {
+            "text": "Performed as part of diagnostic evaluation of a suspicious lung lesion seen on chest imaging [MEDDIALOG:C34.9:3]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7cfe416a-361b-47bf-82c0-4ea74f24bec0",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 72-year-old man from the Czech Republic who has gradually become less active over the past year because of a persistent, forceful cough, troublesome sputum that is thick and hard to clear, shortness of breath after coughing, and marked fatigue [MEDDIALOG:C34.9:0]. Over the same period he has also developed intermittent chest discomfort with a heavy feeling in the chest and has unintentionally lost weight, which has made both him and his family increasingly worried about an underlying lung malignancy [MEDDIALOG:C34.9:3].\n\nIn the last several days, his family has noticed episodes of confusion: he struggles to put sentences together and needs help with basic tasks when these episodes are at their worst, raising concern for a serious complication of his lung disease [MEDDIALOG:C34.9:7]. His relatives now report that there was one milder, shorter spell of similar confusion about a month earlier that resolved the same day without medical attention, making the current episode particularly alarming. He looks tired and somewhat frail, pausing to catch his breath after bouts of coughing and occasionally needing to sit down during conversation [MEDDIALOG:C34.9:0].\n\n{patientName} is retired after decades of work in construction and demolition, where he was regularly exposed to dust, asbestos-containing materials, diesel fumes, and other inhaled irritants despite inconsistent respiratory protection. He smoked approximately 1 pack of cigarettes daily for about 45 years and only cut down recently because coughing became so troublesome, establishing a clear lifestyle risk factor for lung cancer [MEDDIALOG:C34.9:3]. He also has chronic obstructive pulmonary disease, which developed after years of tobacco exposure and contributes to his baseline breathlessness.\n\nAt home he spends most of his time with family support. He enjoys quiet routines and short walks when his breathing allows, but his stamina has declined because of cough and breathlessness [MEDDIALOG:C34.9:0]. For many years he also did woodworking and home renovation as hobbies in a poorly ventilated garage, with frequent exposure to sawdust, paint fumes, solvents, and sanding dust. He has close contact with relatives, and cancer in the family is part of their shared medical story, which adds to the household's worry [MEDDIALOG:C34.9:3]. The recent cognitive change has made his family particularly fearful that the cancer may have spread to the brain or that a metabolic problem is contributing [MEDDIALOG:C34.9:7]."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:29bb2254-7ccf-468e-b5f2-65a187db1a82",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has had months of chronic respiratory symptoms, including persistent cough, thick sputum that is difficult to clear, episodic breathlessness, fatigue, and unintentional weight loss [MEDDIALOG:C34.9:0]. He also reports a heavy sensation in the chest [MEDDIALOG:C34.9:3]. Over the last two days, family members have noted confusion and difficulty speaking clearly, with loss of independence in feeding, walking, and toileting during the episodes [MEDDIALOG:C34.9:7]. His wife recalls one prior but milder episode of transient confusion roughly a month ago that resolved within hours, so this is not the first such spell.\n\nHis background history includes chronic obstructive pulmonary disease, hypertension, and hyperlipidemia. COPD is a relevant comorbidity because it shares the major causal exposure of heavy smoking and is commonly associated with increased lung cancer risk. He smoked about 45 pack-years and only recently reduced his tobacco use because of worsening cough, making smoking a clearly established lifestyle risk factor rather than a hypothetical one [MEDDIALOG:C34.9:3].\n\nHe worked for many years in construction and demolition with regular exposure to asbestos, silica-rich dust, diesel exhaust, and other inhaled agents, all recognized occupational risk factors for lung malignancy [MEDDIALOG:C34.9:3]. As a hobby he frequently performed woodworking and home renovation in enclosed spaces, exposing himself to sawdust, paint vapors, and solvent fumes. A family history of lung cancer is present in a first-degree relative, supporting hereditary risk [MEDDIALOG:C34.9:3, MEDDIALOG:C34.9:7].\n\nHe has not yet undergone definitive cancer-directed therapy in this scenario. Prior evaluation has focused on chest imaging for lung lesions and current concern for possible brain metastasis or hyponatremia because of new confusion [MEDDIALOG:C34.9:3, MEDDIALOG:C34.9:7]. His chronic medications are for background comorbidities and are not considered causes of the suspected lung cancer."
+          }
+        ]
+      }
+    }
+  ]
+}

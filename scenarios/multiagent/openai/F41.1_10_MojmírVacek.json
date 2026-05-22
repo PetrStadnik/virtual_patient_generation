@@ -1,0 +1,534 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "10"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Vacek",
+            "given": [
+              "Mojmír"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "F41.1",
+              "display": "Generalized anxiety disorder"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bca7c900-b910-489b-b4d7-23ebfddb7b46",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for salbutamol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R03AC02"
+            }
+          ],
+          "text": "salbutamol 100 ug"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "100 ug inhaled as needed for wheeze"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b845b12d-a020-49c3-8ffe-587caadb88d4",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for cetirizine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R06AE07"
+            }
+          ],
+          "text": "cetirizine 5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "5 mg oral once daily during pollen season"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:513e2db9-ba43-4ee5-9380-5a3968a6dddf",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Complete blood count</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2"
+            }
+          ],
+          "text": "Complete blood count"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T23:05:24Z",
+        "valueString": "Within reference range; no anemia or leukocytosis identified.",
+        "note": [
+          {
+            "text": "Within reference range; no anemia or leukocytosis identified."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f0ce39e3-c5ef-4b01-a12a-aba0174ca750",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Thyrotropin [Units/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3016-3"
+            }
+          ],
+          "text": "Thyrotropin [Units/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T23:05:24Z",
+        "valueString": "Normal result, making thyroid dysfunction less likely as a contributor to anxiety symptoms.",
+        "note": [
+          {
+            "text": "Normal result, making thyroid dysfunction less likely as a contributor to anxiety symptoms."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b5753981-98c5-4574-a516-63fd29e2a12f",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Electrocardiogram study</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8606-6"
+            }
+          ],
+          "text": "Electrocardiogram study"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T23:05:24Z",
+        "valueString": "Normal sinus rhythm without acute abnormality.",
+        "note": [
+          {
+            "text": "Normal sinus rhythm without acute abnormality."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3ea1caab-0041-4b95-b003-c7371600e178",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Blood pressure</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58295-7"
+            }
+          ],
+          "text": "Blood pressure"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T23:05:24Z",
+        "valueQuantity": {
+          "value": 112.0,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        },
+        "note": [
+          {
+            "text": "112/70 mmHg; blood pressure is normal today."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ec9ddccb-4f69-4abd-9e63-6e04ef21107a",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Amoxicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CA04"
+            }
+          ],
+          "text": "Amoxicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Maculopapular rash"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6f4955c6-a999-486f-81e1-e9d45555c39b",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Generalized anxiety disorder</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F41.1"
+                }
+              ],
+              "text": "Generalized anxiety disorder"
+            },
+            "onsetAge": {
+              "value": 28,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6fc2958e-8f4b-4270-85a1-7b11ebfb5288",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Essential hypertension</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I10"
+                }
+              ],
+              "text": "Essential hypertension"
+            },
+            "onsetAge": {
+              "value": 41,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:699fddf2-e6c9-478b-a9b3-329df168fdb3",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Tonsillectomy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "173422009"
+            }
+          ],
+          "text": "Tonsillectomy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2021",
+        "note": [
+          {
+            "text": "Performed in early childhood for recurrent tonsillar infections."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f465c87c-7685-4ca3-a5ed-48c15e99c3da",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 10-year-old boy from the Czech Republic who is brought to clinic by his mother because he has been worrying excessively about everyday situations, especially school performance, minor health concerns, and whether something bad might happen to family members, which is characteristic of generalized anxiety disorder. Over the past several months, his family has noticed that he seems tense and on edge much of the day, and when he becomes especially anxious he complains that his heart is racing and that he feels sweaty and shaky. He also has trouble falling asleep on many nights and is often tired the next day, with poor concentration during class after bad nights of sleep. His mother also describes him as more irritable than usual when he is overtired or feels pressured by schoolwork, and he often seeks repeated reassurance before tests, after minor mistakes, or when a parent is running late.\n\nIn the exam room, {patientName} sits close to his mother, fidgets with the drawstring of his sweatshirt, and answers questions politely but cautiously. He is cooperative and age-appropriate, but he frequently looks to his mother for reassurance before answering. He describes a near-constant feeling of \"thinking too much\" about normal daily events and says that even small changes in routine can make him feel sick to his stomach and unable to relax. During periods of higher anxiety, his appetite drops and he may eat poorly, and on some nights he lies awake for a long time before finally sleeping. His mother reports that these worries tend to escalate around school deadlines, competitive football practice, and after hearing upsetting news stories or family discussions about illness.\n\nAt home, {patientName} enjoys building with LEGO, drawing football players, and playing football with friends from school, but recently his mother says he has needed more encouragement to join in because he is preoccupied with worries. Although he likes football, he becomes especially nervous before matches and sometimes worries for days about making mistakes in front of teammates or disappointing his coach. He also spends time online watching youth football clips and occasionally comes across injury-related content, which can intensify his health worries. He lives with both parents and a younger sister in a supportive family environment. His parents describe him as thoughtful, sensitive, perfectionistic, and eager to do well.\n\nHis mother reports that the family initially wondered if his symptoms were due to a physical illness because he often complained of bodily sensations such as palpitations, sweating, stomach discomfort, and feeling unwell during anxious moments, which made the problem harder to recognize at first. She also recalls a milder but similar period about a year earlier, when he became excessively worried during the start of a new school term, though those symptoms settled after several weeks. Despite his current symptoms, he remains engaged in school and family life, and the family is motivated to build a trusting relationship with clinicians as part of his care."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2ecd7b5f-69f4-4e47-a6f2-a31c7006f9cd",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has had several months of excessive worry across multiple day-to-day topics, with associated insomnia, fatigue, difficulty focusing, irritability, palpitations, sweating, stomach discomfort, and occasional tremulousness during anxious episodes. His parents first brought him to primary care because the symptoms seemed physical rather than emotional, which is a common presentation for generalized anxiety disorder.\n\nHis background is notable for an anxious temperament and longstanding perfectionistic traits. Since early primary school he has been described as very sensitive to criticism, prone to overpreparing for assignments, and highly distressed by uncertainty or changes in plans. His mother reports a similar but shorter episode of excessive worry during the previous school year when he transitioned to a new classroom and teacher; at that time he had trouble sleeping, repeatedly asked for reassurance, and complained of stomachaches before school, but symptoms improved without formal psychiatric treatment. This pattern supports previous similar episodes rather than a single completely new presentation.\n\nPast medical history is also notable for mild intermittent asthma and seasonal allergic rhinitis. Although these are not the primary cause of his condition, recurrent physical sensations such as shortness of breath during wheeze and prior health-related worries have increased his focus on bodily symptoms and reinforced fears that something may be medically wrong. He has never been hospitalized for psychiatric reasons. He underwent tonsillectomy in early childhood for recurrent throat infections. He sleeps irregularly when worried and sometimes eats less during anxious periods, particularly before stressful school days.\n\nFamily history is relevant because his mother has generalized anxiety disorder, increasing his vulnerability through both genetic and environmental factors. His current salbutamol inhaler is used only intermittently for wheeze, but the family notes that on rare occasions after using it he feels briefly more shaky or aware of his heartbeat, which can amplify his anxiety symptoms even though it does not explain the overall disorder. There is no history of substance use. His parents are receptive to counseling, school-based support, and supportive follow-up."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,694 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "35"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Růžička",
+            "given": [
+              "Adam"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "B20.0",
+              "display": "HIV disease resulting in mycobacterial infection"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:62f816b4-0050-4e13-a734-2ea94d9169d8",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for dolutegravir.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J05AX12"
+            }
+          ],
+          "text": "dolutegravir 50 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "50 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f51e4089-f874-48c5-a974-524f4666d17e",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for tenofovir disoproxil.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J05AF07"
+            }
+          ],
+          "text": "tenofovir disoproxil 300 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "300 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d5f0b546-3d96-4c61-8cef-1562fc34b1ca",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for emtricitabine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J05AF09"
+            }
+          ],
+          "text": "emtricitabine 200 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "200 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:841b6246-0878-4515-b699-d2f5ec77cc20",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for rifabutin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J04AB04"
+            }
+          ],
+          "text": "rifabutin 300 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "300 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c6e3ee56-b92d-4601-aebe-3983c3d619f9",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for ethambutol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J04AK02"
+            }
+          ],
+          "text": "ethambutol 1200 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1200 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7ee916a3-1c30-4946-a3ad-72e79b1b67cc",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for azithromycin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01FA10"
+            }
+          ],
+          "text": "azithromycin 500 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "500 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:33c50f4a-f40a-49cc-9b43-45b8d406db14",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">HIV 1 RNA [#/volume] (viral load) in Plasma by NAA with probe detection</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "20447-9"
+            }
+          ],
+          "text": "HIV 1 RNA [#/volume] (viral load) in Plasma by NAA with probe detection"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T22:10:57Z",
+        "valueString": "Elevated at 286,000 copies/mL",
+        "note": [
+          {
+            "text": "Elevated at 286,000 copies/mL"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a2a3e174-340e-48ce-8306-b58e7e06994c",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">CD4 cells [#/volume] in Blood</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "26570-2"
+            }
+          ],
+          "text": "CD4 cells [#/volume] in Blood"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T22:10:57Z",
+        "valueString": "Severely decreased at 48 cells/uL",
+        "note": [
+          {
+            "text": "Severely decreased at 48 cells/uL"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3c2994e0-ca86-4686-b5fe-10da7e08b6ca",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Acid fast bacilli stain</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "23244-7"
+            }
+          ],
+          "text": "Acid fast bacilli stain"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T22:10:57Z",
+        "valueString": "Positive on sputum specimen",
+        "note": [
+          {
+            "text": "Positive on sputum specimen"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a4da6856-8699-4cb0-b1fb-7c7b40186af2",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body temperature</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T22:10:57Z",
+        "valueQuantity": {
+          "value": 38.6,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        },
+        "note": [
+          {
+            "text": "38.6 °C"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3d69f6c1-f21a-4b99-a9d0-4280c0a7d457",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Oxygen saturation in Arterial blood by Pulse oximetry</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "2708-6"
+            }
+          ],
+          "text": "Oxygen saturation in Arterial blood by Pulse oximetry"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T22:10:57Z",
+        "valueQuantity": {
+          "value": 93.0,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "note": [
+          {
+            "text": "93% on room air"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b7362a4e-77d0-46e3-a87c-311caf74d457",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Type 2 diabetes mellitus</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "E11"
+                }
+              ],
+              "text": "Type 2 diabetes mellitus"
+            },
+            "onsetAge": {
+              "value": 52,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6111cdd1-dacd-41d8-83af-ca40470e127f",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Essential hypertension</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I10"
+                }
+              ],
+              "text": "Essential hypertension"
+            },
+            "onsetAge": {
+              "value": 49,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a8ed8535-c7fa-44ba-b0c6-848a43ad5aff",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sister: Asthma</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "SIS",
+              "display": "Sister"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "J45"
+                }
+              ],
+              "text": "Asthma"
+            },
+            "onsetAge": {
+              "value": 14,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ab92b913-caef-4995-aafa-d5102c30d8a0",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Bronchoscopy with bronchoalveolar lavage</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "397397002"
+            }
+          ],
+          "text": "Bronchoscopy with bronchoalveolar lavage"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2026",
+        "note": [
+          {
+            "text": "Performed during current evaluation to obtain lower respiratory specimens for suspected opportunistic mycobacterial infection."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0a783a74-be27-4984-8337-c4b6112c7fb5",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 35-year-old man who appears fatigued and underweight, with visible temporal wasting and a persistent dry cough that occasionally becomes productive. He has intermittent fevers, drenching night sweats, and reports several weeks of progressive shortness of breath with exertion. During conversation he is alert and cooperative, but he pauses often to catch his breath and seems physically depleted. Mild cervical lymphadenopathy is present, and his clothes hang loosely after recent unintentional weight loss.\n\nHe works irregular hours as a restaurant line cook, a job he has struggled to maintain because of worsening stamina and frequent illness. Outside work, {patientName} used to play recreational soccer and spend weekends with friends, but lately he has become socially withdrawn and spends most of his free time resting at home. He lives alone in a small apartment, has limited financial reserves, and has missed several follow-up appointments in the past year because of transportation problems and unstable work scheduling.\n\nHis diet has become poor over recent months because of low appetite, fatigue, and chronic illness. He occasionally smokes cigarettes and drinks alcohol socially, and he reports prior inconsistent condom use with male partners. He has a small but supportive circle of friends and one sister who checks on him regularly, though he has not fully disclosed the extent of his illness to everyone close to him.\n\nOverall, {patientName} presents as a young adult with advanced HIV disease complicated by a mycobacterial opportunistic infection, with constitutional symptoms, respiratory complaints, and clear signs of chronic systemic illness affecting daily function and quality of life."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6395b9eb-e1b1-43d2-a8c2-aedb1bf67733",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} was diagnosed with HIV 4 years ago but has had inconsistent engagement in care and poor adherence to antiretroviral therapy during the past 18 months. He reports prior periods of doing well on treatment, followed by medication interruptions related to depression, unstable employment, and difficulty attending clinic appointments. Over the last 2 months, he has developed worsening fevers, night sweats, cough, and an 8 kg unintentional weight loss.\n\nHis past medical history includes recurrent oral candidiasis and one prior hospitalization 2 years ago for community-acquired pneumonia. He denies chronic kidney disease or diabetes. He smokes about half a pack of cigarettes per day and drinks alcohol on weekends. He has no known history of injection drug use, but he does report past high-risk sexual exposure. There is no known prior history of active tuberculosis treatment. The current presentation is concerning for advanced immunosuppression with HIV-associated mycobacterial pulmonary infection."
+          }
+        ]
+      }
+    }
+  ]
+}

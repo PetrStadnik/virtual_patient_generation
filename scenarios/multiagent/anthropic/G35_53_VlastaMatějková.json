@@ -1,0 +1,867 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "53"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Matějková",
+            "given": [
+              "Vlasta"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "G35",
+              "display": "Multiple sclerosis"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1646f47b-2650-4301-b265-5ee97a914580",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Sertraline.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N06AB06"
+            }
+          ],
+          "text": "Sertraline 50 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "50 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6cbc521e-8980-4a9d-9aa1-c0b09c27cc0a",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Gabapentin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N03AX12"
+            }
+          ],
+          "text": "Gabapentin 300 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "300 mg oral three times daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d40cd192-312b-483a-a58f-ba1f48add532",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Amitriptyline.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N06AA09"
+            }
+          ],
+          "text": "Amitriptyline 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral once daily at night"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:209ba78e-f28f-41e9-9b40-a428aeb105f8",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Baclofen.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "M03BX01"
+            }
+          ],
+          "text": "Baclofen 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0b8e3c99-ae27-44e4-ad38-34a7adfe28a6",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Omeprazole.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A02BC01"
+            }
+          ],
+          "text": "Omeprazole 20 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "20 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:297417ec-ff04-4291-8440-91a2f447b2c4",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Atorvastatin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C10AA05"
+            }
+          ],
+          "text": "Atorvastatin 20 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "20 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8b878dcf-5e77-40bf-86c8-d21c2be3312e",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">MRI brain</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11541-0"
+            }
+          ],
+          "text": "MRI brain"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T22:51:52Z",
+        "valueString": "Multiple periventricular and juxtacortical T2/FLAIR hyperintense lesions consistent with demyelinating plaques; one new enhancing lesion in the corpus callosum",
+        "note": [
+          {
+            "text": "Multiple periventricular and juxtacortical T2/FLAIR hyperintense lesions consistent with demyelinating plaques; one new enhancing lesion in the corpus callosum"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:029e3b93-0777-43d5-acf1-ca19f7eec7c5",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cerebrospinal fluid oligoclonal bands</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "48668-8"
+            }
+          ],
+          "text": "Cerebrospinal fluid oligoclonal bands"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T22:51:52Z",
+        "valueString": "Positive — 5 oligoclonal bands detected in CSF, absent in serum",
+        "note": [
+          {
+            "text": "Positive — 5 oligoclonal bands detected in CSF, absent in serum"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2cafebfa-3802-4bcc-a58e-629f6675165e",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Evoked potential study</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "77199-8"
+            }
+          ],
+          "text": "Evoked potential study"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T22:51:52Z",
+        "valueString": "Prolonged P100 latency in right eye (132 ms), consistent with demyelination of the visual pathway",
+        "note": [
+          {
+            "text": "Prolonged P100 latency in right eye (132 ms), consistent with demyelination of the visual pathway"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5623bd01-1518-4efd-af93-250b63fc96fc",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">IgG CSF serum ratio</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "42207-1"
+            }
+          ],
+          "text": "IgG CSF serum ratio"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T22:51:52Z",
+        "valueString": "Elevated at 0.78 (reference < 0.70), indicating intrathecal IgG synthesis",
+        "note": [
+          {
+            "text": "Elevated at 0.78 (reference < 0.70), indicating intrathecal IgG synthesis"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d01cb79e-9a68-4ff5-9c1e-e8ed71e7a73b",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Complete blood count</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2"
+            }
+          ],
+          "text": "Complete blood count"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T22:51:52Z",
+        "valueString": "WBC 6.2 x10^9/L, Hb 128 g/L, Platelets 210 x10^9/L — within normal limits",
+        "note": [
+          {
+            "text": "WBC 6.2 x10^9/L, Hb 128 g/L, Platelets 210 x10^9/L — within normal limits"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7cdb464f-fcc9-4e62-bb53-958ce4d57325",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CE01"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Urticaria"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8baae593-4d15-418a-9a3f-fa255ff8ca92",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Lactose.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "intolerance",
+        "category": [
+          "food"
+        ],
+        "criticality": "low",
+        "code": {
+          "text": "Lactose"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Bloating and diarrhoea"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:974a13f1-7ce6-4cf7-8c67-874fe0fb4f42",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Systemic autoimmune disease</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "M35"
+                }
+              ],
+              "text": "Systemic autoimmune disease"
+            },
+            "onsetAge": {
+              "value": 58,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b1f63b18-5cf1-4360-b0ee-00d9e29aee8c",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Atherosclerotic heart disease</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I25.1"
+                }
+              ],
+              "text": "Atherosclerotic heart disease"
+            },
+            "onsetAge": {
+              "value": 65,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d25dd542-0b16-4016-b3c9-afa78d8ef1ac",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sister: Rheumatoid arthritis</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "SIS",
+              "display": "Sister"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "M06"
+                }
+              ],
+              "text": "Rheumatoid arthritis"
+            },
+            "onsetAge": {
+              "value": 47,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f60ebcff-7f5c-494c-aef8-3f526eb9b347",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Lumbar puncture</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "277762005"
+            }
+          ],
+          "text": "Lumbar puncture"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2012",
+        "note": [
+          {
+            "text": "CSF analysis confirmed oligoclonal bands, supporting MS diagnosis [MEDLINEPLUS:G35]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6c11684d-fcdd-47b1-8947-86e629482342",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">MRI of brain</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "816077007"
+            }
+          ],
+          "text": "MRI of brain"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2023",
+        "note": [
+          {
+            "text": "Surveillance MRI showing multiple demyelinating periventricular lesions and one new enhancing lesion [MEDLINEPLUS:G35, MEDDIALOG:G35:2]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d4e0a67c-5a26-493f-8608-2b6701e4bbdd",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "in-progress",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Physical therapy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "410160006"
+            }
+          ],
+          "text": "Physical therapy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2018",
+        "note": [
+          {
+            "text": "Ongoing physiotherapy for balance, coordination and muscle strength; initially intensified during 2018 relapse hospitalisation [MEDLINEPLUS:G35]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:095260e2-2be7-431f-b717-d72b1d12fdb0",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Occupational therapy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "84478008"
+            }
+          ],
+          "text": "Occupational therapy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2019",
+        "note": [
+          {
+            "text": "Occupational therapy assessment and adaptive strategy training to support continued employment as a librarian [MEDLINEPLUS:G35]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:99f02f29-3ebc-4e6c-941c-e1c74dd33e7c",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 53-year-old Czech woman with a slender build, slightly pale complexion, and a quiet but determined manner. She arrives at the neurology clinic walking with a cane, wearing comfortable flat shoes and a knitted cardigan. She works part-time as a librarian at a municipal library in Brno, a role she has held for over two decades and values deeply for its calm intellectual atmosphere. She lives in a ground-floor flat with her husband and their adult daughter who visits frequently. In her leisure time she enjoys reading historical fiction, tending to her balcony herb garden, and attending a weekly choir rehearsal — though she notes she has had to reduce her singing commitments due to fatigue.\n\n{patientName} reports a fluctuating course of neurological symptoms that have troubled her for more than a decade [MEDLINEPLUS:G35]. She describes episodes of tingling and numbness spreading from her hands into her forearms, occasional \"pins and needles\" sensations in her lower legs and feet [MEDLINEPLUS:G35, MEDDIALOG:G35:2], and intermittent muscle weakness that makes climbing stairs effortful [MEDLINEPLUS:G35]. She also experiences chronic neuropathic pain in her lower extremities, which she describes as a persistent burning quality [SNOMED:G35]. Balance problems and occasional trouble with coordination have led to one near-fall at home in the past year [MEDLINEPLUS:G35].\n\nCognitively, {patientName} mentions word-finding difficulties and occasional memory lapses that have made her work as a librarian more challenging [MEDLINEPLUS:G35]. She also reports intermittent visual disturbances — brief episodes of blurred vision in her right eye — which she attributes to fatigue [MEDLINEPLUS:G35]. Her mood has been affected by the chronicity of her illness; she has been followed by a psychiatrist for depressive symptoms, a well-recognised comorbidity in patients with MS-related neurological burden [PMID:31302591]. She denies any psychotic features.\n\n{patientName} leads a generally sedentary lifestyle due to her symptoms, but tries to walk short distances daily and attends physiotherapy twice a week. She does not smoke and drinks wine only occasionally on social occasions. She maintains close contact with her sister who also has a chronic autoimmune condition, and draws emotional support from her husband and a small circle of long-standing friends."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:83a38808-6265-4fa3-aea8-7c55b640fef5",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} was first evaluated for neurological symptoms at age 41, when she presented with an episode of right-sided visual blurring and left-hand numbness that resolved over several weeks [MEDLINEPLUS:G35]. MRI of the brain at that time demonstrated multiple periventricular white-matter lesions consistent with demyelination [MEDLINEPLUS:G35, MEDDIALOG:G35:2]. Lumbar puncture confirmed the presence of cerebrospinal fluid oligoclonal bands [MEDLINEPLUS:G35]. She was diagnosed with relapsing-remitting multiple sclerosis and has been followed in the neurology department ever since [PMID:37966451].\n\n{patientName} has a background of mild depressive disorder, managed with sertraline, diagnosed approximately four years ago in the context of adjustment difficulties related to her MS diagnosis [PMID:31302591]. She also experiences chronic neuropathic pain in both lower limbs for which she takes gabapentin and low-dose amitriptyline [SNOMED:G35]. Baclofen is prescribed for spasticity-related muscle stiffness, a recognised comorbidity in MS [MEDLINEPLUS:G35]. She takes omeprazole for gastroprotection. Atorvastatin was initiated two years ago for mildly elevated cholesterol detected on routine screening.\n\nShe was hospitalised once in 2018 during a significant relapse characterised by severe limb weakness and balance deterioration requiring inpatient physiotherapy rehabilitation [MEDLINEPLUS:G35]. Physical therapy has been an ongoing part of her management [MEDLINEPLUS:G35]. She has a documented allergy to penicillin (urticaria) and a food intolerance to lactose. Family history is notable for her mother having a systemic autoimmune condition and her father having ischaemic heart disease."
+          }
+        ]
+      }
+    }
+  ]
+}

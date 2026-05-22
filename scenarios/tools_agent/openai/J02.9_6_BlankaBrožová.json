@@ -1,0 +1,593 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "6"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Brožová",
+            "given": [
+              "Blanka"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "J02.9",
+              "display": "Acute pharyngitis, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:916915b7-29a3-403d-8843-403f9188d2a7",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Acetaminophen.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N02BE01"
+            }
+          ],
+          "text": "Acetaminophen 300 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "300 mg oral every 6 hours as needed for fever or throat pain"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:37001e11-1a28-4a90-a7ce-6618e080e5f2",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Amoxicillin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CA04"
+            }
+          ],
+          "text": "Amoxicillin 500 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "500 mg oral twice daily for 10 days if streptococcal infection is confirmed"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:76594611-6a7b-4717-9f86-3bb6588738e9",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body temperature</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T20:26:36Z",
+        "valueQuantity": {
+          "value": 38.3,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        },
+        "note": [
+          {
+            "text": "38.3 °C"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b3129d88-5068-4fb4-8078-aa335ac034ad",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Heart rate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T20:26:36Z",
+        "valueQuantity": {
+          "value": 112.0,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "note": [
+          {
+            "text": "112 beats/min"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:edf57813-c2e4-402e-89f4-546953b63a73",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Respiratory rate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T20:26:36Z",
+        "valueQuantity": {
+          "value": 22.0,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "note": [
+          {
+            "text": "22 breaths/min"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d6cc3656-8406-47d7-a988-701017017d8a",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52416-5"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T20:26:36Z",
+        "valueQuantity": {
+          "value": 20.4,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "20.4 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1f994805-e33b-4529-9380-d1ff876b8428",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Streptococcus pyogenes Ag [Presence] in Throat by Rapid immunoassay</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "78012-2"
+            }
+          ],
+          "text": "Streptococcus pyogenes Ag [Presence] in Throat by Rapid immunoassay"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T20:26:36Z",
+        "valueString": "Negative",
+        "note": [
+          {
+            "text": "Negative"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:306ff2d9-3713-47cf-b81f-8121a596cec0",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "high",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CE01"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Diffuse urticarial rash"
+              }
+            ],
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e0ef222c-0337-46d4-ac49-76378888400d",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brother: Acute upper respiratory infection, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "BRO",
+              "display": "Brother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "J06.9"
+                }
+              ],
+              "text": "Acute upper respiratory infection, unspecified"
+            },
+            "onsetAge": {
+              "value": 8,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2aa2fb82-ed59-45ea-a1e6-718d93d99c2c",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Allergic rhinitis, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "J30.4"
+                }
+              ],
+              "text": "Allergic rhinitis, unspecified"
+            },
+            "onsetAge": {
+              "value": 12,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:88ab6198-dd0e-4cc5-8e21-a7de4ef970c6",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "not-done",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Tonsillectomy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "173422009"
+            }
+          ],
+          "text": "Tonsillectomy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "note": [
+          {
+            "text": "No history of tonsillectomy; tonsils remain present on examination."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:34ed0473-6cb8-4d35-9c7d-2bb73d23e59e",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 6-year-old girl who arrives at the pediatric clinic sitting close to her mother, clutching a stuffed rabbit and speaking in a soft, scratchy voice. She looks tired and mildly flushed, with watery eyes and a reluctant expression whenever she swallows. Her throat pain started suddenly yesterday, and this morning she refused breakfast because it hurt to eat. She has had a low appetite, mild fever, and fussiness, but she is still alert and comforted by familiar people.\n\nShe is small for her age but generally healthy appearing, dressed in a bright T-shirt and leggings with mismatched socks she insisted on choosing herself. Between symptoms, she is usually energetic, enjoys drawing animals, building blanket forts, and playing simple games with neighborhood friends. She attends first grade, likes story time at school, and normally sleeps well, though the sore throat woke her overnight.\n\nAt home, {patientName} lives with her parents and an older brother in a nonsmoking household. She eats a typical child diet with some pickiness, especially around vegetables, and drinks mostly water and diluted juice. She has no exposure to alcohol, tobacco, or drugs. Her family is attentive and brought her in because several children in her class recently had sore throats and fevers.\n\nToday she appears mildly ill but not toxic. She breathes comfortably, without stridor or drooling, and can take small sips of water. On exam she would be expected to have an erythematous pharynx with tender swallowing and possibly enlarged cervical nodes, but no signs of deep neck infection or respiratory distress."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d3f938c0-6394-4a75-9aa9-1d2cf4d137c5",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has no major chronic medical conditions and has been growing and developing appropriately for age. She has not had previous hospitalizations and has no history of asthma, congenital disease, or immunodeficiency. Her immunizations are up to date per routine childhood schedule.\n\nSymptoms began about 24 hours ago with sore throat, fatigue, and fever at home. She has had reduced appetite and pain with swallowing solids, but she is still tolerating liquids. There is no significant cough, wheezing, vomiting, drooling, muffled voice, or neck swelling. Her mother reports exposure to sick classmates at school.\n\nShe has no regular daily medications. Supportive care at home has included cool fluids and rest. There is no smoke exposure in the home, and family members are generally well except for her brother, who recently had a brief cold."
+          }
+        ]
+      }
+    }
+  ]
+}

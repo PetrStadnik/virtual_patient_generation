@@ -1,0 +1,800 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "53"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Bláhová",
+            "given": [
+              "Nora"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "M54.5",
+              "display": "Low back pain"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ad4062f5-39c7-48ef-8395-e4b98ab3d854",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Levothyroxine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "H03AA01"
+            }
+          ],
+          "text": "Levothyroxine 75 mcg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "75 mcg oral once daily (morning, fasting)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e09e79b9-b8ad-455f-9faf-55a0b0559d0d",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Amlodipine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C08CA01"
+            }
+          ],
+          "text": "Amlodipine 5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "5 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:806081d3-2920-4f64-9c5e-ee84165c183d",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Ferrous sulfate.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "B03AA07"
+            }
+          ],
+          "text": "Ferrous sulfate 200 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "200 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6b8f8c9b-d711-4133-8cd9-663ec9740c4b",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Colecalciferol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A11CC05"
+            }
+          ],
+          "text": "Colecalciferol 1000 IU"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1000 IU oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:db71c050-5665-4b39-a60b-c4fde71792fd",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Ibuprofen.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "M01AE01"
+            }
+          ],
+          "text": "Ibuprofen 400 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "400 mg oral three times daily with food (short-term, as needed for pain)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:da8e6870-72fe-40bb-936f-fbb112a30d09",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Lumbar spine X-ray (anteroposterior and lateral)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "36643-3"
+            }
+          ],
+          "text": "Lumbar spine X-ray (anteroposterior and lateral)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T00:31:00Z",
+        "valueString": "Mild disc space narrowing at L4-L5 and L5-S1. Marginal osteophyte formation consistent with early degenerative disc disease. No fracture, listhesis, or osseous lesion identified.",
+        "note": [
+          {
+            "text": "Mild disc space narrowing at L4-L5 and L5-S1. Marginal osteophyte formation consistent with early degenerative disc disease. No fracture, listhesis, or osseous lesion identified."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cdcd82c2-4aa2-4708-8a0c-c4aaf60441e6",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Erythrocyte Sedimentation Rate (ESR)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "30341-2"
+            }
+          ],
+          "text": "Erythrocyte Sedimentation Rate (ESR)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T00:31:00Z",
+        "valueQuantity": {
+          "value": 18.0,
+          "unit": "mm/h",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm/h"
+        },
+        "note": [
+          {
+            "text": "18 mm/hr (within normal limits)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:769cb996-d678-498f-bb54-bc446129d56b",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">C-Reactive Protein (CRP)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1988-5"
+            }
+          ],
+          "text": "C-Reactive Protein (CRP)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T00:31:00Z",
+        "valueQuantity": {
+          "value": 4.2,
+          "unit": "mg/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/L"
+        },
+        "note": [
+          {
+            "text": "4.2 mg/L (mildly elevated, likely mechanical in context)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fbcb2e2e-742c-4859-af94-c115facab0ea",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T00:31:00Z",
+        "valueQuantity": {
+          "value": 74.5,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "74.5 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d1028040-a15b-4ed5-b3f0-30a919e4230a",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pain severity — numeric rating scale (NRS)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72514-3"
+            }
+          ],
+          "text": "Pain severity — numeric rating scale (NRS)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T00:31:00Z",
+        "valueQuantity": {
+          "value": 6.0,
+          "unit": "{score}",
+          "system": "http://unitsofmeasure.org",
+          "code": "{score}"
+        },
+        "note": [
+          {
+            "text": "6 out of 10 at rest; 8 out of 10 with activity"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a67f73a2-560b-4d99-82d7-9fcd1f7369be",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Codeine.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "intolerance",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N02AA59"
+            }
+          ],
+          "text": "Codeine"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Nausea and vomiting"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:89e924a4-9b70-4d3f-90a8-005fc854ff38",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Latex.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "environment"
+        ],
+        "criticality": "low",
+        "code": {
+          "text": "Latex"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Contact urticaria"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6fde9130-9999-406c-ac15-ad0ad135672d",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Postmenopausal osteoporosis</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "M81.0"
+                }
+              ],
+              "text": "Postmenopausal osteoporosis"
+            },
+            "onsetAge": {
+              "value": 67,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:90074810-4b2e-4933-b62d-0acd1279c909",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Atherosclerotic heart disease</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I25.1"
+                }
+              ],
+              "text": "Atherosclerotic heart disease"
+            },
+            "onsetAge": {
+              "value": 61,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0c831568-b417-4da1-af6f-d6d2d507a491",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sister: Low back pain (chronic)</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "SIS",
+              "display": "Sister"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "M54.5"
+                }
+              ],
+              "text": "Low back pain (chronic)"
+            },
+            "onsetAge": {
+              "value": 49,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a18569da-e7a1-4c00-b941-f81e6a3409d8",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Laparoscopic cholecystectomy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "45595009"
+            }
+          ],
+          "text": "Laparoscopic cholecystectomy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2017",
+        "note": [
+          {
+            "text": "Performed in 2017 for symptomatic cholelithiasis. Uncomplicated procedure with full recovery."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:766b77ae-2da1-465f-a7aa-eb02cc9bfd79",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Lumbar physiotherapy programme</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "91251008"
+            }
+          ],
+          "text": "Lumbar physiotherapy programme"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2020",
+        "note": [
+          {
+            "text": "Six-week structured physiotherapy course for prior acute LBP episode four years ago; included manual therapy and exercise prescription. Resulted in full resolution of that episode."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:66aa0131-08b1-4ee8-ab35-ec9e33a44e57",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 53-year-old woman with a medium build and slightly rounded posture, a common adaptation to chronic low back discomfort she has carried for years. She presents to the clinic today moving cautiously, favouring her right side and grimacing mildly when transitioning from sitting to standing. She is neatly dressed in comfortable, loose-fitting clothes and supportive walking shoes — a practical wardrobe choice she adopted after her pain worsened.\n\n{patientName} works as an elementary school librarian, a job she genuinely loves but that demands long hours on her feet, frequent bending to shelve books, and carrying moderately heavy boxes of new arrivals. She describes her typical workday as \"eight hours of my back arguing with me.\" At home she lives with her husband of 27 years and their teenage daughter; her older son recently moved out for university. She manages most household chores herself and finds vacuuming and grocery shopping particularly aggravating to her symptoms.\n\nHer pain is primarily located in the lumbosacral region, rated 6–7 out of 10 on most days, described as a dull, aching pressure that radiates into the left buttock and down the posterior left thigh — consistent with sciatic nerve irritation — though it does not extend below the knee. On palpation, there is notable paraspinal muscle tenderness at the L4–L5 and L5–S1 levels bilaterally, and she winces on direct pressure over the left sacroiliac region. Morning stiffness lasting 30–40 minutes is a daily complaint. She notes that prolonged sitting and forward bending worsen the pain, while lying down with a pillow under her knees provides partial relief. She has tried heat pads and over-the-counter ibuprofen with inconsistent benefit.\n\nOutside of work, {patientName} used to enjoy gardening and light hiking with her husband, but has significantly curtailed these activities over the past 18 months due to pain. She recently joined a gentle yoga class on her physiotherapist's advice and reports modest improvement in flexibility. She is an avid reader and enjoys cooking elaborate weekend meals for family and friends. Socially active, she is part of a neighbourhood book club that meets monthly.\n\n{patientName} appears mildly anxious about her condition, expressing concern that her pain might be \"something serious.\" She denies any bowel or bladder dysfunction, fever, unexplained weight loss, or night sweats. Neurological symptoms such as foot drop or frank weakness are absent. She is motivated to recover and asks thoughtful questions about her treatment plan, indicating a strong understanding of her condition and high health literacy."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:933497cf-8feb-49fc-841b-051d43c94a8e",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has a medical history notable for hypothyroidism diagnosed at age 46, currently managed with levothyroxine with good biochemical control at her last review. Importantly, long-standing or suboptimally controlled hypothyroidism can contribute to musculoskeletal symptoms including myalgia and reduced connective tissue integrity, potentially worsening spinal pain; her levothyroxine dose has required minor adjustments over the years, with periods of borderline under-replacement. She was also diagnosed with mild hypertension three years ago and is on a low-dose antihypertensive. She has a history of iron-deficiency anaemia, treated intermittently with oral iron supplementation, likely related to previously heavy menstrual periods; she is now perimenopausal with irregular cycles. Her perimenopausal state is itself a recognised contributor to accelerated intervertebral disc degeneration.\n\nShe reports a prior episode of acute low back pain approximately four years ago following heavy lifting at work, which resolved within six weeks with physiotherapy and NSAIDs. The current episode began insidiously about 18 months ago without a clear precipitating event, progressively worsening in intensity and functional impact. Clinical examination today reveals paraspinal tenderness at L4–L5 and L5–S1 and radiation of pain into the left posterior thigh consistent with early sciatica. She has not had formal spinal imaging for this episode yet.\n\n{patientName} has no prior spinal surgeries or hospitalisations related to her back. She underwent a laparoscopic cholecystectomy in 2017 for symptomatic gallstones without complications. She is a non-smoker and drinks alcohol socially (approximately 3–4 units per week). She does not use recreational drugs. Her BMI is 27.4 kg/m², and she is generally sedentary outside of her new yoga participation. She has no known diabetes, autoimmune conditions, or malignancy. Family history is notable for osteoporosis in her mother, ischaemic heart disease in her father, and chronic low back pain in her sister."
+          }
+        ]
+      }
+    }
+  ]
+}

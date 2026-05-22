@@ -1,0 +1,345 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "68"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Janda",
+            "given": [
+              "Boleslav"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C61",
+              "display": "Malignant neoplasm of prostate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:221a179e-7a99-4fd7-8933-52e0295a0858",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for leuprolide.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "L02AE02"
+            }
+          ],
+          "text": "leuprolide 22.5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "22.5 mg intramuscular every 3 months"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:41cd8a5e-1037-4186-a639-5d3d21dd8422",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for bicalutamide.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "L02BB03"
+            }
+          ],
+          "text": "bicalutamide 50 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "50 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ff9cb097-534c-4f4f-a7ab-90699b0dac22",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Prostate specific Ag [Mass/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2857-1"
+            }
+          ],
+          "text": "Prostate specific Ag [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:30:08Z",
+        "valueString": "0.06 ng/mL on current surveillance after prostatectomy",
+        "note": [
+          {
+            "text": "0.06 ng/mL on current surveillance after prostatectomy"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3e02480e-6c3a-40ac-9ee9-4702c1be12ed",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Prostate specific Ag.free [Mass/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "10886-0"
+            }
+          ],
+          "text": "Prostate specific Ag.free [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:30:08Z",
+        "valueString": "Below assay reporting threshold on current monitoring",
+        "note": [
+          {
+            "text": "Below assay reporting threshold on current monitoring"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:93885a68-7770-45a0-847f-9d607f8925d5",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pelvic ultrasound</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "43776-4"
+            }
+          ],
+          "text": "Pelvic ultrasound"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:30:08Z",
+        "valueString": "No focal pelvic mass identified on surveillance imaging",
+        "note": [
+          {
+            "text": "No focal pelvic mass identified on surveillance imaging"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6bf242c2-e9af-43db-a06b-3bb0d3afe34c",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Radical prostatectomy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "26294005"
+            }
+          ],
+          "text": "Radical prostatectomy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2006",
+        "note": [
+          {
+            "text": "Performed for high-risk prostate cancer with Gleason score 10/10 [MEDDIALOG:C61:0]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a373b730-d9e1-4ea5-a5aa-4f2103c14664",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 68-year-old man from the Czech Republic who presents for oncology follow-up after a prior diagnosis of prostate cancer. He describes himself as feeling extremely good at present, with stable day-to-day functioning since surgery, and he is mainly concerned with understanding his diagnosis wording and keeping up with surveillance rather than with major current symptoms [MEDDIALOG:C61:0]. He is neatly dressed, calm, and attentive during the visit, speaking in a practical, informed way about his prior treatment and follow-up needs [MEDDIALOG:C61:0].\n\nHe lives a steady retired lifestyle and spends much of his week with his spouse, adult children, and a few close friends. He enjoys walks, light gardening, and watching football, and he tries to keep active without overexerting himself. He values routine and has become especially disciplined about medical appointments and laboratory monitoring after his cancer treatment [MEDDIALOG:C61:0].\n\n{patientName} says the cancer was originally diagnosed years ago and was described as very high grade, with a Gleason score of 10/10 [MEDDIALOG:C61:0]. He underwent radical prostatectomy and later received intermittent hormonal therapy with Lupron and Casodex, after which he continued to feel well overall [MEDDIALOG:C61:0]. He understands that prostate cancer and the phrase “malignant neoplasm of prostate” refer to the same condition, and he comes in wanting reassurance and clear guidance about ongoing PSA monitoring [MEDDIALOG:C61:0]."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bd7117f8-e4e3-47fa-9ca2-ca9b6170ea32",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} reports that he was diagnosed with prostate cancer in 2006 and that pathology described a Gleason score of 10/10, consistent with high-risk disease [MEDDIALOG:C61:0]. He underwent radical prostatectomy the same year and was subsequently treated with intermittent Lupron and Casodex through oncology follow-up [MEDDIALOG:C61:0]. He states that his overall condition has been extremely good since surgery [MEDDIALOG:C61:0].\n\nHe presents now for routine reassessment and clarification of terminology seen on prior records, specifically the phrase “malignant neoplasm of prostate,” which he learned is simply another term for prostate cancer [MEDDIALOG:C61:0]. He understands the need for regular PSA surveillance after prostatectomy, including attention to whether PSA rises above 0.2 ng/mL and whether it ever reached below 0.03 ng/mL after treatment, both of which carry prognostic significance [MEDDIALOG:C61:0]. He denies any major interval decline in function and remains engaged with follow-up care [MEDDIALOG:C61:0]."
+          }
+        ]
+      }
+    }
+  ]
+}

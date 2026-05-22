@@ -1,0 +1,515 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "63"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Havlíčková",
+            "given": [
+              "Štěpánka"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C50.9",
+              "display": "Malignant neoplasm: Breast, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:59cc5d44-2fac-4eb0-bfca-c5ce936be514",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for anastrozole.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "L02BG03"
+            }
+          ],
+          "text": "anastrozole 1 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a816209d-5586-49c1-82f6-a32deb397013",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for paracetamol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N02BE01"
+            }
+          ],
+          "text": "paracetamol 500 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "500 mg oral every 8 hours as needed"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:31084cb4-0a38-4a66-b6db-40689c1d4b46",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mammography diagnostic bilateral</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "91519-9"
+            }
+          ],
+          "text": "Mammography diagnostic bilateral"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:25:43Z",
+        "valueString": "Diagnostic bilateral mammography ordered to evaluate palpable breast lump and nipple discharge.",
+        "note": [
+          {
+            "text": "Diagnostic bilateral mammography ordered to evaluate palpable breast lump and nipple discharge."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:593fa0d7-d094-43a6-a26c-bf1daeaa0f9a",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Breast ultrasound</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24601-7"
+            }
+          ],
+          "text": "Breast ultrasound"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:25:43Z",
+        "valueString": "Breast ultrasound requested to further characterize the palpable breast lesion and associated swelling.",
+        "note": [
+          {
+            "text": "Breast ultrasound requested to further characterize the palpable breast lesion and associated swelling."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d011bffd-6da5-4d95-8a81-6d3adf7cfaa8",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Breast MRI</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "30795-9"
+            }
+          ],
+          "text": "Breast MRI"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:25:43Z",
+        "valueString": "Breast MRI considered for additional local assessment after abnormal clinical breast findings.",
+        "note": [
+          {
+            "text": "Breast MRI considered for additional local assessment after abnormal clinical breast findings."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a0a77331-f113-4b0f-a3ff-9d06a55bb2b6",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pathology report breast biopsy</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66110-8"
+            }
+          ],
+          "text": "Pathology report breast biopsy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:25:43Z",
+        "valueString": "Breast biopsy pathology report pending for definitive tissue diagnosis of suspected malignant breast lesion.",
+        "note": [
+          {
+            "text": "Breast biopsy pathology report pending for definitive tissue diagnosis of suspected malignant breast lesion."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:315ab04d-af29-49b7-a049-323c8a7d6493",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "unable-to-assess",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CE01"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Rash"
+              }
+            ],
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:929abd72-7913-401f-bb9c-fdb54ea59248",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Breast cancer</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "C50.9"
+                }
+              ],
+              "text": "Breast cancer"
+            },
+            "onsetAge": {
+              "value": 68,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9b943b54-2db8-4824-a553-35b98a63db34",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Breast biopsy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "122548005"
+            }
+          ],
+          "text": "Breast biopsy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2026",
+        "note": [
+          {
+            "text": "Core biopsy performed to establish tissue diagnosis after breast lump and nipple discharge were identified."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a767fbb6-8f3e-43b3-ad78-7c9354460ecd",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "in-progress",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Lumpectomy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "392022002"
+            }
+          ],
+          "text": "Lumpectomy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2026",
+        "note": [
+          {
+            "text": "Breast-conserving surgery under consideration pending full staging and pathology confirmation."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d8de7375-f023-4cf5-89df-3cac2caa6453",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 63-year-old woman from the Czech Republic who comes in worried after noticing a breast lump and intermittent nipple discharge, along with mild local irritation and a sense of swelling in the affected breast [SNOMED:C50.9]. She says the changes have made her increasingly anxious over the past several weeks, and she has started checking the area repeatedly in the mirror and avoiding fitted clothing because it makes her more aware of the lump [SNOMED:C50.9].\n\nShe appears well groomed and tired but not acutely ill. {patientName} is retired from office administration and now spends much of her week helping with her grandchildren, gardening on her balcony, and meeting a close friend for coffee. She lives with her husband and describes a supportive family, though she admits she has been keeping some of her fears to herself while waiting for test results. Her appetite is fair and she remains independent in daily activities.\n\nAt home, {patientName} usually keeps an active routine with regular walks and household tasks. Since finding the lump, she has become more distracted and has had trouble sleeping, mostly because she is frightened that the breast changes may represent cancer. She denies dramatic systemic decline and presents mainly because of the breast findings of lump, discharge, irritation, and swelling [SNOMED:C50.9]."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5c3e9a76-eb77-4797-a004-224a0664a213",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} reports no previous cancer diagnosis and no prior breast surgery. She sought evaluation after personally detecting a new breast lump and later noticing nipple discharge and local irritation with a feeling of swelling [SNOMED:C50.9]. She has not had recent trauma to the breast and did not present with symptoms suggesting another cause from the provided evidence. \n\nHer background history is otherwise notable for common age-appropriate chronic disease screening and routine primary care follow-up, but no major prior hospitalizations are reported. She is a nonsmoker by history, drinks alcohol only occasionally, and remains functionally independent. She lives with family support and says the emotional stress of awaiting answers has been more difficult than the physical discomfort from the breast changes [SNOMED:C50.9]."
+          }
+        ]
+      }
+    }
+  ]
+}

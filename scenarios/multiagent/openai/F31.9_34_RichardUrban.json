@@ -1,0 +1,538 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "34"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Urban",
+            "given": [
+              "Richard"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "F31.9",
+              "display": "Bipolar affective disorder, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ac2d4e4f-c384-4c31-b66d-5b3df82df6b3",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for cetirizine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R06AE07"
+            }
+          ],
+          "text": "cetirizine 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d84be70e-5ac9-4d86-b9ed-37ad4cda5b33",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for alprazolam.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N05BA12"
+            }
+          ],
+          "text": "alprazolam 0.25 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "0.25 mg oral as needed up to twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c78c0ea7-bb25-4db6-8811-564d551a9b69",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mood assessment</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "54633-3"
+            }
+          ],
+          "text": "Mood assessment"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T23:42:54Z",
+        "valueString": "Mental status and mood rating indicate elevated mood, decreased need for sleep, distractibility, pressured speech, and psychomotor agitation consistent with a current manic-spectrum episode; history also supports prior hypomanic episodes.",
+        "note": [
+          {
+            "text": "Mental status and mood rating indicate elevated mood, decreased need for sleep, distractibility, pressured speech, and psychomotor agitation consistent with a current manic-spectrum episode; history also supports prior hypomanic episodes."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:53884fee-56f6-4cf6-aa24-85c557b382ba",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Urine drug screen</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "54247-2"
+            }
+          ],
+          "text": "Urine drug screen"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T23:42:54Z",
+        "valueString": "Positive for cannabinoids; otherwise negative for common substances of abuse, helping assess contributing triggers and exclude other substance-related mood symptoms.",
+        "note": [
+          {
+            "text": "Positive for cannabinoids; otherwise negative for common substances of abuse, helping assess contributing triggers and exclude other substance-related mood symptoms."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9a6418bb-d883-41b8-b090-5ba17460850a",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Heart rate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T23:42:54Z",
+        "valueQuantity": {
+          "value": 104.0,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "note": [
+          {
+            "text": "104 /min, mildly elevated during an agitated and sleepless presentation."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7147370f-7a2a-419b-a921-9b4b616bb176",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Thyrotropin [Units/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3016-3"
+            }
+          ],
+          "text": "Thyrotropin [Units/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T23:42:54Z",
+        "valueString": "TSH within reference range, making hyperthyroidism less likely as a cause of mood elevation.",
+        "note": [
+          {
+            "text": "TSH within reference range, making hyperthyroidism less likely as a cause of mood elevation."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:aff029ae-9534-42d5-8934-ac97f13ad09d",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Bipolar affective disorder, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F31.9"
+                }
+              ],
+              "text": "Bipolar affective disorder, unspecified"
+            },
+            "onsetAge": {
+              "value": 29,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3d02bbd9-07b1-4fac-9153-aa626d52424d",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Aunt: Recurrent depressive disorder, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "AUNT",
+              "display": "Aunt"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F33.9"
+                }
+              ],
+              "text": "Recurrent depressive disorder, unspecified"
+            },
+            "onsetAge": {
+              "value": 41,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6e8537d0-6503-481e-908b-1ff73e2ff5e5",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Type 2 diabetes mellitus</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "E11"
+                }
+              ],
+              "text": "Type 2 diabetes mellitus"
+            },
+            "onsetAge": {
+              "value": 52,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:59495ec3-a3a1-4ebf-b408-3369d637846d",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandmother: Alzheimer disease</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRMTH",
+              "display": "Grandmother"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "G30"
+                }
+              ],
+              "text": "Alzheimer disease"
+            },
+            "onsetAge": {
+              "value": 78,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0bd07d63-a8a3-40e8-8e01-76def6b18cc0",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 34-year-old man in the Czech Republic who was brought in by family after several days of markedly reduced sleep and escalating energy, with restless pacing and pressured, hard-to-interrupt speech. He reports feeling unusually confident and productive, but those around him have become worried by his psychomotor agitation, impulsive spending, and flirtatious, sexually inappropriate behavior that is out of character for him. Over the past year he has also had contrasting periods of low mood, anhedonia, fatigue, poor concentration, and oversleeping that interfered with work and social life. During the current episode he has struggled with insomnia, and at times his family has noticed grandiose and suspicious ideas consistent with delusional thinking. He also describes prior shorter periods of elevated mood and increased activity that were noticeable but less impairing than the current presentation, consistent with hypomanic episodes in the past. [SNOMED:F31.9]\n\nHe works as an IT support technician for a mid-sized logistics company, including rotating on-call evening and overnight shifts that often disrupt his sleep schedule. On ordinary weeks, {patientName} enjoys cycling along the river, gaming with friends online, and meeting his younger brother for football on weekends; however, he also describes prolonged late-night online gaming sessions and heavy caffeine use to stay awake after irregular shifts, both of which have repeatedly preceded mood destabilization. He lives alone in a rented apartment, but his mother and brother remain closely involved and have been checking on him more frequently because of recent mood swings.\n\nIn conversation, {patientName} alternates between saying he feels better than ever and admitting that he has not been sleeping more than a few hours a night. He becomes distractible, gets up repeatedly during the interview, interrupts questions, and minimizes the impact of his symptoms despite clear functional decline from insomnia, agitation, and disorganized decision-making. When asked about prior episodes, he recalls stretches when he could barely get out of bed, slept excessively, withdrew socially, and lost interest in hobbies, suggesting alternating manic and depressive features. He denies hallucinations, focal neurologic deficits, and language disturbance such as aphasia. [SNOMED:F31.9]\n\nOutside of his psychiatric symptoms, he has a history of seasonal allergic rhinitis and generalized anxiety symptoms during periods of high stress. He also reports that a short course of oral prednisone for severe allergies about a year ago was followed by several days of markedly decreased need for sleep and unusually elevated mood, raising concern that corticosteroid exposure may have amplified an underlying bipolar vulnerability. He does not describe chronic medical illness, and his general physical health has otherwise been good. He has no history of perinatal depression, autoscopic hallucinations, or traumatic injury such as fall from a swing, which are not relevant features in this adult male case. [MEDDIALOG:F31.9:0]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0b2de478-5c2a-409f-ad0c-89be82da6a39",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} reports several years of episodic mood disturbance with periods of elevated mood, increased activity, impulsive decisions, and reduced need for sleep alternating with crashes marked by fatigue, hypersomnia, poor concentration, and loss of interest in usual activities. He says that stress at work and sleep disruption tend to worsen anxiety symptoms and often precede mood elevation. He also recalls at least two past episodes lasting several days in which he was unusually energetic, slept little, talked more than usual, and was more socially outgoing without the marked impairment seen in his current presentation, supporting a history of hypomanic symptoms as well as more severe episodes. [SNOMED:F31.9, MEDDIALOG:F31.9:0]\n\nAbout two years ago, {patientName} had a brief psychiatric admission after an agitated, sleepless episode in which family members were concerned about risky behavior and possible delusional ideas; no self-harm occurred. He was advised to maintain regular psychiatric follow-up, but attendance has been inconsistent. He recalls another clear deterioration after a prescribed 5-day course of prednisone for severe allergic rhinitis, when he became unusually energetic, slept very little, and behaved recklessly, suggesting medication-triggered exacerbation of an underlying bipolar diathesis.\n\nPast medical history is notable for generalized anxiety symptoms and seasonal allergic rhinitis. He denies known endocrine disease, neurologic disease, and major medical hospitalizations. He drinks alcohol socially, uses cannabis intermittently on weekends, and consumes large amounts of caffeinated energy drinks during on-call work periods. His rotating shift schedule and frequent late-night gaming contribute to irregular sleep-wake timing, which his family has noticed often occurs before mood episodes.\n\nFamily history is significant for bipolar disorder in his father and recurrent depressive disorder in a maternal aunt, increasing his inherited risk for mood illness. His mother has type 2 diabetes mellitus, and his maternal grandmother had Alzheimer disease. Current background medications are limited to cetirizine for allergies and occasional alprazolam prescribed previously for acute anxiety symptoms; neither is intended as treatment for the current bipolar episode."
+          }
+        ]
+      }
+    }
+  ]
+}

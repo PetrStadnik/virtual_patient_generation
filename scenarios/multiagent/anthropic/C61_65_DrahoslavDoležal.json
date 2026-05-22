@@ -1,0 +1,758 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "65"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Doležal",
+            "given": [
+              "Drahoslav"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C61",
+              "display": "Malignant neoplasm of prostate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:652b60b4-4203-4500-88b1-78422073adeb",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Lisinopril.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C09AA03"
+            }
+          ],
+          "text": "Lisinopril 20 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "20 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6f512ee5-b27d-4039-a75f-9395b746a579",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Atenolol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C07AB03"
+            }
+          ],
+          "text": "Atenolol 100 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "100 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4b3ae0f9-9ef8-4f37-8f08-0ac91196973b",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Amlodipine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C08CA01"
+            }
+          ],
+          "text": "Amlodipine 5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "5 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:34a28830-1d71-4044-b6dd-7d488766cf26",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Metformin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A10BA02"
+            }
+          ],
+          "text": "Metformin 1000 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1000 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b447d54f-1741-4ff6-ab86-5c44e773ecbe",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Atorvastatin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C10AA05"
+            }
+          ],
+          "text": "Atorvastatin 40 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "40 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:49363020-7a3b-4059-8802-f425eb70ab76",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Aspirin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "B01AC06"
+            }
+          ],
+          "text": "Aspirin 100 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "100 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2e22a1fa-80d3-422a-986b-ff640b9b5646",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">PSA [Mass/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "35741-8"
+            }
+          ],
+          "text": "PSA [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-19T00:33:59Z",
+        "valueQuantity": {
+          "value": 0.15,
+          "unit": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL"
+        },
+        "note": [
+          {
+            "text": "0.15 ng/mL — currently below biochemical recurrence threshold of 0.2 ng/mL post-prostatectomy; initial PSA at diagnosis was 14.3 ng/mL (elevated), which prompted biopsy"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:599724b8-35ef-4ebd-9b95-01ad38cc25d5",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Gleason score in Prostate tumor</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "84904-2"
+            }
+          ],
+          "text": "Gleason score in Prostate tumor"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-19T00:33:59Z",
+        "valueString": "Gleason score 10/10 — high-grade, high-risk prostate adenocarcinoma confirmed on postoperative pathology",
+        "note": [
+          {
+            "text": "Gleason score 10/10 — high-grade, high-risk prostate adenocarcinoma confirmed on postoperative pathology"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:910b51c3-bf04-4c4a-aaf6-d2cfd8a4b5d0",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Testosterone [Mass/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2986-8"
+            }
+          ],
+          "text": "Testosterone [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-19T00:33:59Z",
+        "valueQuantity": {
+          "value": 8.2,
+          "unit": "nmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "nmol/L"
+        },
+        "note": [
+          {
+            "text": "8.2 nmol/L — reduced, consistent with post-treatment hormonal changes and contributing to erectile dysfunction"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fadb57b4-af68-439b-88a3-ab5db8c9cca4",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pelvic ultrasound</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "43776-4"
+            }
+          ],
+          "text": "Pelvic ultrasound"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-19T00:33:59Z",
+        "valueString": "No residual prostatic tissue identified post-prostatectomy; no evidence of local recurrence; bladder wall thickening noted consistent with outflow symptoms",
+        "note": [
+          {
+            "text": "No residual prostatic tissue identified post-prostatectomy; no evidence of local recurrence; bladder wall thickening noted consistent with outflow symptoms"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9ceef220-30a7-4346-9bbd-76f14b62e6ca",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Bone scan</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "83302-0"
+            }
+          ],
+          "text": "Bone scan"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-19T00:33:59Z",
+        "valueString": "No scintigraphic evidence of skeletal metastases",
+        "note": [
+          {
+            "text": "No scintigraphic evidence of skeletal metastases"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:12ab1217-1de4-4819-8efb-0a33730e1825",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Amoxicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "high",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CA04"
+            }
+          ],
+          "text": "Amoxicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Urticaria"
+              }
+            ],
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:47eb2f06-f369-46b2-92bf-ed20e259b4de",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Malignant neoplasm of prostate</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "C61"
+                }
+              ],
+              "text": "Malignant neoplasm of prostate"
+            },
+            "onsetAge": {
+              "value": 70,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2a3907d4-bdc5-4e0e-910c-4057992bbfca",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brother: Atherosclerotic heart disease</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "BRO",
+              "display": "Brother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I25.1"
+                }
+              ],
+              "text": "Atherosclerotic heart disease"
+            },
+            "onsetAge": {
+              "value": 60,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:80a13ddd-66d4-446d-83c3-e00ee9387945",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Radical prostatectomy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "26294005"
+            }
+          ],
+          "text": "Radical prostatectomy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2021",
+        "note": [
+          {
+            "text": "Radical prostatectomy performed for high-risk Gleason 10/10 prostate adenocarcinoma; postoperative pathology confirmed malignant neoplasm of the prostate. Patient developed persistent erectile dysfunction post-procedure."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6cc35ab0-4f0f-4a42-88a5-197b748b703d",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pelvic radiation therapy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "1287742003"
+            }
+          ],
+          "text": "Pelvic radiation therapy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2022",
+        "note": [
+          {
+            "text": "Adjuvant pelvic radiotherapy administered post-prostatectomy given high-risk Gleason score."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4cbe3153-0020-480b-94d1-cf900bd09240",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Transrectal ultrasound guided biopsy of prostate</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "788709002"
+            }
+          ],
+          "text": "Transrectal ultrasound guided biopsy of prostate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2021",
+        "note": [
+          {
+            "text": "Trans-rectal ultrasound-guided biopsy performed to confirm diagnosis of malignant neoplasm of the prostate prior to surgery, prompted by elevated PSA of 14.3 ng/mL."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:38063bbb-66cc-4682-b150-d595ec5b375c",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 65-year-old retired civil engineer from Brno, Czech Republic, presenting with a stocky build, slightly ruddy complexion, and the careful, methodical manner typical of his profession. He stands approximately 178 cm tall and has put on some weight since retirement, now weighing around 92 kg. He attends his outpatient urology appointment today wearing a neat flannel shirt, appearing generally well but visibly anxious about recent changes in his PSA trend.\n\n{patientName} reports progressive lower urinary tract symptoms over the past two years, including urinary frequency, urinary urgency, nocturia (waking two to three times per night), a weak urinary stream, and occasional lower abdominal discomfort. He has experienced episodes of urinary retention requiring prompt voiding effort. He also reports intermittent haematuria — blood-tinged urine on several occasions over recent months — and acknowledges erectile dysfunction that has persisted since his radical prostatectomy, which has been a significant source of distress. He was first flagged for elevated PSA during a routine check-up three years ago (PSA 14.3 ng/mL at that time), which led to further investigation and eventual diagnosis of malignant neoplasm of the prostate.\n\nOutside of his medical concerns, {patientName} enjoys weekend woodworking in his garden workshop and tends a large vegetable plot with his wife of 38 years. He has two adult sons, with whom he is close. He is a non-smoker and drinks beer socially — typically two to three 500 ml glasses per week. He is a member of a local hiking club and walks five to ten kilometres most Sundays, though fatigue has limited this somewhat recently.\n\n{patientName} is a retired professional who worked for 35 years in structural design and now volunteers part-time mentoring engineering students. He has a stable and supportive social network, though he admits the cancer diagnosis has caused considerable psychological stress, particularly regarding the implications for his independence and quality of life. He has been taking low-dose non-steroidal anti-inflammatory medication intermittently for musculoskeletal discomfort related to his active lifestyle, and his long-term use of androgens in the form of endogenous hormonal activity — combined with a high-fat diet during his working years and a positive family history — are recognised risk factors for prostate cancer in his case."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cd070cbc-33c4-46d1-90fa-c3a87d743ec0",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} was diagnosed with malignant neoplasm of the prostate (high-risk, Gleason score 10/10) approximately three years ago following an elevated PSA of 14.3 ng/mL detected at routine screening. He subsequently underwent radical prostatectomy at the University Hospital Brno, with postoperative pathology confirming high-grade adenocarcinoma. He is currently under surveillance with regular PSA measurements to detect any biochemical recurrence, with particular attention to values above 0.2 ng/mL as a threshold for failure. Adjuvant pelvic radiation was discussed postoperatively; {patientName} received a course of adjuvant radiotherapy given his high-risk Gleason score.\n\nSince his prostatectomy, {patientName} has experienced persistent erectile dysfunction, which he finds psychologically challenging, and intermittent haematuria and urinary urgency which are monitored at each urology visit. Urinary retention events have occurred on two occasions, managed conservatively.\n\n{patientName} has a background of arterial hypertension, managed with Lisinopril 20 mg twice daily, Atenolol 100 mg twice daily, and Amlodipine 5 mg twice daily. He also has type 2 diabetes mellitus managed with Metformin, and takes low-dose Aspirin for cardiovascular risk reduction. He takes Atorvastatin for hypercholesterolaemia. Notably, his prostate cancer is attributed to recognised risk factors including advancing age, positive paternal family history, high-fat dietary habits during his working years, and long-term endogenous androgen exposure — none of his background medications are implicated as causative; indeed, Metformin and statins are considered to have potentially protective effects against prostate malignancy. He has no prior hospitalisations other than his prostatectomy. He is a lifelong non-smoker and a light social drinker. Family history is notable for prostate cancer in his father and cardiovascular disease in an elder brother."
+          }
+        ]
+      }
+    }
+  ]
+}

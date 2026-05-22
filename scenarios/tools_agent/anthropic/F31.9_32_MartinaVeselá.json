@@ -1,0 +1,781 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "32"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Veselá",
+            "given": [
+              "Martina"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "F31.9",
+              "display": "Bipolar affective disorder, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4fe59fff-17c0-49a1-ac7d-045f1acf4cca",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Lithium.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N05AN01"
+            }
+          ],
+          "text": "Lithium 600 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "600 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:38fea213-d0d2-4629-b3a5-9bccf9dec9f4",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Quetiapine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N05AH04"
+            }
+          ],
+          "text": "Quetiapine 200 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "200 mg oral once daily at bedtime"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:15e4e795-fdb9-4411-9750-266399eb028b",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Lamotrigine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N03AX09"
+            }
+          ],
+          "text": "Lamotrigine 100 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "100 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4a2ded11-eed2-4f8d-8c4d-863515ccc8e7",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Lorazepam.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N05BA06"
+            }
+          ],
+          "text": "Lorazepam 0.5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "0.5 mg oral as needed for acute agitation, maximum twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:09bbfab1-62c4-4569-bcd8-4a7c148d82a1",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Lithium serum level</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "80970-7"
+            }
+          ],
+          "text": "Lithium serum level"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:50:54Z",
+        "valueQuantity": {
+          "value": 0.72,
+          "unit": "mEq/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mEq/L"
+        },
+        "note": [
+          {
+            "text": "0.72 mEq/L (therapeutic range 0.6–1.2 mEq/L)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:994ba90e-b2f5-484b-bec5-fb69a296528d",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">TSH [Units/volume] in Serum</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11579-0"
+            }
+          ],
+          "text": "TSH [Units/volume] in Serum"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:50:54Z",
+        "valueQuantity": {
+          "value": 5.8,
+          "unit": "mIU/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mIU/L"
+        },
+        "note": [
+          {
+            "text": "5.8 mIU/L (mildly elevated, consistent with subclinical hypothyroidism)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:534bc756-6d21-4bee-bcdf-c37dd3b9a75a",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Comprehensive metabolic panel</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24323-8"
+            }
+          ],
+          "text": "Comprehensive metabolic panel"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:50:54Z",
+        "valueString": "Within normal limits; creatinine 0.78 mg/dL, eGFR >90 mL/min/1.73m²",
+        "note": [
+          {
+            "text": "Within normal limits; creatinine 0.78 mg/dL, eGFR >90 mL/min/1.73m²"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b8eec3ef-2d0e-412c-ba46-8be81c8b0637",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Complete blood count</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2"
+            }
+          ],
+          "text": "Complete blood count"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:50:54Z",
+        "valueString": "Within normal limits; WBC 6.2 x10³/µL, Hgb 13.1 g/dL, Platelets 228 x10³/µL",
+        "note": [
+          {
+            "text": "Within normal limits; WBC 6.2 x10³/µL, Hgb 13.1 g/dL, Platelets 228 x10³/µL"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bc7b41a7-2c67-4a09-9efc-94edd73ad69c",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52416-5"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:50:54Z",
+        "valueQuantity": {
+          "value": 67.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "67 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8ed52688-0841-4dcc-9799-73de3784fa49",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CE01"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Urticaria"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b302aa37-2b23-4771-af32-576ddead05d2",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Shellfish.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "food"
+        ],
+        "criticality": "high",
+        "code": {
+          "text": "Shellfish"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Urticaria and throat tightening"
+              }
+            ],
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7b595cf8-8654-4c9d-9f9a-57f6255154d4",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Bipolar affective disorder, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F31.9"
+                }
+              ],
+              "text": "Bipolar affective disorder, unspecified"
+            },
+            "onsetAge": {
+              "value": 28,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:80ad285e-7c6a-4ee9-a612-af45ea1b12bc",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandmother: Recurrent depressive disorder, moderate episode</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRMTH",
+              "display": "Grandmother"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F33.1"
+                }
+              ],
+              "text": "Recurrent depressive disorder, moderate episode"
+            },
+            "onsetAge": {
+              "value": 45,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e95aec1d-20e8-47a1-b4e0-b6dc824d848e",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Psychiatric evaluation</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "165171009"
+            }
+          ],
+          "text": "Psychiatric evaluation"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2016",
+        "note": [
+          {
+            "text": "Initial comprehensive psychiatric evaluation at age 24 leading to formal diagnosis of Bipolar Affective Disorder."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8f7472d0-55fd-4248-8ec8-5ef0417b736f",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Inpatient psychiatric hospitalization</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "25621005"
+            }
+          ],
+          "text": "Inpatient psychiatric hospitalization"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2021",
+        "note": [
+          {
+            "text": "Second psychiatric hospitalization at age 29 for severe depressive episode with passive suicidal ideation; resulted in ECT treatment course."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e0b38269-8fe2-468a-9d79-9ea88e3e441c",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Electroconvulsive therapy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "23835007"
+            }
+          ],
+          "text": "Electroconvulsive therapy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2021",
+        "note": [
+          {
+            "text": "Course of 8 ECT sessions during second hospitalization for treatment-resistant bipolar depression; significant symptom improvement observed."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bc312236-5ffc-4088-b3df-ca5c9b75674b",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "in-progress",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cognitive behavioral therapy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "302230009"
+            }
+          ],
+          "text": "Cognitive behavioral therapy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2022",
+        "note": [
+          {
+            "text": "Ongoing CBT adapted for bipolar disorder (CBT-BP) focusing on mood monitoring, sleep hygiene, and relapse prevention strategies."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:645743eb-2aba-4882-b39e-fc104682c93d",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 32-year-old woman who presents to the outpatient psychiatry clinic for a scheduled follow-up. She is of mixed Latinx heritage, with dark curly hair pulled back loosely and tired, expressive eyes that shift between intense engagement and distant distraction. At today's visit, she appears slightly disheveled — her clothes mismatched and her speech mildly pressured — suggesting she may be entering a hypomanic phase after several weeks of relative stability.\n\n{patientName} works as a freelance graphic designer, a career she finds both liberating and overwhelming. She thrives during high-energy creative sprints but struggles to maintain deadlines and client relationships during depressive episodes. She lives in a one-bedroom apartment in a mid-sized city and describes her social world as \"a handful of very patient close friends.\" She has a long-term on-and-off romantic relationship that has been strained by her mood instability, and she attends bi-weekly group therapy for people with mood disorders.\n\nOutside of work, {patientName} enjoys painting, listening to indie and jazz music, and taking long urban walks with her rescue dog, Mochi. During manic episodes, she tends to start multiple ambitious projects at once — recently she began remodeling her apartment herself, signed up for two online courses, and attempted to launch a new business, all within a single week. During depressive phases, she can barely leave bed and loses interest in all activities she normally loves.\n\n{patientName} reports that her current sleep has been reduced to about 4 hours per night for the past five days, she feels \"wired but exhausted,\" and she has been spending impulsively — notably purchasing over $800 in art supplies she does not need. Her appetite is decreased and her concentration is scattered. She denies suicidal ideation at this time but endorses a previous episode where she had passive thoughts of self-harm during a severe depressive episode two years ago.\n\nHer support network includes her mother (who has the same diagnosis) and one close friend who accompanies her to some appointments. {patientName} expresses ambivalence about her medications, stating that she sometimes misses them because she \"likes the energy\" of her hypomanic states, even though she intellectually understands the risks. She is insightful, articulate, and motivated for recovery when in a stable mood."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c0a57931-e867-493a-bbe2-6d04b14c3076",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} was first diagnosed with Bipolar Affective Disorder at age 24 after her first documented manic episode, during which she did not sleep for five days, maxed out two credit cards, and was briefly detained under a psychiatric hold. In retrospect, she recalls depressive episodes as early as age 16 that were initially misdiagnosed as major depressive disorder, and she was trialed on antidepressants alone for nearly three years, which may have precipitated her first full manic break.\n\nShe has had two inpatient psychiatric hospitalizations: the first at age 24 following her initial manic episode, and the second at age 29 during a severe depressive episode with passive suicidal ideation. She completed a course of electroconvulsive therapy (ECT) during the second hospitalization, which produced significant improvement in her depressive symptoms. She has been in outpatient psychiatric care continuously since age 24, with varying levels of engagement.\n\n{patientName} has no significant medical comorbidities aside from mild hypothyroidism, likely related to long-term lithium use. She is a non-smoker and drinks alcohol occasionally — she was counseled to abstain entirely given mood disorder risks and has largely complied. She denies illicit substance use currently, though she experimented with cannabis in her early 20s, which she associates with triggering her first manic episode. She has a family history of Bipolar Disorder (mother) and major depression (maternal grandmother). She exercises irregularly and reports poor sleep hygiene as an ongoing challenge."
+          }
+        ]
+      }
+    }
+  ]
+}

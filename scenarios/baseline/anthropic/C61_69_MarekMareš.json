@@ -1,0 +1,801 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "69"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Mareš",
+            "given": [
+              "Marek"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C61",
+              "display": "Malignant neoplasm of prostate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d7a18e06-20e6-48bf-a6d9-13b3918097e6",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Metformin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A10BA02"
+            }
+          ],
+          "text": "Metformin 1000 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1000 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:940eea95-3b62-49ee-8821-4b25cfaacd00",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Amlodipine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C08CA01"
+            }
+          ],
+          "text": "Amlodipine 5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "5 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:89bb3778-a4d6-4b11-902b-f0effc675543",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Ramipril.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C09AA05"
+            }
+          ],
+          "text": "Ramipril 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:669805f7-8007-49f3-be70-01a3305c47f7",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Atorvastatin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C10AA05"
+            }
+          ],
+          "text": "Atorvastatin 20 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "20 mg oral once daily at bedtime"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3023d2b7-15e6-4ee8-831c-f1210ff83feb",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Tamsulosin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "G04CA02"
+            }
+          ],
+          "text": "Tamsulosin 0.4 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "0.4 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6a170bce-7180-4a9f-a699-f48c30b1695b",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Aspirin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "B01AC06"
+            }
+          ],
+          "text": "Aspirin 100 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "100 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:81759061-8cdf-47c3-9afe-39f0b2f113c9",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Prostate-Specific Antigen (PSA) measurement</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2857-1"
+            }
+          ],
+          "text": "Prostate-Specific Antigen (PSA) measurement"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:56:41Z",
+        "valueQuantity": {
+          "value": 18.4,
+          "unit": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL"
+        },
+        "note": [
+          {
+            "text": "18.4 ng/mL (elevated)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:60de0719-1807-45a6-af05-4ff3a5024be6",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Prostate biopsy Gleason score</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "35266-4"
+            }
+          ],
+          "text": "Prostate biopsy Gleason score"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:56:41Z",
+        "valueString": "Gleason score 7 (3+4) – Adenocarcinoma of the prostate, Grade Group 2",
+        "note": [
+          {
+            "text": "Gleason score 7 (3+4) – Adenocarcinoma of the prostate, Grade Group 2"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a0094f2f-796e-492b-979b-d68da71a60d7",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Bone scan (Technetium-99m skeletal scintigraphy)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24646-3"
+            }
+          ],
+          "text": "Bone scan (Technetium-99m skeletal scintigraphy)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:56:41Z",
+        "valueString": "No evidence of osseous metastatic disease",
+        "note": [
+          {
+            "text": "No evidence of osseous metastatic disease"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bb3ed023-14e0-4f9f-be34-79a2e0b4ed04",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Multiparametric MRI of the prostate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "36643-5"
+            }
+          ],
+          "text": "Multiparametric MRI of the prostate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:56:41Z",
+        "valueString": "T2c lesion with bilateral involvement, no seminal vesicle invasion, no extracapsular extension. PI-RADS score 4.",
+        "note": [
+          {
+            "text": "T2c lesion with bilateral involvement, no seminal vesicle invasion, no extracapsular extension. PI-RADS score 4."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9225cdbd-6a14-4170-b789-8fc7842a25dd",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Testosterone (Total serum)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2986-8"
+            }
+          ],
+          "text": "Testosterone (Total serum)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:56:41Z",
+        "valueQuantity": {
+          "value": 412.0,
+          "unit": "ng/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/dL"
+        },
+        "note": [
+          {
+            "text": "412 ng/dL (normal)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:033fa8b9-39dc-4429-8f48-4be0787c1476",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Sulfamethoxazole.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01EC01"
+            }
+          ],
+          "text": "Sulfamethoxazole"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Maculopapular rash"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3dcb7668-defb-41d1-9c41-021477908917",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Malignant neoplasm of prostate</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "C61"
+                }
+              ],
+              "text": "Malignant neoplasm of prostate"
+            },
+            "onsetAge": {
+              "value": 71,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ca1bec6d-77ba-4d48-bb0a-c83b803fe1fe",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brother: Atherosclerotic heart disease of native coronary artery</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "BRO",
+              "display": "Brother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I25.1"
+                }
+              ],
+              "text": "Atherosclerotic heart disease of native coronary artery"
+            },
+            "onsetAge": {
+              "value": 64,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:33569d4e-7e95-4da4-9bda-c9c0f54870ad",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Type 2 diabetes mellitus</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "E11"
+                }
+              ],
+              "text": "Type 2 diabetes mellitus"
+            },
+            "onsetAge": {
+              "value": 58,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d0862d24-cdc0-40ce-ae0b-2deaee57c366",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Inguinal hernia repair</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "17370000"
+            }
+          ],
+          "text": "Inguinal hernia repair"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2013",
+        "note": [
+          {
+            "text": "Right-sided open inguinal hernia repair performed without complications at age 58."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:47998095-26fc-487e-a758-1a8956a44273",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Transrectal ultrasound-guided prostate biopsy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "76164006"
+            }
+          ],
+          "text": "Transrectal ultrasound-guided prostate biopsy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "12-core TRUS-guided biopsy confirming adenocarcinoma, Gleason 3+4=7, Grade Group 2."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5bfdd630-1e1b-4a9d-97e4-ed15385740b2",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Digital rectal examination</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "410006001"
+            }
+          ],
+          "text": "Digital rectal examination"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "DRE revealed a hard, irregular nodule on the posterior lobe of the prostate, prompting urgent urology referral."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:387e9b45-2bd6-4d7d-a6e3-e924e87cc6d3",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 69-year-old retired civil engineer who presents with a dignified but visibly fatigued appearance. He is moderately built, standing approximately 5'10\" and weighing around 185 lbs, with slightly sunken cheeks and a graying beard. He moves carefully, occasionally wincing with lower back discomfort. He reports progressive difficulty with urination over the past several months, including weak urinary stream, increased urinary frequency—particularly at night—and a sensation of incomplete bladder emptying. He has also noticed mild pelvic discomfort and general fatigue that he initially attributed to aging.\n\n{patientName} is a widower who lives alone in a suburban home. He has two adult children who live nearby and are actively involved in his care. He describes himself as an avid gardener and enjoys woodworking in his garage workshop on weekends. He is a non-smoker and drinks one to two glasses of wine occasionally on weekends. He walks for 30 minutes most mornings, though recently his lower back pain has reduced his activity level. He follows a mostly Western diet, high in red meat and dairy, and has modest vegetable and fruit intake.\n\n{patientName} worked as a civil engineer for over 35 years before retiring at age 65. He describes his former work as highly stressful and sedentary. Since retirement, he has made efforts to stay socially active through a local seniors' club and a weekly book group. He has a close-knit circle of friends but admits he tends to downplay his symptoms and delayed seeking medical attention, only presenting after his daughter insisted he visit his primary care physician.\n\nHis primary complaint prompted a digital rectal exam (DRE) by his GP, which revealed a hard, irregular nodule on the posterior lobe of the prostate. His PSA level was markedly elevated at 18.4 ng/mL. He was referred to urology for further evaluation and biopsy, which confirmed adenocarcinoma of the prostate with a Gleason score of 7 (3+4), staged at T2cN0M0. He is currently undergoing evaluation for treatment planning, including discussion of radiation therapy and androgen deprivation therapy (ADT)."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:24e5f20b-0c26-4fe0-8813-3a67db664188",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has a known history of benign prostatic hyperplasia (BPH) diagnosed at age 63, for which he was managed conservatively. He has a long-standing diagnosis of type 2 diabetes mellitus, well-controlled on oral medication, and hypertension managed with antihypertensive therapy for the past 12 years. He was hospitalized once at age 58 for a right-sided inguinal hernia repair. He has no prior history of other malignancies and no known prior radiation exposure. His lifestyle history includes a high-red-meat, low-fiber diet, which is considered a contributing risk factor. He has no tobacco use history and only social alcohol use. He reports no symptoms of bone pain or neurological deficits currently. Family history is significant for prostate cancer in his father, who was diagnosed at age 71. He has no known drug allergies except a documented rash to sulfonamide antibiotics. He reports adherence to his medications and attends follow-up appointments regularly since his cancer diagnosis. His performance status is ECOG 1, indicating mild symptoms but ambulatory and capable of self-care."
+          }
+        ]
+      }
+    }
+  ]
+}

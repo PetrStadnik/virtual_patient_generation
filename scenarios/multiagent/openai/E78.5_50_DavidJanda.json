@@ -1,0 +1,817 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "50"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Janda",
+            "given": [
+              "David"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "E78.5",
+              "display": "Hyperlipidaemia, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f2df5f32-26b2-4d25-8a3f-acd36f969b45",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Rosuvastatin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C10AA07"
+            }
+          ],
+          "text": "Rosuvastatin 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral once nightly"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d394a17a-0f0c-4583-9c29-727178acdfd8",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Omeprazole.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A02BC01"
+            }
+          ],
+          "text": "Omeprazole 20 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "20 mg oral once daily before breakfast"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:26e6f7e0-c899-4319-a3d6-2862e94d14fe",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Ibuprofen.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "M01AE01"
+            }
+          ],
+          "text": "Ibuprofen 400 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "400 mg oral as needed up to three times daily for back pain"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:789c6a82-afc7-4464-9eb2-5c24bf0604b2",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Loratadine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R06AX13"
+            }
+          ],
+          "text": "Loratadine 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral once daily during allergy season"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:de7eea18-03d1-4094-b823-3ac465bd8026",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Prednisone.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "H02AB07"
+            }
+          ],
+          "text": "Prednisone 20 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "20 mg oral once daily for 5 days during severe seasonal allergy flares, used intermittently"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:db4cb1cc-6cca-4b72-b406-1c5fe398d8d7",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cholesterol in LDL [Mass/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "13457-7"
+            }
+          ],
+          "text": "Cholesterol in LDL [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T00:08:37Z",
+        "valueString": "LDL cholesterol 171 mg/dL (elevated)",
+        "note": [
+          {
+            "text": "LDL cholesterol 171 mg/dL (elevated)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c90e6f5c-c4d8-431a-a547-02516c321a5e",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cholesterol in HDL [Mass/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2085-9"
+            }
+          ],
+          "text": "Cholesterol in HDL [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T00:08:37Z",
+        "valueString": "HDL cholesterol 38 mg/dL (low)",
+        "note": [
+          {
+            "text": "HDL cholesterol 38 mg/dL (low)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:04c5e8a0-ec00-4e69-866c-249b8a094bf0",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Triglyceride [Mass/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2571-8"
+            }
+          ],
+          "text": "Triglyceride [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T00:08:37Z",
+        "valueString": "Triglycerides 242 mg/dL (elevated)",
+        "note": [
+          {
+            "text": "Triglycerides 242 mg/dL (elevated)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ce30d733-d684-42fd-b20b-308439dd8b58",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cholesterol.total [Mass/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2093-3"
+            }
+          ],
+          "text": "Cholesterol.total [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T00:08:37Z",
+        "valueString": "Total cholesterol 258 mg/dL (elevated)",
+        "note": [
+          {
+            "text": "Total cholesterol 258 mg/dL (elevated)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5ef7fbc9-2497-4555-a6a0-93fa0b5cc55d",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Thyrotropin [Units/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3016-3"
+            }
+          ],
+          "text": "Thyrotropin [Units/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T00:08:37Z",
+        "valueString": "TSH 2.1 mIU/L (within normal limits)",
+        "note": [
+          {
+            "text": "TSH 2.1 mIU/L (within normal limits)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:676d0541-fe38-4e88-806d-9832949d819b",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "unable-to-assess",
+        "code": {
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Maculopapular rash"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3016ab13-d641-4359-af4c-035af4f5b2ed",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Cat dander.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "environment"
+        ],
+        "criticality": "low",
+        "code": {
+          "text": "Cat dander"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Sneezing and itchy eyes"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4658e87c-5dfc-4ea6-ad21-d6c6a18a3a1b",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Atherosclerotic heart disease</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I25.1"
+                }
+              ],
+              "text": "Atherosclerotic heart disease"
+            },
+            "onsetAge": {
+              "value": 54,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f398afa2-a9e6-4636-a8e2-cb13f0420323",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Hyperlipidaemia, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "E78.5"
+                }
+              ],
+              "text": "Hyperlipidaemia, unspecified"
+            },
+            "onsetAge": {
+              "value": 48,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:49af5ecb-a27d-446e-b5f8-c0667f801b2e",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Type 2 diabetes mellitus</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "E11"
+                }
+              ],
+              "text": "Type 2 diabetes mellitus"
+            },
+            "onsetAge": {
+              "value": 62,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:aff85d0a-fb6e-45c5-9e7d-1d6bfdc3bec5",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandfather: Essential hypertension</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRFTH",
+              "display": "Grandfather"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I10"
+                }
+              ],
+              "text": "Essential hypertension"
+            },
+            "onsetAge": {
+              "value": 60,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:44b0574f-8059-4adb-b3bc-99d9cfae454e",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Screening colonoscopy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "73761001"
+            }
+          ],
+          "text": "Screening colonoscopy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Average-risk screening colonoscopy completed without major complications; one small benign polyp removed."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1e01d9c9-5053-44ee-8172-f2ed7a14671f",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Dental extraction</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "234697000"
+            }
+          ],
+          "text": "Dental extraction"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2018",
+        "note": [
+          {
+            "text": "Wisdom tooth extraction performed as an outpatient procedure."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:137a78df-e044-47d3-93fb-aa14ca0faeae",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 50-year-old man who appears slightly overweight but generally well, with a sedentary office-worker build and mild central adiposity. He is neatly dressed, attentive, and speaks comfortably, though he admits he has not been as proactive about preventive health as he should be. He does not have acute physical complaints and was prompted to seek medical follow-up after routine blood work at an employer-sponsored health screening showed elevated cholesterol levels. He denies chest pain, exertional dyspnea, claudication, focal neurologic deficits, prior stroke, or recent weight loss. On further questioning, he mentions small yellowish plaques near the inner corners of both upper eyelids that have been present for the past 1-2 years and that he assumed were just a cosmetic change; examination is also notable for a faint corneal arcus, findings that can be seen with dyslipidaemia. He reports increasing worry after seeing his cholesterol numbers and his father's early heart disease, and says he is afraid of “having a heart attack like my dad did” if he does not make changes soon. His clinician explains that high LDL and triglyceride levels contribute over time to atherosclerotic plaque formation even when a person feels entirely well, and that this gradual atherosclerosis can eventually lead to coronary disease or ischemic stroke if left untreated.\n\nHe works as a regional sales manager, spending long hours driving and sitting at a computer, often eating meals on the go. His diet is heavy in red meat, takeout food, refined carbohydrates, and late-night snacks, with inconsistent intake of fruits and vegetables. He drinks alcohol socially, usually several beers on weekends, and does not smoke currently, though he smoked briefly in his early 20s. Exercise is sporadic; he occasionally plays golf and walks the dog but does not engage in regular aerobic activity.\n\nAt home, {patientName} lives with his spouse and stays close with two teenage children. He describes his life as busy and somewhat stressful, with work deadlines limiting sleep and making it easy to skip routine clinic visits. He enjoys watching sports, grilling, and weekend home projects; these social routines often center on barbecued fatty meats, processed snacks, and beer, which reinforce the dietary pattern contributing to his lipid disorder. Friends describe him as dependable and sociable, though he acknowledges that many of his social activities revolve around food and alcohol.\n\nOverall, {patientName} gives the impression of a middle-aged man with cardiometabolic risk shaped more by lifestyle than by acute illness. He is concerned because his father had heart disease at a relatively young age and high cholesterol, and he has begun to notice that his belt size has increased over the past decade. He has no known clinical atherosclerotic cardiovascular disease and no history of ischemic stroke, but he is motivated to avoid these complications and is unsure how much can be achieved with diet and exercise alone."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7438688f-af3c-4f3f-8b0f-d4726b2d3107",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has a history of borderline hypertension noted intermittently during workplace screenings, though he has not required antihypertensive medication to date. He has no known history of diabetes, chronic kidney disease, myocardial infarction, transient ischemic attack, stroke, or peripheral vascular disease. Prior routine laboratory work has occasionally shown mildly elevated fasting glucose in the prediabetic range, but no formal diagnosis of diabetes has been made. A recent primary care visit documented xanthelasma at the medial eyelids and suspected early corneal arcus, prompting more detailed cardiovascular risk counseling. Because hyperlipidaemia is a major driver of atherosclerosis, his clinician also reviewed warning symptoms of possible ischemic stroke and other atherosclerotic cardiovascular disease, although he has never personally experienced such an event.\n\nHe has never been hospitalized for a major medical illness. He reports chronic low back discomfort related to prolonged sitting and episodic gastroesophageal reflux symptoms after large evening meals. He also uses a short course of oral prednisone once or twice most years for severe seasonal allergy flares prescribed at urgent care, a medication exposure that can contribute to worsening lipid levels when repeated. His sleep is often shortened to 5-6 hours nightly because of work travel and stress. He is a former light smoker with an estimated 3 pack-year history, having quit more than 25 years ago.\n\nLifestyle factors are strongly contributory: limited exercise, calorie-dense diet, frequent restaurant meals, and gradual weight gain since his 30s. He drinks alcohol socially, averaging 1-2 drinks on some weekdays and more on weekends, but denies illicit drug use. His hobbies and social routines frequently involve grilling high-fat meats, tailgating, and prolonged sedentary sports viewing, which further reinforce exposure to dietary triggers associated with hyperlipidaemia. {patientName} is now seeking care primarily because repeated screening results showed persistent cholesterol elevation and because of concern regarding his family history of early cardiovascular disease and hyperlipidaemia. He has no personal history of clinical atherosclerotic cardiovascular disease, including symptomatic atherosclerosis or ischemic stroke, but understands that untreated dyslipidaemia increases that future risk."
+          }
+        ]
+      }
+    }
+  ]
+}

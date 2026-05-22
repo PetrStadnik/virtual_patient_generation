@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Medical Diagnosis Simulation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background: #f0f2f5; }
+    #chat-box { height: 520px; overflow-y: auto; }
+    .bubble { max-width: 80%; word-wrap: break-word; }
+    .bubble-doctor { background: #e8f4fd; border-left: 4px solid #0d6efd; }
+    .bubble-patient { background: #f0fdf4; border-left: 4px solid #198754; }
+    .bubble-result  { background: #fff3cd; border-left: 4px solid #ffc107; }
+    .bubble-error   { background: #f8d7da; border-left: 4px solid #dc3545; }
+    .badge-turn     { font-size: 0.7rem; }
+    #scenario-editor { font-size: 0.78rem; height: 200px; }
+    .card-scroll { max-height: calc(100vh - 120px); overflow-y: auto; }
+    .spinner-dot { animation: pulse 1s infinite; }
+    @keyframes pulse { 0%,100%{opacity:.3} 50%{opacity:1} }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid py-3">
+  <div class="row g-3">
+
+    <!-- LEFT PANEL: Scenario input -->
+    <div class="col-lg-4">
+      <div class="card shadow-sm h-100">
+        <div class="card-header bg-primary text-white fw-semibold">
+          <i class="bi bi-person-vcard"></i> Patient Scenario
+        </div>
+        <div class="card-body card-scroll d-flex flex-column gap-2">
+
+          <!-- Identity -->
+          <div class="d-flex gap-2 align-items-center flex-wrap">
+            <span class="badge bg-secondary">ICD-10</span>
+            <code id="icd-display">—</code>
+            <span class="badge bg-primary-subtle text-primary-emphasis ms-auto" id="diag-display">—</span>
+          </div>
+          <div class="d-flex gap-3 small">
+            <span class="fw-semibold">👤 <span id="age-display">—</span> y/o</span>
+            <span class="text-capitalize" id="gender-display">—</span>
+          </div>
+
+          <!-- Description -->
+          <div class="small text-muted" id="desc-display" style="max-height:80px;overflow-y:auto;border-left:3px solid #dee2e6;padding-left:8px"></div>
+
+          <hr class="my-1">
+
+          <!-- Medications -->
+          <div class="small fw-semibold">💊 Medications</div>
+          <div id="med-display" class="small text-muted"></div>
+
+          <!-- Allergies -->
+          <div class="small fw-semibold">⚠️ Allergies</div>
+          <div id="allergy-display" class="small text-muted"></div>
+
+          <!-- Medical tests -->
+          <div class="small fw-semibold">🔬 Tests</div>
+          <div id="tests-display" class="small text-muted"></div>
+
+          <!-- Family history -->
+          <div class="small fw-semibold">👨‍👩‍👧 Family History</div>
+          <div id="family-display" class="small text-muted"></div>
+
+          <!-- Procedures -->
+          <div class="small fw-semibold" id="proc-label" style="display:none">🏥 Procedures</div>
+          <div id="proc-display" class="small text-muted"></div>
+
+          <hr class="my-1">
+
+          <label class="form-label fw-semibold small mb-0">EvalInput JSON</label>
+          <textarea id="scenario-editor" class="form-control font-monospace">{{ default_scenario }}</textarea>
+
+          <div class="d-flex gap-2">
+            <button class="btn btn-sm btn-outline-secondary" onclick="resetScenario()">Reset</button>
+            <button id="start-btn" class="btn btn-primary w-100" onclick="startSimulation()">
+              ▶ Start Simulation
+            </button>
+          </div>
+          <div class="text-muted small text-center">{{ max_turns }} exchanges</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL: Conversation -->
+    <div class="col-lg-8">
+      <div class="card shadow-sm">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <span class="fw-semibold">🩺 Live Consultation</span>
+          <div id="status-badge" class="badge bg-secondary">Idle</div>
+        </div>
+        <div class="card-body p-2">
+          <div id="chat-box" class="d-flex flex-column gap-2 p-2">
+            <div class="text-center text-muted small py-5" id="empty-msg">
+              Configure the scenario and click <strong>Start Simulation</strong>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Result Modal -->
+<div class="modal fade" id="resultModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" id="modal-header">
+        <h5 class="modal-title" id="modal-title">Simulation Complete</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center" id="modal-body"></div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button class="btn btn-primary" onclick="location.reload()">New Simulation</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const DEFAULT_SCENARIO = {{ default_scenario|safe }};
+  let evtSource = null;
+
+  function updateSidebar(data) {
+    const p = data.patient || {};
+    document.getElementById('icd-display').textContent    = data.icd_code        || '—';
+    document.getElementById('diag-display').textContent   = data.diagnosis_name  || '—';
+    document.getElementById('age-display').textContent    = data.age             || '—';
+    document.getElementById('gender-display').textContent = data.gender          || '—';
+
+    // Description
+    const desc = (p.patient_description || '').replace(/\{patientName\}/g, 'Alex');
+    document.getElementById('desc-display').textContent = desc || '—';
+
+    // Medications
+    const meds = (p.medication || []).map(m =>
+      `${m.medication_name} ${m.dose} (${m.route}, ${m.frequency})`
+    );
+    document.getElementById('med-display').innerHTML =
+      meds.length ? meds.map(s => `<div>• ${escapeHtml(s)}</div>`).join('') : '<span class="fst-italic">none</span>';
+
+    // Allergies
+    const allg = (p.allergies || []).map(a =>
+      `${a.substance_name} — ${a.reaction} [${a.severity}]`
+    );
+    document.getElementById('allergy-display').innerHTML =
+      allg.length ? allg.map(s => `<div>• ${escapeHtml(s)}</div>`).join('') : '<span class="fst-italic">none</span>';
+
+    // Tests
+    const tests = (p.medical_tests || []).map(t =>
+      `${t.test_name}: ${t.value_string}`
+    );
+    document.getElementById('tests-display').innerHTML =
+      tests.length ? tests.map(s => `<div>• ${escapeHtml(s)}</div>`).join('') : '<span class="fst-italic">none</span>';
+
+    // Family history
+    const rel = {FTH:'Father',MTH:'Mother',BRO:'Brother',SIS:'Sister',SON:'Son',DAU:'Daughter',GRFTH:'Grandfather',GRMTH:'Grandmother',UNCLE:'Uncle',AUNT:'Aunt',COUSN:'Cousin'};
+    const fam = (p.family_history || []).map(f =>
+      `${rel[f.relationship]||f.relationship}: ${f.condition_name} (${f.condition_icd})${f.onset_age ? ' @ age '+f.onset_age : ''}`
+    );
+    document.getElementById('family-display').innerHTML =
+      fam.length ? fam.map(s => `<div>• ${escapeHtml(s)}</div>`).join('') : '<span class="fst-italic">none</span>';
+
+    // Procedures
+    const procs = (p.procedures || []).map(pr => `${pr.procedure_name} (${pr.status})`);
+    const procEl = document.getElementById('proc-display');
+    document.getElementById('proc-label').style.display = procs.length ? '' : 'none';
+    procEl.innerHTML = procs.length ? procs.map(s => `<div>• ${escapeHtml(s)}</div>`).join('') : '';
+  }
+
+  function resetScenario() {
+    document.getElementById('scenario-editor').value = JSON.stringify(DEFAULT_SCENARIO, null, 2);
+    updateSidebar(DEFAULT_SCENARIO);
+  }
+
+  function appendMessage(msg) {
+    const box = document.getElementById('chat-box');
+    document.getElementById('empty-msg')?.remove();
+
+    const el = document.createElement('div');
+
+    if (msg.role === 'doctor' || msg.role === 'patient') {
+      const isDoctor = msg.role === 'doctor';
+      const align = isDoctor ? 'align-self-start' : 'align-self-end';
+      const cls   = isDoctor ? 'bubble-doctor'    : 'bubble-patient';
+      const icon  = isDoctor ? '🩺'               : '🧑‍⚕️';
+      const label = isDoctor ? 'Doctor'            : 'Patient';
+      const turnBadge = msg.is_final
+        ? '<span class="badge bg-warning text-dark badge-turn ms-1">Final</span>'
+        : `<span class="badge bg-light text-secondary badge-turn ms-1">Turn ${msg.turn}</span>`;
+
+      el.className = `bubble ${cls} ${align} rounded p-3 small`;
+
+      // Highlight FINAL DIAGNOSIS line
+      let text = escapeHtml(msg.text);
+      text = text.replace(/(FINAL DIAGNOSIS:[^\n]+)/g, '<strong class="text-danger">$1</strong>');
+
+      el.innerHTML = `<div class="fw-bold mb-1">${icon} ${label} ${turnBadge}</div>${text}`;
+
+    } else if (msg.role === 'result') {
+      el.className = 'bubble bubble-result align-self-center rounded p-3 small w-100 text-center';
+      const icon   = msg.correct === true ? '✅' : msg.correct === false ? '❌' : 'ℹ️';
+      const colour = msg.correct === true ? 'success' : msg.correct === false ? 'danger' : 'secondary';
+      el.innerHTML = `
+        <div class="fw-bold fs-6 mb-1">${icon} Correct diagnosis: <code>${msg.correct_icd}</code> — ${escapeHtml(msg.diagnosis_name)}</div>
+        ${msg.guessed_icd ? `<div>Doctor guessed: <code>${escapeHtml(msg.guessed_icd)}</code> — <span class="badge bg-${colour}">${msg.correct === true ? 'Correct' : msg.correct === false ? 'Wrong' : 'Partial'}</span></div>` : ''}
+      `;
+      showResultModal(msg);
+
+    } else if (msg.role === 'error') {
+      el.className = 'bubble bubble-error align-self-start rounded p-3 small';
+      el.textContent = '⚠️ Error: ' + msg.text;
+    }
+
+    box.appendChild(el);
+    box.scrollTop = box.scrollHeight;
+  }
+
+  function showResultModal(msg) {
+    const icon    = msg.correct === true ? '✅' : msg.correct === false ? '❌' : 'ℹ️';
+    const hdrCls  = msg.correct === true ? 'bg-success text-white' : msg.correct === false ? 'bg-danger text-white' : 'bg-secondary text-white';
+    const title   = msg.correct === true ? 'Correct Diagnosis!' : msg.correct === false ? 'Wrong Diagnosis' : 'Simulation Complete';
+    document.getElementById('modal-header').className = 'modal-header ' + hdrCls;
+    document.getElementById('modal-title').textContent = icon + ' ' + title;
+    document.getElementById('modal-body').innerHTML = `
+      <p class="mb-1">Correct answer: <strong><code>${msg.correct_icd}</code> — ${escapeHtml(msg.diagnosis_name)}</strong></p>
+      ${msg.guessed_icd ? `<p class="mb-0">Doctor guessed: <code>${escapeHtml(msg.guessed_icd)}</code></p>` : '<p class="mb-0 text-muted">No ICD code found in doctor\'s response.</p>'}
+    `;
+    new bootstrap.Modal(document.getElementById('resultModal')).show();
+  }
+
+  function setStatus(text, cls) {
+    const b = document.getElementById('status-badge');
+    b.textContent = text;
+    b.className = 'badge ' + cls;
+  }
+
+  function startSimulation() {
+    if (evtSource) { evtSource.close(); }
+
+    let data;
+    try {
+      data = JSON.parse(document.getElementById('scenario-editor').value);
+    } catch(e) {
+      alert('Invalid JSON: ' + e.message);
+      return;
+    }
+    updateSidebar(data);
+
+    // Clear chat
+    const box = document.getElementById('chat-box');
+    box.innerHTML = '<div class="text-center text-muted small py-3 spinner-dot" id="loading-msg">Connecting to agents…</div>';
+
+    document.getElementById('start-btn').disabled = true;
+    setStatus('Running…', 'bg-warning text-dark');
+
+    const url = '/simulate/?scenario=' + encodeURIComponent(JSON.stringify(data));
+    evtSource = new EventSource(url);
+
+    evtSource.onmessage = function(e) {
+      document.getElementById('loading-msg')?.remove();
+      if (e.data === '[DONE]') {
+        evtSource.close();
+        document.getElementById('start-btn').disabled = false;
+        setStatus('Done', 'bg-success');
+        return;
+      }
+      try {
+        const msg = JSON.parse(e.data);
+        appendMessage(msg);
+      } catch(_) {}
+    };
+
+    evtSource.onerror = function() {
+      evtSource.close();
+      document.getElementById('start-btn').disabled = false;
+      setStatus('Error', 'bg-danger');
+      appendMessage({role: 'error', text: 'Connection lost or server error.'});
+    };
+  }
+
+  function escapeHtml(str) {
+    return String(str)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+      .replace(/"/g,'&quot;').replace(/\n/g,'<br>');
+  }
+
+  // Init sidebar with default
+  updateSidebar(DEFAULT_SCENARIO);
+</script>
+</body>
+</html>

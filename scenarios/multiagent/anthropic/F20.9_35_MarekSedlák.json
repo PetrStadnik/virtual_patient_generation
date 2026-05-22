@@ -1,0 +1,671 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "35"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Sedlák",
+            "given": [
+              "Marek"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "F20.9",
+              "display": "Schizophrenia, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e7042f9a-af21-449a-8840-fe3aa7b4d9aa",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Metformin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A10BA02"
+            }
+          ],
+          "text": "Metformin 1000 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1000 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3dd96197-7bd5-4878-bcfb-bee479c62c50",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Atorvastatin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C10AA05"
+            }
+          ],
+          "text": "Atorvastatin 20 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "20 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3ed621bb-3ed2-4a10-bb5d-531d5546637d",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Omeprazole.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A02BC01"
+            }
+          ],
+          "text": "Omeprazole 20 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "20 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fc5f487a-ff1a-4ee9-b6c7-f94b47fd1bf7",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Psychiatric evaluation</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52331-6"
+            }
+          ],
+          "text": "Psychiatric evaluation"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T23:19:39Z",
+        "valueString": "Prominent auditory hallucinations, persecutory delusions, inappropriate affect, and disorganised thinking documented. Negative symptoms including emotional blunting and social withdrawal noted. Catatonic excitement and episodes of muteness observed during prior admission. Factitious psychosis excluded following longitudinal multidisciplinary assessment.",
+        "note": [
+          {
+            "text": "Prominent auditory hallucinations, persecutory delusions, inappropriate affect, and disorganised thinking documented. Negative symptoms including emotional blunting and social withdrawal noted. Catatonic excitement and episodes of muteness observed during prior admission. Factitious psychosis excluded following longitudinal multidisciplinary assessment."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:835e566a-668b-44ba-82fe-5ceec277d9c6",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Psychotic Symptom Rating Scales (PSYRATS) — Auditory Hallucination Subscale</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "75678-6"
+            }
+          ],
+          "text": "Psychotic Symptom Rating Scales (PSYRATS) — Auditory Hallucination Subscale"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T23:19:39Z",
+        "valueString": "Total auditory hallucination subscale score 32/44 — severe range; hallucinations present daily, perceived as external, with high distress and moderate controllability.",
+        "note": [
+          {
+            "text": "Total auditory hallucination subscale score 32/44 — severe range; hallucinations present daily, perceived as external, with high distress and moderate controllability."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:78555fc0-2637-4252-9fce-7b6da842cc29",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cognitive function assessment</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "70759-6"
+            }
+          ],
+          "text": "Cognitive function assessment"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T23:19:39Z",
+        "valueString": "Significant impairment in attention, working memory, and executive function consistent with cognitive dysfunction in schizophrenia.",
+        "note": [
+          {
+            "text": "Significant impairment in attention, working memory, and executive function consistent with cognitive dysfunction in schizophrenia."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:203c80f1-6e20-4396-b970-518c120b24ad",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Fasting glucose [Mass/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1558-6"
+            }
+          ],
+          "text": "Fasting glucose [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T23:19:39Z",
+        "valueQuantity": {
+          "value": 7.4,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "note": [
+          {
+            "text": "7.4 mmol/L (mildly elevated, consistent with poorly controlled type 2 diabetes)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:40905370-f599-465d-b6e6-3d5c3607b12c",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T23:19:39Z",
+        "valueQuantity": {
+          "value": 82.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "82 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0f5a2c9e-575f-42e5-8ff9-d79b1f954041",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Amoxicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CA04"
+            }
+          ],
+          "text": "Amoxicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Urticaria"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a4589d69-5e76-4fea-903a-f5ee47457ece",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Schizophrenia, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F20.9"
+                }
+              ],
+              "text": "Schizophrenia, unspecified"
+            },
+            "onsetAge": {
+              "value": 30,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e2ce8821-4b63-4e35-83b1-5f7cae59fc72",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Essential hypertension</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I10"
+                }
+              ],
+              "text": "Essential hypertension"
+            },
+            "onsetAge": {
+              "value": 55,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7aefe046-b0e9-4a18-9fa7-b5c90f5f90b3",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Inpatient psychiatric admission</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "183455007"
+            }
+          ],
+          "text": "Inpatient psychiatric admission"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2021",
+        "note": [
+          {
+            "text": "Second involuntary admission for acute psychotic decompensation with catatonic features including waxy flexibility, catatonic excitement, and episode of muteness (dissociative neurological symptom disorder with muteness). Suicidal threat documented. Factitious psychosis excluded after multidisciplinary review."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:24e5fba0-ee03-4754-bd7c-c3f2184b53dd",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Psychological assessment</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "405783006"
+            }
+          ],
+          "text": "Psychological assessment"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2021",
+        "note": [
+          {
+            "text": "Comprehensive neuropsychological testing confirming significant cognitive dysfunction in attention, memory, and executive function. PSYRATS auditory hallucination subscale completed — severe range score."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:083f8aeb-309d-43e1-a976-b2fdbd0fe209",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "not-done",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Electroconvulsive therapy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "23835007"
+            }
+          ],
+          "text": "Electroconvulsive therapy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2021",
+        "note": [
+          {
+            "text": "Discussed during second inpatient admission for catatonic schizophrenia presentation; ultimately not administered after multidisciplinary review."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:95345fbe-ad7f-42d6-b440-f22801ecfe65",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 35-year-old Czech male with a gaunt, dishevelled appearance, presenting to the outpatient psychiatric clinic in Prague. He is dressed in mismatched, unkempt clothing and makes only intermittent eye contact during the interview. His speech is occasionally disorganised, and he demonstrates a flat, inappropriate affect. He reports recurrently hearing frightening voices that comment on his behaviour and sometimes command him to act, and he holds firm beliefs that a secret government organisation is monitoring his apartment through hidden devices. He becomes visibly agitated when these topics are raised and has at times covered his ears and withdrawn to a corner of the room. During one recent episode, he was observed holding his head rigidly against a pillow for an extended period in what appeared to be a catatonic posture, and during a prior admission he entered a brief state of catatonic excitement with sudden, purposeless agitation and restlessness before becoming mute and unresponsive for several hours — consistent with dissociative neurological symptom disorder with muteness. On formal assessment using a structured auditory hallucination rating scale (psychotic symptom rating scale — PSYRATS), his hallucinations scored in the severe range. At times, {patientName} demonstrates behaviours that superficially appear to simulate or exaggerate his psychotic symptoms, which required careful exclusion of factitious psychosis before the primary diagnosis was consolidated.\n\n{patientName} lives alone in a small rented flat on the outskirts of Brno. He completed a vocational apprenticeship in plumbing in his early twenties but has been unable to maintain employment for the past six years due to his illness. He spends most of his time indoors, occasionally watching television or listening to the radio — activities he increasingly attributes to surveillance. His social network has shrunk dramatically; he maintains sporadic contact with his mother and an older brother, who reports that {patientName} rarely leaves the apartment and has refused treatment for extended periods.\n\n{patientName} has notable cognitive difficulties including trouble organising thoughts and making everyday decisions. His insight into his illness is limited, though he has recently accepted follow-up at the community mental health centre, possibly prompted by his mother's insistence. He smokes approximately 20 cigarettes per day and occasionally drinks beer, but denies illicit drug use. He also reports intermittent episodes of loose stools and diarrhoea, which he attributes to his Metformin, a known gastrointestinal side effect of the medication he takes for type 2 diabetes — the diabetes itself being a direct consequence of long-term antipsychotic treatment he received earlier in the course of his illness."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:43cf48a7-18da-4433-9d91-59913ceb8203",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} first presented with psychotic symptoms at the age of 27, manifesting as persecutory delusions and auditory hallucinations. He has had two involuntary inpatient psychiatric admissions — the most recent in 2021 — triggered by acute psychotic decompensation and a brief suicidal threat. During his second admission, catatonic features including waxy flexibility and an episode of catatonic excitement (with sudden purposeless motor agitation) were noted, followed by a period of muteness consistent with dissociative neurological symptom disorder with muteness. Factitious psychosis was formally excluded by the multidisciplinary team following careful longitudinal observation. A psychological assessment was completed at that time, confirming significant cognitive dysfunction. Formal PSYRATS (Psychotic Symptom Rating Scales) auditory hallucination subscale scoring at that admission placed him in the severe range. Electroconvulsive therapy was discussed with the treatment team but not ultimately administered.\n\n{patientName} has comorbid type 2 diabetes mellitus (diagnosed at age 32, directly attributable to metabolic side-effects of prior long-term antipsychotic treatment, particularly weight gain and insulin resistance induced by prior atypical antipsychotics), currently managed with Metformin. A known side effect of Metformin — gastrointestinal upset including diarrhoea — has been reported by {patientName} intermittently. He also has dyslipidaemia, likewise linked to prior antipsychotic use, managed with Atorvastatin. He has a history of gastric discomfort and mild peptic symptoms for which he takes Omeprazole. He has a known allergy to Amoxicillin (urticaria). He is a heavy smoker (20 cigarettes/day) and consumes alcohol occasionally. He denies illicit substance use. Family history is notable for schizophrenia in his father and hypertension in his mother."
+          }
+        ]
+      }
+    }
+  ]
+}

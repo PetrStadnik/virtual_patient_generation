@@ -1,0 +1,612 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "4"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Vítek",
+            "given": [
+              "Oldřich"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "J20.9",
+              "display": "Acute bronchitis, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0f605c76-383c-4f12-b73c-97b8c02ff569",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Acetaminophen.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N02BE01"
+            }
+          ],
+          "text": "Acetaminophen 160 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "160 mg oral every 6 hours as needed for fever or discomfort"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d9f763f4-34ce-4e30-9d3e-1102f5659853",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Sodium chloride nasal drops.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": ""
+            }
+          ],
+          "text": "Sodium chloride nasal drops 2 drops each nostril"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "2 drops each nostril topical 3 times daily as needed for nasal congestion"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:790c1b85-afe3-468d-b4d8-67770d6730ad",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body temperature</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T15:54:43Z",
+        "valueQuantity": {
+          "value": 37.8,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        },
+        "note": [
+          {
+            "text": "37.8 °C, low-grade fever"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:155b6708-a642-4320-b7f9-2ec56013425d",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Respiratory rate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T15:54:43Z",
+        "valueQuantity": {
+          "value": 28.0,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "note": [
+          {
+            "text": "28 breaths/min, mildly elevated for age"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8b0fcdb0-d340-4820-9d8d-53f012aa41d5",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Heart rate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T15:54:43Z",
+        "valueQuantity": {
+          "value": 108.0,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "note": [
+          {
+            "text": "108 beats/min"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:dfe4b5d5-a55a-4574-a378-a8aed2501cd0",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Oxygen saturation in Arterial blood by Pulse oximetry</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "2708-6"
+            }
+          ],
+          "text": "Oxygen saturation in Arterial blood by Pulse oximetry"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T15:54:43Z",
+        "valueQuantity": {
+          "value": 97.0,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "note": [
+          {
+            "text": "SpO2 97% on room air"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ee11959a-ad25-4405-abe1-9128a7bbb744",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">SARS-CoV-2 and Influenza A+B RNA panel</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "95409-9"
+            }
+          ],
+          "text": "SARS-CoV-2 and Influenza A+B RNA panel"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T15:54:43Z",
+        "valueString": "Negative for SARS-CoV-2, influenza A, and influenza B",
+        "note": [
+          {
+            "text": "Negative for SARS-CoV-2, influenza A, and influenza B"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2b5461c7-5983-4c52-9e6c-7b062c455ed0",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Amoxicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "unable-to-assess",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CA04"
+            }
+          ],
+          "text": "Amoxicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Maculopapular rash"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:17853419-6953-4759-9cf8-8bf2988f5d41",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Nicotine dependence</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F17.2"
+                }
+              ],
+              "text": "Nicotine dependence"
+            },
+            "onsetAge": {
+              "value": 19,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:12f042df-0795-4a40-ba05-9e7fe17920f7",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Allergic rhinitis</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "J30.4"
+                }
+              ],
+              "text": "Allergic rhinitis"
+            },
+            "onsetAge": {
+              "value": 12,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c67cd061-7e60-4148-a582-4b4f3b3d239d",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sister: Asthma, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "SIS",
+              "display": "Sister"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "J45.9"
+                }
+              ],
+              "text": "Asthma, unspecified"
+            },
+            "onsetAge": {
+              "value": 5,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b4837678-00e4-464c-8c47-bda8d1ec6d99",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 4-year-old boy who appears tired but alert, sitting close to his mother and clutching a small stuffed dinosaur. He has had several days of frequent coughing, worse at night and early in the morning, and his parents report that the cough started after a runny nose and low-grade fever. On examination he looks mildly uncomfortable with intermittent coughing fits, flushed cheeks, and audible coarse breath sounds after coughing, but he remains interactive and consolable. His appetite is somewhat reduced, though he continues to drink fluids and has normal urine output.\n\nHe is of average height and weight for age and attends preschool four days a week, where several classmates recently had colds. He enjoys toy cars, picture books, and playing in the backyard with his older sister. He lives with both parents and a 7-year-old sibling in a suburban apartment, and the family has a cat. His father smokes cigarettes but usually does so outside; however, there is occasional secondhand smoke exposure through clothing and at the doorway, which may worsen respiratory irritation.\n\nAt home, {patientName} is usually energetic and sociable, with no baseline exercise intolerance. During this illness he has been sleeping poorly because of nocturnal cough and has become more clingy than usual. His parents deny cyanosis, apnea, or severe breathing difficulty, but they have noticed rapid breathing during coughing spells. They have been using humidified air, honey in warm water under supervision, and nasal saline to help his symptoms.\n\nThe family is attentive and reliable with follow-up and brought him for evaluation because the cough has persisted and sounds deeper than with his usual colds. His mother describes that he has had occasional viral upper respiratory infections since starting preschool, but this episode is notable for a harsher cough and mild wheezing after activity. He has good support from nearby grandparents, and there are no social concerns regarding access to food, housing, or routine medical care."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9fa77d7f-454e-45dd-a03d-59f0e146e8de",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} was born at term without neonatal complications and has met normal developmental milestones. Immunizations are up to date for age, including routine childhood vaccines, though he did not receive the current season's influenza vaccine. He has no history of asthma, chronic lung disease, congenital heart disease, or prior pneumonia. His past illnesses have been limited to uncomplicated viral upper respiratory infections and one episode of otitis media treated successfully in early toddlerhood.\n\nHe has never been hospitalized and has not required emergency care for breathing problems. There is no history of recurrent wheezing, eczema, or food-triggered reactions, making chronic atopic disease less likely, although mild environmental sensitivity is possible. He takes no daily prescription medications. Parents have given occasional acetaminophen for fever and discomfort during this illness.\n\nLifestyle factors relevant to the current episode include preschool attendance with frequent viral exposure and intermittent secondhand smoke exposure from a parent who smokes outside. He eats a typical mixed diet for age, drinks milk and water regularly, and is generally active. There is no travel history, no known tuberculosis exposure, and no recent choking event or aspiration concern."
+          }
+        ]
+      }
+    }
+  ]
+}

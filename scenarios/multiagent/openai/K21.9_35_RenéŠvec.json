@@ -1,0 +1,619 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "35"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Švec",
+            "given": [
+              "René"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "K21.9",
+              "display": "Gastro-oesophageal reflux disease without oesophagitis"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3e5f4b51-fde0-43f9-8040-9a21c88dbdf0",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Cetirizine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R06AE07"
+            }
+          ],
+          "text": "Cetirizine 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral once daily as needed during allergy season"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8702c012-593e-4316-ac36-9d532783e974",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Ibuprofen.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "M01AE01"
+            }
+          ],
+          "text": "Ibuprofen 200-400 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "200-400 mg oral every 8 hours as needed for headache or muscle soreness"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3732dde1-50ef-466a-9432-b96a20d7a8f9",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T21:49:07Z",
+        "valueQuantity": {
+          "value": 86.4,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "86.4 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1f84a115-9ea3-437c-a1b8-79e6e5396978",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body mass index (BMI)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "39156-5"
+            }
+          ],
+          "text": "Body mass index (BMI)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T21:49:07Z",
+        "valueQuantity": {
+          "value": 27.3,
+          "unit": "kg/m2",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg/m2"
+        },
+        "note": [
+          {
+            "text": "BMI 27.3 kg/m²"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5bda8813-39e3-4a35-845a-65fceb8a03a0",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Upper gastrointestinal endoscopy</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "30725-7"
+            }
+          ],
+          "text": "Upper gastrointestinal endoscopy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T21:49:07Z",
+        "valueString": "Normal-appearing oesophageal mucosa without erosions or ulceration; no endoscopic evidence of oesophagitis.",
+        "note": [
+          {
+            "text": "Normal-appearing oesophageal mucosa without erosions or ulceration; no endoscopic evidence of oesophagitis."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:88714637-8876-4842-8dc0-7df49f46f6ae",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Esophageal pH monitoring</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "17780-8"
+            }
+          ],
+          "text": "Esophageal pH monitoring"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T21:49:07Z",
+        "valueString": "Abnormal distal oesophageal acid exposure consistent with gastro-oesophageal reflux.",
+        "note": [
+          {
+            "text": "Abnormal distal oesophageal acid exposure consistent with gastro-oesophageal reflux."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ef9ee151-379c-4da3-839f-c68a02d70980",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Pollen.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "environment"
+        ],
+        "criticality": "low",
+        "code": {
+          "text": "Pollen"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Sneezing and itchy eyes"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ee98ddc9-bfe6-47a6-84a1-f82c70b30f66",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Gastro-oesophageal reflux disease without oesophagitis</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "K21.9"
+                }
+              ],
+              "text": "Gastro-oesophageal reflux disease without oesophagitis"
+            },
+            "onsetAge": {
+              "value": 48,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2b5dcd52-371a-45f0-a00f-ec078bf79ece",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Essential hypertension</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I10"
+                }
+              ],
+              "text": "Essential hypertension"
+            },
+            "onsetAge": {
+              "value": 52,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:71fb9fe8-0cbc-43ba-acf5-1360d3a0f181",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Type 2 diabetes mellitus</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "E11"
+                }
+              ],
+              "text": "Type 2 diabetes mellitus"
+            },
+            "onsetAge": {
+              "value": 58,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9c690269-acc0-407c-bc5e-10ac5a53fcd6",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandfather: Atherosclerotic heart disease</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRFTH",
+              "display": "Grandfather"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I25.1"
+                }
+              ],
+              "text": "Atherosclerotic heart disease"
+            },
+            "onsetAge": {
+              "value": 67,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0f9ac033-569c-4871-b783-1a822b22df66",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Dental extraction of impacted wisdom tooth</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "234697006"
+            }
+          ],
+          "text": "Dental extraction of impacted wisdom tooth"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2012",
+        "note": [
+          {
+            "text": "Outpatient extraction without complications."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:aaf01473-8419-4eb3-86fb-6019189b762e",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 35-year-old man of average build who appears tired but otherwise well, often shifting in his chair and occasionally clearing his throat during conversation. He describes a burning sensation rising from the upper abdomen into the chest, sometimes felt as a central to left precordial burning discomfort, especially after late meals, coffee, spicy takeout, and when lying flat at night. He sometimes wakes with a sour taste in his mouth and notices intermittent hoarseness in the mornings, along with an irritating dry cough that is worse overnight and on waking.\n\nHe is neatly dressed in business-casual clothing and works full-time in IT project management, a mostly sedentary job with long hours at a desk and frequent deadline-related stress. He lives with his partner and a young dog in an urban apartment and maintains an active social life centered around dining out, weekend football with friends, and streaming films late into the evening. His diet is irregular during workweeks, with skipped breakfasts, larger evening meals, frequent coffee, and occasional energy drinks. He drinks alcohol socially, usually 1-2 beers on several weekends per month, and denies illicit drug use. He does not smoke cigarettes, though he occasionally used nicotine vapes socially in the past.\n\nDespite recurring symptoms over the past year, {patientName} has tried to manage things on his own with over-the-counter antacids, avoiding only the foods that clearly trigger symptoms. He has no dramatic weight loss or signs of severe systemic illness, but the persistent discomfort has begun to affect his sleep quality and concentration at work. He worries that the chest burning could represent something serious, though he notes it is clearly worse after meals and when bending over.\n\nIn his personal life, {patientName} is independent, sociable, and generally functional, though he admits recent frustration from disrupted sleep and needing to prop himself up with extra pillows. He remains physically capable and still plays recreational sport, but he has cut back on late-night snacks and intense evening exercise because these tend to worsen his symptoms. He stays close with his parents and one sister, and family meals are an important part of his routine, even though rich foods often aggravate his reflux. He also recalls that, according to his mother, he had troublesome reflux and frequent spit-up as an infant that resolved in early childhood."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:44d2ffd1-cf63-4128-bfa2-8838f3fe0cc2",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} reports intermittent heartburn and acid regurgitation for approximately 12 months, with symptoms increasing in frequency over the past 3-4 months. He notices clear triggers including large evening meals, tomato-based foods, spicy dishes, coffee, carbonated beverages, and lying down within an hour or two of eating. He also describes a non-exertional burning discomfort in the precordial chest after meals and when bending forward, as well as an intermittent dry cough and throat irritation, especially at night and on waking. Over-the-counter calcium carbonate provides temporary relief. He denies dysphagia, hematemesis, melena, persistent vomiting, or unintentional weight loss.\n\nHis past medical history is notable for seasonal allergic rhinitis, occasional tension-type headaches, and overweight status with central adiposity, all in the setting of a largely sedentary routine. He also reports recurrent nasal congestion that sometimes leads to mouth breathing at night. As an infant, he reportedly had neonatal gastroesophageal reflux with frequent spit-up that resolved without surgery or long-term treatment. He has never been hospitalized for gastrointestinal disease and has no known history of peptic ulcer disease, liver disease, or inflammatory bowel disease. Sleep has become fragmented because of nocturnal reflux symptoms, especially after late dinners.\n\n{patientName} takes cetirizine as needed during allergy season and uses ibuprofen only occasionally for headaches or minor sports-related muscle soreness. He has no regular prescription medications directed at gastrointestinal symptoms. He has not undergone prior upper endoscopy before the current evaluation. He drinks coffee daily, usually 2-3 cups, and alcohol socially in modest amounts. He denies current tobacco smoking and reports no recreational drug use.\n\nThere is no history suggesting serious cardiopulmonary disease, and his chest discomfort is non-exertional and meal-related. He has not had prior abdominal surgery. Lifestyle factors contributing to his current presentation include irregular meal timing, frequent late dinners, stress-related eating, overweight body habitus, and recumbency soon after meals while working or watching television. His father has a history of chronic reflux symptoms treated with acid-suppressing medication, suggesting a family history of reflux disease."
+          }
+        ]
+      }
+    }
+  ]
+}

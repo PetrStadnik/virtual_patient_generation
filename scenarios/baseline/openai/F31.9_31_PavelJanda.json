@@ -1,0 +1,669 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "31"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Janda",
+            "given": [
+              "Pavel"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "F31.9",
+              "display": "Bipolar affective disorder, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e67e37dc-ba77-4009-bf39-a2caccf37676",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Albuterol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R03AC02"
+            }
+          ],
+          "text": "Albuterol 100 ug"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "100 ug inhaled 1-2 puffs every 6 hours as needed"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c2da3b4b-7a45-48b5-a9a5-871bf40c2905",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Cetirizine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R06AE07"
+            }
+          ],
+          "text": "Cetirizine 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral once daily during allergy season"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a64182bb-eec5-457c-883b-a8fb20ae876d",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mood disorder assessment panel interview</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "69737-5"
+            }
+          ],
+          "text": "Mood disorder assessment panel interview"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:44:15Z",
+        "valueString": "Clinical assessment supports episodic mood elevation and depression consistent with bipolar spectrum disorder; subtype remains unspecified pending longitudinal follow-up.",
+        "note": [
+          {
+            "text": "Clinical assessment supports episodic mood elevation and depression consistent with bipolar spectrum disorder; subtype remains unspecified pending longitudinal follow-up."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:08358a8f-57ee-4f4c-b229-2d48d37582f3",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Thyroid stimulating hormone (TSH) [Units/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3016-3"
+            }
+          ],
+          "text": "Thyroid stimulating hormone (TSH) [Units/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:44:15Z",
+        "valueString": "2.1 mIU/L (within normal limits)",
+        "note": [
+          {
+            "text": "2.1 mIU/L (within normal limits)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bc3be9f5-8606-4547-8e31-44e408925176",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Comprehensive metabolic panel</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24323-8"
+            }
+          ],
+          "text": "Comprehensive metabolic panel"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:44:15Z",
+        "valueString": "Electrolytes, renal function, and liver enzymes within normal limits",
+        "note": [
+          {
+            "text": "Electrolytes, renal function, and liver enzymes within normal limits"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1b926b14-9978-47a1-8ecc-6156dd730191",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Drugs of abuse screen panel - Urine</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11479-7"
+            }
+          ],
+          "text": "Drugs of abuse screen panel - Urine"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:44:15Z",
+        "valueString": "Negative for amphetamines, cocaine, opioids, and benzodiazepines; cannabinoids intermittently detected by history",
+        "note": [
+          {
+            "text": "Negative for amphetamines, cocaine, opioids, and benzodiazepines; cannabinoids intermittently detected by history"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:43e66acc-8aeb-4989-8436-454e9f66ee96",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:44:15Z",
+        "valueQuantity": {
+          "value": 82.4,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "82.4 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7427c788-d6c7-4f02-b2bc-de41a1e25354",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Cat dander.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "environment"
+        ],
+        "criticality": "low",
+        "code": {
+          "text": "Cat dander"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Sneezing and itchy eyes"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:51a707bd-5308-4c70-b4f5-05eaa9ad5f06",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Amoxicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "unable-to-assess",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CA04"
+            }
+          ],
+          "text": "Amoxicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Maculopapular rash"
+              }
+            ],
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c4fd52f4-5530-4c30-98e9-0a568ce1444d",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Depressive episode</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F32"
+                }
+              ],
+              "text": "Depressive episode"
+            },
+            "onsetAge": {
+              "value": 40,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:07cf6119-6ead-4f28-86ef-3042b5118bac",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Uncle: Bipolar affective disorder</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "UNCLE",
+              "display": "Uncle"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F31"
+                }
+              ],
+              "text": "Bipolar affective disorder"
+            },
+            "onsetAge": {
+              "value": 28,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cdd973e9-b8b4-4e86-9827-2be4733cb907",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Essential hypertension</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I10"
+                }
+              ],
+              "text": "Essential hypertension"
+            },
+            "onsetAge": {
+              "value": 52,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:17d35b6f-0d1d-4ab6-9bf0-b002525ad652",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Psychiatric emergency evaluation</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "185349003"
+            }
+          ],
+          "text": "Psychiatric emergency evaluation"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2022",
+        "note": [
+          {
+            "text": "Evaluated after several days of insomnia, agitation, and mood elevation; discharged with outpatient follow-up recommendations."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f4b090ee-c45a-44ff-bc1e-1b5c64afa3ee",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 31-year-old man who arrives to clinic looking slightly disheveled but physically well nourished, with restless hand movements and fluctuating eye contact. His speech can vary from rapid and expansive during more energized periods to slowed and sparse when his mood drops. He reports weeks of reduced need for sleep, increased goal-directed activity, impulsive spending, and irritability alternating with stretches of low mood, fatigue, poor concentration, and social withdrawal. He denies any current intoxication and says the mood shifts have begun to interfere with work and relationships.\n\nHe works as a freelance graphic designer, a job he usually enjoys because of its flexibility and creative demands, but his productivity has become inconsistent. During high-energy phases he takes on too many projects, works through the night, and sends impulsive emails to clients; during depressive periods he misses deadlines and avoids calls. Outside work, he likes cycling, video games, live music, and sketching, though he often abandons hobbies when his mood becomes unstable. His daily routine is irregular, with erratic sleep and meal timing.\n\n{patientName} lives alone in an apartment in the city and stays in intermittent contact with his parents and younger sister. Friends describe him as talented and charismatic but increasingly unpredictable over the past few years. He has had arguments with close friends related to irritability, oversharing, and risky decisions during elevated moods. He is currently single after a recent breakup that followed a period of emotional volatility and poor sleep.\n\nHe drinks alcohol socially on weekends and occasionally uses cannabis, especially when trying to calm down or sleep, though he acknowledges it sometimes worsens his motivation and concentration. He does not smoke cigarettes regularly. He is concerned because his symptoms feel cyclical and no longer seem explainable by stress alone. He presents as help-seeking, somewhat ambivalent about treatment, but worried about losing control over his mood and functioning."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7b06c43d-617e-4a1e-9507-cfd9beb0b2d3",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} reports intermittent mood instability since his mid-20s, with episodes of feeling unusually energized, sleeping as little as 3 to 4 hours nightly without fatigue, talking more than usual, making impulsive purchases, and becoming unusually confident and irritable. He also describes recurrent periods lasting days to weeks of depressed mood, low motivation, oversleeping, and difficulty maintaining work responsibilities. He has never had a clearly documented formal subtype diagnosis, which is why his chart currently lists bipolar affective disorder, unspecified.\n\nHis past medical history includes mild intermittent asthma and seasonal allergic rhinitis. He has no known seizure disorder, thyroid disease, or major cardiovascular illness. He was evaluated in an emergency department once 2 years ago after several nights without sleep and escalating agitation, but he was not admitted. There is no history of major self-harm requiring surgery or ICU care, though he admits to past passive suicidal thoughts during depressive phases without current intent or plan.\n\nLifestyle factors include irregular sleep, high caffeine intake during intense work periods, episodic binge drinking on weekends, and occasional cannabis use. He has no regular primary care follow-up and has struggled with medication adherence in the past because he felt better during elevated phases and disliked side effects such as sedation and weight gain. He has never been married and has no children. Psychosocial stressors over the last year include unstable freelance income, a recent breakup, and conflict with friends related to erratic behavior."
+          }
+        ]
+      }
+    }
+  ]
+}

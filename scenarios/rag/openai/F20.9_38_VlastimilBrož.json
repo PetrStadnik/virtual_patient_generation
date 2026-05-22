@@ -1,0 +1,371 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "38"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Brož",
+            "given": [
+              "Vlastimil"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "F20.9",
+              "display": "Schizophrenia, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d96cb3c0-92ad-4a88-a27b-71edde3e5277",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for olanzapine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N05AH03"
+            }
+          ],
+          "text": "olanzapine 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5744e8f6-f8f9-448d-9189-466e9c87bc7f",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for risperidone.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N05AX08"
+            }
+          ],
+          "text": "risperidone 2 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "2 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d2db039a-9322-4226-8010-e64e9c26b843",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52416-5"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:15:10Z",
+        "valueQuantity": {
+          "value": 81.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "81 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:65ff15da-9aad-4f49-bb93-d4bfb3b7fb9b",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Blood pressure</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58295-7"
+            }
+          ],
+          "text": "Blood pressure"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:15:10Z",
+        "valueQuantity": {
+          "value": 128.0,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        },
+        "note": [
+          {
+            "text": "128/82 mmHg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e3698b7f-072a-4e4e-838e-dace7d7d9c00",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Glucose [Mass/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2345-7"
+            }
+          ],
+          "text": "Glucose [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:15:10Z",
+        "valueString": "5.4 mmol/L (fasting serum glucose)",
+        "note": [
+          {
+            "text": "5.4 mmol/L (fasting serum glucose)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d7ae9ef1-de0f-48e8-90ee-733b309509ea",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Triglyceride [Mass/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2571-8"
+            }
+          ],
+          "text": "Triglyceride [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:15:10Z",
+        "valueString": "1.4 mmol/L",
+        "note": [
+          {
+            "text": "1.4 mmol/L"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:382fcc6d-4358-4a4e-a686-27819f413e9b",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 38-year-old man in the Czech Republic who appears guarded and distracted during interview, with limited emotional expression and periods of inappropriate affect [MEDLINEPLUS:F20.9, SNOMED:F20.9]. He reports hearing voices that others do not hear and says they sometimes become frightening enough that he covers his ears and tries to isolate himself [MEDLINEPLUS:F20.9, MEDDIALOG:F20.9:3]. He also describes fixed beliefs that other people are trying to hurt or control him, including fear that hidden devices are monitoring him [MEDLINEPLUS:F20.9, MEDDIALOG:F20.9:7]. At times his speech becomes hard to follow, with disorganized thought content and odd phrases that do not make sense [MEDLINEPLUS:F20.9, SNOMED:F20.9, MEDDIALOG:F20.9:7].\n\nOver the last several years, {patientName} has become increasingly withdrawn and antisocial, spending much of the day alone at home and struggling to maintain regular work [MEDLINEPLUS:F20.9, MEDDIALOG:F20.9:7]. Friends have largely drifted away because he mistrusts other people and avoids social contact [MEDLINEPLUS:F20.9, MEDDIALOG:F20.9:7]. His daily routine is inconsistent; he often has difficulty organizing tasks, making decisions, and managing basic responsibilities without prompting [MEDLINEPLUS:F20.9].\n\nHe lives with family members who remain involved in his care, but relationships are strained by his suspicion that relatives may wish to harm him [MEDDIALOG:F20.9:7]. Family members describe episodes of chanting in nonsensical language and writing strange notes, which fit with disorganized thought and language disturbance [MEDDIALOG:F20.9:7, SNOMED:F20.9]. He has few current hobbies beyond sitting alone in his room, occasionally listening to music, and taking short walks when persuaded by his family; these lifestyle details are clinically plausible defaults."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0ea51c10-5f10-4408-a2d4-572e28d113d7",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName}'s psychotic symptoms began in early adulthood and have been present for about 6 years, which is compatible with the usual age range for onset of schizophrenia [MEDDIALOG:F20.9:7, MEDLINEPLUS:F20.9]. Early symptoms included believing that people were after him, and over time he developed stronger persecutory ideas, social withdrawal, and inability to sustain employment [MEDDIALOG:F20.9:7, MEDLINEPLUS:F20.9]. He has had prior psychiatric hospitalizations for suicidal threat and attempt [MEDDIALOG:F20.9:7].\n\nFamily reports that {patientName} has at times refused therapy or medication despite persistent symptoms [MEDDIALOG:F20.9:7]. He has no clearly documented chronic nonpsychiatric medical illness in the provided evidence [MEDDIALOG:F20.9:7]. Current treatment is modeled as outpatient antipsychotic management, since medicine can help control many symptoms and patients may need trials of different medicines to find the best response [MEDLINEPLUS:F20.9]. He denies alcohol or illicit substance misuse; this is a clinically plausible default because the evidence is silent on substance use."
+          }
+        ]
+      }
+    }
+  ]
+}

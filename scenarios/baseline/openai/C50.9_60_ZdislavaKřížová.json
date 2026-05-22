@@ -1,0 +1,722 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "60"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Křížová",
+            "given": [
+              "Zdislava"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C50.9",
+              "display": "Malignant neoplasm: Breast, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:55ebe2be-acde-4201-9ca1-a8d1b837a667",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Lisinopril.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C09AA03"
+            }
+          ],
+          "text": "Lisinopril 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:92d8409c-fd88-4dae-876c-7d6c3afed646",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Levothyroxine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "H03AA01"
+            }
+          ],
+          "text": "Levothyroxine 75 ug"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "75 ug oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:83c94fd8-e0ef-48fb-8b91-e1c34213a3a9",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Melatonin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N05CH01"
+            }
+          ],
+          "text": "Melatonin 3 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "3 mg oral at bedtime as needed"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7450fc41-aaf5-4da3-8690-33a653855ca2",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mammography diagnostic bilateral</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24606-6"
+            }
+          ],
+          "text": "Mammography diagnostic bilateral"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:50:29Z",
+        "valueString": "Irregular spiculated mass identified in the breast, BI-RADS 5, highly suggestive of malignancy.",
+        "note": [
+          {
+            "text": "Irregular spiculated mass identified in the breast, BI-RADS 5, highly suggestive of malignancy."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8a9fa2d6-b0d3-4e33-93d2-e3aca5bc8951",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Breast ultrasound</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "46350-8"
+            }
+          ],
+          "text": "Breast ultrasound"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:50:29Z",
+        "valueString": "Hypoechoic irregular solid lesion with posterior shadowing corresponding to palpable abnormality; suspicious axillary lymph node noted.",
+        "note": [
+          {
+            "text": "Hypoechoic irregular solid lesion with posterior shadowing corresponding to palpable abnormality; suspicious axillary lymph node noted."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:afdd27fd-63b9-419e-b21a-9557126615c8",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Breast biopsy pathology report</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "60568-3"
+            }
+          ],
+          "text": "Breast biopsy pathology report"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:50:29Z",
+        "valueString": "Core needle biopsy positive for invasive carcinoma of the breast.",
+        "note": [
+          {
+            "text": "Core needle biopsy positive for invasive carcinoma of the breast."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:121da779-09d5-408f-8930-83eeef7599fc",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Estrogen receptor [Presence] in Breast cancer specimen by Immune stain</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "85337-4"
+            }
+          ],
+          "text": "Estrogen receptor [Presence] in Breast cancer specimen by Immune stain"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:50:29Z",
+        "valueString": "Estrogen receptor positive.",
+        "note": [
+          {
+            "text": "Estrogen receptor positive."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cc2c5327-3bed-44b3-9361-da785a0e5b6a",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">HER2 [Presence] in Breast cancer specimen by Immune stain</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "85319-2"
+            }
+          ],
+          "text": "HER2 [Presence] in Breast cancer specimen by Immune stain"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:50:29Z",
+        "valueString": "HER2 negative.",
+        "note": [
+          {
+            "text": "HER2 negative."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:962f7349-e73e-4b95-be65-e6951200be1a",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Amoxicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CA04"
+            }
+          ],
+          "text": "Amoxicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Maculopapular rash"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1d76067a-c334-4850-ba8a-920e0daa2792",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Cat dander.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "environment"
+        ],
+        "criticality": "low",
+        "code": {
+          "text": "Cat dander"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Sneezing and itchy eyes"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ea0626af-acf1-486c-834d-3bf89914a3a2",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Breast cancer</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "C50.9"
+                }
+              ],
+              "text": "Breast cancer"
+            },
+            "onsetAge": {
+              "value": 68,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b38c5914-db4c-440e-bf44-ddd5bcc5e6a0",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Atherosclerotic heart disease</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I25.1"
+                }
+              ],
+              "text": "Atherosclerotic heart disease"
+            },
+            "onsetAge": {
+              "value": 72,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bb9c0cec-deda-416f-9503-527e25d2976d",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Aunt: Malignant neoplasm of ovary</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "AUNT",
+              "display": "Aunt"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "C56.9"
+                }
+              ],
+              "text": "Malignant neoplasm of ovary"
+            },
+            "onsetAge": {
+              "value": 63,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:583d6ec9-f55d-4464-adf2-97e0e1118a43",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Core needle biopsy of breast</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "122548005"
+            }
+          ],
+          "text": "Core needle biopsy of breast"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2026",
+        "note": [
+          {
+            "text": "Image-guided core biopsy performed after diagnostic imaging identified a suspicious breast mass."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:51eb71af-d492-408a-893f-668643978645",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Screening colonoscopy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "73761001"
+            }
+          ],
+          "text": "Screening colonoscopy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2018",
+        "note": [
+          {
+            "text": "Routine screening colonoscopy with no major reported abnormalities."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2a97e233-5d61-4293-8703-7620fd16375d",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 60-year-old woman who appears slightly fatigued but well groomed, with a careful, practical style of dress and an attentive manner during conversation. Over the past several months she has noticed a firm, painless lump in her breast along with intermittent breast heaviness and mild discomfort, which she initially attributed to aging and minor strain. She reports increasing anxiety since the mass became more noticeable and admits to occasionally checking it several times a day. On examination, she has no acute distress, but her posture is somewhat guarded and she becomes visibly tense when discussing the possibility of cancer.\n\nShe lives with her husband in a suburban home and works part-time as a bookkeeper for a local construction company after many years of full-time office work. Her lifestyle is mostly sedentary, though she takes short evening walks with a neighbor when weather permits. She enjoys gardening, cooking for family gatherings, and caring for two grandchildren on weekends. Sleep has been poor recently because of worry, and her appetite has decreased slightly over the last few weeks.\n\n{patientName} has two adult children who live nearby and a close circle of friends from church, though she has shared her current health concerns with only a few people. She drinks wine socially, usually 1 to 2 glasses on weekends, and quit smoking in her late 30s after a 10 pack-year history. She is independent in daily activities and usually describes herself as reliable and active within her family role, but the current illness has made her feel uncertain and emotionally overwhelmed.\n\nShe went through menopause at age 52 and has become more attentive to health maintenance in recent years, attending routine primary care visits but not always scheduling recommended screening promptly. She denies major weight loss but notes her bras have felt tighter on one side and she recently noticed subtle skin dimpling. She presents as thoughtful and cooperative, asking detailed questions and wanting clear explanations about test results and next steps."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:630333bf-ba46-4573-af64-e0a0d5ef238e",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has a history of essential hypertension and primary hypothyroidism, both generally well controlled in the outpatient setting. She has no prior history of malignancy and no previous breast surgery. She reports intermittent insomnia over the past year, worsened recently by stress. Obstetric history includes two full-term pregnancies, with first childbirth at age 31. She breastfed both children for several months. Menarche occurred at age 12 and menopause at age 52. She used combined oral contraceptives in early adulthood but has not used postmenopausal hormone replacement therapy.\n\nShe was hospitalized once in her 40s for community-acquired pneumonia, recovered fully, and otherwise has had routine medical care. Screening mammography had been performed irregularly; her last mammogram was several years ago. She is a former smoker with an estimated 10 pack-year history and quit more than 20 years ago. Alcohol intake is low to moderate. She denies illicit drug use. Her diet is mixed, with frequent home-cooked meals but limited structured exercise. Recent psychosocial stress has centered on fear of cancer diagnosis and concerns about how treatment might affect her role in caring for family.\n\nThere is no known personal history of BRCA testing. She reports no chest pain, chronic cough, or neurologic deficits, but does endorse mild localized breast discomfort and recent awareness of a persistent lump. She has not had prior chemotherapy or radiation. Functional status remains good, and she manages her own medications, finances, and transportation without assistance."
+          }
+        ]
+      }
+    }
+  ]
+}

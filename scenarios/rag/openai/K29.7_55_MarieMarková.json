@@ -1,0 +1,403 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "55"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Marková",
+            "given": [
+              "Marie"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "K29.7",
+              "display": "Gastritis, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:64fc0c51-c1dd-440f-a5cc-58ad1b8f51c0",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for omeprazole.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A02BC01"
+            }
+          ],
+          "text": "omeprazole 20 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "20 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:747b3e3e-3875-4a4d-b58a-eae5c2159c25",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for sucralfate.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A02BX02"
+            }
+          ],
+          "text": "sucralfate 1 g"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 g oral four times daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:aa2767ad-4957-4dd3-9b2a-8f28620ebd2b",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body temperature</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T18:27:48Z",
+        "valueQuantity": {
+          "value": 36.9,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        },
+        "note": [
+          {
+            "text": "36.9 Cel"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9eeb107d-6ffe-443b-911a-08067cdd1f88",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Hemoglobin [Mass/volume] in Blood</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "718-7"
+            }
+          ],
+          "text": "Hemoglobin [Mass/volume] in Blood"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T18:27:48Z",
+        "valueString": "128 g/L",
+        "note": [
+          {
+            "text": "128 g/L"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7745b97f-af17-4470-bada-2d2824677c40",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Helicobacter pylori Ag [Presence] in Stool</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "31843-6"
+            }
+          ],
+          "text": "Helicobacter pylori Ag [Presence] in Stool"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T18:27:48Z",
+        "valueString": "Negative",
+        "note": [
+          {
+            "text": "Negative"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:df15dcc0-6ab5-4e7e-94d5-64bbfda91c0b",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Ibuprofen.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "intolerance",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C01EB16"
+            }
+          ],
+          "text": "Ibuprofen"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Worsening stomach pain and nausea"
+              }
+            ],
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a8c1205e-1030-4a45-83be-285fb919da5a",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Upper gastrointestinal endoscopy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "76009000"
+            }
+          ],
+          "text": "Upper gastrointestinal endoscopy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2026",
+        "note": [
+          {
+            "text": "Performed to evaluate persistent upper abdominal pain, nausea, and vomiting; showed findings consistent with gastritis."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bcd723ef-232f-47aa-a868-cf9bb30c427d",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 55-year-old woman from the Czech Republic who comes in looking tired and uncomfortable, frequently resting a hand over the upper abdomen as she describes ongoing abdominal pain and a pressure-like discomfort after meals [SNOMED:K29.7, MEDDIALOG:K29.7:0]. She reports nausea with intermittent vomiting, especially around eating, and says she has become troubled by bloating and excessive belching over the last few weeks [SNOMED:K29.7, MEDDIALOG:K29.7:4]. She also notes early satiety and reduced appetite, saying that she feels full quickly and has been eating smaller portions than usual [SNOMED:K29.7, MEDDIALOG:K29.7:1].\n\nIn daily life, {patientName} works as an administrative assistant and usually enjoys a steady routine, but recently she has been distracted at work by stomach discomfort and the need to avoid heavier meals. She likes meeting friends for coffee and rich café foods, though she has noticed that coffee and fatty meals seem to worsen her symptoms, so she has started cutting back [MEDDIALOG:K29.7:4]. She lives with her husband, keeps in close contact with her adult daughter, and spends weekends cooking for family, although lately even the smell of heavy food can make her feel queasy [SNOMED:K29.7].\n\nShe describes herself as generally active but not athletic, preferring neighborhood walks and light gardening. Over the past month she has avoided social dinners because eating often leads to bloating, belching, and a sensation of upper abdominal fullness [SNOMED:K29.7, MEDDIALOG:K29.7:4]. She is worried that the symptoms are persisting, but she is reassured by being able to talk clearly, with no signs of acute distress beyond discomfort from abdominal inflammation-related symptoms [SNOMED:K29.7]."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4d13d33a-29c5-45d3-b0ad-ba3c3426d7dd",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} reports several weeks of upper abdominal discomfort with nausea, bloating, belching, and occasional vomiting after food [SNOMED:K29.7, MEDDIALOG:K29.7:4]. She says the discomfort is worse after coffee and heavier, fatty meals, so she has recently tried to avoid these triggers [MEDDIALOG:K29.7:0, MEDDIALOG:K29.7:4]. She denies alcohol misuse and has not been taking ibuprofen after hearing that it may aggravate gastritis [MEDDIALOG:K29.7:3].\n\nShe has not had prior major hospitalizations and has no known chronic gastrointestinal diagnosis documented. Her recent symptoms have led to decreased appetite and smaller meals because of early satiety and fear of provoking nausea or vomiting [SNOMED:K29.7, MEDDIALOG:K29.7:1]. She has no reported prior abdominal surgery. Lifestyle-wise, she drinks coffee regularly, eats a mixed diet, and is now attempting more bland foods because dietary change is commonly advised in gastritis [MEDDIALOG:K29.7:0, MEDDIALOG:K29.7:4]."
+          }
+        ]
+      }
+    }
+  ]
+}

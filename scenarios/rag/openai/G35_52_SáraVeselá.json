@@ -1,0 +1,563 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "52"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Veselá",
+            "given": [
+              "Sára"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "G35",
+              "display": "Multiple sclerosis"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e8f1b99f-5186-4ed6-a190-9f3d03854bbf",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for natalizumab.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "L04AA23"
+            }
+          ],
+          "text": "natalizumab 300 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "300 mg intravenous every 4 weeks"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5e52a1e3-b35a-4ad7-ae20-dc18e05be1c9",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for baclofen.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "M03BX01"
+            }
+          ],
+          "text": "baclofen 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral three times daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:29b780f0-2de0-4880-b62b-57290c110928",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for gabapentin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N03AX12"
+            }
+          ],
+          "text": "gabapentin 300 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "300 mg oral three times daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5801fcf7-6599-45bb-a87b-3cea23d38250",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Neurologic assessment</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "67536-3"
+            }
+          ],
+          "text": "Neurologic assessment"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:03:40Z",
+        "valueString": "Abnormal neurological examination with mild lower-extremity weakness, decreased distal sensation, and impaired tandem gait consistent with MS symptoms.",
+        "note": [
+          {
+            "text": "Abnormal neurological examination with mild lower-extremity weakness, decreased distal sensation, and impaired tandem gait consistent with MS symptoms."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1971b6a0-1b86-4a54-88e9-f1cd6a6a734d",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Magnetic resonance imaging of brain</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "37235-9"
+            }
+          ],
+          "text": "Magnetic resonance imaging of brain"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:03:40Z",
+        "valueString": "MRI brain shows demyelinating lesions compatible with multiple sclerosis.",
+        "note": [
+          {
+            "text": "MRI brain shows demyelinating lesions compatible with multiple sclerosis."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b6a11b84-23d4-45f4-b431-03360ecbbed6",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cognitive function panel</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "81492-1"
+            }
+          ],
+          "text": "Cognitive function panel"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:03:40Z",
+        "valueString": "Mild deficits in attention and working memory, matching reported thinking and memory problems.",
+        "note": [
+          {
+            "text": "Mild deficits in attention and working memory, matching reported thinking and memory problems."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7ff6aac2-a726-4ee7-b3b8-c8f5140f53cb",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52416-5"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:03:40Z",
+        "valueQuantity": {
+          "value": 68.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "68 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ab833803-59f0-41ca-9311-9db4be945da2",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CE01"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Rash"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a7ea9e85-0bdd-4661-b62e-47f5f32df30e",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Type 2 diabetes mellitus</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "E11"
+                }
+              ],
+              "text": "Type 2 diabetes mellitus"
+            },
+            "onsetAge": {
+              "value": 62,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:62b08a54-40c6-4a86-9ca1-d7fb2f2d93b1",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Essential hypertension</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I10"
+                }
+              ],
+              "text": "Essential hypertension"
+            },
+            "onsetAge": {
+              "value": 58,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a91a9efd-431a-45a6-a34a-05fbe827ef84",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Magnetic resonance imaging of brain</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "448306001"
+            }
+          ],
+          "text": "Magnetic resonance imaging of brain"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Performed for monitoring of multiple sclerosis disease activity and follow-up."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0e9399df-2d38-4395-b814-e8259e6b58d6",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 52-year-old woman in the Czech Republic who lives with a chronic neurological illness affecting the brain and spinal cord [MEDLINEPLUS:G35]. She describes symptoms that come and go, with periods when she feels relatively stable and other times when neurological problems flare, which fits the pattern of exacerbation and remission described in multiple sclerosis [PMID:37966451]. In daily life she is most bothered by numbness and prickling sensations in her arms and legs, intermittent muscle weakness, trouble with balance when walking on uneven ground, and episodes of chronic burning neuropathic pain [MEDLINEPLUS:G35, SNOMED:G35, MEDDIALOG:G35:2]. She has also noticed occasional visual blurring and mild forgetfulness that makes multitasking harder at work [MEDLINEPLUS:G35].\n\n{patientName} works part-time in an office-based administrative role and has cut back her hours because fatigue and coordination problems make long days difficult. She enjoys gardening and short walks with a close friend, but she plans activities carefully because some days her legs feel weak and unsteady [MEDLINEPLUS:G35]. She remains socially connected with her adult daughter and a small circle of friends, though she is frustrated by the unpredictability of symptoms that can interfere with hobbies and household tasks. She is independent in basic self-care, but during symptom flares she moves more slowly and uses handrails for stairs because of balance difficulty [MEDLINEPLUS:G35].\n\nOn appearance, {patientName} is neatly dressed, cooperative, and mildly anxious about progression of her disease. During conversation she occasionally pauses to find words and reports that concentration and memory are not as sharp as before [MEDLINEPLUS:G35]. She speaks openly about intermittent high-pitched sounds in her head, tingling, and muscle jumping sensations that can be alarming when they intensify [MEDDIALOG:G35:2]. She is motivated to stay active and attend follow-up visits because she knows treatment can slow the disease and help control symptoms [MEDLINEPLUS:G35]."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a4b8daab-bf90-42cf-a688-104340d3b0ca",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} was diagnosed with multiple sclerosis after recurrent neurological symptoms and MRI evaluation, consistent with the usual diagnostic approach of history, neurological examination, and MRI [MEDLINEPLUS:G35]. Her symptoms have included intermittent numbness, tingling, burning sensations, muscle weakness, balance difficulty, and chronic neuropathic pain [MEDLINEPLUS:G35, SNOMED:G35, MEDDIALOG:G35:2]. She reports a relapsing course with symptom flare-ups followed by partial improvement, reflecting the described pattern of exacerbation and remission in MS [PMID:37966451].\n\nShe has been treated with natalizumab as a disease-modifying therapy, a realistic choice for relapsing MS and one specifically mentioned in patient dialogue about MS treatment [MEDDIALOG:G35:0]. She attends regular follow-up and MRI surveillance because doctors use MRI to monitor disease activity and treatment-related concerns [MEDLINEPLUS:G35, MEDDIALOG:G35:0]. For symptomatic care, she uses medication for spasticity and neuropathic pain. She has not had a psychotic disorder, but she has been counseled that psychiatric symptoms can occasionally be associated with MS or its treatment [PMID:31302591].\n\nLifestyle-wise, {patientName} does not smoke, drinks alcohol rarely, and tries to remain physically active with walking and home stretching. She has not required major hospitalization in the past year, but she has needed intermittent outpatient neurology visits during symptom flares. She is allergic to penicillin, which previously caused a rash."
+          }
+        ]
+      }
+    }
+  ]
+}

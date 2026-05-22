@@ -1,0 +1,764 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "36"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Strnadová",
+            "given": [
+              "Elena"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "K75.9",
+              "display": "Inflammatory liver disease, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a4e815cc-ce6b-4248-ae48-8419ec492c20",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Herbal energy supplement.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": ""
+            }
+          ],
+          "text": "Herbal energy supplement 1 capsule"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 capsule oral once daily until stopped after symptom onset"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8e6f9c10-5714-49d8-91fa-c1532ff1fd6d",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Green tea extract energy beverage.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": ""
+            }
+          ],
+          "text": "Green tea extract energy beverage 1 serving"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 serving oral intermittently during busy work weeks until stopped after symptom onset"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8226667c-176c-42d6-a5e7-639beff87f6b",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Cetirizine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R06AE07"
+            }
+          ],
+          "text": "Cetirizine 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral once daily as needed during allergy season"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5546f707-14fb-4fc5-8e04-787adf9978f0",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Cholestyramine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C10AC01"
+            }
+          ],
+          "text": "Cholestyramine 4 g"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "4 g oral once or twice daily as needed for pruritus if prescribed after evaluation"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0f5b9cef-e55d-4090-980b-616a93f30b14",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T23:42:43Z",
+        "valueQuantity": {
+          "value": 86.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "86 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:aaa9e5e3-758b-4b13-9785-386a6444514a",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Alanine aminotransferase (ALT) [Enzymatic activity/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1742-6"
+            }
+          ],
+          "text": "Alanine aminotransferase (ALT) [Enzymatic activity/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T23:42:43Z",
+        "valueString": "Elevated at 412 U/L",
+        "note": [
+          {
+            "text": "Elevated at 412 U/L"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:82ed5a8f-519b-42ed-8fbc-8f7453acb806",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Aspartate aminotransferase (AST) [Enzymatic activity/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1920-8"
+            }
+          ],
+          "text": "Aspartate aminotransferase (AST) [Enzymatic activity/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T23:42:43Z",
+        "valueString": "Elevated at 356 U/L",
+        "note": [
+          {
+            "text": "Elevated at 356 U/L"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0232f6bc-659a-47f1-85d4-24fe96e7e86e",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Bilirubin.total [Mass/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1975-2"
+            }
+          ],
+          "text": "Bilirubin.total [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T23:42:43Z",
+        "valueString": "Elevated at 3.4 mg/dL",
+        "note": [
+          {
+            "text": "Elevated at 3.4 mg/dL"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:89414acd-bcf7-4dd8-b87b-2ab75763f803",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">INR in Platelet poor plasma by Coagulation assay</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6301-6"
+            }
+          ],
+          "text": "INR in Platelet poor plasma by Coagulation assay"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T23:42:43Z",
+        "valueString": "1.1, no current evidence of significant synthetic failure",
+        "note": [
+          {
+            "text": "1.1, no current evidence of significant synthetic failure"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:dc78cd0c-39d2-40fd-9a4d-cad7216cabe2",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Peanut.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "food"
+        ],
+        "criticality": "low",
+        "code": {
+          "text": "Peanut"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Oral itching and mild urticaria"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:119d3546-c95e-49fe-971e-66129746a4f0",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Cat dander.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "environment"
+        ],
+        "criticality": "low",
+        "code": {
+          "text": "Cat dander"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Sneezing and itchy eyes"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:20ba89c4-d9b2-4006-9f5f-ae894e77278f",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Type 2 diabetes mellitus</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "E11"
+                }
+              ],
+              "text": "Type 2 diabetes mellitus"
+            },
+            "onsetAge": {
+              "value": 52,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:79f16ecc-bfe2-4ffa-97f3-d81a4ef29926",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Essential hypertension</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I10"
+                }
+              ],
+              "text": "Essential hypertension"
+            },
+            "onsetAge": {
+              "value": 48,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:379d6044-8390-49cf-ad38-8eb9c03e92b5",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandmother: Chronic hepatitis, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRMTH",
+              "display": "Grandmother"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "K73.9"
+                }
+              ],
+              "text": "Chronic hepatitis, unspecified"
+            },
+            "onsetAge": {
+              "value": 71,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d80c3270-28e8-48ec-8039-dcfd990117aa",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sister: Fatty change of liver, not elsewhere classified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "SIS",
+              "display": "Sister"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "K76.0"
+                }
+              ],
+              "text": "Fatty change of liver, not elsewhere classified"
+            },
+            "onsetAge": {
+              "value": 34,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fb0e5163-e01e-454a-b82f-7ab8455d01a0",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cesarean section</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "72410000"
+            }
+          ],
+          "text": "Cesarean section"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2018",
+        "note": [
+          {
+            "text": "Performed for arrest of labor; uncomplicated postoperative recovery."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5b600c82-3081-4c3c-a74f-ae0e5c2e42fc",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 36-year-old woman who appears tired and mildly unwell, with a faint yellow tinge to the sclera, occasional scratching of her forearms from itching, and mild right upper quadrant abdominal discomfort that she sometimes guards with her hand. Over the past several weeks she has developed worsening fatigue, intermittent nausea, poor appetite, dark urine, paler-than-usual stools, pruritus, and a sense of abdominal fullness after meals. She reports generalized malaise and low-grade subjective fevers on some evenings, but denies severe abdominal pain, overt gastrointestinal bleeding, vomiting, or confusion. On examination she would likely look mildly uncomfortable, with subtle jaundice, mild hepatomegaly, hepatic tenderness, and no signs of chronic liver failure.\n\nShe works as a middle-school art teacher and also supervises ceramics and mixed-media projects, with intermittent exposure to solvents, glazes, and cleaning agents in poorly ventilated art-room periods despite routine precautions. She lives with her partner and young daughter. Her days are often busy and irregular, and she tends to skip meals during the school day, rely on coffee and convenience foods, and use over-the-counter “energy” and wellness products during stressful school terms.\n\nOutside work she enjoys gardening, weekend walks, watercolor painting, and seasonal canning of home-grown produce. She does not smoke and drinks alcohol only socially, usually 1 to 2 glasses of wine on weekends. In the month before symptom onset she had been taking an herbal energy supplement most days and also intermittently used concentrated green-tea extract/energy beverages; she considered both part of her usual self-care routine and therefore part of her active medication and supplement use before becoming ill. After noticing jaundice she stopped these products. Friends and family have noticed she has looked more run-down than usual, and she has recently cut back on activity because of fatigue.\n\nSocially, {patientName} is well supported and has good health literacy, though she initially delayed seeking care because she assumed the illness would pass on its own. She is attentive to preventive care and usually follows up reliably. She is worried because the symptoms have persisted longer than a typical viral illness and because the yellowing of her eyes, dark urine, itching, and pale stools are new. Her presentation is most consistent with a subacute inflammatory liver process, and the recent herbal supplement and concentrated green-tea product use are the leading suspected triggers while infectious, autoimmune, toxic, and metabolic causes still require evaluation."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b41a3b23-ac0b-4d92-a37f-5e38bfe3ae4c",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has a history of mild seasonal allergic rhinitis, obesity with a body weight of 86 kg, and previously documented nonalcoholic fatty liver on an abdominal ultrasound performed 2 years ago during evaluation of mildly elevated aminotransferases. She also has intermittent dyslipidemia noted on prior primary care labs and occasional tension headaches. These baseline factors increase her vulnerability to hepatic inflammation. She has never been hospitalized for liver-related illness.\n\nAbout 6 weeks before presentation, she began experiencing fatigue and reduced appetite, followed by intermittent nausea and dull right upper quadrant discomfort. In the last 10 days she noticed darkening of the urine, mild yellowing of the eyes, itching, and lighter stools. She recalls one prior self-limited episode about 18 months ago of fatigue and mild right upper quadrant discomfort after using a different over-the-counter “detox” supplement, during which outside labs reportedly showed mildly elevated liver enzymes that normalized after she stopped the product; no formal liver workup was completed at that time.\n\nShe denies intravenous drug use, recent tattoos, recent travel, high-risk sexual exposures, or known blood exposure. In addition to an over-the-counter multivitamin, she had been actively taking an herbal supplement marketed for energy for approximately one month before this illness and occasionally consumed concentrated green-tea extract/energy drinks during busy work weeks; these represent current medication and supplement exposures and are the most likely contributors to the current inflammatory liver process. She also used ibuprofen intermittently for headaches but not heavily, and acetaminophen only rarely at standard doses. She stopped all nonessential medicines and supplements once jaundice appeared. Alcohol intake remains light and social, without binge drinking. She has no smoking history and denies recreational drug use.\n\nHer work as an art teacher includes periodic handling of paints, solvents, kiln glazes, and cleaning chemicals, though she reports no single major accidental exposure. Her hobbies include watercolor painting and gardening, and she has used insecticides and weed-control products at home a few times each season. Gynecologic history is unremarkable, and she is not currently pregnant. Her immunization history is generally up to date, though she is unsure of prior hepatitis A and B vaccination status. There is no known personal history of inflammatory bowel disease or autoimmune disease, but her baseline fatty liver disease, prior mild transaminitis after supplement use, and recent herbal product exposure all increase concern for a supplement-related inflammatory liver process.\n\nFamily history is notable for a maternal grandmother with chronic hepatitis that later progressed to cirrhosis, and a sister with fatty liver disease. This does not establish a hereditary inflammatory liver disorder, but it does add a family history of liver inflammation/hepatitis and chronic liver disease that increases her concern about the current illness."
+          }
+        ]
+      }
+    }
+  ]
+}

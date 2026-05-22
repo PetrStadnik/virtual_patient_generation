@@ -1,0 +1,623 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "14"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Matoušková",
+            "given": [
+              "Drahoslava"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "G40.9",
+              "display": "Epilepsy, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b70354aa-cba4-4daa-8111-5f951b025220",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for levetiracetam.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N03AX14"
+            }
+          ],
+          "text": "levetiracetam 500 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "500 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:183f810f-f096-4174-a5b9-d51a1aa79d96",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for diazepam.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N05BA01"
+            }
+          ],
+          "text": "diazepam 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg rectal as needed for seizure lasting more than 5 minutes"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:24d0a1ac-c7d9-4828-bb40-58358b5da7c9",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Electroencephalogram</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "75949-8"
+            }
+          ],
+          "text": "Electroencephalogram"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:28:49Z",
+        "valueString": "Abnormal EEG with intermittent generalized spike-and-wave discharges, supporting a seizure disorder.",
+        "note": [
+          {
+            "text": "Abnormal EEG with intermittent generalized spike-and-wave discharges, supporting a seizure disorder."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:98c4c1e1-105e-414f-ba3f-1f201b9e3151",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52416-5"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:28:49Z",
+        "valueQuantity": {
+          "value": 49.2,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "49.2 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:29e6bd6b-9629-481e-b30c-915e4e703535",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body height</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "92996-8"
+            }
+          ],
+          "text": "Body height"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:28:49Z",
+        "valueQuantity": {
+          "value": 160.0,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        },
+        "note": [
+          {
+            "text": "160 cm"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:76d4e5be-d71a-4e19-b7a5-41ca1eb8203f",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Heart rate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:28:49Z",
+        "valueQuantity": {
+          "value": 82.0,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "note": [
+          {
+            "text": "82/min"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9e851182-586e-4cca-a77e-f3ad9608dacb",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Blood pressure systolic and diastolic</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "55284-4"
+            }
+          ],
+          "text": "Blood pressure systolic and diastolic"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:28:49Z",
+        "valueQuantity": {
+          "value": 108.0,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        },
+        "note": [
+          {
+            "text": "108/68 mmHg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1e13a106-6f94-4de8-a27d-0be126dc0510",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Amoxicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CA04"
+            }
+          ],
+          "text": "Amoxicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Maculopapular rash in childhood"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:37a47f46-825d-4c04-8832-9e758d40fa75",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Epilepsy</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "G40"
+                }
+              ],
+              "text": "Epilepsy"
+            },
+            "onsetAge": {
+              "value": 16,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fc0366e9-e158-4aef-b822-3418734b98d5",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandfather: Essential hypertension</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRFTH",
+              "display": "Grandfather"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I10"
+                }
+              ],
+              "text": "Essential hypertension"
+            },
+            "onsetAge": {
+              "value": 58,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:52b10df5-9271-4702-8994-cf57daadd8d7",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Electroencephalographic monitoring</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "397796008"
+            }
+          ],
+          "text": "Electroencephalographic monitoring"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2026",
+        "note": [
+          {
+            "text": "Outpatient EEG performed after recurrent unprovoked seizures; showed epileptiform activity."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:267757ae-6ba4-488d-afa2-c351033c6e6a",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "in-progress",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Magnetic resonance imaging of brain without contrast</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "489801000119103"
+            }
+          ],
+          "text": "Magnetic resonance imaging of brain without contrast"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2026",
+        "note": [
+          {
+            "text": "MRI brain ordered to evaluate for structural cause of seizures; scheduling underway."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ca83d1af-e0f7-47ed-8abd-7ef066b0beb0",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 14-year-old girl who looks her stated age, slim and healthy-appearing, usually dressed in a school hoodie and sneakers, with a cautious but friendly manner. She arrives with her mother, who tends to answer first until {patientName} feels comfortable enough to speak for herself. During conversation she is alert and oriented, though a little embarrassed by the attention around her seizures. She describes brief episodes of staring, confusion, and on two occasions full-body shaking followed by exhaustion and headache. Since the most recent event, she has become more anxious about being in crowded places, taking showers alone, or staying over at friends' houses.\n\nAt school, {patientName} is a solid student who enjoys art, volleyball, and listening to music while sketching in her room. She had previously been very independent, but over the last several months her family has noticed she is more tired and sometimes forgetful after episodes. Her friends remain supportive, though she worries about seeming \"different\" if she has a seizure in public. Sleep has been inconsistent because of homework, evening screen time, and stress before exams, and her mother suspects that missed sleep may have triggered at least one event.\n\nAt home, {patientName} lives with her mother, younger brother, and stepfather in a busy but supportive household. There is no tobacco, alcohol, or drug use. She does not drive and is supervised around swimming and bathing since the diagnosis is being evaluated. She enjoys weekend visits with cousins and often helps care for the family dog. The family is learning seizure first aid together, and her mother keeps a phone log of event timing, duration, and recovery details.\n\nOverall, {patientName} presents as an adolescent adjusting to a new chronic neurologic condition that affects not only her health but also her confidence, independence, school routine, and family dynamics. Between episodes her examination is generally normal, and she is eager to return to ordinary teenage activities with clear guidance, effective treatment, and reassurance about safety."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:05d8bdbc-6afb-4ba5-8084-82da7310b211",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has had several months of intermittent episodes concerning for seizures, initially described as brief staring spells with unresponsiveness lasting less than a minute, followed more recently by two generalized convulsive episodes with postictal sleepiness. She has no known history of central nervous system infection, major head trauma, developmental delay, or substance use. Birth and early childhood history were unremarkable, and immunizations are current. There has been no prior hospitalization except for one recent emergency department visit after a witnessed convulsive seizure at home.\n\nRelevant comorbidity includes mild generalized anxiety that has worsened since the onset of seizures. Lifestyle contributors include irregular sleep schedule, occasional skipped breakfast, high academic stress, and frequent evening phone use. She is not sexually active. There is no history suggesting medication nonadherence because treatment is just being started. Family has been counseled on supervision during water activities, avoiding sleep deprivation, and basic seizure first aid.\n\nShe has not undergone prior neurosurgery. A diagnostic EEG has been completed, and brain MRI is planned as part of seizure workup. Her mother reports a childhood rash with amoxicillin, so penicillin-class antibiotic exposure is approached cautiously until further clarification."
+          }
+        ]
+      }
+    }
+  ]
+}

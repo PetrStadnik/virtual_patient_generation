@@ -1,0 +1,471 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "35"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Novotný",
+            "given": [
+              "Daniel"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "K75.9",
+              "display": "Inflammatory liver disease, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4cf1a09d-93e1-4057-9751-f5a89d82330b",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for ursodeoxycholic acid.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A05AA02"
+            }
+          ],
+          "text": "ursodeoxycholic acid 250 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "250 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:45e7c936-89db-4b86-8543-77edea02d924",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for omeprazole.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A02BC01"
+            }
+          ],
+          "text": "omeprazole 20 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "20 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:db67aa4d-d307-49e9-af02-bab4eca27c93",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for ondansetron.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A04AA01"
+            }
+          ],
+          "text": "ondansetron 4 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "4 mg oral every 8 hours as needed"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:39a3566c-c862-4453-9ff8-04e92c9fe64b",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1742-6"
+            }
+          ],
+          "text": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T18:36:23Z",
+        "valueString": "148.5 IU/L, elevated",
+        "note": [
+          {
+            "text": "148.5 IU/L, elevated"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:930e2e9b-2d43-41b6-b216-d083071eadd5",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1920-8"
+            }
+          ],
+          "text": "Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T18:36:23Z",
+        "valueString": "93.8 IU/L, elevated",
+        "note": [
+          {
+            "text": "93.8 IU/L, elevated"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ac1c809a-ae03-48f3-8941-e2d3ea79ff07",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Bilirubin.total [Mass/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1975-2"
+            }
+          ],
+          "text": "Bilirubin.total [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T18:36:23Z",
+        "valueString": "0.93 mg/dL, within normal range",
+        "note": [
+          {
+            "text": "0.93 mg/dL, within normal range"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bdcad8e2-610c-431c-b652-fbd8003cafbc",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ultrasound abdomen</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24558-9"
+            }
+          ],
+          "text": "Ultrasound abdomen"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T18:36:23Z",
+        "valueString": "Recommended to evaluate for liver parenchymal disease or alcoholic liver disease if enzyme abnormalities persist",
+        "note": [
+          {
+            "text": "Recommended to evaluate for liver parenchymal disease or alcoholic liver disease if enzyme abnormalities persist"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:00410277-f447-4cbf-bb37-75757c6e550b",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "unable-to-assess",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CE01"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Rash"
+              }
+            ],
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d4974914-263c-469b-9e74-d77b7ed730cb",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "not-done",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Liver biopsy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "86259008"
+            }
+          ],
+          "text": "Liver biopsy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "note": [
+          {
+            "text": "May be considered after evaluation if the cause of liver parenchymal disease remains unclear [MEDDIALOG:K75.9:3]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:16e6b780-031f-4b2b-a43c-c9946b83dd2a",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 35-year-old man from the Czech Republic who comes in after routine blood work showed abnormal liver function tests, leaving him worried and confused about what the numbers mean. He reports no jaundice and no major day-to-day symptoms, but he has been told that elevated aminotransferases can reflect liver cell injury and should be followed over time [MEDDIALOG:K75.9:4]. He appears well, mildly anxious, and focused on understanding whether this is something serious or temporary [MEDDIALOG:K75.9:4].\n\nHe works full time in an office-based job and spends much of the day sitting. Outside work he enjoys cycling on weekends, meeting friends for dinner, and watching football. He lives with his partner and usually manages an independent, active routine. He drinks alcohol socially and has recently realized he may need to stop while his liver is being evaluated, because alcohol can worsen liver injury and clinicians advised avoiding wine or alcohol when liver enzymes are abnormal [MEDDIALOG:K75.9:4, MEDDIALOG:K75.9:1].\n\nOver the past few weeks, {patientName} has noticed occasional upper abdominal discomfort after heavy meals and reduced energy, though he remains able to work. He denies severe swelling, bleeding, or confusion, and he is still eating normally; he was specifically warned that excessive sleepiness, bleeding manifestations, and inability to eat would be concerning alarm features in acute inflammatory liver illness [MEDDIALOG:K75.9:2, MEDDIALOG:K75.9:5]. He has supportive family nearby and has become more health-conscious since learning that imaging such as ultrasound may be useful if liver tests remain abnormal [MEDDIALOG:K75.9:1, MEDDIALOG:K75.9:4]."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3e9e652a-c7c1-4991-84c0-e3370ddaea81",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has no known chronic liver diagnosis in the past and has not previously required hospitalization for liver disease. He presented after incidental liver test abnormalities were found, with bilirubin still in the normal range but aminotransferases elevated to a mild-to-moderate degree, a pattern that can fit hepatocellular injury [MEDDIALOG:K75.9:4]. He has not had severe edema, eyelid puffiness, or other features that would push concern toward heart, kidney, or advanced liver dysfunction at presentation [MEDDIALOG:K75.9:5].\n\nHe reports regular social alcohol intake and was counseled to stop drinking during the evaluation because alcohol may damage the liver and complicate interpretation of abnormal liver enzymes [MEDDIALOG:K75.9:1, MEDDIALOG:K75.9:4]. He is not currently taking known hepatoprotective therapy but is open to supportive treatment if symptoms such as nausea or acidity develop, as supportive care, acid suppression, antiemetics, and vitamin supplementation were mentioned in the evidence for acute hepatitis management [MEDDIALOG:K75.9:2]. If laboratory abnormalities persist or worsen, he understands that abdominal ultrasound is appropriate and that liver biopsy can occasionally be considered after further evaluation [MEDDIALOG:K75.9:3, MEDDIALOG:K75.9:4]."
+          }
+        ]
+      }
+    }
+  ]
+}

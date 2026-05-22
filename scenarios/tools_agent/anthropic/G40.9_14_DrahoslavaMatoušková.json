@@ -1,0 +1,671 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "14"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Matoušková",
+            "given": [
+              "Drahoslava"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "G40.9",
+              "display": "Epilepsy, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7d47d2fd-4aa7-4f07-8619-72675f5831b7",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Valproic acid.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N03AG01"
+            }
+          ],
+          "text": "Valproic acid 500 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "500 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4a3c79b7-5435-4d85-b69a-82a0933ea444",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Levetiracetam.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N03AX14"
+            }
+          ],
+          "text": "Levetiracetam 500 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "500 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3c4d16a5-6bf4-40ef-82e7-2f932228c86f",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Clonazepam.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N03AE01"
+            }
+          ],
+          "text": "Clonazepam 0.5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "0.5 mg oral once daily at bedtime (rescue/adjunct)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:10852476-18c4-41b0-a4c3-f529a0dc923b",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Electroencephalogram</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "75949-8"
+            }
+          ],
+          "text": "Electroencephalogram"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:30:31Z",
+        "valueString": "Generalized 3 Hz spike-and-wave discharges noted, consistent with generalized epileptiform activity. No focal abnormality identified.",
+        "note": [
+          {
+            "text": "Generalized 3 Hz spike-and-wave discharges noted, consistent with generalized epileptiform activity. No focal abnormality identified."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5b92a978-df71-4860-aaf7-e04839ac9a89",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">MRI brain</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11541-0"
+            }
+          ],
+          "text": "MRI brain"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:30:31Z",
+        "valueString": "No structural abnormality identified. Normal cortical development for age. No hippocampal sclerosis or space-occupying lesion.",
+        "note": [
+          {
+            "text": "No structural abnormality identified. Normal cortical development for age. No hippocampal sclerosis or space-occupying lesion."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:64950fcf-5f4c-4c08-b54b-769e69cd08b1",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Valproic acid level</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "74260-1"
+            }
+          ],
+          "text": "Valproic acid level"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:30:31Z",
+        "valueQuantity": {
+          "value": 68.0,
+          "unit": "ug/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ug/mL"
+        },
+        "note": [
+          {
+            "text": "68 mcg/mL — within therapeutic range (50–100 mcg/mL)."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b6ea1653-7479-41a2-af15-ac5a505a6546",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Complete blood count</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2"
+            }
+          ],
+          "text": "Complete blood count"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:30:31Z",
+        "valueString": "WBC 6.8 x10^9/L, Hgb 12.9 g/dL, Platelets 198 x10^9/L. No cytopenias noted.",
+        "note": [
+          {
+            "text": "WBC 6.8 x10^9/L, Hgb 12.9 g/dL, Platelets 198 x10^9/L. No cytopenias noted."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:21d82498-c48c-4ca5-a469-a202e7380cd6",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52416-5"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:30:31Z",
+        "valueQuantity": {
+          "value": 52.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "52 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bc811d52-eb14-44d1-b8ab-846817cb0fc0",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CE01"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Maculopapular rash"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4c132ecc-7b8d-4d81-bbd2-320e04a9897c",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Uncle: Epilepsy, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "UNCLE",
+              "display": "Uncle"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "G40.9"
+                }
+              ],
+              "text": "Epilepsy, unspecified"
+            },
+            "onsetAge": {
+              "value": 16,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1f6b7c02-db26-42bf-b4ec-916a9ee212ea",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandmother: Essential hypertension</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRMTH",
+              "display": "Grandmother"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I10"
+                }
+              ],
+              "text": "Essential hypertension"
+            },
+            "onsetAge": {
+              "value": 58,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7800ea13-33c2-4c5c-b22b-e63f76ad507e",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Electroencephalography</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "54550000"
+            }
+          ],
+          "text": "Electroencephalography"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2023",
+        "note": [
+          {
+            "text": "Initial EEG performed at diagnosis 18 months ago; repeated 6 months later to monitor epileptiform activity. Generalized spike-and-wave pattern identified."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:64423b32-8547-404c-bcef-9650308c34a7",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Video electroencephalography monitoring</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "252738008"
+            }
+          ],
+          "text": "Video electroencephalography monitoring"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "24-hour video-EEG performed to classify seizure type and correlate clinical events with electrographic discharges. Confirmed generalized onset seizures."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bb1677d7-9993-4949-bd52-c899d5953214",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">MRI of brain</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "816077007"
+            }
+          ],
+          "text": "MRI of brain"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2023",
+        "note": [
+          {
+            "text": "MRI brain with and without contrast performed to exclude structural etiology. Result was normal — no lesion, malformation, or hippocampal abnormality."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:04e2bdf1-a133-496a-ba4c-4977845fb46a",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 14-year-old girl with a slight, athletic build who presents to the pediatric neurology clinic accompanied by her mother. She stands about 162 cm tall and weighs approximately 52 kg. Her dark brown hair is pulled back into a ponytail, and she wears a medical ID bracelet on her left wrist — a detail her mother insisted upon after her second seizure episode. Despite her diagnosis, {patientName} carries herself with a quiet confidence, though today she appears mildly anxious, fidgeting with the strap of her school backpack.\n\n{patientName} is a passionate artistic girl who loves drawing manga-style comics and plays volleyball on her school's junior team. She is a dedicated 9th-grade student with strong grades, particularly in art and biology. She lives with both parents and a younger brother (age 10) in a suburban home. She has an active social life and spends weekends with a close group of friends. Sleep is occasionally irregular due to late-night screen time — a known seizure trigger her neurologist has repeatedly addressed.\n\nHer seizures first began approximately 18 months ago. She experienced sudden episodes of staring blankly for 15–30 seconds, during which she was unresponsive to verbal cues. These were initially dismissed as daydreaming at school. The episodes escalated eight months ago when she suffered her first convulsive (tonic-clonic) seizure at home, lasting roughly 2 minutes, witnessed by her mother. She was post-ictally confused and fatigued for about 30 minutes afterward.\n\n{patientName} reports occasional auras before her convulsive episodes — a brief strange feeling in her stomach and a sense of déjà vu. She denies any significant head trauma, febrile seizures in infancy, or meningitis. She does not smoke, drink alcohol, or use any illicit substances. Her menstrual cycles started at age 12 and are regular; her physician has carefully noted the potential teratogenic risk of valproic acid and discussed it with both {patientName} and her mother.\n\nOn today's visit, {patientName} appears alert and oriented. She is cooperative and articulate about her symptoms. Her vitals are stable. Her mother reports that {patientName} has been seizure-free for the past three months on the current medication regimen, though she still occasionally forgets to take her evening dose — a source of ongoing family tension."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cd4beb18-2b29-473e-8655-9951c7e4b43c",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has no prior significant medical history aside from the current epilepsy diagnosis, which was established 18 months ago. She was born at term via uncomplicated vaginal delivery, met all developmental milestones on time, and has had no prior hospitalizations except for an overnight stay following her first witnessed tonic-clonic seizure, during which initial investigations were performed. She has no history of head trauma, CNS infections, or neurodevelopmental disorders. There is a family history of epilepsy on the paternal side (father's brother). She is up to date on all recommended vaccinations. She has a documented penicillin allergy (rash). {patientName} is not sexually active and is not on any hormonal contraceptive. Her BMI is within the normal range for her age and sex. She was started on levetiracetam after her first tonic-clonic seizure, and valproic acid was later added due to incomplete seizure control. Lamotrigine was considered but not yet initiated. She is followed every three months in the pediatric neurology outpatient clinic."
+          }
+        ]
+      }
+    }
+  ]
+}

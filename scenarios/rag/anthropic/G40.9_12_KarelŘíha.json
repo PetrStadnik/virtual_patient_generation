@@ -1,0 +1,671 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "12"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Říha",
+            "given": [
+              "Karel"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "G40.9",
+              "display": "Epilepsy, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e274ce8c-a2d1-4563-9772-6cce9aa086b8",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Levetiracetam.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N03AX14"
+            }
+          ],
+          "text": "Levetiracetam 500 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "500 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:914abf0e-8607-4d05-aa75-aa8053b0d179",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Valproic acid.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N03AG01"
+            }
+          ],
+          "text": "Valproic acid 300 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "300 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9d3015e1-eac4-41e9-82e7-b0c831434fc8",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Lamotrigine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N03AX09"
+            }
+          ],
+          "text": "Lamotrigine 25 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "25 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cd1d73e1-dd97-491b-9bc3-2e4584417f3f",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Electroencephalogram (EEG)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "75949-8"
+            }
+          ],
+          "text": "Electroencephalogram (EEG)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:02:39Z",
+        "valueString": "Generalised polyspike-and-wave discharges on sleep-deprivation EEG, maximal on awakening; no focal abnormality",
+        "note": [
+          {
+            "text": "Generalised polyspike-and-wave discharges on sleep-deprivation EEG, maximal on awakening; no focal abnormality"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fabdb2a6-2476-471d-af5e-4b2eae831d30",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">MRI brain</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11541-0"
+            }
+          ],
+          "text": "MRI brain"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:02:39Z",
+        "valueString": "No structural lesion identified; normal myelination and cortical architecture for age",
+        "note": [
+          {
+            "text": "No structural lesion identified; normal myelination and cortical architecture for age"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6f855d5e-d888-4f5c-adfd-d8a8da040ed3",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Complete blood count</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2"
+            }
+          ],
+          "text": "Complete blood count"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:02:39Z",
+        "valueString": "WBC 6.8 x10^9/L, Hb 132 g/L, Plt 245 x10^9/L – within normal limits",
+        "note": [
+          {
+            "text": "WBC 6.8 x10^9/L, Hb 132 g/L, Plt 245 x10^9/L – within normal limits"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:446209fc-e2b5-4823-9207-438e8713e199",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Glucose [Mass/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2345-7"
+            }
+          ],
+          "text": "Glucose [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:02:39Z",
+        "valueQuantity": {
+          "value": 4.9,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "note": [
+          {
+            "text": "4.9 mmol/L – normal fasting glucose"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e8128199-320f-4090-a987-abf28ccbe961",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Levetiracetam level in serum</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "48347-9"
+            }
+          ],
+          "text": "Levetiracetam level in serum"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:02:39Z",
+        "valueQuantity": {
+          "value": 28.0,
+          "unit": "mg/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/L"
+        },
+        "note": [
+          {
+            "text": "28 mg/L – within therapeutic range"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b1247417-1716-4904-94b9-1866a88e7269",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Amoxicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CA04"
+            }
+          ],
+          "text": "Amoxicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Urticaria"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3bef9a95-76a7-458f-8a84-d6bdc607ee3f",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Epilepsy, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "G40.9"
+                }
+              ],
+              "text": "Epilepsy, unspecified"
+            },
+            "onsetAge": {
+              "value": 14,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6b2c36db-9f65-41a5-8ed3-dee343d62a64",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandfather: Epilepsy, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRFTH",
+              "display": "Grandfather"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "G40.9"
+                }
+              ],
+              "text": "Epilepsy, unspecified"
+            },
+            "onsetAge": {
+              "value": 20,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e3c0b288-db23-419f-8469-f8abc13ad1fc",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Electroencephalogram</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "54550000"
+            }
+          ],
+          "text": "Electroencephalogram"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Routine and sleep-deprivation EEG performed at initial neurology assessment; showed generalised polyspike-and-wave discharges on awakening [MEDDIALOG:G40.9:1]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:28714a80-3970-4c23-994c-8bc8c9a104b8",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">MRI of brain</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "816077007"
+            }
+          ],
+          "text": "MRI of brain"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Performed to exclude structural epilepsy aetiology; result normal [MEDLINEPLUS:G40.9]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:72c0a9b5-31ea-4210-b078-3b2440fc6cae",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Video electroencephalogram monitoring</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "252738008"
+            }
+          ],
+          "text": "Video electroencephalogram monitoring"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2025",
+        "note": [
+          {
+            "text": "Video-EEG capturing a clinical myoclonic episode on awakening confirming epileptiform correlate [MEDDIALOG:G40.9:1]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2f1158d8-3048-40d8-87c3-a7db283341b0",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 12-year-old Czech boy with a slender build and slightly dishevelled dark hair, who presents with his worried mother to the paediatric neurology outpatient clinic in Prague. He is dressed in a football jersey and carries a backpack decorated with stickers – a lively, sociable child who, despite his current illness, seems eager to talk about his favourite football team and his hobby of building LEGO sets. He is in the sixth grade at a local základní škola (primary school) and is described by his teachers as an above-average student who occasionally appears \"zoned out\" during morning lessons.\n\nOver the past three months {patientName}'s mother has noticed that he sometimes wakes at night in a panic and rushes to the bathroom complaining of nausea and vomiting, without fever or any other sign of intercurrent illness [MEDDIALOG:G40.9:1]. During the day he has had several episodes in which he appears to see himself reflected outside his own body – his mother calls it his \"ghost moments\" – consistent with autoscopic hallucinations [SNOMED:G40.9]. On two occasions his classmates reported brief shock-like jerks of both arms on awakening, causing him to spill his morning juice [MEDDIALOG:G40.9:1]. No prolonged tonic-clonic convulsions have been witnessed.\n\n{patientName} lives with both parents and a younger sister in a flat in a Prague suburb. His father works as an IT technician and his mother is a school librarian. He spends his afternoons either at football training or playing video games with friends. He sleeps approximately 8–9 hours on school nights but stays up later on weekends. Sleep deprivation and stress during exam weeks appear to worsen his episodes [MEDDIALOG:G40.9:1]. He does not drink alcohol and has no history of substance use.\n\nOn examination he is alert and fully oriented. Vital signs are within normal limits for age. Neurological examination is unremarkable between episodes. His mother has filmed one episode on her mobile phone, showing a brief myoclonic jerk of the upper limbs lasting less than two seconds."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4dc5e354-23ec-4e52-8ce3-7ace1e4980e9",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} was born at term by uncomplicated vaginal delivery with no neonatal complications. Developmental milestones were achieved on time. He had no prior seizures or febrile convulsions. He was hospitalised once at age 5 for a fractured radius following a playground fall, which resolved without sequelae. No prior neurological diagnoses were recorded.\n\nApproximately three months ago {patientName} began experiencing the nocturnal vomiting episodes and arm jerks described above [MEDDIALOG:G40.9:1]. His general practitioner initially investigated for gastrointestinal causes before neurology referral. He has no known comorbidities, takes no regular medications prior to this presentation, and his immunisation record is up to date. He is not on any special diet, though the neurology team has mentioned that special diets can help some children with epilepsy [MEDLINEPLUS:G40.9].\n\nLifestyle factors: regular physical activity (football twice weekly), adequate but sometimes irregular sleep due to weekend gaming sessions. Screen time and sleep deprivation around school exams appear to cluster with his episodes [MEDDIALOG:G40.9:1]. No alcohol or drug use. No head trauma preceding episode onset."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,728 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "14"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Ševčík",
+            "given": [
+              "Jindřich"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "F90.0",
+              "display": "Disturbance of activity and attention"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ac33aebe-57ef-4070-ac75-bd43d8d1886d",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Cetirizine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R06AE07"
+            }
+          ],
+          "text": "Cetirizine 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2001238c-c13f-4108-b4ee-13febaef75a3",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Montelukast.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R03DC03"
+            }
+          ],
+          "text": "Montelukast 5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "5 mg oral once daily in the evening"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:61f29e07-3fb5-4c73-8d25-ec03f31ca139",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Melatonin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N05CH01"
+            }
+          ],
+          "text": "Melatonin 1 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 mg oral once daily at bedtime"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fb4fba9b-94b2-45d7-89ff-fe0c1a79f95f",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Complete blood count panel</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2"
+            }
+          ],
+          "text": "Complete blood count panel"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T23:57:17Z",
+        "valueString": "WBC 6.2 ×10⁹/L, Hb 130 g/L, Platelets 240 ×10⁹/L — within normal limits",
+        "note": [
+          {
+            "text": "WBC 6.2 ×10⁹/L, Hb 130 g/L, Platelets 240 ×10⁹/L — within normal limits"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:587307e4-e54f-48fc-8ddb-4251e027e40a",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">TSH</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "13897-4"
+            }
+          ],
+          "text": "TSH"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T23:57:17Z",
+        "valueQuantity": {
+          "value": 2.1,
+          "unit": "mIU/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mIU/L"
+        },
+        "note": [
+          {
+            "text": "2.1 mIU/L — within normal range, thyroid dysfunction excluded"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:69827605-5091-495b-adef-500735a77068",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Blood lead level</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "10368-9"
+            }
+          ],
+          "text": "Blood lead level"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T23:57:17Z",
+        "valueQuantity": {
+          "value": 2.1,
+          "unit": "ug/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ug/dL"
+        },
+        "note": [
+          {
+            "text": "2.1 µg/dL — below threshold, toxic lead exposure excluded"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0b00f52a-b60d-457c-bce7-3ac37996bea5",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ferritin [Mass/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2276-4"
+            }
+          ],
+          "text": "Ferritin [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T23:57:17Z",
+        "valueQuantity": {
+          "value": 18.0,
+          "unit": "ug/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "ug/L"
+        },
+        "note": [
+          {
+            "text": "18 µg/L — low-normal; iron deficiency as contributing factor to be monitored"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f9845a2b-d34b-491c-92a8-aff8b1690836",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52416-5"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T23:57:17Z",
+        "valueQuantity": {
+          "value": 48.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "48 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f3089335-cfc7-402b-9729-0e8c1e5a5d5d",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Amoxicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CA04"
+            }
+          ],
+          "text": "Amoxicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Urticaria"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0fedba05-446c-4ca1-a466-c8177109ec22",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Pollen.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "environment"
+        ],
+        "criticality": "low",
+        "code": {
+          "text": "Pollen"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Allergic rhinitis, sneezing, watery eyes"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a6fb1e92-91c8-4939-b476-796cc99387d4",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Disturbance of activity and attention (ADHD)</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F90.0"
+                }
+              ],
+              "text": "Disturbance of activity and attention (ADHD)"
+            },
+            "onsetAge": {
+              "value": 8,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:712979c0-861c-4ba0-bbd4-8d29fcc49ec0",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandmother: Generalised anxiety disorder</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRMTH",
+              "display": "Grandmother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F41.1"
+                }
+              ],
+              "text": "Generalised anxiety disorder"
+            },
+            "onsetAge": {
+              "value": 45,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:724d4968-fb0c-44d9-8d2d-2e082a5f5754",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Neuropsychological testing</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "307808008"
+            }
+          ],
+          "text": "Neuropsychological testing"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2022",
+        "note": [
+          {
+            "text": "Revealed significant deficits in sustained attention and executive function, consistent with F90.0 [SNOMED:F90.0]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5f9d2282-ed8e-4f3e-b685-7b195d3d624a",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Electroencephalogram</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "54550000"
+            }
+          ],
+          "text": "Electroencephalogram"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2022",
+        "note": [
+          {
+            "text": "Normal recording; epileptic basis for attention lapses excluded"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8df7c6aa-23f9-4cc4-a22b-5c6abf93be39",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Psychological assessment</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "405783006"
+            }
+          ],
+          "text": "Psychological assessment"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Confirmed distractibility, emotional impulsivity, and productive executive deficits [SNOMED:F90.0]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:71f497d1-1053-449a-a712-16c527c80689",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 14-year-old Czech boy who presents to the child psychiatry outpatient clinic in Brno, accompanied by his mother and a written behavioural report from his class teacher. He is slightly underweight for his age, visibly fidgety, and unable to remain seated for more than a few minutes without repositioning himself or getting up to inspect objects around the room. His eyes dart constantly across the environment, and he repeatedly interrupts the consultation with tangential remarks — classic manifestations of distractibility and cognitive deficit in attention [SNOMED:F90.0].\n\n{patientName} lives with both parents and a younger sister in a mid-sized apartment in Brno. His father is a civil engineer and his mother a primary school teacher. Despite a supportive home environment, daily life is frequently disrupted by arguments about uncompleted homework and forgotten chores. He loses his school supplies on an almost weekly basis, and instructions given to him are forgotten within minutes, reflecting the inattention dimension of his condition [SNOMED:F90.0].\n\nOutside school, {patientName} is passionate about football and trains with a local junior club three evenings per week, where his boundless energy is more constructively channelled. He also spends several hours each day playing video games, frequently staying up past midnight despite his parents' efforts to set boundaries. This chronic sleep deprivation worsens his already impaired ability to sustain attention during school hours.\n\n{patientName} has a small but loyal group of friends; however, he frequently alienates peers through emotional impulsivity — blurting out comments, acting before thinking, and struggling to wait his turn in conversations or games [SNOMED:F90.0]. His academic performance has declined markedly over the past two school years, with grades in mathematics and Czech language dropping from satisfactory to insufficient. Despite evident intelligence, deficits in productive executive function prevent him from organising multi-step tasks, planning essays, or managing his time effectively [SNOMED:F90.0]. His parents have trialled reward charts, private tutoring, and strict screen-time schedules with limited success, prompting this formal psychiatric referral."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:886a8479-1ec3-4bc3-961b-28e2ce6f447c",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} was born at 39 weeks by uncomplicated vaginal delivery. Developmental milestones were reached on time, though his parents recall he was always unusually active from toddlerhood. Concerns about his attention and behaviour were first raised by his kindergarten teacher at age 5, but no formal evaluation was pursued at that point.\n\n{patientName} carries a diagnosis of seasonal allergic rhinitis, managed with cetirizine during the spring pollen season, and mild intermittent asthma diagnosed at age 10, currently managed with montelukast. He takes low-dose melatonin prescribed by his paediatrician to assist with chronic sleep-onset delay. He has had no emergency visits or hospitalisations for asthma.\n\nAt age 12, following a marked decline in academic performance, {patientName} underwent neuropsychological testing which revealed significant deficits in sustained attention and executive function consistent with F90.0 [SNOMED:F90.0]. An electroencephalogram performed concurrently was normal, excluding an epileptic contribution to his attentional lapses. A comprehensive psychological assessment in 2024 confirmed distractibility, emotional impulsivity, and productive executive deficits [SNOMED:F90.0].\n\n{patientName} does not smoke or use alcohol or recreational substances. He has a documented allergy to amoxicillin (urticaria). Family history is notable for ADHD in his father and generalised anxiety disorder in his maternal grandmother."
+          }
+        ]
+      }
+    }
+  ]
+}

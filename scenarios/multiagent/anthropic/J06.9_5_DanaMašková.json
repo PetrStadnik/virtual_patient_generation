@@ -1,0 +1,664 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "5"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Mašková",
+            "given": [
+              "Dana"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "J06.9",
+              "display": "Acute upper respiratory infection, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:60638c5c-e37d-48e8-9231-ffd81b9465e3",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Paracetamol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N02BE01"
+            }
+          ],
+          "text": "Paracetamol 240 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "240 mg oral every 6 hours as needed for fever or discomfort"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2c47a9df-0c07-4ab3-99ae-d31c94b59caa",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Saline nasal spray.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A09AB04"
+            }
+          ],
+          "text": "Saline nasal spray 1–2 sprays per nostril"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1–2 sprays per nostril topical three times daily for nasal congestion relief"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3cb747e9-aff8-4d60-a3f4-8af9c0682b6a",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Hydrocortisone.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "D07AA02"
+            }
+          ],
+          "text": "Hydrocortisone 1% cream, thin application"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1% cream, thin application topical once daily during eczema flares"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:644a024f-8ef3-44ae-902f-04fd971b1a3b",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Dexpanthenol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "D03AX03"
+            }
+          ],
+          "text": "Dexpanthenol apply liberally"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "apply liberally topical twice daily for dry skin and eczema maintenance"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:eff9cac0-520f-4443-b4e8-226a41a879ef",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body temperature measurement</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5"
+            }
+          ],
+          "text": "Body temperature measurement"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T20:07:45Z",
+        "valueQuantity": {
+          "value": 38.2,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        },
+        "note": [
+          {
+            "text": "38.2°C – Low-grade fever"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:abc11664-4a02-4c6d-9801-4bd5c646f97e",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Heart rate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T20:07:45Z",
+        "valueQuantity": {
+          "value": 102.0,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "note": [
+          {
+            "text": "102 bpm – Mildly elevated, consistent with febrile state"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f3f02322-3117-43dd-97ee-db399e120ea0",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Oxygen saturation (SpO2)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "2708-6"
+            }
+          ],
+          "text": "Oxygen saturation (SpO2)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T20:07:45Z",
+        "valueQuantity": {
+          "value": 98.0,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "note": [
+          {
+            "text": "98% – Within normal limits"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:245de98c-b124-4759-b23d-127af36a83b4",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Rapid influenza antigen test</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "44558-6"
+            }
+          ],
+          "text": "Rapid influenza antigen test"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T20:07:45Z",
+        "valueString": "Negative – Influenza A and B not detected",
+        "note": [
+          {
+            "text": "Negative – Influenza A and B not detected"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1a95e78f-82a5-48d1-aad5-c7688a73c75a",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">C-reactive protein (CRP) measurement</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1988-5"
+            }
+          ],
+          "text": "C-reactive protein (CRP) measurement"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T20:07:45Z",
+        "valueQuantity": {
+          "value": 8.0,
+          "unit": "mg/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/L"
+        },
+        "note": [
+          {
+            "text": "8 mg/L – Mildly elevated, consistent with viral infection"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:66193c40-ac16-45bd-a5bf-a6e940a65acc",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to House dust mite.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "environment"
+        ],
+        "criticality": "low",
+        "code": {
+          "text": "House dust mite"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Mild nasal congestion and sneezing"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fe463a9c-c713-4201-bd48-a1cd95c0eafa",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Allergic rhinitis due to pollen</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "J30.1"
+                }
+              ],
+              "text": "Allergic rhinitis due to pollen"
+            },
+            "onsetAge": {
+              "value": 12,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6c31767e-e55a-4e30-be98-de3861b9cd2b",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Asthma, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "J45.9"
+                }
+              ],
+              "text": "Asthma, unspecified"
+            },
+            "onsetAge": {
+              "value": 7,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:17bebc7a-c991-4ce8-9213-b3038a12aaaa",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brother: Acute upper respiratory infection, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "BRO",
+              "display": "Brother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "J06.9"
+                }
+              ],
+              "text": "Acute upper respiratory infection, unspecified"
+            },
+            "onsetAge": {
+              "value": 7,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a3c103db-f57f-408f-a738-797078954628",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a bright-eyed, energetic 5-year-old girl who attends kindergarten at a local elementary school. She is small for her age but generally healthy and active, with rosy cheeks and curly brown hair. Over the past three days, she has been feeling unwell, presenting with a runny nose, nasal congestion, mild sore throat, and a low-grade fever reaching up to 38.2°C (100.8°F). She has been sneezing frequently and has a mild, intermittent dry cough that disturbs her sleep at night. {patientName} has also complained of intermittent stomach ache and mild nausea, which her mother attributes to post-nasal drip and the general viral illness. {patientName} has appeared more tired than usual and has had a reduced appetite, only picking at her meals.\n\n{patientName} lives at home with her parents and a 7-year-old brother, who recently recovered from a similar acute upper respiratory infection approximately one week ago — the same illness now affecting {patientName}. She enjoys drawing, playing with dolls, and attending ballet classes twice a week. Her parents noted that several of her classmates at kindergarten were also recently sick with similar symptoms, suggesting a likely community spread of a common viral upper respiratory infection. As a kindergarten student, {patientName} spends several hours each day in close contact with peers in a shared indoor environment, which is a well-recognised risk factor for frequent viral URIs in young children.\n\n{patientName}'s parents are attentive and concerned. Her mother brought her to the clinic after two nights of disrupted sleep due to nasal congestion and coughing. {patientName} was cooperative during the physical examination, though somewhat fussy and tearful. On examination, her oropharynx appears mildly erythematous, bilateral nasal turbinates are swollen with clear mucoid discharge, and mild cervical lymphadenopathy is noted. Lungs are clear to auscultation with no wheeze or crackle.\n\nAt home, {patientName} enjoys a balanced diet including fruits and vegetables prepared by her mother. She attends ballet and loves outdoor play in the park on weekends. She has no known exposure to tobacco smoke at home and lives in a well-ventilated apartment. Her parents are diligent about her vaccination schedule, and she is up to date with all routine childhood immunisations.\n\n{patientName} currently uses a low-potency topical corticosteroid (hydrocortisone 1% cream) intermittently for eczema flares on her flexural surfaces. Although the dose and route are topical and systemic absorption is minimal, regular use of any corticosteroid preparation in young children can have a subtle effect on local skin immunity; more relevantly, the underlying atopic constitution associated with eczema is linked to a modified mucosal immune response, which may marginally increase susceptibility to viral respiratory infections."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:daeb302b-7192-40c8-a3ff-c9c6339c31f3",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has a generally unremarkable past medical history. She was born at 39 weeks gestation via normal vaginal delivery with no neonatal complications. Her growth and developmental milestones have been appropriate for age. She has experienced two prior episodes of acute upper respiratory tract infections in the past 12 months, both managed conservatively with supportive care at home. Her 7-year-old brother recently had a confirmed acute upper respiratory infection one week prior to {patientName}'s current illness, representing a likely source of household transmission.\n\n{patientName} has a history of mild atopic eczema on the flexural surfaces of her arms and knees, managed with regular moisturiser and occasional topical hydrocortisone during flares. No prior hospitalisations or surgical procedures have been recorded. She has no known history of asthma, recurrent otitis media, or allergic rhinitis, though her parents report occasional sneezing during spring months suggesting possible mild seasonal sensitivity.\n\nAs a kindergarten-aged child, {patientName}'s primary daily environment is her school classroom — a closed, shared indoor space where she is in prolonged close contact with approximately 20 peers. This setting is a well-established risk factor for frequent viral URIs due to shared air, surfaces, and the immature immune systems of young children. Several classmates have recently been ill with similar symptoms, confirming active community circulation of a respiratory virus.\n\nRegarding medications, {patientName} uses topical hydrocortisone 1% cream intermittently for eczema flares. While systemic immunosuppression at this dose and route is negligible, children with atopic dermatitis have an inherent Th2-skewed immune profile that may subtly impair antiviral mucosal defences, potentially contributing to increased susceptibility to URI. The underlying atopic constitution — rather than the medication itself — is the more relevant predisposing factor.\n\n{patientName} is fully vaccinated according to the national childhood immunisation schedule, including influenza vaccination administered last autumn. She has no known drug allergies. There is a family history of atopy, with her mother having allergic rhinitis and her father having childhood asthma. Her diet is nutritionally balanced and she takes no regular prescription medications beyond the topical treatments noted above."
+          }
+        ]
+      }
+    }
+  ]
+}

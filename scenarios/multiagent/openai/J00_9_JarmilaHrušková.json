@@ -1,0 +1,596 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "9"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Hrušková",
+            "given": [
+              "Jarmila"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "J00",
+              "display": "Acute nasopharyngitis [common cold]"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:50246b65-4241-4c34-a9d4-9fe7db5a3e2d",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Acetaminophen.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N02BE01"
+            }
+          ],
+          "text": "Acetaminophen 325 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "325 mg oral every 6 hours as needed for fever or discomfort"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:59067ba3-2484-4957-8e3f-673010664fe2",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Sodium chloride nasal spray.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R01AX10"
+            }
+          ],
+          "text": "Sodium chloride nasal spray 1-2 sprays per nostril"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1-2 sprays per nostril topical 3 times daily as needed for congestion"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8a4e98b9-f2af-4b12-8767-0fb9da377eaa",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Cetirizine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R06AE07"
+            }
+          ],
+          "text": "Cetirizine 5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "5 mg oral once daily as needed for rhinorrhea or itching"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22437fd8-d94f-4e26-a8e8-f7306ee00aef",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body temperature</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T19:57:43Z",
+        "valueQuantity": {
+          "value": 37.6,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        },
+        "note": [
+          {
+            "text": "Low-grade temperature of 37.6 C"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3ae41968-621a-4d9f-8903-89614d204368",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Respiratory rate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T19:57:43Z",
+        "valueQuantity": {
+          "value": 20.0,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "note": [
+          {
+            "text": "Respiratory rate 20/min, normal for age"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:333fbab3-1584-4944-8dfd-812f6f6b35e0",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Heart rate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T19:57:43Z",
+        "valueQuantity": {
+          "value": 96.0,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "note": [
+          {
+            "text": "Heart rate 96/min"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d7be391b-12d1-4bd7-a6f7-f47560f1b521",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Oxygen saturation in Arterial blood by Pulse oximetry</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "2708-6"
+            }
+          ],
+          "text": "Oxygen saturation in Arterial blood by Pulse oximetry"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T19:57:43Z",
+        "valueQuantity": {
+          "value": 99.0,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "note": [
+          {
+            "text": "SpO2 99% on room air"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f9340768-0c17-4883-9b90-8c50d0ef94e3",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Amoxicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "unable-to-assess",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CA04"
+            }
+          ],
+          "text": "Amoxicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Maculopapular rash"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b5d93e7f-3a55-4d45-b981-e34b973dc9ed",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Asthma</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "J45"
+                }
+              ],
+              "text": "Asthma"
+            },
+            "onsetAge": {
+              "value": 12,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:724ab207-3cfa-4ce0-a560-fe7a11245adf",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Allergic rhinitis</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "J30.4"
+                }
+              ],
+              "text": "Allergic rhinitis"
+            },
+            "onsetAge": {
+              "value": 15,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:55263f9c-a3cd-4743-97df-37b5537f042f",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brother: Acute nasopharyngitis [common cold]</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "BRO",
+              "display": "Brother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "J00"
+                }
+              ],
+              "text": "Acute nasopharyngitis [common cold]"
+            },
+            "onsetAge": {
+              "value": 9,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:eea272f9-4bba-4eb3-b4f0-788a4d12660b",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 9-year-old girl who appears tired but not toxic, sitting curled up on the exam table with a box of tissues in her lap. She has a red nose from frequent wiping, watery eyes, intermittent sneezing, and a mildly nasal voice. She breathes comfortably through her mouth when congestion worsens and says her head feels “stuffed up,” with a mild frontal headache and a scratchy throat. She also has a mild cough that is more noticeable at night and her parents report soft snoring over the last 2 nights because of nasal blockage. She has had low-grade fever at home but remains interactive, alert, and able to drink fluids. She denies ear pain but mentions a brief blocked-ear sensation with faint ringing earlier today that resolved spontaneously.\n\nAt baseline, {patientName} is an active elementary school student who enjoys drawing, riding her scooter, and playing outside with neighborhood friends. She also attends an after-school indoor art club and weekend gymnastics, where she spends time in close contact with other children, especially during the colder months when activities are indoors. She lives with her mother, father, and younger brother, and attends school regularly. Several classmates have recently had “colds,” and her mother notes that symptoms began about 2 days after a school week with multiple sick contacts. She usually sleeps well, but congestion has recently interrupted her rest.\n\nHer diet is typical for a child her age, with a preference for pasta, fruit, yogurt, and chicken soup when ill. She drinks water inconsistently unless reminded, and during this illness she has had a mildly decreased appetite but continues taking fluids. There is no smoke exposure in the home, but she often shares school supplies, participates in group snacks, and is not always consistent with hand hygiene before eating at school. The family keeps up with routine pediatric care and vaccinations. She has a close relationship with her grandparents, who help with after-school care and have occasionally looked after her while recovering from minor colds themselves.\n\nFunctionally, {patientName} is less energetic than usual but still smiles, answers questions appropriately, and asks when she can return to school. Her parents describe her as generally healthy, though she has mild seasonal allergic rhinitis that can cause baseline nasal irritation and may make viral upper respiratory symptoms feel worse. She tends to develop several minor viral illnesses during the school year because of frequent classroom and extracurricular exposure. They became concerned because the nasal discharge increased, her throat remained sore, she developed persistent congestion with headache and nighttime snoring, and they wanted to make sure this was an uncomplicated cold rather than something more serious."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c7b14f7c-dad5-4fc0-967e-8b13fa8084f5",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has normal growth and development for age and no history of hospitalization, intensive care, or surgery. She has mild seasonal allergic rhinitis with intermittent spring and fall nasal congestion, managed conservatively, which can predispose her to more noticeable upper airway symptoms during viral infections. Her immunizations are up to date per routine pediatric schedule. She has a history of occasional uncomplicated upper respiratory infections during the school year and one prior episode of otitis media in early childhood that resolved with outpatient treatment.\n\nSymptoms started 3 days ago with throat irritation and sneezing, followed by clear rhinorrhea, nasal congestion, mild fatigue, and a mild frontal headache. Her mother measured a maximum temperature of 37.9 C at home. She has had no shortness of breath, wheezing, chest pain, vomiting, diarrhea, rash, or neck stiffness. She has not had persistent ear pain, though she noticed a short episode of ear fullness with faint ringing. Oral intake is slightly reduced, but urine output remains normal. Congestion has caused noisy sleep and mild snoring for the past 2 nights. Over-the-counter supportive care at home has included warm fluids, honey for cough, saline nasal spray, and occasional cetirizine previously used for allergy symptoms, which can dry nasal mucosa somewhat but is not the cause of the current viral illness.\n\n{patientName} lives in a stable home environment with her parents and sibling. She attends primary school, where multiple children in her class have recently had similar respiratory symptoms, and she also participates in indoor after-school activities that increase close-contact exposure to common respiratory viruses. She is frequently reminded to wash her hands because she tends to touch her face and forget hand hygiene before snacks at school. There is no tobacco exposure, no known mold exposure, and no recent travel. She does not take any chronic daily medications. There is no history suggestive of asthma, immunodeficiency, or recurrent serious infections.\n\nFamily history is notable for common colds spreading easily within the household during the school year; her younger brother recently had an uncomplicated viral cold with similar congestion and cough, and both parents report getting seasonal colds most winters. Maternal history includes asthma, and paternal history includes allergic rhinitis."
+          }
+        ]
+      }
+    }
+  ]
+}

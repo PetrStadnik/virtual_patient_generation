@@ -1,0 +1,743 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "38"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Horáčková",
+            "given": [
+              "Hana"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "K75.9",
+              "display": "Inflammatory liver disease, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6e4b13e0-9469-4e16-b2d7-79a58ecc9cd0",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Levonorgestrel and ethinylestradiol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "G03AA07"
+            }
+          ],
+          "text": "Levonorgestrel and ethinylestradiol 0.15 mg / 0.03 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "0.15 mg / 0.03 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:681a7f44-f6e7-477b-ad7a-252c2865f47b",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Cetirizine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R06AE07"
+            }
+          ],
+          "text": "Cetirizine 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral once daily as needed (seasonal)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e7803ee3-38d3-4442-bc29-a22eb7c5f1de",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Ferrous sulfate.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "B03AA07"
+            }
+          ],
+          "text": "Ferrous sulfate 325 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "325 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f4ad2200-ec57-4a7a-93ef-07966408e1ce",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Alanine aminotransferase (ALT) measurement</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1742-6"
+            }
+          ],
+          "text": "Alanine aminotransferase (ALT) measurement"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:08:28Z",
+        "valueQuantity": {
+          "value": 187.0,
+          "unit": "U/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "U/L"
+        },
+        "note": [
+          {
+            "text": "Elevated at 187 U/L (reference: 7–56 U/L)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:84ffe1b1-3f86-44b8-99ae-7257cea7d019",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Aspartate aminotransferase (AST) measurement</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1920-8"
+            }
+          ],
+          "text": "Aspartate aminotransferase (AST) measurement"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:08:28Z",
+        "valueQuantity": {
+          "value": 152.0,
+          "unit": "U/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "U/L"
+        },
+        "note": [
+          {
+            "text": "Elevated at 152 U/L (reference: 10–40 U/L)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6ec94aab-c1d5-403d-9d16-a415b37c1cfc",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Total bilirubin measurement</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1975-2"
+            }
+          ],
+          "text": "Total bilirubin measurement"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:08:28Z",
+        "valueQuantity": {
+          "value": 3.1,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "note": [
+          {
+            "text": "Elevated at 3.1 mg/dL (reference: 0.1–1.2 mg/dL)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7735c406-be75-40cb-a551-fb02cc8b0ee7",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Antinuclear antibody (ANA) panel</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "69066-5"
+            }
+          ],
+          "text": "Antinuclear antibody (ANA) panel"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:08:28Z",
+        "valueString": "Weakly positive (1:80 titer, homogeneous pattern)",
+        "note": [
+          {
+            "text": "Weakly positive (1:80 titer, homogeneous pattern)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:55a5498a-9d9e-4ffd-910f-40df6383ce0a",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Abdominal ultrasound</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24975-7"
+            }
+          ],
+          "text": "Abdominal ultrasound"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:08:28Z",
+        "valueString": "Mildly enlarged liver (hepatomegaly); heterogeneous echotexture; no biliary obstruction or focal lesions identified",
+        "note": [
+          {
+            "text": "Mildly enlarged liver (hepatomegaly); heterogeneous echotexture; no biliary obstruction or focal lesions identified"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6b37a070-ef11-406c-ac48-5bbf05a39f35",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Ibuprofen.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "intolerance",
+        "category": [
+          "medication"
+        ],
+        "criticality": "high",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "M01AE01"
+            }
+          ],
+          "text": "Ibuprofen"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Hepatotoxicity — elevated liver enzymes following prolonged use"
+              }
+            ],
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e345736a-e564-434f-a400-48d637c264bb",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "high",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CA01"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Urticaria and angioedema"
+              }
+            ],
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f6dbf5db-7213-4c36-ab88-b17bbc399a13",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Autoimmune thyroiditis (Hashimoto's disease)</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "E06.3"
+                }
+              ],
+              "text": "Autoimmune thyroiditis (Hashimoto's disease)"
+            },
+            "onsetAge": {
+              "value": 44,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:90487931-9ee4-4e15-b7c7-c37493f7718e",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Alcoholic cirrhosis of liver</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "K70.3"
+                }
+              ],
+              "text": "Alcoholic cirrhosis of liver"
+            },
+            "onsetAge": {
+              "value": 57,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4e843447-acd6-428b-b12f-74bc71334de5",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandmother: Autoimmune hepatitis</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRMTH",
+              "display": "Grandmother"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "K75.4"
+                }
+              ],
+              "text": "Autoimmune hepatitis"
+            },
+            "onsetAge": {
+              "value": 62,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2f30b99f-eb5e-4449-b384-5f608195ff1b",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Appendectomy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "80146002"
+            }
+          ],
+          "text": "Appendectomy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2010",
+        "note": [
+          {
+            "text": "Open appendectomy performed at age 24 for acute appendicitis; uncomplicated recovery with no post-operative issues."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7d73befc-4316-40bf-b452-817518996264",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "in-progress",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Liver biopsy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "86273004"
+            }
+          ],
+          "text": "Liver biopsy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Percutaneous liver biopsy ordered to characterize the degree and type of hepatic inflammation; results pending histopathological analysis."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ae414d15-d19b-4af3-873d-8abf83f0ff40",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 38-year-old woman with a warm but visibly fatigued appearance. She presents with a slightly jaundiced tinge to her sclera and mild yellowing of the skin, which she initially dismissed as tiredness. Her abdomen appears mildly distended, and she reports tenderness in the right upper quadrant upon palpation. She works as a graphic designer, spending long hours seated at her desk, and admits to a largely sedentary lifestyle outside of occasional weekend yoga sessions. {patientName} lives in a mid-sized urban apartment with her long-term partner and a rescue cat named Miso. She enjoys cooking elaborate meals for friends, painting watercolors, and binge-watching documentary series in her spare time.\n\n{patientName} describes a 6-week history of persistent fatigue, low-grade fever, nausea, and intermittent right-sided abdominal discomfort. She notes that her urine has appeared darker than usual, and her stools have been lighter in color over the past two weeks. She has lost approximately 3 kg unintentionally over the same period, which she attributes to poor appetite. She occasionally drinks wine socially — approximately 3–4 glasses per week — and denies any illicit drug use. She does not smoke.\n\nHer social life is active but recently curtailed by her symptoms. {patientName} has a close-knit group of friends and a supportive partner, though she admits to feeling anxious about her health and has been researching her symptoms online, which has increased her worry. She is generally health-conscious, reads ingredient labels, and tries to eat a Mediterranean-style diet, though fast food consumption has increased with her heavy workload over the past few months.\n\n{patientName} denies any recent travel to tropical regions and has no known exposure to hepatitis. She has not started any new herbal supplements but did take a course of over-the-counter ibuprofen regularly for about three weeks in the preceding two months for tension headaches. She is up to date on routine vaccinations."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9082e5d5-1690-480c-bb97-e9d42118c3ed",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has no prior history of liver disease or chronic illness. She was hospitalized once at age 24 for appendicitis, which was managed surgically without complications. She has no known history of autoimmune conditions, though her mother has Hashimoto's thyroiditis, raising a potential autoimmune predisposition. {patientName} has a history of mild iron-deficiency anemia, diagnosed at age 31, which was managed with short-term oral iron supplementation and dietary modification.\n\nShe takes oral contraceptive pills and uses over-the-counter antihistamines for seasonal allergies. She has no prior history of blood transfusions or tattoos and denies any high-risk sexual behavior. Her BMI is 23.4, and her blood pressure has historically been within normal limits. She is a non-smoker and a light-to-moderate social drinker. There is no prior psychiatric history, though she has reported episodes of work-related stress and mild anxiety managed without medication.\n\n{patientName} has no known history of metabolic syndrome, diabetes, or thyroid dysfunction. She underwent routine pelvic ultrasound screening two years ago, which was unremarkable. She reports regular menstrual cycles with no significant gynecological history. Her last full blood panel, performed eighteen months ago, was reported as normal. She has never been tested for viral hepatitis."
+          }
+        ]
+      }
+    }
+  ]
+}

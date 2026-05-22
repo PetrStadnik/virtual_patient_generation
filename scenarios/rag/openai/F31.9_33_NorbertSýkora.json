@@ -1,0 +1,376 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "33"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Sýkora",
+            "given": [
+              "Norbert"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "F31.9",
+              "display": "Bipolar affective disorder, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d4961685-3f52-4e0e-b1f8-32cefa95b7bb",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for lithium.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N05AN01"
+            }
+          ],
+          "text": "lithium 300 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "300 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d5358bf0-b603-4134-850c-a8fb04b71f85",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for quetiapine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N05AH04"
+            }
+          ],
+          "text": "quetiapine 50 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "50 mg oral at bedtime"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6ee20c12-66a4-42ab-b467-9ccdae77e1d2",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mood assessment</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "54633-3"
+            }
+          ],
+          "text": "Mood assessment"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:17:34Z",
+        "valueString": "Markedly elevated and labile mood with decreased sleep, agitation, and intermittent depressive symptoms reported during psychiatric assessment.",
+        "note": [
+          {
+            "text": "Markedly elevated and labile mood with decreased sleep, agitation, and intermittent depressive symptoms reported during psychiatric assessment."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5c7778eb-c4a7-40dc-9d22-ce3b5f6d6d8b",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52416-5"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:17:34Z",
+        "valueQuantity": {
+          "value": 82.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "82 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:70170767-9a9b-4c43-b51a-da478ae5e77f",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Blood pressure</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58295-7"
+            }
+          ],
+          "text": "Blood pressure"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:17:34Z",
+        "valueQuantity": {
+          "value": 138.0,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        },
+        "note": [
+          {
+            "text": "138/86 mm[Hg]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fb9cab4f-7bb4-46ef-a4cc-26a8a0381aec",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Heart rate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:17:34Z",
+        "valueQuantity": {
+          "value": 104.0,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "note": [
+          {
+            "text": "104 /min"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f9f479ba-22c6-4114-81ba-ffe0098fcfa6",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 33-year-old man in the Czech Republic who works full time in a warehouse logistics role. Over the last several weeks, people close to him have noticed a striking change in his energy and behavior: he has been sleeping only a few hours a night because of persistent insomnia, yet still arrives at work talking rapidly, pacing, and seeming unusually driven and restless with clear psychomotor agitation [SNOMED:F31.9]. During these periods he becomes overly flirtatious and impulsive, with episodes of hypersexual behavior that are very out of character for him [SNOMED:F31.9].\n\nAt home, {patientName} lives alone but stays in close contact with his sister and a small group of friends. He usually enjoys football, video games, and weekend trips, but between elevated phases he can swing into low periods marked by fatigue, hypersomnia, and anhedonia, spending long stretches in bed and losing interest in hobbies and socializing [SNOMED:F31.9]. His coworkers describe him as talented and hardworking when stable, but inconsistent when his mood shifts.\n\nIn more severe high periods, {patientName} has voiced fixed false beliefs that others are watching him and has seemed suspicious and grandiose, consistent with delusional thinking [SNOMED:F31.9]. He has never had a major neurological disorder documented, and his general physical appearance is otherwise unremarkable, but during interview he appears tired around the eyes from poor sleep while simultaneously fidgety and difficult to interrupt because of the current manic symptoms of insomnia and agitation [SNOMED:F31.9].\n\nHe does not describe an especially large social circle, yet his family remains involved because the alternating pattern of mania, hypomania, and depressive symptoms has begun to interfere with relationships and work reliability [SNOMED:F31.9]. He is worried about losing control when symptoms intensify, especially when sleeplessness builds over several nights [SNOMED:F31.9]."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:80d1c18c-29e8-407d-bcd6-66fe6ded2fe0",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} reports a history of recurrent mood episodes over several years, with periods of elevated mood and reduced sleep suggestive of hypomania or mania, alternating with low periods of fatigue, hypersomnia, and loss of pleasure [SNOMED:F31.9]. He says stress at work tends to worsen his symptoms, and he recalls episodes of anxiety and panic during high-stress periods, which is consistent with one dialogue source describing panic attacks and anxiety around bipolar evaluation [MEDDIALOG:F31.9:0].\n\nHe has not had major chronic medical illness documented. He denies substance injection drug use and has no known history of head trauma. During depressed periods he may withdraw socially and spend most of the day sleeping, while during elevated periods he becomes more impulsive, restless, and socially intrusive with insomnia and psychomotor agitation [SNOMED:F31.9].\n\nThere is no confirmed prior psychiatric hospitalization available in the evidence, but his symptoms have been significant enough to disrupt work and relationships. He has no prior surgeries of relevance and no established neurological diagnosis. He is seeking treatment now because the current episode of poor sleep, agitation, and intermittent grandiose or suspicious ideas has become harder for him to manage, with delusional symptoms reported during severe mood elevation [SNOMED:F31.9]."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,700 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "59"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Bartošová",
+            "given": [
+              "Danuše"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "K29.7",
+              "display": "Gastritis, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d5f0b66d-336e-475f-b8a7-b4d4c0e06e1e",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Omeprazole.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A02BC01"
+            }
+          ],
+          "text": "Omeprazole 20 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "20 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:820da976-e753-4629-b984-5aa94854f80f",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Clarithromycin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01FA09"
+            }
+          ],
+          "text": "Clarithromycin 500 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "500 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:76e42a94-9f1d-4250-bfe8-630ba4956838",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Metronidazole.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A01AB17"
+            }
+          ],
+          "text": "Metronidazole 500 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "500 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e4cc5f9d-8d21-4185-8d4a-6e7f5ed5f605",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Sucralfate.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A02BX02"
+            }
+          ],
+          "text": "Sucralfate 1 g"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 g oral four times daily before meals"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f74afe14-a36f-4aee-8410-0f5bb4721847",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Domperidone.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A03FA03"
+            }
+          ],
+          "text": "Domperidone 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral three times daily before meals"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:395bca29-da30-4a02-a7b4-7263638a6d03",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Helicobacter pylori IgG antibody serum</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "51762-3"
+            }
+          ],
+          "text": "Helicobacter pylori IgG antibody serum"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:00:56Z",
+        "valueString": "Positive — IgG antibody titer elevated, suggestive of H. pylori infection",
+        "note": [
+          {
+            "text": "Positive — IgG antibody titer elevated, suggestive of H. pylori infection"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e4fda9b6-a85e-4f5c-ad00-d394d6a9bc32",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Helicobacter pylori stool antigen</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "31843-6"
+            }
+          ],
+          "text": "Helicobacter pylori stool antigen"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:00:56Z",
+        "valueString": "Positive — H. pylori antigen detected in stool sample",
+        "note": [
+          {
+            "text": "Positive — H. pylori antigen detected in stool sample"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:98fd4133-09c9-43d6-ac40-b3f0141b8ba0",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Complete blood count</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2"
+            }
+          ],
+          "text": "Complete blood count"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:00:56Z",
+        "valueString": "Mild normocytic anemia: Hgb 11.2 g/dL, MCV 85 fL, WBC 7.4 x10^9/L, Platelets 230 x10^9/L",
+        "note": [
+          {
+            "text": "Mild normocytic anemia: Hgb 11.2 g/dL, MCV 85 fL, WBC 7.4 x10^9/L, Platelets 230 x10^9/L"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:79158acf-50d3-4d1a-aa1d-8f7e749e099f",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52416-5"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:00:56Z",
+        "valueQuantity": {
+          "value": 67.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "67 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b4efbd1e-d9b7-4f28-b31e-302768155bae",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Heart rate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:00:56Z",
+        "valueQuantity": {
+          "value": 78.0,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "note": [
+          {
+            "text": "78 bpm"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2c17d4d2-1a80-46fb-bd27-b24b8ef4c948",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Ibuprofen.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "intolerance",
+        "category": [
+          "medication"
+        ],
+        "criticality": "high",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C01EB16"
+            }
+          ],
+          "text": "Ibuprofen"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Gastric mucosal irritation and worsening epigastric pain"
+              }
+            ],
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fe61832f-93ab-45e6-8d0c-22d8a09047fa",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Malignant neoplasm of stomach, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "C16.9"
+                }
+              ],
+              "text": "Malignant neoplasm of stomach, unspecified"
+            },
+            "onsetAge": {
+              "value": 67,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:dea8f6ce-d131-4e8b-be6c-59f88993ade5",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Essential (primary) hypertension</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I10"
+                }
+              ],
+              "text": "Essential (primary) hypertension"
+            },
+            "onsetAge": {
+              "value": 55,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:35d854ef-966f-403b-ac5a-3a837870b348",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Upper gastrointestinal endoscopy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "76009000"
+            }
+          ],
+          "text": "Upper gastrointestinal endoscopy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Performed to evaluate persistent epigastric pain and H. pylori-positive serology; revealed erythematous and edematous gastric mucosa consistent with active gastritis, no ulceration observed."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e9f255f6-1aa4-42ed-88fb-a0146b753714",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Gastric biopsy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "274350003"
+            }
+          ],
+          "text": "Gastric biopsy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Biopsy of gastric antrum obtained during endoscopy; histopathology confirmed chronic active gastritis with H. pylori colonization."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4b6b3745-1a4f-41d2-bcc5-ae618e2778c8",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 59-year-old woman with a warm but somewhat weary demeanor, presenting to the outpatient gastroenterology clinic with a several-month history of persistent upper abdominal discomfort. She describes the pain as a dull, burning sensation centered in the epigastric region, often worsening after meals and occasionally waking her at night. She reports accompanying nausea, early satiety, occasional bloating, and a loss of appetite that has contributed to unintentional weight loss of approximately 3 kg over the past two months.\n\n{patientName} works as a middle school librarian, a role she has held for over 20 years. She finds the job meaningful but at times stressful, particularly during exam periods when she oversees extended library hours. She tends to skip breakfast, relying heavily on coffee throughout the morning — often drinking three to four cups before noon — which she acknowledges likely aggravates her symptoms. She lives with her husband in a quiet suburb and has two adult children who visit on weekends.\n\nOutside of work, {patientName} enjoys tending to her garden, reading historical fiction, and attending a weekly yoga class. However, her ongoing gastrointestinal discomfort has made her less enthusiastic about these activities recently, as the post-meal bloating makes physical activity uncomfortable. She admits to a moderate alcohol intake — a glass of wine most evenings — and has smoked socially in the past, though she quit roughly 15 years ago.\n\n{patientName} is a tidy, slightly anxious individual who has been self-medicating with over-the-counter antacids and, until recently, taking ibuprofen regularly for chronic lower back pain, which she now suspects may have worsened her stomach condition. She is motivated to find a long-term solution and is open to dietary and lifestyle modifications alongside medical treatment."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:663d202b-2780-4ed6-82ff-6a603db65fd4",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has a background of mild hypertension managed with lifestyle measures and intermittent antihypertensive therapy. She has a long-standing history of chronic lower back pain for which she self-administered ibuprofen regularly over the past two years without gastroprotective co-therapy — considered a major contributing factor to her current presentation. She has no prior history of peptic ulcer disease, gastrointestinal bleeding, or previous endoscopic procedures. She underwent a routine colonoscopy approximately 5 years ago with normal findings. She has no known liver or pancreatic disease. {patientName} reports a mildly stressful lifestyle, high daily coffee intake, and moderate alcohol use, all of which are relevant gastric irritants. She is postmenopausal and takes no hormonal therapy. There is a family history of gastric cancer on the maternal side, which adds clinical significance to her current symptom workup. She has no known prior H. pylori testing or treatment."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,514 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "73"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Kratochvíl",
+            "given": [
+              "Jan"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C34.9",
+              "display": "Malignant neoplasm: Bronchus or lung, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5a5b5ed9-4ca5-47ff-8536-14857c5f06ca",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Fentanyl.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N01AH01"
+            }
+          ],
+          "text": "Fentanyl 25 mcg/hour"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "25 mcg/hour transdermal every 72 hours"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8295ffd2-da19-48f5-806e-dc50a6842d79",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Albuterol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R03AC02"
+            }
+          ],
+          "text": "Albuterol 100 mcg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "100 mcg inhaled every 6 hours as needed"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6721b0d3-8f48-447e-a9b0-793cdbbf24e9",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Acetylcysteine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R05CB01"
+            }
+          ],
+          "text": "Acetylcysteine 200 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "200 mg oral three times daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9d4bf528-7fd9-48b1-b45b-f94dd605c6cb",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Chest X-ray</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24565-4"
+            }
+          ],
+          "text": "Chest X-ray"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:23:29Z",
+        "valueString": "Abnormal chest radiograph with a suspicious right hilar/pulmonary lesion, obtained as part of evaluation for chronic cough and breathlessness [MEDDIALOG:C34.9:0, MEDDIALOG:C34.9:3, MEDDIALOG:C34.9:5]",
+        "note": [
+          {
+            "text": "Abnormal chest radiograph with a suspicious right hilar/pulmonary lesion, obtained as part of evaluation for chronic cough and breathlessness [MEDDIALOG:C34.9:0, MEDDIALOG:C34.9:3, MEDDIALOG:C34.9:5]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:63f34e4e-291d-4ed5-bde1-b7eddeb4c9ef",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">MRI brain</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11541-0"
+            }
+          ],
+          "text": "MRI brain"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:23:29Z",
+        "valueString": "Ordered urgently to evaluate acute confusion and rule out brain metastases in known lung cancer [MEDDIALOG:C34.9:7]",
+        "note": [
+          {
+            "text": "Ordered urgently to evaluate acute confusion and rule out brain metastases in known lung cancer [MEDDIALOG:C34.9:7]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:299471b7-6eb8-4d58-bfc9-534f9ea75d00",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sodium [Moles/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2951-2"
+            }
+          ],
+          "text": "Sodium [Moles/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:23:29Z",
+        "valueString": "128 mmol/L, hyponatremia considered as a cause of altered mental status in lung cancer [MEDDIALOG:C34.9:7]",
+        "note": [
+          {
+            "text": "128 mmol/L, hyponatremia considered as a cause of altered mental status in lung cancer [MEDDIALOG:C34.9:7]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:871960d4-86a4-4cb1-9e92-d93405a667cb",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pulmonary function test</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "20080-8"
+            }
+          ],
+          "text": "Pulmonary function test"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:23:29Z",
+        "valueString": "Performed during evaluation of chronic cough and breathlessness; supportive respiratory assessment but not diagnostic of malignancy [MEDDIALOG:C34.9:0, MEDDIALOG:C34.9:5, MEDDIALOG:C34.9:6]",
+        "note": [
+          {
+            "text": "Performed during evaluation of chronic cough and breathlessness; supportive respiratory assessment but not diagnostic of malignancy [MEDDIALOG:C34.9:0, MEDDIALOG:C34.9:5, MEDDIALOG:C34.9:6]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b03d1803-ea13-4fc1-b527-602926d7bb9f",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "unable-to-assess",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CE01"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Rash"
+              }
+            ],
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9a06c811-a122-489f-a200-d2c725928741",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Malignant neoplasm of bronchus or lung, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "C34.9"
+                }
+              ],
+              "text": "Malignant neoplasm of bronchus or lung, unspecified"
+            },
+            "onsetAge": {
+              "value": 68,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2911915f-521e-4127-b20c-988d95414808",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "not-done",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Partial hip replacement</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "340922009"
+            }
+          ],
+          "text": "Partial hip replacement"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "note": [
+          {
+            "text": "Discussed previously in the setting of cancer care in the broader evidence base, but not performed for this patient [MEDDIALOG:C34.9:2]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:45a55847-3916-4f60-bf25-4987cd2e0546",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 73-year-old man from the Czech Republic who looks chronically unwell and tired, with a persistent cough that has been present for many months and episodes of shortness of breath after coughing fits [MEDDIALOG:C34.9:0]. He describes a heavy feeling in the chest and intermittent chest discomfort, symptoms that can occur with lung disease and are part of the current concern [MEDDIALOG:C34.9:3, MEDDIALOG:C34.9:6]. Over the last two days, his family has also noticed new confusion, difficulty putting sentences together, and needing help with feeding, walking, and using the restroom [MEDDIALOG:C34.9:7].\n\nHe is a retired industrial maintenance worker who spent decades around dusts and inhaled workplace agents, a plausible occupational exposure pattern relevant to lung cancer risk [MEDDIALOG:C34.9:3]. He lives with his wife, and his adult daughter visits daily and has become increasingly involved because of the sudden change in his mental status [MEDDIALOG:C34.9:7]. He used to enjoy gardening and short walks, but his stamina has dropped because of cough, fatigue, and breathlessness [MEDDIALOG:C34.9:0].\n\nAt home, {patientName} tries to stay independent, but his recent decline has made that difficult. The cough is often forceful and exhausting, and he brings up thick sputum at times [MEDDIALOG:C34.9:0]. His family is especially worried that the abrupt confusion could reflect spread of the cancer to the brain or a medication effect from strong pain patches started a few days ago [MEDDIALOG:C34.9:7]."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0e314529-3e59-4bd1-9b65-eed89e969f51",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has a history of chronic cough with periods of thick sputum production, fatigue, and breathlessness, symptoms that were concerning enough to warrant chest imaging in the diagnostic workup [MEDDIALOG:C34.9:0, MEDDIALOG:C34.9:5]. He recently started strong pain patches for cancer-related pain, and the family links the onset of confusion to the last few days after beginning this medication [MEDDIALOG:C34.9:7].\n\nHis occupational background included years of exposure to inhaled industrial agents, a recognized risk factor for lung cancer [MEDDIALOG:C34.9:3]. There is also a family history of lung cancer in his father [MEDDIALOG:C34.9:7]. He has had declining exercise tolerance because of cough and shortness of breath [MEDDIALOG:C34.9:0]. No prior major procedures are essential to this presentation, and no additional comorbidities are specified by the evidence."
+          }
+        ]
+      }
+    }
+  ]
+}

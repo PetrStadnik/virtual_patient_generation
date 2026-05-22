@@ -1,0 +1,877 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "55"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Procházka",
+            "given": [
+              "Denis"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "E11.9",
+              "display": "Type 2 diabetes mellitus without complications"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c58ad179-e850-4388-a851-97d000b17c17",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Metformin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A10BA02"
+            }
+          ],
+          "text": "Metformin 1000 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1000 mg oral twice daily with meals"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ce5e2fdd-7658-43d6-a79c-650c0d3b3edc",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Lisinopril.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C09AA03"
+            }
+          ],
+          "text": "Lisinopril 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b154ed69-30f7-4035-9444-646485eb598f",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Atorvastatin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C10AA05"
+            }
+          ],
+          "text": "Atorvastatin 20 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "20 mg oral once daily at bedtime"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:eab40888-11bb-41b6-8989-3c98975ab126",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Aspirin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "B01AC06"
+            }
+          ],
+          "text": "Aspirin 81 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "81 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:81aa675a-905f-4ba0-86cf-5e145782b9c9",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Omeprazole.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A02BC01"
+            }
+          ],
+          "text": "Omeprazole 20 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "20 mg oral once daily before breakfast"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7f577fb5-0343-4ee6-b94e-8fd07940856e",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Hemoglobin A1c (HbA1c) measurement</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4"
+            }
+          ],
+          "text": "Hemoglobin A1c (HbA1c) measurement"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T00:03:36Z",
+        "valueQuantity": {
+          "value": 8.1,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "note": [
+          {
+            "text": "8.1% – above target (goal <7.0%)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9da8ef9f-c46a-41a0-91b5-3de86fa6af71",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Fasting plasma glucose</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1558-6"
+            }
+          ],
+          "text": "Fasting plasma glucose"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T00:03:36Z",
+        "valueQuantity": {
+          "value": 152.0,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "note": [
+          {
+            "text": "152 mg/dL – elevated (normal fasting <100 mg/dL)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a7021757-24c2-495d-8003-789e83c05015",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Urine albumin-to-creatinine ratio</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9318-7"
+            }
+          ],
+          "text": "Urine albumin-to-creatinine ratio"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T00:03:36Z",
+        "valueQuantity": {
+          "value": 28.0,
+          "unit": "mg/g",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/g"
+        },
+        "note": [
+          {
+            "text": "28 mg/g – mildly elevated, borderline microalbuminuria"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9bda23a8-0126-460a-9b00-47485c9a65ed",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Lipid panel – LDL Cholesterol</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2089-1"
+            }
+          ],
+          "text": "Lipid panel – LDL Cholesterol"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T00:03:36Z",
+        "valueQuantity": {
+          "value": 118.0,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "note": [
+          {
+            "text": "118 mg/dL – mildly above target for diabetic patients (<100 mg/dL)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4907e830-10df-47a6-88c1-9959a4863bd2",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T00:03:36Z",
+        "valueQuantity": {
+          "value": 91.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "91 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8f51191e-5176-4ee6-87c3-cf6aca4f4ed3",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Sulfamethoxazole.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "intolerance",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01EC01"
+            }
+          ],
+          "text": "Sulfamethoxazole"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Nausea and gastrointestinal upset"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cc836ced-d9b9-4503-b4fc-7562f16768c3",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Shellfish.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "food"
+        ],
+        "criticality": "high",
+        "code": {
+          "text": "Shellfish"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Urticaria and lip swelling"
+              }
+            ],
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c981a960-860a-42eb-8f6d-a2ade38eadde",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Type 2 diabetes mellitus</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "E11.9"
+                }
+              ],
+              "text": "Type 2 diabetes mellitus"
+            },
+            "onsetAge": {
+              "value": 58,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ca3c9f1d-2c71-4c20-9179-45ea4feda257",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Essential hypertension</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I10"
+                }
+              ],
+              "text": "Essential hypertension"
+            },
+            "onsetAge": {
+              "value": 52,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d980cbbf-07c6-4dda-bf6e-8e7ef6a005dd",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brother: Hyperlipidemia</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "BRO",
+              "display": "Brother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "E78.5"
+                }
+              ],
+              "text": "Hyperlipidemia"
+            },
+            "onsetAge": {
+              "value": 47,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:19596d86-2399-4c66-9398-09274f581e2f",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandfather: Atherosclerotic heart disease</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRFTH",
+              "display": "Grandfather"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I25.1"
+                }
+              ],
+              "text": "Atherosclerotic heart disease"
+            },
+            "onsetAge": {
+              "value": 65,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:20a017b7-8965-4356-9bb0-2dae5df1600a",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Inguinal hernia repair</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "44950006"
+            }
+          ],
+          "text": "Inguinal hernia repair"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2015",
+        "note": [
+          {
+            "text": "Elective surgical repair of right inguinal hernia performed in patient's late 40s; uncomplicated recovery with no recurrence noted."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:52fa6775-f79c-4d70-8e91-0ac5358613f3",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Fasting lipid panel screening</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "104957000"
+            }
+          ],
+          "text": "Fasting lipid panel screening"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2022",
+        "note": [
+          {
+            "text": "Performed as part of routine cardiovascular risk assessment at time of dyslipidemia diagnosis; led to initiation of statin therapy."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c12c2df2-a33e-4003-957a-a1796bde4294",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Diabetic foot examination</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "401191002"
+            }
+          ],
+          "text": "Diabetic foot examination"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Monofilament sensation testing and visual inspection performed at today's visit; intact sensation bilaterally, no ulceration or structural deformity detected."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b46f496d-5044-4692-b3c1-d4b37816dce7",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 55-year-old male who presents to the outpatient clinic for a routine follow-up visit. He is moderately overweight, with a slightly rounded abdomen and a ruddy complexion. He appears his stated age, dressed casually in work clothes, and is alert and cooperative throughout the encounter. He reports feeling \"a bit more tired than usual\" over the past few months. He also describes persistent increased thirst — drinking large quantities of water and sweetened beverages throughout the day — which he initially attributed to stress and the dry environment of his car during long drives, but which has been a consistent feature since his diagnosis. This compulsive urge to drink is strongly reinforced during stressful work periods, suggesting a significant psychogenic component to his polydipsia in addition to the osmotic drive from hyperglycemia; he often reaches for beverages not out of physiological need but as a coping mechanism for work-related anxiety. He reports frequent urination, particularly noticeable at night, which disrupts his sleep on most evenings.\n\n{patientName} works as a regional sales manager, spending long hours behind a desk or behind the wheel of his car visiting clients across the state. His diet is largely composed of fast food and convenience meals due to his hectic travel schedule. He admits to drinking two to three cups of sweetened coffee per day and consuming alcohol socially — typically four to five beers on weekends. He gets little structured exercise; his weekend football-watching gatherings with neighbors typically involve hours of sitting, snacking on chips and processed foods, and drinking beer — a pattern that reinforces his caloric excess and sedentary habits. He occasionally walks his dog in the evenings, which represents the bulk of his weekly physical activity.\n\nAt home, {patientName} lives with his wife of 28 years and their teenage son. He describes his home life as busy but fulfilling. He is an avid fan of American football and spends Sunday afternoons watching games with neighbors, a routine that frequently involves high-calorie snacks and sugary sodas — dietary habits directly associated with worsening glycemic control. He smoked cigarettes for about 12 years in his 30s and early 40s, but quit approximately 10 years ago. He reports ongoing and significant stress related to work performance targets and financial responsibilities, which he acknowledges leads to emotional eating, poor food choices, and notably an almost reflexive, stress-driven urge to drink fluids — a behavioral pattern his wife has commented on repeatedly.\n\n{patientName} first noticed increased thirst and frequent urination about two years ago, which prompted a visit to his primary care physician. He recalls that even in the years before his formal diagnosis, he would periodically experience similar spells of excessive thirst and fatigue during particularly stressful work periods, dismissing them as consequences of long travel days and dehydration. A fasting glucose and HbA1c confirmed the diagnosis of Type 2 diabetes mellitus. He was initially counseled on lifestyle modification and started on oral hypoglycemic therapy. His adherence to medications is generally good, though he acknowledges difficulty sticking to dietary recommendations.\n\nOn examination today, his BMI is 29.4 kg/m², blood pressure is mildly elevated at 134/86 mmHg, and his fasting blood glucose is above target. His feet show intact sensation on monofilament testing with no ulcerations or deformities noted. It is also worth noting that {patientName} has been on atorvastatin for three years — a medication with a well-documented modest association with increased risk of new-onset T2DM — and while his diabetes was diagnosed around the same period statin therapy was initiated, this temporal overlap may have contributed incrementally to his insulin resistance."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:86e68612-3850-43e3-a9a1-a6c48964d9aa",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} was diagnosed with Type 2 diabetes mellitus approximately two years ago following an incidental finding of elevated fasting blood glucose during a routine workplace health screening. He was subsequently evaluated by his primary care physician, who confirmed the diagnosis with a repeat fasting glucose of 138 mg/dL and an HbA1c of 7.8%. He was initially started on metformin and referred to a diabetes education program, which he attended for three sessions before work obligations interfered. Notably, {patientName} recalls experiencing episodes of excessive thirst, fatigue, and increased urination in the one to two years preceding his formal diagnosis — particularly during stressful work stretches — suggesting a prolonged pre-diabetic or early diabetic period that went unrecognized. Clinically, it is noteworthy that his polydipsia has a dual character: an osmotic component driven by hyperglycemia, and a psychogenic component in which significant occupational and financial stress reliably triggers compulsive fluid intake beyond what is physiologically warranted. These symptoms were repetitive and progressive, consistent with the chronic, insidious natural history of T2DM.\n\nHis past medical history is notable for hypertension, diagnosed five years ago and managed with a single antihypertensive agent. He also has a history of dyslipidemia, for which he has been on atorvastatin for the past three years. It is recognized that statin therapy carries a small but statistically significant increased risk of new-onset T2DM, and the initiation of atorvastatin temporally coincided with the period during which {patientName}'s glucose metabolism began to deteriorate — a contributing pharmacological factor that cannot be entirely excluded. He was hospitalized once in his late 40s for an inguinal hernia repair with an uneventful recovery. There is no prior history of cardiovascular events, kidney disease, or eye problems documented to date.\n\n{patientName} is a former smoker (12 pack-year history, quit 10 years ago) and currently consumes alcohol socially. His sedentary occupational lifestyle, calorie-dense diet, and weekend social habits — which involve prolonged sitting, high-calorie snacking, and beer consumption during football gatherings — represent compounding lifestyle triggers for both the development and ongoing poor control of his T2DM. He has no known drug allergies apart from a documented intolerance to sulfa antibiotics causing gastrointestinal upset. His immunizations are up to date, including annual influenza vaccine. He sees his primary care physician every three months for diabetes monitoring and has been referred for ophthalmologic screening, though he has not yet attended the appointment."
+          }
+        ]
+      }
+    }
+  ]
+}

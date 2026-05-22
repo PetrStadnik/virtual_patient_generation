@@ -1,0 +1,316 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "51"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Sedláček",
+            "given": [
+              "Michal"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "M79.1",
+              "display": "Myalgia"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ba088d5b-a039-4175-a26b-3543e64917dd",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for paracetamol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N02BE01"
+            }
+          ],
+          "text": "paracetamol 500 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "500 mg oral every 6 hours as needed"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3a1cc2c2-d1d6-4338-ae00-20dea1f910b2",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for ibuprofen.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C01EB16"
+            }
+          ],
+          "text": "ibuprofen 400 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "400 mg oral three times daily as needed"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:06c064e8-83c3-40da-a052-7e47d3b6e822",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Creatine kinase [Enzymatic activity/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2157-6"
+            }
+          ],
+          "text": "Creatine kinase [Enzymatic activity/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T18:54:17Z",
+        "valueString": "168 U/L, within reference range",
+        "note": [
+          {
+            "text": "168 U/L, within reference range"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1af2cb32-cf2e-49fe-8fc1-98454d3de365",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">C reactive protein [Mass/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1988-5"
+            }
+          ],
+          "text": "C reactive protein [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T18:54:17Z",
+        "valueString": "3.2 mg/L, not significantly elevated",
+        "note": [
+          {
+            "text": "3.2 mg/L, not significantly elevated"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b42b18f0-bd59-46b6-9c39-80e06b33670a",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Erythrocyte sedimentation rate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "30341-2"
+            }
+          ],
+          "text": "Erythrocyte sedimentation rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T18:54:17Z",
+        "valueString": "11 mm/h, within reference range",
+        "note": [
+          {
+            "text": "11 mm/h, within reference range"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:662aa590-f4f0-4e9c-ac1c-313232e5e081",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 51-year-old man from the Czech Republic who comes in because of persistent muscle pain [SNOMED:M79.1]. He describes the discomfort as a diffuse aching in his muscles that has been troubling him enough to limit his normal daily activities [SNOMED:M79.1]. He looks tired but not acutely ill, walks into the clinic independently, and is able to hold a full conversation. He works a regular job and tries to stay active on weekends with light home projects and short walks, but lately he has been avoiding heavier activity because the muscle pain flares with exertion [SNOMED:M79.1].\n\nAt home, {patientName} lives with his family and keeps a fairly structured routine. He enjoys practical hobbies such as gardening and do-it-yourself repairs, and he usually prefers to manage minor health problems conservatively before seeking care. Over the past several days, however, the muscle pain has become noticeable enough that his spouse encouraged him to get evaluated [SNOMED:M79.1]. He denies dramatic focal injury and instead describes a bothersome generalized soreness centered in the muscles [SNOMED:M79.1].\n\nIn the exam room, {patientName} appears mildly uncomfortable when changing position on the chair because of the aching sensation in his muscles [SNOMED:M79.1]. He is worried that the pain may represent something more serious, especially because it has not resolved with rest alone. Despite the discomfort, he remains attentive, cooperative, and motivated to understand the cause and get symptom relief."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1fbfd109-97b3-4fa5-bb52-aaa80500b538",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} reports recent muscle pain as his main concern [SNOMED:M79.1]. He has not described a single clear traumatic event leading to the symptoms, and there is no documented prior hospitalization related to this complaint. He initially tried rest and reducing physical activity at home, but the muscle pain persisted [SNOMED:M79.1].\n\nHe has been functioning independently in daily life, though with some reduction in exercise and household activity because movement worsens his muscular discomfort [SNOMED:M79.1]. No additional comorbidity is directly supported by the provided evidence, so the remainder of his past medical history is unremarkable by available records. He presents now for outpatient assessment and symptomatic treatment of muscle pain [SNOMED:M79.1]."
+          }
+        ]
+      }
+    }
+  ]
+}

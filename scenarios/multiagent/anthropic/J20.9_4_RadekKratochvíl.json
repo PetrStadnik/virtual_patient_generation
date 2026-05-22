@@ -1,0 +1,659 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "4"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Kratochvíl",
+            "given": [
+              "Radek"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "J20.9",
+              "display": "Acute bronchitis, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e1210fd9-546e-4a88-a2de-2223f1cf05e9",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Paracetamol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N02BE01"
+            }
+          ],
+          "text": "Paracetamol 240 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "240 mg oral every 6 hours as needed for fever or discomfort"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c2cddb39-84ef-40d3-9bdd-84cc2754fd1e",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Sodium chloride 0.9% nasal drops.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "B05XA03"
+            }
+          ],
+          "text": "Sodium chloride 0.9% nasal drops 2 drops per nostril"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "2 drops per nostril topical 3 times daily for nasal congestion"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cd742561-0934-44ea-aa6c-fb37ad87668e",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Glucose electrolyte solution.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A07CA01"
+            }
+          ],
+          "text": "Glucose electrolyte solution 150 mL"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "150 mL oral after each episode of reduced fluid intake or as tolerated"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:dbbfcc64-5370-43da-8670-461cac33dbdb",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Salbutamol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R03AC02"
+            }
+          ],
+          "text": "Salbutamol 2.5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "2.5 mg inhaled every 4–6 hours as needed for wheeze or shortness of breath"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b4728656-657f-4548-a0a7-6a86bbad7baa",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Chest X-ray</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "36643-5"
+            }
+          ],
+          "text": "Chest X-ray"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T21:39:00Z",
+        "valueString": "No consolidation or lobar collapse. Mild peribronchial thickening bilaterally. No pleural effusion. Heart size normal.",
+        "note": [
+          {
+            "text": "No consolidation or lobar collapse. Mild peribronchial thickening bilaterally. No pleural effusion. Heart size normal."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:860858e3-d7d5-40ad-8cbd-2bc054e9eb03",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Oxygen saturation (SpO2) by pulse oximetry</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "2708-6"
+            }
+          ],
+          "text": "Oxygen saturation (SpO2) by pulse oximetry"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T21:39:00Z",
+        "valueQuantity": {
+          "value": 97.0,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "note": [
+          {
+            "text": "97%"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bd90400a-e7df-4ff2-bb32-d177a80521cf",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body temperature</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T21:39:00Z",
+        "valueQuantity": {
+          "value": 38.2,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        },
+        "note": [
+          {
+            "text": "38.2 °C"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f0ee7c1c-d6e7-4e73-b9f6-f0bb217e49ba",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Respiratory rate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T21:39:00Z",
+        "valueQuantity": {
+          "value": 28.0,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "note": [
+          {
+            "text": "28 breaths/min"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7864c2ae-7f97-4eba-8773-9a7e1079ff53",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Respiratory syncytial virus (RSV) antigen rapid test</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "13285-8"
+            }
+          ],
+          "text": "Respiratory syncytial virus (RSV) antigen rapid test"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T21:39:00Z",
+        "valueString": "Positive for RSV antigen",
+        "note": [
+          {
+            "text": "Positive for RSV antigen"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ed45dc7b-98e2-42e4-95d5-ddb7cb474ebd",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Fragrance mix (topical lotion).</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "intolerance",
+        "category": [
+          "environment"
+        ],
+        "criticality": "low",
+        "code": {
+          "text": "Fragrance mix (topical lotion)"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Mild contact dermatitis (skin erythema and itching)"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:59920a45-e98a-4f71-915a-aa441b90e9e0",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Seasonal allergic rhinitis</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "J30.1"
+                }
+              ],
+              "text": "Seasonal allergic rhinitis"
+            },
+            "onsetAge": {
+              "value": 12,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:01f3528b-7640-4a7f-8b83-cb16bc9b2060",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Chronic bronchitis</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "J40"
+                }
+              ],
+              "text": "Chronic bronchitis"
+            },
+            "onsetAge": {
+              "value": 35,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:37e3f316-c5eb-427b-b32c-cf097a622d71",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sister: Acute bronchitis, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "SIS",
+              "display": "Sister"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "J20.9"
+                }
+              ],
+              "text": "Acute bronchitis, unspecified"
+            },
+            "onsetAge": {
+              "value": 7,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22bb3517-5f4a-41f7-a333-b1751d11166e",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a cheerful, energetic 4-year-old boy who attends a local preschool five days a week, where he loves painting, playing with building blocks, and chasing his classmates during outdoor recess. He lives with his parents and a 7-year-old sister in a cozy suburban home that has a small backyard where he enjoys digging in the sandbox and kicking a football around with his dad on weekends. The family has a pet cat named \"Biscuit,\" whom {patientName} adores, often cuddling with him on the living room couch.\n\nOver the past five days, {patientName} has been unusually irritable and fatigued, spending most of his time on the sofa rather than playing. He developed a runny nose and low-grade fever initially, which progressed to a persistent, wet, productive-sounding cough that frequently disturbs his sleep at night. His parents report that he has been coughing so hard at times that he nearly vomits, and on several occasions thick phlegm has partially obstructed his throat, causing brief choking episodes that have frightened his parents. He also complains of tummy aches, particularly after prolonged coughing fits, and his voice sounds slightly hoarse.\n\nOn examination, {patientName} appears mildly distressed, with tired eyes and a flushed face. He breathes a little faster than normal and occasionally uses his accessory muscles subtly. He reports feeling short of breath during coughing episodes. Auscultation of the chest reveals coarse rhonchi bilaterally alongside intermittent asthmatoid wheeze, which partially clears with coughing. There is no significant stridor. His oropharynx is mildly erythematous with clear post-nasal drip.\n\n{patientName}'s appetite has noticeably decreased over the past few days, and he is drinking less than usual, prompting his parents to worry about dehydration. His mother mentions he has had two or three similar episodes of chest colds in the past year, each resolving on its own, but this one feels worse to her. She is a non-smoker, though the father smokes occasionally outside the home. Notably, {patientName} attends a preschool classroom where indoor air quality is poor due to an aging HVAC system, and he spends several hours each day in close contact with other children — a significant environmental exposure to respiratory pathogens and airborne irritants.\n\nThe family leads an otherwise healthy lifestyle — {patientName} eats a balanced diet with plenty of fruits and vegetables, is up to date on all vaccinations, and generally sleeps 10–11 hours per night. His preschool recently had a cluster of children with upper respiratory illnesses, which is the likely source of his current infection. His father's long history of smoking-related bronchitis and his sister's recent acute bronchitis episode earlier this season suggest a familial susceptibility to lower respiratory tract illness in this household."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7eec58fc-8474-43cf-a8c2-21f5b102fb3c",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has no significant chronic medical conditions. He was born at 39 weeks via normal vaginal delivery with no perinatal complications and achieved all developmental milestones appropriately. His vaccination record is complete and up to date per the national immunization schedule, including influenza vaccine administered last autumn.\n\n{patientName} has had two to three episodes of viral upper respiratory tract infections in the past 12 months, managed conservatively at home. One episode approximately six months ago was associated with mild bronchospasm and was treated with a short course of salbutamol nebulization in the emergency department, though no formal diagnosis of asthma was made at the time. There is a family history of atopy, with his mother having seasonal allergic rhinitis, and his older sister experienced an episode of acute bronchitis (J20.9) earlier this respiratory season, confirming a family pattern of acute lower respiratory tract infections circulating within the household.\n\n{patientName} attends a preschool with a known cluster of respiratory illness among classmates, and spends prolonged hours daily in a shared indoor environment with suboptimal ventilation — a direct occupational-equivalent exposure for a child of his age that increases risk of acquiring and transmitting respiratory pathogens. Additionally, passive smoke exposure from the father (outdoor smoking) is noted as a contributing environmental risk factor for recurrent respiratory infections and airway irritability.\n\nHe has no history of hospitalization, surgical procedures, or known food or drug allergies aside from a mild skin reaction to a fragrance-containing lotion. He is not on any regular medications and has no known immunodeficiency. It is noted that regular use of proton pump inhibitors or inhaled corticosteroids can predispose to lower respiratory infections; {patientName} does not currently take such medications, and his current symptomatic regimen (paracetamol, saline drops, oral rehydration) does not contribute to bronchitis risk. However, the oral rehydration solution contains glucose and electrolytes that support recovery rather than cause illness."
+          }
+        ]
+      }
+    }
+  ]
+}

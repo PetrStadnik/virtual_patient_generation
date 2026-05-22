@@ -1,0 +1,647 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "31"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Janda",
+            "given": [
+              "Pavel"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "F31.9",
+              "display": "Bipolar affective disorder, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cab42915-f6f4-4bae-97d9-1600ef59c7e3",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Omeprazole.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A02BC01"
+            }
+          ],
+          "text": "Omeprazole 20 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "20 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:da16b328-219c-44ac-a04c-422e8b63adaf",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Ibuprofen.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "M01AE01"
+            }
+          ],
+          "text": "Ibuprofen 400 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "400 mg oral as needed for headache, maximum 3 times daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d1bfbed4-4970-490a-97d3-327b03c89a55",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Vitamin D3.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A11CC05"
+            }
+          ],
+          "text": "Vitamin D3 1000 IU"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1000 IU oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a792fca2-1df4-45d8-8117-db10ff2a1ab4",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Young Mania Rating Scale (YMRS) Assessment</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "77015-0"
+            }
+          ],
+          "text": "Young Mania Rating Scale (YMRS) Assessment"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:45:15Z",
+        "valueQuantity": {
+          "value": 28.0,
+          "unit": "{score}",
+          "system": "http://unitsofmeasure.org",
+          "code": "{score}"
+        },
+        "note": [
+          {
+            "text": "Score: 28 – indicating moderate-to-severe manic symptoms"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8ea468a2-e1cc-4e50-92ee-0b7530ae67e6",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Thyroid Stimulating Hormone (TSH)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3016-3"
+            }
+          ],
+          "text": "Thyroid Stimulating Hormone (TSH)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:45:15Z",
+        "valueQuantity": {
+          "value": 2.1,
+          "unit": "mIU/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mIU/L"
+        },
+        "note": [
+          {
+            "text": "2.1 mIU/L – within normal range"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b6cbee98-29a3-40fa-94ad-e91fbced4453",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Lithium serum level</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "14334-7"
+            }
+          ],
+          "text": "Lithium serum level"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:45:15Z",
+        "valueQuantity": {
+          "value": 0.5,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "note": [
+          {
+            "text": "0.5 mmol/L – subtherapeutic (target 0.6–1.2 mmol/L); consistent with poor adherence"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b00f6fc8-e366-4141-955e-06d4ca567e70",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Complete Blood Count (CBC)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2"
+            }
+          ],
+          "text": "Complete Blood Count (CBC)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:45:15Z",
+        "valueString": "WBC 6.8 x10³/µL, RBC 4.9 x10⁶/µL, Hgb 14.8 g/dL, Hct 43.5%, Platelets 220 x10³/µL – all within normal limits",
+        "note": [
+          {
+            "text": "WBC 6.8 x10³/µL, RBC 4.9 x10⁶/µL, Hgb 14.8 g/dL, Hct 43.5%, Platelets 220 x10³/µL – all within normal limits"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1d760164-af9f-4948-99d0-562c135b0081",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Comprehensive Metabolic Panel (CMP)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24323-8"
+            }
+          ],
+          "text": "Comprehensive Metabolic Panel (CMP)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:45:15Z",
+        "valueString": "Sodium 139 mmol/L, Potassium 4.0 mmol/L, Creatinine 0.9 mg/dL, ALT 22 U/L, AST 19 U/L, Glucose 94 mg/dL – all within normal limits",
+        "note": [
+          {
+            "text": "Sodium 139 mmol/L, Potassium 4.0 mmol/L, Creatinine 0.9 mg/dL, ALT 22 U/L, AST 19 U/L, Glucose 94 mg/dL – all within normal limits"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:843f0ae9-6cf4-4a1d-a047-7527afe601d6",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "high",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CA04"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Urticaria and angioedema"
+              }
+            ],
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e23ce022-a645-45a5-8b25-6a25261a781f",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Recurrent depressive disorder</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F33"
+                }
+              ],
+              "text": "Recurrent depressive disorder"
+            },
+            "onsetAge": {
+              "value": 38,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:210d71ae-386f-4dac-a962-454b90916457",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Uncle: Bipolar affective disorder</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "UNCLE",
+              "display": "Uncle"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F31"
+                }
+              ],
+              "text": "Bipolar affective disorder"
+            },
+            "onsetAge": {
+              "value": 25,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2a075d31-80d0-4fe8-ac28-97f4c92442e6",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Psychiatric inpatient hospitalization</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "183807002"
+            }
+          ],
+          "text": "Psychiatric inpatient hospitalization"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2018",
+        "note": [
+          {
+            "text": "Brief inpatient psychiatric admission at age 26 during first severe manic episode with sleep deprivation and reckless financial behavior. Stabilized and discharged with outpatient follow-up plan."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:243d0ec4-bfdf-472c-82e3-b3d85186898f",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cognitive behavioral therapy (CBT)</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "228553007"
+            }
+          ],
+          "text": "Cognitive behavioral therapy (CBT)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2020",
+        "note": [
+          {
+            "text": "Intermittent course of individual CBT targeting mood episode triggers, sleep hygiene, and medication adherence. Patient reports benefit but has not maintained consistent engagement."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:50d8f61e-3c84-4c76-ae53-8f16a26dc829",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 31-year-old male who presents to the outpatient psychiatric clinic with a somewhat disheveled appearance — his hair is slightly unkempt, and he is wearing a wrinkled flannel shirt and jeans. Despite this, he is animated, speaks rapidly, and occasionally loses his train of thought mid-sentence. His eyes are bright and restless, darting around the consultation room. He reports that he has \"never felt more alive\" over the past two weeks, sleeping only 3–4 hours per night and feeling no fatigue. He describes grandiose plans to launch three separate tech startups simultaneously and mentions he has been spending recklessly on equipment and \"investments.\"\n\n{patientName} works as a freelance graphic designer, a career he is passionate about but struggles to maintain consistently due to episodes of low motivation and depression that have punctuated his life since his early twenties. He lives alone in a small apartment in an urban neighborhood and tends to isolate during depressive phases. During manic phases, he is highly social, often staying out until the early hours of the morning with a wide circle of acquaintances he describes as friends.\n\nOutside of work, {patientName} enjoys skateboarding, digital art, and playing bass guitar in an informal band that meets sporadically. He is an avid coffee drinker, consuming 4–5 cups per day, and admits to occasional recreational cannabis use on weekends. He does not smoke tobacco and rarely drinks alcohol. He follows no structured diet but tends to eat irregularly, especially during mood episodes.\n\n{patientName} has a close but sometimes strained relationship with his mother, who lives nearby and is often the first to notice when he is cycling into a manic or depressive episode. He has no current romantic partner, having ended a long-term relationship approximately eight months ago — a breakup he attributes partly to his mood instability. He describes feelings of guilt and shame regarding the impact his condition has had on people he cares about.\n\nOn examination today, his speech is pressured and his affect is expansive and labile. He denies auditory or visual hallucinations. He has limited insight into the current severity of his manic symptoms, stating he feels \"better than ever\" and questioning why he needs medication at this stage."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8e83ef40-d6e1-4ede-ab8c-ba689fa83d79",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} was first evaluated by a psychiatrist at age 23 following a severe depressive episode during which he was unable to work for approximately three months. He was initially diagnosed with major depressive disorder and started on an SSRI, which he self-discontinued after several months. At age 26, he experienced his first clearly recognized manic episode, during which he maxed out two credit cards, did not sleep for five consecutive days, and was briefly hospitalized for observation. It was at that time that the diagnosis of bipolar affective disorder was formally established.\n\nSince then, {patientName} has had two further depressive episodes and one hypomanic episode, managed on an outpatient basis. Medication adherence has been inconsistent; he tends to stop medications when feeling well, believing he no longer needs them. He has engaged in individual psychotherapy intermittently, with cognitive behavioral therapy (CBT) showing the most benefit, though he is not currently in active therapy.\n\nHis medical history is notable for mild gastroesophageal reflux disease (GERD) and tension-type headaches for which he occasionally uses over-the-counter ibuprofen. He has no known cardiovascular, neurological, or endocrine conditions. He has never been diagnosed with diabetes or thyroid disease, although he has not had routine bloodwork in over two years. There is no prior history of head trauma or seizures. Family history is significant for bipolar disorder in his maternal uncle and depression in his mother. He denies any current suicidal ideation but acknowledges passive thoughts of worthlessness during depressive phases. Cannabis use is acknowledged and discussed as a potential mood destabilizer."
+          }
+        ]
+      }
+    }
+  ]
+}

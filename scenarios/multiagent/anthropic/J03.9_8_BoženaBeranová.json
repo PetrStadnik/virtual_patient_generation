@@ -1,0 +1,641 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "8"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Beranová",
+            "given": [
+              "Božena"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "J03.9",
+              "display": "Acute tonsillitis, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d3d05540-ae90-420f-9700-43f508e84f89",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Amoxicillin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CA04"
+            }
+          ],
+          "text": "Amoxicillin 500 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "500 mg oral twice daily for 10 days"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7627cda6-679c-4a85-985a-f565bae2f04f",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Paracetamol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N02BE01"
+            }
+          ],
+          "text": "Paracetamol 250 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "250 mg oral every 6 hours as needed for fever or pain"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d7d451d5-d931-4c50-b7cc-5437fe1f66c3",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Ibuprofen.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "M01AE01"
+            }
+          ],
+          "text": "Ibuprofen 150 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "150 mg oral every 8 hours as needed with food"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e6b283f7-e016-4b84-b4e2-3c92b7ab9814",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Multivitamin with vitamin C.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A11BA00"
+            }
+          ],
+          "text": "Multivitamin with vitamin C 1 tablet"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 tablet oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:31217cc9-b58c-481c-9ea4-0f3785fda7e2",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Rapid Streptococcal Antigen Detection Test (Rapid Strep Test)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "18481-2"
+            }
+          ],
+          "text": "Rapid Streptococcal Antigen Detection Test (Rapid Strep Test)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T21:03:55Z",
+        "valueString": "Positive for Group A Streptococcus antigen",
+        "note": [
+          {
+            "text": "Positive for Group A Streptococcus antigen"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2c384962-a8be-4ca6-a29f-7fcb12f1a1fe",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Throat culture</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "625-4"
+            }
+          ],
+          "text": "Throat culture"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T21:03:55Z",
+        "valueString": "Growth of Group A beta-hemolytic Streptococcus (Streptococcus pyogenes)",
+        "note": [
+          {
+            "text": "Growth of Group A beta-hemolytic Streptococcus (Streptococcus pyogenes)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:78fc0d10-d82a-4291-a8aa-358c774175b9",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body temperature</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T21:03:55Z",
+        "valueQuantity": {
+          "value": 39.4,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        },
+        "note": [
+          {
+            "text": "39.4 Cel"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:696de634-a026-4914-9021-2c2b57d3fe5d",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">White blood cell count</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2"
+            }
+          ],
+          "text": "White blood cell count"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T21:03:55Z",
+        "valueQuantity": {
+          "value": 14.2,
+          "unit": "10*9/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*9/L"
+        },
+        "note": [
+          {
+            "text": "14.2 x10^9/L (elevated, consistent with bacterial infection)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:98a0a5a7-71f6-44be-8cad-92c347ce24c5",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">C-reactive protein (CRP)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1988-5"
+            }
+          ],
+          "text": "C-reactive protein (CRP)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T21:03:55Z",
+        "valueQuantity": {
+          "value": 52.0,
+          "unit": "mg/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/L"
+        },
+        "note": [
+          {
+            "text": "52 mg/L (elevated)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:40bc85d6-4645-40c3-9c9d-045c16208533",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Peanut.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "food"
+        ],
+        "criticality": "low",
+        "code": {
+          "text": "Peanut"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Mild urticaria"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f339ee42-663a-4ee5-a61b-90086c276383",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Chronic tonsillitis (requiring tonsillectomy in childhood)</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "J35.0"
+                }
+              ],
+              "text": "Chronic tonsillitis (requiring tonsillectomy in childhood)"
+            },
+            "onsetAge": {
+              "value": 10,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:51c2a828-b0f7-4391-90d0-404f28f6208a",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Type 2 diabetes mellitus</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "E11"
+                }
+              ],
+              "text": "Type 2 diabetes mellitus"
+            },
+            "onsetAge": {
+              "value": 45,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1afc7f4c-aa6a-4f08-b7d7-1e58b93f0214",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Oropharyngeal examination</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "274798009"
+            }
+          ],
+          "text": "Oropharyngeal examination"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Bilateral tonsillar enlargement with erythema and white exudates noted. No peritonsillar swelling or uvular deviation."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4e385183-7cb2-4c2e-8b99-ba6f404aa755",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is an energetic 8-year-old girl with bright brown eyes and long, dark hair usually worn in two braids. Today she appears visibly unwell — her cheeks are flushed, her eyes are glassy, and she is sitting quietly on the examination table, clutching a stuffed rabbit. She is dressed in a colorful school uniform, suggesting she was brought in directly after her mother picked her up from school.\n\n{patientName} has been complaining of a very sore throat for the past three days, making it painful to swallow food or even liquids. Her mother reports that she has had a fever reaching up to 39.4°C (103°F), along with chills, fatigue, and a noticeably reduced appetite. {patientName} says her throat feels \"like sandpaper\" and has been reluctant to eat anything more than warm soup and ice cream. She has also had mild headache and swollen, tender lumps on the sides of her neck.\n\nAt school, {patientName} is in the second grade and attends a crowded public primary school where close physical contact with classmates is unavoidable — she shares desks, participates in group activities, and regularly attends choir practice twice a week, where singing in an enclosed room with other children significantly increases her exposure to respiratory droplets and airborne pathogens. Her mother mentions that several of her classmates have been ill with similar symptoms over the past two weeks, suggesting a possible school outbreak. Outside of school, {patientName} enjoys drawing and painting, participates in a Saturday morning art class held indoors in a small, poorly ventilated studio shared by 12 children, and loves playing on the school playground with her friends. At home, she enjoys reading picture books and watching animated films with her younger brother.\n\n{patientName} lives with both parents and her 5-year-old brother in a suburban home. Her brother recently recovered from a upper respiratory tract infection two weeks ago, representing a direct household exposure. {patientName}'s diet is generally balanced with home-cooked meals, though she has a known fondness for sweets and tends to consume sugary snacks and fruit juices regularly — a dietary pattern associated with suboptimal immune mucosal defenses. Her mother also notes that {patientName} frequently stays up late on weekends watching films and attending sleepovers with friends, resulting in irregular and insufficient sleep that may impair her immune response.\n\nOn physical examination, her oropharynx reveals markedly enlarged, erythematous tonsils with patchy white exudates bilaterally. Bilateral tender anterior cervical lymphadenopathy is present. Breath sounds are clear, and there are no signs of respiratory distress. She is up to date with her vaccinations and has no chronic conditions."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0b4f8ec1-c249-4d7e-9a8c-682eaea56351",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is an 8-year-old female with a background of mild allergic rhinitis — diagnosed at age 6 — which causes chronic nasal congestion and habitual mouth breathing. Mouth breathing bypasses the nasal mucociliary defense mechanism and results in drying of the oropharyngeal mucosa, reducing local immune protection and predisposing her tonsils to repeated microbial colonization and infection. She is managed conservatively with saline nasal rinses and has not required pharmacological treatment for this condition to date.\n\nShe has had two prior episodes of pharyngotonsillitis — one at age 5 and one at age 7 — both managed conservatively and resolving without complications. She has no history of hospitalizations, surgeries, or complex medical procedures.\n\n{patientName}'s immunization record is complete and current per national schedule, including MMR, varicella, and annual influenza vaccines. She has no known drug allergies. Her growth and developmental milestones have been normal throughout childhood. However, her mother notes that {patientName} has been sleeping fewer than the recommended 9–11 hours per night on weekends, frequently staying up past 11 PM at sleepovers or watching films — a habit linked to immune suppression and increased infection susceptibility. She also consumes sugary snacks and fruit juices daily, which may impair mucosal immune defenses over time.\n\nHer family history is notable for her mother having recurrent tonsillitis in childhood, which eventually required tonsillectomy — suggesting a possible hereditary predisposition to tonsillar disease. {patientName}'s father is healthy but has a history of type 2 diabetes. {patientName} does not smoke (household is non-smoking) and is not exposed to secondary smoke. She attends a crowded public primary school, participates in indoor choir practice twice weekly in a small enclosed room, and attends a Saturday art class in a poorly ventilated studio — all settings that significantly increase her exposure to respiratory pathogens. Her younger brother recently recovered from an upper respiratory tract infection, constituting a direct household transmission risk."
+          }
+        ]
+      }
+    }
+  ]
+}

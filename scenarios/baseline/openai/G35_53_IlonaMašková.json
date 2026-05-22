@@ -1,0 +1,700 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "53"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Mašková",
+            "given": [
+              "Ilona"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "G35",
+              "display": "Multiple sclerosis"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:12ab59eb-d3c9-450c-9f68-5ba04770a411",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Lisinopril.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C09AA03"
+            }
+          ],
+          "text": "Lisinopril 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c6c641c2-b260-4685-ae16-7fb11589b819",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Cholecalciferol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A11CC05"
+            }
+          ],
+          "text": "Cholecalciferol 2000 IU"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "2000 IU oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1901520f-92ca-483b-9af7-7f3c032abc5b",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Polyethylene glycol 3350.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": ""
+            }
+          ],
+          "text": "Polyethylene glycol 3350 17 g"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "17 g oral once daily as needed"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9b07283c-7c4b-4d92-a2fb-0c354d2f7b21",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Acetaminophen.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N02BE01"
+            }
+          ],
+          "text": "Acetaminophen 500 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "500 mg oral every 6 hours as needed"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5a19f771-fc5a-40e8-b09b-c940bc8b0049",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Magnetic resonance imaging study of brain and brain stem with and without contrast</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72147-8"
+            }
+          ],
+          "text": "Magnetic resonance imaging study of brain and brain stem with and without contrast"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:32:16Z",
+        "valueString": "Multiple periventricular and juxtacortical T2/FLAIR hyperintense demyelinating plaques; no acute mass effect.",
+        "note": [
+          {
+            "text": "Multiple periventricular and juxtacortical T2/FLAIR hyperintense demyelinating plaques; no acute mass effect."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3d0221f6-eadc-425b-99c2-d99828456c2f",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Magnetic resonance imaging study of spinal canal cervical with and without contrast</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72142-9"
+            }
+          ],
+          "text": "Magnetic resonance imaging study of spinal canal cervical with and without contrast"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:32:16Z",
+        "valueString": "Patchy noncompressive intramedullary T2 hyperintense lesions in the cervical cord consistent with demyelination.",
+        "note": [
+          {
+            "text": "Patchy noncompressive intramedullary T2 hyperintense lesions in the cervical cord consistent with demyelination."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2e67e933-3700-482a-8f9b-11819be08a82",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Immunoglobulin G oligoclonal bands in CSF and Serum</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "49852-7"
+            }
+          ],
+          "text": "Immunoglobulin G oligoclonal bands in CSF and Serum"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:32:16Z",
+        "valueString": "Positive cerebrospinal fluid-restricted oligoclonal bands present.",
+        "note": [
+          {
+            "text": "Positive cerebrospinal fluid-restricted oligoclonal bands present."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:154c26b0-7f56-465e-9a88-876401ee3667",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Visual evoked potential study</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "82989-8"
+            }
+          ],
+          "text": "Visual evoked potential study"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:32:16Z",
+        "valueString": "Prolonged P100 latency suggestive of prior optic pathway demyelination.",
+        "note": [
+          {
+            "text": "Prolonged P100 latency suggestive of prior optic pathway demyelination."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b28d98f2-fae1-48f3-b88f-8b8e62140104",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Sulfonamide antibiotics.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "high",
+        "code": {
+          "text": "Sulfonamide antibiotics"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Urticarial rash"
+              }
+            ],
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1bb7d89c-8a2e-4a7f-b23f-01290f28d0ed",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Cat dander.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "environment"
+        ],
+        "criticality": "low",
+        "code": {
+          "text": "Cat dander"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Sneezing and itchy eyes"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:79a3f971-ad27-4612-8631-b81ec0384857",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Essential hypertension</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I10"
+                }
+              ],
+              "text": "Essential hypertension"
+            },
+            "onsetAge": {
+              "value": 52,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:47c43bcf-d872-4e8d-9167-b70f1d2a4954",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Atherosclerotic heart disease</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I25.1"
+                }
+              ],
+              "text": "Atherosclerotic heart disease"
+            },
+            "onsetAge": {
+              "value": 67,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9e4cd3df-222d-49c1-b91f-916a7323be9b",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sister: Hypothyroidism</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "SIS",
+              "display": "Sister"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "E03"
+                }
+              ],
+              "text": "Hypothyroidism"
+            },
+            "onsetAge": {
+              "value": 45,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5c0b83f0-5411-46e0-98cf-512f65f33873",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Lumbar puncture for cerebrospinal fluid analysis</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "16664009"
+            }
+          ],
+          "text": "Lumbar puncture for cerebrospinal fluid analysis"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2017",
+        "note": [
+          {
+            "text": "Performed during diagnostic workup; cerebrospinal fluid supported demyelinating disease."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2c0de9fd-0b95-4025-aa7d-7e46e50fba8d",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Outpatient physical therapy for gait and balance training</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "91251008"
+            }
+          ],
+          "text": "Outpatient physical therapy for gait and balance training"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2022",
+        "note": [
+          {
+            "text": "Completed structured therapy program with modest improvement in balance confidence."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9c3578f7-ff48-4432-8d4f-75f6a84e696c",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 53-year-old woman who appears mildly fatigued but attentive and engaged during conversation. She walks with a cautious, slightly wide-based gait and occasionally steadies herself on nearby furniture when turning. On some days she uses a single-point cane, especially when outside the home or after prolonged activity. She reports intermittent numbness and tingling in both lower legs, occasional blurred vision in the past, urinary urgency, and a sense of leg heaviness that worsens later in the day. Heat exposure and overexertion tend to aggravate her symptoms, and she has learned to pace herself carefully.\n\nShe lives with her spouse in a suburban home and works part-time as a library assistant after reducing her hours over the past few years because of fatigue and difficulty standing for long periods. She remains independent in basic activities of daily living, though she plans errands around her energy level and prefers shorter outings. Her hobbies include reading, container gardening, and light yoga at home. She enjoys spending time with two close friends and stays in frequent contact with her adult daughter, who lives nearby.\n\nIn appearance, {patientName} is neatly dressed and practical in her choices, often wearing supportive walking shoes and layered clothing because she is sensitive to temperature changes. She describes herself as organized and resilient, though at times frustrated by unpredictable symptom flares. Her sleep is sometimes disrupted by nocturia and leg discomfort, which contributes to daytime tiredness. She does not appear acutely ill, but there is a subtle reduction in endurance and coordination that becomes more noticeable during prolonged examination or conversation.\n\nHer diet is generally balanced, though she admits that on busy days she relies on convenience foods. She does not smoke and drinks alcohol only socially, about 1 to 2 glasses of wine on weekends. She tries to remain active with short neighborhood walks and stretching exercises, but she avoids strenuous activity during warm weather because it can temporarily worsen her weakness and visual symptoms. She has a supportive family network and is motivated to remain functional and employed despite her chronic neurologic condition."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4fa780cf-4229-4a6c-a1cb-782feea60697",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} was diagnosed with multiple sclerosis in her mid-40s after several months of intermittent sensory symptoms and an episode of unilateral visual blurring that prompted neurologic evaluation. Since diagnosis, she has had a relapsing course marked by periodic worsening of gait imbalance, lower-extremity paresthesias, fatigue, and urinary urgency, with partial recovery after prior treatments. She has not required recent hospitalization, but she has had several outpatient neurology visits for symptom progression and medication monitoring.\n\nHer past medical history is notable for essential hypertension and vitamin D insufficiency. She also reports chronic constipation that tends to worsen when her mobility decreases. She denies diabetes, coronary artery disease, chronic lung disease, or prior stroke. She has never smoked, does not use recreational drugs, and drinks alcohol in moderation. She lives with her spouse, remains partly employed, and has strong social support, though she acknowledges stress related to uncertainty about future disability.\n\n{patientName} underwent physical therapy in the past for balance and gait training, which she found beneficial. She has no major psychiatric history, though she has experienced situational anxiety during symptomatic flares. She reports good adherence to routine primary care follow-up. There is no history suggesting significant occupational toxin exposure. She manages most daily activities independently but has gradually adapted her routine to conserve energy, avoid overheating, and reduce fall risk."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,929 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "74"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Kraus",
+            "given": [
+              "Lukáš"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C34.9",
+              "display": "Malignant neoplasm: Bronchus or lung, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0649b2e2-3779-4fbe-978b-ce674d02a524",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Tiotropium.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R03BB04"
+            }
+          ],
+          "text": "Tiotropium 18 mcg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "18 mcg inhaled once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d8f7c746-1e19-4e1d-8b5d-6a14690d7d46",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Salbutamol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R03AC02"
+            }
+          ],
+          "text": "Salbutamol 100 mcg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "100 mcg inhaled as needed (up to 4 times daily)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f2396de4-5d69-4a9c-9856-49b552320587",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Amlodipine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C08CA01"
+            }
+          ],
+          "text": "Amlodipine 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:44616020-968b-4f2b-98fc-32725c090385",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Metformin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A10BA02"
+            }
+          ],
+          "text": "Metformin 1000 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1000 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:de53d831-1eb8-4781-be63-559dbf83ff63",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Atorvastatin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C10AA05"
+            }
+          ],
+          "text": "Atorvastatin 40 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "40 mg oral once daily at night"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fad77517-3bc5-46ed-addb-1ad9483a6678",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Tamsulosin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "G04CA02"
+            }
+          ],
+          "text": "Tamsulosin 0.4 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "0.4 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:91f457fb-ff03-45d5-bcaa-3088ecbf3139",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">CT scan of thorax with contrast</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24627-2"
+            }
+          ],
+          "text": "CT scan of thorax with contrast"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:49:31Z",
+        "valueString": "4.3 cm spiculated mass in the right lower lobe; ipsilateral hilar and mediastinal lymphadenopathy; moderate right-sided pleural effusion",
+        "note": [
+          {
+            "text": "4.3 cm spiculated mass in the right lower lobe; ipsilateral hilar and mediastinal lymphadenopathy; moderate right-sided pleural effusion"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c2ca261b-8e77-4455-a7b5-4b40bd989d49",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Forced expiratory volume in 1 second (FEV1) - Spirometry</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "20150-9"
+            }
+          ],
+          "text": "Forced expiratory volume in 1 second (FEV1) - Spirometry"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:49:31Z",
+        "valueQuantity": {
+          "value": 1.42,
+          "unit": "L",
+          "system": "http://unitsofmeasure.org",
+          "code": "L"
+        },
+        "note": [
+          {
+            "text": "FEV1 1.42 L (52% predicted); FEV1/FVC ratio 0.58 — consistent with moderate obstructive pattern"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a207a332-cc41-4a4a-afad-c647a6ed7975",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Carcinoembryonic antigen (CEA) [Mass/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2857-1"
+            }
+          ],
+          "text": "Carcinoembryonic antigen (CEA) [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:49:31Z",
+        "valueQuantity": {
+          "value": 38.4,
+          "unit": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL"
+        },
+        "note": [
+          {
+            "text": "Elevated at 38.4 ng/mL (reference: <5.0 ng/mL)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7b04cb50-ff86-41fc-9009-0cbedb0f3e0e",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cytology study of pleural fluid</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "10333-1"
+            }
+          ],
+          "text": "Cytology study of pleural fluid"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:49:31Z",
+        "valueString": "Malignant cells identified consistent with non-small cell carcinoma; adenocarcinoma morphology suspected",
+        "note": [
+          {
+            "text": "Malignant cells identified consistent with non-small cell carcinoma; adenocarcinoma morphology suspected"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:12620374-e41e-4022-bbc7-890ea1f5bcc6",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Oxygen saturation by pulse oximetry</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "2708-6"
+            }
+          ],
+          "text": "Oxygen saturation by pulse oximetry"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:49:31Z",
+        "valueQuantity": {
+          "value": 91.0,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "note": [
+          {
+            "text": "91% on room air at rest"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:be128fc0-053c-489d-9cb5-c96f7742ff82",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "high",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CA04"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Urticaria and angioedema"
+              }
+            ],
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:932261d1-7557-409b-9434-3c5afec8c186",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Shellfish.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "food"
+        ],
+        "criticality": "high",
+        "code": {
+          "text": "Shellfish"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Anaphylaxis"
+              }
+            ],
+            "severity": "severe"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:657fdb90-f16f-4829-9579-ffb6169c3532",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Malignant neoplasm of bronchus or lung</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "C34.9"
+                }
+              ],
+              "text": "Malignant neoplasm of bronchus or lung"
+            },
+            "onsetAge": {
+              "value": 71,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6f6a23da-3081-41e3-a335-7e46e697bd9e",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brother: Malignant neoplasm of bronchus or lung</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "BRO",
+              "display": "Brother"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "C34.9"
+                }
+              ],
+              "text": "Malignant neoplasm of bronchus or lung"
+            },
+            "onsetAge": {
+              "value": 68,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d15d35d4-3cd1-4e81-9a1a-76d41932c6bc",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Stroke, not specified as haemorrhage or infarction</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I64"
+                }
+              ],
+              "text": "Stroke, not specified as haemorrhage or infarction"
+            },
+            "onsetAge": {
+              "value": 76,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:691ff6d6-97d1-4dc1-a259-811e79ab06eb",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sister: Type 2 diabetes mellitus</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "SIS",
+              "display": "Sister"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "E11"
+                }
+              ],
+              "text": "Type 2 diabetes mellitus"
+            },
+            "onsetAge": {
+              "value": 60,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bdd66581-0c1f-4d64-afa1-3e9327d01b37",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Appendectomy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "80146002"
+            }
+          ],
+          "text": "Appendectomy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "1972",
+        "note": [
+          {
+            "text": "Performed in early adulthood for acute appendicitis. Uncomplicated recovery."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bc9faef7-707a-49cc-9609-7ed2d662659e",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Inguinal hernia repair</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "\n44558001"
+            }
+          ],
+          "text": "Inguinal hernia repair"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2005",
+        "note": [
+          {
+            "text": "Right inguinal hernia repaired via open technique under general anaesthesia. No post-operative complications."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3e49f179-d43b-445d-adb9-3552c13518e8",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Bronchoscopy with biopsy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "173171007"
+            }
+          ],
+          "text": "Bronchoscopy with biopsy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Flexible bronchoscopy performed to obtain tissue samples from right lower lobe endobronchial lesion for histopathological and molecular analysis. Biopsy confirmed NSCLC. Tolerated procedure well."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6cf81584-3a31-43b6-8030-80a9c20e13a6",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Thoracentesis</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "91602002"
+            }
+          ],
+          "text": "Thoracentesis"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Therapeutic and diagnostic pleural fluid drainage of right-sided malignant pleural effusion. Approximately 800 mL of exudative, haemoserous fluid removed. Cytology positive for malignant cells."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:74a9810e-42c3-4c15-a7d0-0488f989d1be",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 74-year-old retired steelworker who carries the weathered look of a man who has spent decades in industrial environments. He is of medium build but has lost noticeable weight over the past several months, now appearing gaunt with visible clavicles and sunken cheeks. He walks with a slight stoop and requires brief rests after climbing even a single flight of stairs. His skin has a pale, slightly grayish hue, and there are nicotine stains still visible on his right index and middle fingers — a remnant of a 45-pack-year smoking history he only quit five years ago.\n\n{patientName} lives alone in a modest row house in a post-industrial town in Pennsylvania. He is a widower; his wife of 42 years passed from a stroke six years ago. He has two adult children — a son in Ohio and a daughter nearby who accompanies him to most of his medical appointments. He maintains a small vegetable garden in his backyard, which he says keeps him \"sane,\" although he admits he can no longer tend to it as vigorously as before. He used to enjoy fishing trips with his retired friends every summer, but has declined invitations over the past year due to fatigue and shortness of breath.\n\n{patientName} first presented to his primary care physician four months ago complaining of a persistent, worsening cough that he initially dismissed as a \"smoker's cough.\" Over time he developed blood-tinged sputum (hemoptysis), progressive dyspnea on exertion, and a dull, aching pain in his right chest. He has lost approximately 9 kg (about 20 lbs) in the past three months without intentional dietary changes. He also reports intermittent episodes of hoarseness and night sweats that soak his bedclothes.\n\nOn physical examination, {patientName} appears chronically ill and malnourished. Breath sounds are diminished at the right lower lobe with dullness to percussion, suggesting pleural effusion. There is mild clubbing of the fingers bilaterally. Cervical and supraclavicular lymph nodes are palpable on the right side, raising concern for regional nodal involvement. His performance status is ECOG 2.\n\n{patientName} is a man of quiet resilience. He does not complain easily, and his daughter reports she had to nearly \"drag him\" to the doctor. He drinks an occasional beer on weekends and has been largely sedentary since retiring at age 67. He follows a simple diet of home-cooked meals and takes his medications inconsistently when he feels well. He is anxious about his prognosis but finds comfort in his faith and his close bond with his grandchildren, whom he sees every Sunday."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:abca963d-6ce3-42d7-957e-73a0bf7828ec",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has a significant medical history notable for the following conditions and events:\n\n**Smoking History:** 45 pack-year history (smoked approximately 1.5 packs/day from age 24 to age 69). Quit five years ago. This remains his single greatest risk factor for lung malignancy.\n\n**Occupational Exposure:** Worked 35 years in a steel mill with known exposure to industrial dust, fumes, and possible asbestos-containing materials during plant maintenance procedures.\n\n**Chronic Obstructive Pulmonary Disease (COPD):** Diagnosed at age 68 following spirometry demonstrating FEV1/FVC ratio of 0.58. Currently managed with bronchodilators. Hospitalised once in 2019 for an acute COPD exacerbation requiring a short course of systemic corticosteroids.\n\n**Hypertension:** Diagnosed at age 58, currently on antihypertensive therapy.\n\n**Type 2 Diabetes Mellitus:** Diagnosed at age 63, managed with oral agents. HbA1c has been suboptimally controlled (last value 8.1%) due to inconsistent medication adherence and poor dietary compliance.\n\n**Hyperlipidaemia:** Diagnosed at age 60, on statin therapy.\n\n**Benign Prostatic Hyperplasia (BPH):** Diagnosed at age 70, managed with an alpha-blocker.\n\n**Prior Hospitalisations:** One admission for COPD exacerbation (2019); one admission for community-acquired pneumonia (2017) treated with IV antibiotics.\n\n**Surgical History:** Appendectomy at age 22; right inguinal hernia repair at age 55.\n\n**Lifestyle:** Former heavy smoker, occasional alcohol use. Sedentary lifestyle since retirement. Diet is modest and home-cooked but high in simple carbohydrates.\n\n**Immunisations:** Up to date with influenza and pneumococcal vaccines. COVID-19 vaccinated (3 doses).\n\n**Current Oncological Workup:** CT chest revealed a 4.3 cm spiculated mass in the right lower lobe with ipsilateral hilar and mediastinal lymphadenopathy and a moderate right-sided pleural effusion. PET-CT and brain MRI pending. Bronchoscopic biopsy scheduled. Molecular profiling (EGFR, ALK, ROS1, PD-L1) ordered."
+          }
+        ]
+      }
+    }
+  ]
+}

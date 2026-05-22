@@ -1,0 +1,623 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "17"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Burešová",
+            "given": [
+              "Milada"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "F32.9",
+              "display": "Depressive episode, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4ab2509b-799c-447a-b773-35a7680b3d68",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Sertraline.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N06AB06"
+            }
+          ],
+          "text": "Sertraline 50 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "50 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b716f238-12d1-4d64-a064-ba421dec1c20",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Mirtazapine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N06AX11"
+            }
+          ],
+          "text": "Mirtazapine 15 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "15 mg oral once daily at bedtime"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:90ed6902-dc1e-475f-8cba-1c07cf5fa94b",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient Health Questionnaire 9 item total score</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "44261-6"
+            }
+          ],
+          "text": "Patient Health Questionnaire 9 item total score"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:09:58Z",
+        "valueQuantity": {
+          "value": 19.0,
+          "unit": "{score}",
+          "system": "http://unitsofmeasure.org",
+          "code": "{score}"
+        },
+        "note": [
+          {
+            "text": "19/27 — moderately severe depression [PMID:36156484]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7d152283-9392-4a13-9ac0-288372dfb0fd",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Thyroid stimulating hormone [Units/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11579-0"
+            }
+          ],
+          "text": "Thyroid stimulating hormone [Units/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:09:58Z",
+        "valueQuantity": {
+          "value": 2.1,
+          "unit": "mIU/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mIU/L"
+        },
+        "note": [
+          {
+            "text": "2.1 mIU/L — within normal limits; organic thyroid cause excluded [PMID:24182617]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:06638aa1-9404-42e8-880c-63a79f9ccd07",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Prolactin [Mass/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2842-3"
+            }
+          ],
+          "text": "Prolactin [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:09:58Z",
+        "valueQuantity": {
+          "value": 12.4,
+          "unit": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL"
+        },
+        "note": [
+          {
+            "text": "12.4 ng/mL — normal; prolactinoma excluded [PMID:24182617]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:899a9845-5af9-4f26-a02a-a311f3d325a1",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Complete blood count panel</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2"
+            }
+          ],
+          "text": "Complete blood count panel"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:09:58Z",
+        "valueString": "Hb 12.8 g/dL, WBC 6.2 ×10⁹/L, Platelets 230 ×10⁹/L — no anaemia or infection identified",
+        "note": [
+          {
+            "text": "Hb 12.8 g/dL, WBC 6.2 ×10⁹/L, Platelets 230 ×10⁹/L — no anaemia or infection identified"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:49159d30-ec9c-4cd8-81c4-0deb16ce6e74",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Heart rate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:09:58Z",
+        "valueQuantity": {
+          "value": 72.0,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "note": [
+          {
+            "text": "72 bpm — normal resting heart rate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d15fb655-2209-4256-9ab9-f405e82ab084",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Ibuprofen.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "intolerance",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C01EB16"
+            }
+          ],
+          "text": "Ibuprofen"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Nausea and abdominal discomfort"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22f41fc8-685c-4b9b-af12-6f0e50402614",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Depressive episode, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F32.9"
+                }
+              ],
+              "text": "Depressive episode, unspecified"
+            },
+            "onsetAge": {
+              "value": 38,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c5772f8f-70c6-4d3e-a755-2d0bdab93ad9",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandmother: Recurrent depressive disorder</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRMTH",
+              "display": "Grandmother"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F33"
+                }
+              ],
+              "text": "Recurrent depressive disorder"
+            },
+            "onsetAge": {
+              "value": 55,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9358201f-3f05-4435-b28a-0cae54835e22",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Psychiatric evaluation</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "165171009"
+            }
+          ],
+          "text": "Psychiatric evaluation"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Initial psychiatric assessment confirming depressive episode; suicidality screened — passive ideation only, no active plan [PMID:36156484, MEDDIALOG:F32.9:2]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:93819aa0-19ec-49a3-9b8f-7534ed7d6913",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "in-progress",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cognitive behavioral therapy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "302230009"
+            }
+          ],
+          "text": "Cognitive behavioral therapy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2025",
+        "note": [
+          {
+            "text": "Weekly CBT sessions commenced alongside pharmacotherapy [MEDDIALOG:F32.9:0]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2c7bb56b-2a53-4c46-89dc-3eae34f3442b",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 17-year-old Czech girl with a slender build and pale complexion, who presents to the adolescent psychiatry outpatient clinic in Prague accompanied by her mother. She is dressed in a dark hoodie and keeps her gaze mostly averted, speaking quietly and with long pauses. Over the past three to four weeks she has experienced a persistently low mood, marked loss of interest in activities she previously enjoyed — including playing the violin and reading graphic novels — profound fatigue, and difficulty falling asleep at night [PMID:36156484]. She reports waking at 3 a.m. most nights and being unable to return to sleep, often lying in bed ruminating. She acknowledges passive thoughts that life is not worth living but denies active suicidal ideation or plans [MEDDIALOG:F32.9:2].\n\nAt school, {patientName} is a diligent student in the second year of a gymnasium (grammar school) in Prague. Her grades have dropped noticeably over the past month; she struggles to concentrate during lessons and often cannot recall what she studied the night before [PMID:36156484]. She used to rehearse violin with a youth orchestra every Saturday, but has stopped attending since the depressive episode began. Her appetite has decreased significantly — she estimates eating about half her usual portions — and she has lost approximately 3 kg over six weeks.\n\n{patientName} lives with both parents and a younger brother in a flat in the Vinohrady district. Her mother describes her as previously cheerful and sociable, but notes that she has been increasingly withdrawn, spending most of her free time alone in her room and barely communicating with family members. Her small circle of friends has tried to include her in outings, but she consistently declines. She does not use alcohol or recreational drugs. She has no romantic relationship at present and reports no significant recent psychosocial stressor beyond general academic pressure, though she mentions feeling \"invisible\" and worrying that she disappoints her parents."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:01b45e15-3e7f-4449-976e-d320fb3ab1cf",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has no prior psychiatric hospitalisations. She was assessed by her paediatrician three years ago for a period of low mood following a change of school, at which time no formal psychiatric diagnosis was made and no medication was prescribed. There is no history of mania, psychosis, or eating disorder. She has no known chronic somatic illnesses and takes no regular medications. She reports no alcohol or substance use [MEDDIALOG:F32.9:0]. Menarche occurred at age 13 and menstrual cycles are regular. She had a single course of amoxicillin for tonsillitis two years ago, which she tolerated without adverse effects. Her BMI at today's visit is below the 25th percentile for age, consistent with recent weight loss. Physical examination and vital signs are otherwise unremarkable. Thyroid function and prolactin levels have been checked to rule out organic contributors to depression [PMID:24182617]. Family psychiatric history is notable: her mother has a history of depressive episodes and her maternal grandmother was treated for recurrent depression. There are no known cardiovascular or connective tissue diseases in the family."
+          }
+        ]
+      }
+    }
+  ]
+}

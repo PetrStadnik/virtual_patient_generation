@@ -1,0 +1,647 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "15"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Ježková",
+            "given": [
+              "Lenka"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "F32.9",
+              "display": "Depressive episode, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9e4312d5-c108-414d-ac42-2ed8cdc030ce",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Fluoxetine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N06AB03"
+            }
+          ],
+          "text": "Fluoxetine 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral once daily (to be titrated to 20 mg after 2 weeks if tolerated)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b99b96d9-6bd8-484c-a6bd-64253476a307",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Melatonin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N05CH01"
+            }
+          ],
+          "text": "Melatonin 1 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 mg oral once nightly, 30 minutes before target bedtime"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:92e14537-5c13-438f-9c67-73d65c8f7e8d",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient Health Questionnaire PHQ-9 (Adolescent)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "89206-7"
+            }
+          ],
+          "text": "Patient Health Questionnaire PHQ-9 (Adolescent)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:41:18Z",
+        "valueQuantity": {
+          "value": 19.0,
+          "unit": "{score}",
+          "system": "http://unitsofmeasure.org",
+          "code": "{score}"
+        },
+        "note": [
+          {
+            "text": "Score: 19/27 — Moderately severe depression"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:43b08083-4535-48ae-a6ad-847c07df4038",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Columbia Suicide Severity Rating Scale</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "93373-9"
+            }
+          ],
+          "text": "Columbia Suicide Severity Rating Scale"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:41:18Z",
+        "valueString": "Ideation Type 1 (passive): present; no active suicidal ideation or intent detected",
+        "note": [
+          {
+            "text": "Ideation Type 1 (passive): present; no active suicidal ideation or intent detected"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1527506f-74ff-4f8b-ad29-7094afcbfefe",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">TSH serum</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "13897-4"
+            }
+          ],
+          "text": "TSH serum"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:41:18Z",
+        "valueQuantity": {
+          "value": 2.1,
+          "unit": "mIU/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mIU/L"
+        },
+        "note": [
+          {
+            "text": "2.1 mIU/L — within normal range"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a98d2207-e481-44b5-b131-de047483a445",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Complete blood count panel</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2"
+            }
+          ],
+          "text": "Complete blood count panel"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:41:18Z",
+        "valueString": "No anemia, leukocytosis, or thrombocytopenia; all values within normal limits",
+        "note": [
+          {
+            "text": "No anemia, leukocytosis, or thrombocytopenia; all values within normal limits"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b45a5d71-1ac5-45a6-b6c7-3e1dc17e4cfe",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52416-5"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:41:18Z",
+        "valueQuantity": {
+          "value": 47.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "47 kg (decreased ~4 kg over 3 months)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4bfcbd3b-0e70-4f09-b225-4931d5788ff5",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Amoxicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CA04"
+            }
+          ],
+          "text": "Amoxicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Maculopapular rash"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0aabc87c-8497-4e93-94e0-12dfe01ad5c6",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Major depressive disorder, recurrent, moderate</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F33.1"
+                }
+              ],
+              "text": "Major depressive disorder, recurrent, moderate"
+            },
+            "onsetAge": {
+              "value": 32,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7b2c66ec-fbee-468e-ab93-3c692af0e2ae",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Uncle: Bipolar disorder, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "UNCLE",
+              "display": "Uncle"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F31.9"
+                }
+              ],
+              "text": "Bipolar disorder, unspecified"
+            },
+            "onsetAge": {
+              "value": 25,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:830c1f78-ec2b-4130-8980-b8b2a43ccb49",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Psychiatric evaluation</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "165171009"
+            }
+          ],
+          "text": "Psychiatric evaluation"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Initial comprehensive psychiatric assessment to establish diagnosis and baseline severity; standardized rating scales administered."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:af53eec6-db2f-485d-babd-d961706b6976",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "in-progress",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cognitive behavioral therapy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "302230009"
+            }
+          ],
+          "text": "Cognitive behavioral therapy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2025",
+        "note": [
+          {
+            "text": "CBT program initiated targeting negative automatic thoughts, behavioral activation, and sleep hygiene; weekly sessions scheduled."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1c645e20-e95f-412c-9e75-814c88445aa3",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "in-progress",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Psychotherapy session</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "41035007"
+            }
+          ],
+          "text": "Psychotherapy session"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2025",
+        "note": [
+          {
+            "text": "Supportive individual psychotherapy conducted alongside CBT to strengthen therapeutic alliance and address ongoing family stressors."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9a54c313-b64e-4dc1-a67f-38527dea7bea",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 15-year-old girl with a slight frame and downcast, tired eyes that seem older than her years. She arrives at the clinic accompanied by her mother, wearing an oversized grey hoodie and keeping her gaze mostly fixed on the floor. She speaks softly and in short sentences, often pausing mid-thought as if searching for words that won't come. Her hair is unwashed and pulled into a loose bun, and her fingernails are bitten down to the quick.\n\nAt home, {patientName} spends the majority of her time alone in her bedroom, having largely withdrawn from the social life she once enjoyed. She used to be an enthusiastic member of her school's drama club and loved painting watercolors on weekends, but over the past four months she has abandoned both. She reports feeling \"empty\" and \"too tired to care about anything,\" and her mother notes that she has been sleeping up to 14 hours a day on weekends yet still wakes unrefreshed. On school days she drags herself out of bed reluctantly and has been frequently late or absent.\n\nAcademically, {patientName} was previously a high-achieving student, but her grades have fallen sharply over the last semester. She describes difficulty concentrating, forgetting assignments, and feeling like \"no matter how hard I try, nothing matters.\" She has lost roughly 4 kg over the past three months and frequently skips meals, stating she has no appetite. She denies current suicidal ideation but admits to passive thoughts of \"wishing she could disappear\" approximately once or twice per week.\n\n{patientName} lives with her mother and 12-year-old brother in a mid-sized suburban town. Her parents divorced two years ago, and she visits her father on alternate weekends, a situation she finds emotionally stressful. Her social circle has dwindled; her two closest friends have grown distant after she repeatedly declined invitations to go out. She uses her smartphone mainly for passive scrolling on social media late into the night, which disrupts her sleep cycle further. She denies use of alcohol, tobacco, or recreational drugs.\n\nOutside of her current illness, {patientName} describes herself as a creative and sensitive person who \"used to feel things deeply in a good way.\" She enjoys animated films, has a pet cat named Miso, and once aspired to study graphic design. Her mother is visibly worried and tearful during the consultation, expressing guilt and concern about missing the early signs of her daughter's decline."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3ecaf9da-9c7d-483a-af7a-b1f381711cb0",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has no prior psychiatric diagnoses, but her mother recalls a brief period of tearfulness and school refusal approximately two years ago, around the time of her parents' divorce, which resolved without formal intervention. She has no history of hospitalization, self-harm, or prior suicide attempts. She has no known chronic medical conditions and her developmental history was unremarkable. Immunizations are up to date. She had a course of amoxicillin for streptococcal pharyngitis at age 13; she developed a mild maculopapular rash which resolved on discontinuation. Menarche occurred at age 13 and her menstrual cycles are irregular with mild dysmenorrhea. {patientName} has no history of trauma beyond the family disruption associated with the divorce. She does not use tobacco, alcohol, or illicit substances. Baseline sleep was normal until approximately six months ago when progressive insomnia with delayed sleep onset began. Family history is significant for maternal depression and a maternal uncle with bipolar disorder. No prescribed medications prior to this visit; occasional over-the-counter melatonin was used by mother's suggestion for sleep, with partial benefit."
+          }
+        ]
+      }
+    }
+  ]
+}

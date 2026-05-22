@@ -1,0 +1,366 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "37"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Vaňková",
+            "given": [
+              "Iveta"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "K21.9",
+              "display": "Gastro-oesophageal reflux disease without oesophagitis"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d4d98ce0-2ee1-440d-91fc-23eb41b394d0",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for omeprazole.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A02BC01"
+            }
+          ],
+          "text": "omeprazole 20 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "20 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5e3b3730-5efa-4261-a396-6c0625d2253e",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for famotidine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A02BA03"
+            }
+          ],
+          "text": "famotidine 20 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "20 mg oral twice daily as needed"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c0bc3361-0139-4a27-9390-d853403aff51",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52416-5"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T18:23:27Z",
+        "valueQuantity": {
+          "value": 74.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "74 kg; stable weight, no reported weight loss."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:33f00c17-ffff-4e5b-94f4-0a9ec71c8cfa",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Hemoglobin</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "43113-0"
+            }
+          ],
+          "text": "Hemoglobin"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T18:23:27Z",
+        "valueString": "Hemoglobin 131 g/L; no evidence of anaemia.",
+        "note": [
+          {
+            "text": "Hemoglobin 131 g/L; no evidence of anaemia."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5e2ad742-f38e-4ff7-a577-9738dd605a50",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Esophagogastroduodenoscopy</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "28015-6"
+            }
+          ],
+          "text": "Esophagogastroduodenoscopy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T18:23:27Z",
+        "valueString": "Not initially required because symptoms are typical and there are no alarm features; would be appropriate if symptoms relapse, respond poorly, or alarm symptoms develop.",
+        "note": [
+          {
+            "text": "Not initially required because symptoms are typical and there are no alarm features; would be appropriate if symptoms relapse, respond poorly, or alarm symptoms develop."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9c2d811c-0e6c-4744-a8e2-b3489c0d6b11",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Esophageal pH monitoring</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "98858-4"
+            }
+          ],
+          "text": "Esophageal pH monitoring"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T18:23:27Z",
+        "valueString": "Consider if symptoms persist despite initial treatment or if diagnostic uncertainty remains after empiric management.",
+        "note": [
+          {
+            "text": "Consider if symptoms persist despite initial treatment or if diagnostic uncertainty remains after empiric management."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4adf7d2e-767a-43bf-bc67-4c6b50df5f1d",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 37-year-old woman in the Czech Republic who comes in describing recurrent retrosternal burning after meals and episodes of sour-tasting fluid coming back up into her chest and throat, symptoms that fit the typical pattern of gastro-oesophageal reflux disease [PMID:9861914]. She says the discomfort is felt as heartburn in the chest and sometimes as precordial pain, and she has also noticed an irritating cough on some days [SNOMED:K21.9]. The symptoms have been going on for months and feel chronic rather than isolated, which is common for this condition [PMID:9861914].\n\nShe appears tired from broken sleep because the burning often wakes her at night with heartburn, and she keeps over-the-counter antacids at home for temporary relief [MEDDIALOG:K21.9:0]. She has started drinking water after swallowing when the chest burning flares and has begun avoiding some meals because eating can bring on the pain [MEDDIALOG:K21.9:0]. She denies red-flag complaints such as trouble swallowing, painful swallowing, weight loss, or known anaemia [PMID:9861914].\n\n{patientName} works a desk-based administrative job and says busy periods increase her stress, which seems to worsen symptoms; she also notices more reflux after large, spicy, or junk-food meals [MEDDIALOG:K21.9:0]. She lives with her partner, enjoys weekend walks and cooking, and has recently tried eating smaller, more frequent meals and sleeping with extra pillows to reduce nighttime reflux [MEDDIALOG:K21.9:0]. She does not report heavy alcohol use or smoking, but she is aware these habits can aggravate reflux and has been trying to keep to a healthier routine [MEDDIALOG:K21.9:0]."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:93cd6433-5687-4f02-a789-115aec8a39d8",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} reports several months of recurrent heartburn and acidic regurgitation, especially after meals and when lying down at night, with occasional chest burning during swallowing and intermittent cough [PMID:9861914; SNOMED:K21.9; MEDDIALOG:K21.9:0]. She says over-the-counter antacids help somewhat, but symptoms recur frequently, suggesting a chronic pattern [PMID:9861914; MEDDIALOG:K21.9:0]. She has not had prior hospitalization for this problem and has no known history of dysphagia, odynophagia, weight loss, or anaemia, which lowers concern for alarm features at presentation [PMID:9861914].\n\nLifestyle review is notable for symptom triggers with large meals, spicy food, junk food, stress, and nighttime recumbency [MEDDIALOG:K21.9:0]. She has started making practical changes including smaller frequent meals, elevating her head with extra pillows, and avoiding late heavy meals [MEDDIALOG:K21.9:0]. She is not currently known to have other major comorbidities. There is no previous reflux procedure, but she understands that patients who do not respond to conventional medical therapy may need further work-up and, in selected resistant cases, surgery [PMID:27405413]."
+          }
+        ]
+      }
+    }
+  ]
+}

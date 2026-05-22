@@ -1,0 +1,674 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "38"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Ježková",
+            "given": [
+              "Kamila"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "K21.9",
+              "display": "Gastro-oesophageal reflux disease without oesophagitis"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7b8413b0-b3e3-4955-85c4-80f77d45517c",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Ibuprofen.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "M01AE01"
+            }
+          ],
+          "text": "Ibuprofen 400 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "400 mg oral as needed (up to 3 times daily) for tension headaches"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5fa30b30-cae1-44b6-b4a8-e318fadec265",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Ferrous sulfate.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "B03AA07"
+            }
+          ],
+          "text": "Ferrous sulfate 200 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "200 mg oral once daily (maintenance, previously completed loading course)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2c03265e-4e0e-47a7-af77-4a0250382c34",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Loratadine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R06AX13"
+            }
+          ],
+          "text": "Loratadine 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral once daily during allergy season"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:503fad05-0218-4a60-9b56-3dc77cdbb720",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ambulatory 24-hour oesophageal pH monitoring</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29762-2"
+            }
+          ],
+          "text": "Ambulatory 24-hour oesophageal pH monitoring"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T16:00:48Z",
+        "valueString": "DeMeester score 18.4 (elevated); acid exposure time 5.8% (above normal threshold of 4%); 62 reflux episodes detected over 24 hours",
+        "note": [
+          {
+            "text": "DeMeester score 18.4 (elevated); acid exposure time 5.8% (above normal threshold of 4%); 62 reflux episodes detected over 24 hours"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:15cc1150-fc20-48e3-80c4-e236f833f793",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Upper gastrointestinal endoscopy (Oesophagogastroduodenoscopy)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "18746-8"
+            }
+          ],
+          "text": "Upper gastrointestinal endoscopy (Oesophagogastroduodenoscopy)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T16:00:48Z",
+        "valueString": "No erosions, ulcerations or Barrett's mucosa identified. Mild erythema of the gastric cardia. Z-line regular. Consistent with GORD without oesophagitis (Los Angeles Grade 0).",
+        "note": [
+          {
+            "text": "No erosions, ulcerations or Barrett's mucosa identified. Mild erythema of the gastric cardia. Z-line regular. Consistent with GORD without oesophagitis (Los Angeles Grade 0)."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:aec5e5f7-7d5f-4935-b9ad-822510d83e67",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Helicobacter pylori antigen, stool</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "17780-8"
+            }
+          ],
+          "text": "Helicobacter pylori antigen, stool"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T16:00:48Z",
+        "valueString": "Negative",
+        "note": [
+          {
+            "text": "Negative"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:49c67a3a-cda5-4376-a409-26fa1e2b915c",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T16:00:48Z",
+        "valueQuantity": {
+          "value": 72.4,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "72.4 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8968aab2-2b62-4aa4-8d6c-b8290b605092",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body mass index</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "39156-5"
+            }
+          ],
+          "text": "Body mass index"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T16:00:48Z",
+        "valueQuantity": {
+          "value": 27.1,
+          "unit": "kg/m2",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg/m2"
+        },
+        "note": [
+          {
+            "text": "27.1 kg/m²"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cf6d7f7f-ee83-4ee2-8754-5d657dee862e",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "high",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CA04"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Urticaria and facial angioedema"
+              }
+            ],
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:08609590-ffef-4b0b-9936-14ba1ea52b3b",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Shellfish.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "food"
+        ],
+        "criticality": "high",
+        "code": {
+          "text": "Shellfish"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Generalised urticaria and throat tightening"
+              }
+            ],
+            "severity": "severe"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:67900374-9d85-4d5a-9688-e3cf5e7a69f1",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Gastro-oesophageal reflux disease without oesophagitis</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "K21.9"
+                }
+              ],
+              "text": "Gastro-oesophageal reflux disease without oesophagitis"
+            },
+            "onsetAge": {
+              "value": 42,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9be70084-cd6f-4426-a1a6-bfbdc9b611e4",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandfather: Malignant neoplasm of oesophagus</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRFTH",
+              "display": "Grandfather"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "C15"
+                }
+              ],
+              "text": "Malignant neoplasm of oesophagus"
+            },
+            "onsetAge": {
+              "value": 68,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:58bcf856-5d7b-4941-8bcd-0d4d3c8d7af5",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Type 2 diabetes mellitus</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "E11"
+                }
+              ],
+              "text": "Type 2 diabetes mellitus"
+            },
+            "onsetAge": {
+              "value": 55,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:287f223e-8ac3-4ce9-83f4-ff84c8095d14",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 38-year-old woman of Mediterranean descent with a warm, expressive demeanor and a noticeably rushed energy about her. She is of average height and slightly overweight, with a body mass index hovering around 27. She presents to the clinic today dressed in business-casual attire, explaining she came straight from her office. She works as a marketing manager for a mid-sized tech firm, a role that demands long hours, frequent client lunches, and considerable deadline-related stress. She lives in a suburban home with her husband and two school-age children, and describes her lifestyle as \"constantly on the go.\"\n\n{patientName} reports a several-month history of a burning sensation that rises from her upper abdomen into her chest and throat, particularly after meals and when she lies down at night. She frequently wakes in the early hours of the morning with a sour or bitter taste in her mouth and a sensation of regurgitation. She notes that large, rich meals — a common occurrence at client dinners — reliably worsen her symptoms, as does her habit of having a glass of wine or two in the evenings to unwind.\n\nShe describes an intermittent dry, irritating cough that she initially attributed to seasonal allergies, and occasional hoarseness in the morning that typically resolves by mid-morning. She denies any dysphagia, odynophagia, involuntary weight loss, or frank haematemesis. She does admit to popping over-the-counter antacid tablets almost daily before her formal diagnosis was pursued.\n\nOutside of work, {patientName} enjoys cooking (particularly spicy and tomato-based dishes), weekend hikes with her family, and binge-watching streaming series late into the night — a habit she acknowledges contributes to her lying down shortly after eating. She is a non-smoker but describes her coffee intake as \"probably too much,\" averaging three to four cups per day. She is socially active, maintains a close circle of friends, and reports moderate but chronic stress related to balancing her demanding career with family responsibilities.\n\n{patientName} is visibly fatigued during the consultation. Her vital signs are within normal limits. Abdominal examination reveals mild epigastric tenderness on deep palpation but no guarding, rigidity, or organomegaly. Oropharyngeal inspection shows mild posterior pharyngeal erythema consistent with laryngopharyngeal reflux."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4d6b41cd-5a1c-41ae-b235-0fb3304da9fd",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has no prior hospitalizations and no significant surgical history. She was diagnosed with mild anxiety disorder at age 33 and has been managing it with lifestyle measures and intermittent counselling, without pharmacological therapy. She has a documented history of iron-deficiency anaemia, diagnosed two years ago postpartum, for which she completed a course of oral iron supplementation; her most recent haemoglobin was within normal limits. She reports occasional tension-type headaches, managed with over-the-counter ibuprofen — a habit that may be contributing to her reflux symptoms given the gastroprotective concerns associated with NSAIDs. She has no history of peptic ulcer disease, Helicobacter pylori infection, or prior upper gastrointestinal investigations. She is nulliparous of further pregnancies, and her last cervical smear was normal 18 months ago. She takes no regular prescribed medications. Family history is notable for her mother having GORD and her paternal grandfather having had oesophageal cancer. {patientName} is a lifelong non-smoker, consumes alcohol socially (approximately 7–10 units per week), and drinks 3–4 cups of coffee daily. Her BMI is 27.1 kg/m². She has no known drug allergies on record prior to this visit."
+          }
+        ]
+      }
+    }
+  ]
+}

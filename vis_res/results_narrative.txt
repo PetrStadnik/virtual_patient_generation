@@ -1,0 +1,317 @@
+========================================================================
+VIRTUAL-PATIENT PIPELINE — EVALUATION SUMMARY
+========================================================================
+
+  * Pipelines evaluated:    baseline, tools_agent, rag, multiagent
+  * Generator models:       GPT-5.4, Claude Sonnet 4.6
+  * Scenarios generated:    240
+  * Evaluation records:     240
+========================================================================
+1. FHIR STRUCTURAL VALIDATION
+========================================================================
+Each generated scenario was validated against the FHIR R4 specification.
+Two metrics are reported: structural validity (res_struct=true) and the
+number of code-level errors (ATC, SNOMED CT, LOINC).
+
+
+Baseline / GPT-5.4
+------------------
+  * Scenarios evaluated:          30
+  * Structurally valid:           80.0%
+  * Scenarios with 0 code errors: 46.7%
+  * Mean code errors / scenario:  0.73  (SD 0.87)
+  * Total code errors:            22
+
+Baseline / Claude Sonnet 4.6
+----------------------------
+  * Scenarios evaluated:          30
+  * Structurally valid:           96.7%
+  * Scenarios with 0 code errors: 36.7%
+  * Mean code errors / scenario:  1.33  (SD 1.32)
+  * Total code errors:            40
+
+Tools agent / GPT-5.4
+---------------------
+  * Scenarios evaluated:          30
+  * Structurally valid:           100.0%
+  * Scenarios with 0 code errors: 90.0%
+  * Mean code errors / scenario:  0.17  (SD 0.53)
+  * Total code errors:            5
+
+Tools agent / Claude Sonnet 4.6
+-------------------------------
+  * Scenarios evaluated:          30
+  * Structurally valid:           100.0%
+  * Scenarios with 0 code errors: 70.0%
+  * Mean code errors / scenario:  0.40  (SD 0.67)
+  * Total code errors:            12
+
+RAG / GPT-5.4
+-------------
+  * Scenarios evaluated:          30
+  * Structurally valid:           100.0%
+  * Scenarios with 0 code errors: 93.3%
+  * Mean code errors / scenario:  0.10  (SD 0.40)
+  * Total code errors:            3
+
+RAG / Claude Sonnet 4.6
+-----------------------
+  * Scenarios evaluated:          30
+  * Structurally valid:           100.0%
+  * Scenarios with 0 code errors: 73.3%
+  * Mean code errors / scenario:  0.37  (SD 0.72)
+  * Total code errors:            11
+
+Multi-agent / GPT-5.4
+---------------------
+  * Scenarios evaluated:          30
+  * Structurally valid:           86.7%
+  * Scenarios with 0 code errors: 76.7%
+  * Mean code errors / scenario:  0.27  (SD 0.52)
+  * Total code errors:            8
+
+Multi-agent / Claude Sonnet 4.6
+-------------------------------
+  * Scenarios evaluated:          30
+  * Structurally valid:           100.0%
+  * Scenarios with 0 code errors: 40.0%
+  * Mean code errors / scenario:  0.93  (SD 0.98)
+  * Total code errors:            28
+========================================================================
+2. EVALUATION RESULTS BY PIPELINE AND GENERATOR MODEL
+========================================================================
+Each scenario was evaluated by a different LLM than the one that generated it
+(cross-validation). Metrics: gate pass rate, symptom coverage, quality ratio,
+and diagnosis accuracy (first attempt / any attempt up to 3).
+
+Baseline
+--------
+  Generator: GPT-5.4  |  Evaluator: claude-sonnet-4-6  |  n=30
+  * Gate pass rate:            93.3%
+  * Symptom coverage:          59.7%  (SD 22.2%)
+  * Quality ratio:             83.3%  (SD 10.8%)
+  * Diagnosis accuracy (1st):  80.0%
+  * Diagnosis accuracy (any):  86.7%
+
+  Generator: Claude Sonnet 4.6  |  Evaluator: gpt-5.4  |  n=30
+  * Gate pass rate:            86.7%
+  * Symptom coverage:          28.7%  (SD 31.8%)
+  * Quality ratio:             70.0%  (SD 18.0%)
+  * Diagnosis accuracy (1st):  66.7%
+  * Diagnosis accuracy (any):  76.7%
+
+
+Tools agent
+-----------
+  Generator: GPT-5.4  |  Evaluator: claude-sonnet-4-6  |  n=30
+  * Gate pass rate:            90.0%
+  * Symptom coverage:          66.0%  (SD 23.1%)
+  * Quality ratio:             77.1%  (SD 10.0%)
+  * Diagnosis accuracy (1st):  80.0%
+  * Diagnosis accuracy (any):  80.0%
+
+  Generator: Claude Sonnet 4.6  |  Evaluator: gpt-5.4  |  n=30
+  * Gate pass rate:            66.7%
+  * Symptom coverage:          52.1%  (SD 26.2%)
+  * Quality ratio:             72.9%  (SD 11.8%)
+  * Diagnosis accuracy (1st):  73.3%
+  * Diagnosis accuracy (any):  93.3%
+
+
+RAG
+---
+  Generator: GPT-5.4  |  Evaluator: claude-sonnet-4-6  |  n=30
+  * Gate pass rate:            100.0%
+  * Symptom coverage:          62.8%  (SD 23.8%)
+  * Quality ratio:             73.6%  (SD 12.3%)
+  * Diagnosis accuracy (1st):  60.0%
+  * Diagnosis accuracy (any):  66.7%
+
+  Generator: Claude Sonnet 4.6  |  Evaluator: gpt-5.4  |  n=30
+  * Gate pass rate:            100.0%
+  * Symptom coverage:          60.5%  (SD 26.9%)
+  * Quality ratio:             77.4%  (SD 10.5%)
+  * Diagnosis accuracy (1st):  66.7%
+  * Diagnosis accuracy (any):  70.0%
+
+
+Multi-agent
+-----------
+  Generator: GPT-5.4  |  Evaluator: claude-sonnet-4-6  |  n=30
+  * Gate pass rate:            96.7%
+  * Symptom coverage:          79.9%  (SD 16.2%)
+  * Quality ratio:             94.0%  (SD 6.0%)
+  * Diagnosis accuracy (1st):  80.0%
+  * Diagnosis accuracy (any):  93.3%
+
+  Generator: Claude Sonnet 4.6  |  Evaluator: gpt-5.4  |  n=30
+  * Gate pass rate:            83.3%
+  * Symptom coverage:          83.0%  (SD 12.0%)
+  * Quality ratio:             82.4%  (SD 10.2%)
+  * Diagnosis accuracy (1st):  66.7%
+  * Diagnosis accuracy (any):  90.0%
+
+========================================================================
+3. GENERATOR MODEL COMPARISON (ACROSS ALL PIPELINES)
+========================================================================
+
+GPT-5.4
+-------
+  * n:                         120
+  * Gate pass rate:            95.0%
+  * Symptom coverage:          67.1%
+  * Quality ratio:             82.0%
+  * Diagnosis accuracy (1st):  75.0%
+  * Diagnosis accuracy (any):  81.7%
+
+Claude Sonnet 4.6
+-----------------
+  * n:                         120
+  * Gate pass rate:            84.2%
+  * Symptom coverage:          56.1%
+  * Quality ratio:             75.6%
+  * Diagnosis accuracy (1st):  68.3%
+  * Diagnosis accuracy (any):  82.5%
+========================================================================
+4. GATE QUESTIONS — FAILURE RATE (ACROSS ALL PIPELINES AND MODELS)
+========================================================================
+A gate question 'fails' when the answer matches the rejection trigger
+(e.g. RF1='YES' means 'contradicting finding present' → rejection).
+Sorted by failure rate descending.
+
+  SAF2     6.7%  (reject on NO)  Are medication doses within clinically accepted ranges?
+  SAF1     3.3%  (reject on YES)  Are prescribed medications contraindicated given allergies?
+  RF3      2.1%  (reject on YES)  Could symptoms be explained as medication side effects instead?
+  RF2      0.8%  (reject on YES)  Is there another diagnosis that explains the symptoms better?
+  REQ3     0.4%  (reject on NO)  Are the key hallmark symptoms of the diagnosis present?
+  RF5      0.4%  (reject on NO)  Are all test results consistent with expected findings?
+  REQ1     0.0%  (reject on NO)  Is this diagnosis plausible for this gender?
+  REQ2     0.0%  (reject on NO)  Is this diagnosis plausible for this age group?
+  REQ4     0.0%  (reject on NO)  Are the minimum required diagnostic findings present?
+  RF1      0.0%  (reject on YES)  Is there a finding that clearly contradicts this diagnosis?
+  RF4      0.0%  (reject on NO)  Does the patient possess required anatomical structures?
+  RF6      0.0%  (reject on YES)  Is there a test result that is impossible or highly atypical?
+  RF7      0.0%  (reject on YES)  Is any test result physiologically implausible?
+  RF8      0.0%  (reject on NO)  Are all numeric test results within physiologically possible ranges?
+========================================================================
+5. QUALITY QUESTIONS — NO ANSWER RATE (ACROSS ALL PIPELINES AND MODELS)
+========================================================================
+A high NO rate means the scenario often failed to satisfy that criterion.
+Sorted by NO rate descending.
+
+  SUP12   72.0%  !! frequent  Could current medications contribute to the disease?
+  SUP14   69.5%  !! frequent  Are all medications unrelated to treating the primary diagnosis?
+  SUP4    36.8%  ! occasional  Has the patient experienced similar episodes previously?
+  SUP5    25.9%  ! occasional  Is there family history of the same disease?
+  SUP11   25.9%  ! occasional  Do hobbies expose the patient to triggers?
+  SUP8    25.5%  ! occasional  Are there comorbidities that predispose to this disease?
+  SUP10   18.0%    ok  Does occupation expose the patient to risk factors?
+  SUP9     9.6%    ok  Does lifestyle include behaviours that trigger this disease?
+  SUP6     9.2%    ok  Is there family history of related disorders?
+  SUP3     2.9%    ok  Does the medical history increase the risk of this disease?
+  SUP7     1.3%    ok  Does the patient have major known risk factors?
+  SUP1     0.0%    ok  Are the most common symptoms present?
+  SUP2     0.0%    ok  Does the symptom pattern match the typical presentation?
+  SUP13    0.0%    ok  Is the onset and progression temporally consistent?
+========================================================================
+6. PER-DIAGNOSIS RESULTS
+========================================================================
+Results aggregated over all pipelines and generator models.
+Diagnoses sorted by overall diagnosis accuracy (descending).
+
+  C18.9      Malignant neoplasm: Colon, unspecified
+  * n=8  gate=88%  symptoms=64%  quality=76%  diagnosis=100% (1st: 88%)
+    [Baseline: 100%  |  Tools agent: 100%  |  RAG: 100%  |  Multi-agent: 100%]
+  C50.9      Malignant neoplasm: Breast, unspecified
+  * n=8  gate=100%  symptoms=42%  quality=75%  diagnosis=100% (1st: 88%)
+    [Baseline: 100%  |  Tools agent: 100%  |  RAG: 100%  |  Multi-agent: 100%]
+  E11.9      Type 2 diabetes mellitus without complications
+  * n=8  gate=100%  symptoms=52%  quality=80%  diagnosis=100% (1st: 100%)
+    [Baseline: 100%  |  Tools agent: 100%  |  RAG: 100%  |  Multi-agent: 100%]
+  F20.9      Schizophrenia, unspecified
+  * n=8  gate=100%  symptoms=46%  quality=82%  diagnosis=100% (1st: 100%)
+    [Baseline: 100%  |  Tools agent: 100%  |  RAG: 100%  |  Multi-agent: 100%]
+  F31.9      Bipolar affective disorder, unspecified
+  * n=8  gate=100%  symptoms=53%  quality=84%  diagnosis=100% (1st: 100%)
+    [Baseline: 100%  |  Tools agent: 100%  |  RAG: 100%  |  Multi-agent: 100%]
+  F41.1      Generalized anxiety disorder
+  * n=8  gate=100%  symptoms=70%  quality=80%  diagnosis=100% (1st: 100%)
+    [Baseline: 100%  |  Tools agent: 100%  |  RAG: 100%  |  Multi-agent: 100%]
+  F90.0      Disturbance of activity and attention
+  * n=7  gate=100%  symptoms=84%  quality=85%  diagnosis=100% (1st: 100%)
+    [Baseline: 100%  |  Tools agent: 100%  |  RAG: 100%  |  Multi-agent: 100%]
+  G20        Parkinson disease
+  * n=8  gate=88%  symptoms=74%  quality=72%  diagnosis=100% (1st: 100%)
+    [Baseline: 100%  |  Tools agent: 100%  |  RAG: 100%  |  Multi-agent: 100%]
+  G35        Multiple sclerosis
+  * n=8  gate=100%  symptoms=76%  quality=78%  diagnosis=100% (1st: 100%)
+    [Baseline: 100%  |  Tools agent: 100%  |  RAG: 100%  |  Multi-agent: 100%]
+  G40.9      Epilepsy, unspecified
+  * n=8  gate=100%  symptoms=43%  quality=78%  diagnosis=100% (1st: 88%)
+    [Baseline: 100%  |  Tools agent: 100%  |  RAG: 100%  |  Multi-agent: 100%]
+  G43.9      Migraine, unspecified
+  * n=8  gate=100%  symptoms=80%  quality=92%  diagnosis=100% (1st: 100%)
+    [Baseline: 100%  |  Tools agent: 100%  |  RAG: 100%  |  Multi-agent: 100%]
+  J18.9      Pneumonia, unspecified
+  * n=8  gate=62%  symptoms=57%  quality=69%  diagnosis=100% (1st: 88%)
+    [Baseline: 100%  |  Tools agent: 100%  |  RAG: 100%  |  Multi-agent: 100%]
+  K21.9      Gastro-oesophageal reflux disease without oesophag
+  * n=8  gate=100%  symptoms=59%  quality=91%  diagnosis=100% (1st: 100%)
+    [Baseline: 100%  |  Tools agent: 100%  |  RAG: 100%  |  Multi-agent: 100%]
+  M17.9      Gonarthrosis, unspecified
+  * n=8  gate=100%  symptoms=83%  quality=87%  diagnosis=100% (1st: 100%)
+    [Baseline: 100%  |  Tools agent: 100%  |  RAG: 100%  |  Multi-agent: 100%]
+  C34.9      Malignant neoplasm: Bronchus or lung, unspecified
+  * n=8  gate=100%  symptoms=53%  quality=74%  diagnosis=88% (1st: 88%)
+    [Baseline: 100%  |  Tools agent: 100%  |  RAG: 50%  |  Multi-agent: 100%]
+  F32.9      Depressive episode, unspecified
+  * n=8  gate=100%  symptoms=68%  quality=82%  diagnosis=88% (1st: 88%)
+    [Baseline: 100%  |  Tools agent: 100%  |  RAG: 100%  |  Multi-agent: 50%]
+  J00        Acute nasopharyngitis [common cold]
+  * n=8  gate=88%  symptoms=70%  quality=83%  diagnosis=88% (1st: 50%)
+    [Baseline: 100%  |  Tools agent: 100%  |  RAG: 50%  |  Multi-agent: 100%]
+  J02.9      Acute pharyngitis, unspecified
+  * n=8  gate=75%  symptoms=66%  quality=72%  diagnosis=88% (1st: 88%)
+    [Baseline: 100%  |  Tools agent: 100%  |  RAG: 50%  |  Multi-agent: 100%]
+  J06.9      Acute upper respiratory infection, unspecified
+  * n=8  gate=75%  symptoms=67%  quality=80%  diagnosis=88% (1st: 62%)
+    [Baseline: 100%  |  Tools agent: 50%  |  RAG: 100%  |  Multi-agent: 100%]
+  A09.0      Other and unspecified gastroenteritis and colitis 
+  * n=8  gate=100%  symptoms=63%  quality=75%  diagnosis=75% (1st: 75%)
+    [Baseline: 100%  |  Tools agent: 100%  |  RAG: 50%  |  Multi-agent: 50%]
+  B20.0      HIV disease resulting in mycobacterial infection
+  * n=8  gate=100%  symptoms=51%  quality=76%  diagnosis=75% (1st: 62%)
+    [Baseline: 100%  |  Tools agent: 50%  |  RAG: 50%  |  Multi-agent: 100%]
+  C61        Malignant neoplasm of prostate
+  * n=8  gate=100%  symptoms=42%  quality=71%  diagnosis=75% (1st: 62%)
+    [Baseline: 100%  |  Tools agent: 100%  |  RAG: 50%  |  Multi-agent: 50%]
+  E78.5      Hyperlipidaemia, unspecified
+  * n=8  gate=88%  symptoms=31%  quality=83%  diagnosis=75% (1st: 62%)
+    [Baseline: 50%  |  Tools agent: 100%  |  RAG: 100%  |  Multi-agent: 50%]
+  J20.9      Acute bronchitis, unspecified
+  * n=8  gate=75%  symptoms=66%  quality=76%  diagnosis=62% (1st: 50%)
+    [Baseline: 50%  |  Tools agent: 50%  |  RAG: 50%  |  Multi-agent: 100%]
+  M79.1      Myalgia
+  * n=8  gate=88%  symptoms=62%  quality=79%  diagnosis=62% (1st: 38%)
+    [Baseline: 50%  |  Tools agent: 100%  |  RAG: 0%  |  Multi-agent: 100%]
+  K75.9      Inflammatory liver disease, unspecified
+  * n=8  gate=38%  symptoms=53%  quality=76%  diagnosis=50% (1st: 12%)
+    [Baseline: 50%  |  Tools agent: 50%  |  RAG: 0%  |  Multi-agent: 100%]
+  M54.5      Low back pain
+  * n=8  gate=100%  symptoms=63%  quality=86%  diagnosis=50% (1st: 25%)
+    [Baseline: 100%  |  Tools agent: 50%  |  RAG: 0%  |  Multi-agent: 50%]
+  J03.9      Acute tonsillitis, unspecified
+  * n=8  gate=50%  symptoms=88%  quality=76%  diagnosis=38% (1st: 25%)
+    [Baseline: 0%  |  Tools agent: 50%  |  RAG: 0%  |  Multi-agent: 100%]
+  K29.7      Gastritis, unspecified
+  * n=8  gate=88%  symptoms=76%  quality=84%  diagnosis=38% (1st: 25%)
+    [Baseline: 0%  |  Tools agent: 50%  |  RAG: 0%  |  Multi-agent: 100%]
+  N39.0      Urinary tract infection, site not specified
+  * n=8  gate=100%  symptoms=55%  quality=75%  diagnosis=38% (1st: 0%)
+    [Baseline: 0%  |  Tools agent: 50%  |  RAG: 0%  |  Multi-agent: 100%]
+  ?          
+  * n=1  gate=0%  symptoms=0%  quality=0%  diagnosis=0% (1st: 0%)
+    [Baseline: 0%]
+
+END OF SUMMARY
+========================================================================

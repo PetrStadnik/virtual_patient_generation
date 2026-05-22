@@ -1,0 +1,519 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "19"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Čechová",
+            "given": [
+              "Lýdie"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "F32.9",
+              "display": "Depressive episode, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:788e05af-9bc6-40ae-952e-47a99a1f5782",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for levothyroxine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "H03AA01"
+            }
+          ],
+          "text": "levothyroxine 50 ug"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "50 ug oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:87ab5b0e-43d3-4d12-aaa2-4d25bc28a795",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for ethinylestradiol and levonorgestrel.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "G03AA07"
+            }
+          ],
+          "text": "ethinylestradiol and levonorgestrel 30 ug/150 ug"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "30 ug/150 ug oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:950a5aeb-0740-460a-bb99-2e4db9e81d41",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient Health Questionnaire 9 item (PHQ-9) total score</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "44261-6"
+            }
+          ],
+          "text": "Patient Health Questionnaire 9 item (PHQ-9) total score"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T22:59:50Z",
+        "valueString": "Score 18, indicating moderately severe depressive symptoms; item 9 positive for passive suicidal thoughts on several days.",
+        "note": [
+          {
+            "text": "Score 18, indicating moderately severe depressive symptoms; item 9 positive for passive suicidal thoughts on several days."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:58f4b06d-2a3b-4d4b-8c59-eb2354414687",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Thyroid stimulating hormone (TSH) [Units/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11579-0"
+            }
+          ],
+          "text": "Thyroid stimulating hormone (TSH) [Units/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T22:59:50Z",
+        "valueString": "2.1 mIU/L, within reference range on levothyroxine therapy.",
+        "note": [
+          {
+            "text": "2.1 mIU/L, within reference range on levothyroxine therapy."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e7167768-8dcb-470c-a307-18817cf6b231",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Complete blood count (hemogram) panel - Blood by Automated count</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2"
+            }
+          ],
+          "text": "Complete blood count (hemogram) panel - Blood by Automated count"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T22:59:50Z",
+        "valueString": "Within normal limits; no anemia or leukocytosis detected.",
+        "note": [
+          {
+            "text": "Within normal limits; no anemia or leukocytosis detected."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:40ee1f05-40d0-4cfc-b254-42b215a7c42a",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Comprehensive metabolic panel</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24323-8"
+            }
+          ],
+          "text": "Comprehensive metabolic panel"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T22:59:50Z",
+        "valueString": "Within normal limits, consistent with prior report that blood work was healthy.",
+        "note": [
+          {
+            "text": "Within normal limits, consistent with prior report that blood work was healthy."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9f6bcf92-08b4-422b-8ede-01842a404563",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Depressive episode, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F32.9"
+                }
+              ],
+              "text": "Depressive episode, unspecified"
+            },
+            "onsetAge": {
+              "value": 34,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9c824fe3-4f9d-4e87-ad25-fbd05cb9bf01",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Generalized anxiety disorder</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F41.1"
+                }
+              ],
+              "text": "Generalized anxiety disorder"
+            },
+            "onsetAge": {
+              "value": 30,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:10326d02-053e-4f3d-8637-759a9e733858",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandmother: Recurrent depressive disorder, current episode moderate</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRMTH",
+              "display": "Grandmother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F33.1"
+                }
+              ],
+              "text": "Recurrent depressive disorder, current episode moderate"
+            },
+            "onsetAge": {
+              "value": 50,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4e00dc5d-6c24-4bc4-9b68-de4486126c71",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Psychiatric diagnostic interview</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "165172002"
+            }
+          ],
+          "text": "Psychiatric diagnostic interview"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2026",
+        "note": [
+          {
+            "text": "Initial outpatient psychiatric assessment for depressed mood, anxiety, passive suicidal ideation, and functional decline."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:aebb4299-3913-4576-bf9b-2a08d81acf70",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 19-year-old woman in the Czech Republic who comes across as tired, slowed, and emotionally worn down. Over the last few weeks she has had a persistently depressed mood with loss of energy, poor motivation, and a sense that she is mentally exhausted. She also reports anxiety occurring alongside the low mood, frequent feelings of hopelessness, and at times she has trouble concentrating on schoolwork and everyday decisions. Her basic blood work has been normal in the past, which has added to her frustration because she feels physically \"healthy\" while struggling psychologically.\n\nShe is a first-year university student who recently moved away from home and now lives in a shared dormitory. Friends describe her as previously reliable and social, but lately she skips classes, ignores messages, and spends long stretches in bed scrolling on her phone. She used to enjoy drawing and meeting friends for coffee, but she now says very little feels rewarding. She is still close to her mother and a younger sister, though she has become more withdrawn and avoids talking openly about how bad she feels.\n\nIn daily life, {patientName} has been sleeping irregularly, eating inconsistently, and struggling to keep up with assignments. She reports markedly reduced enjoyment, low self-worth, and occasional passive suicidal thoughts such as wondering if it would be easier not to wake up, without a stated plan or recent self-harm. Because of this, her low mood is taken seriously and monitored carefully. She does not look disheveled so much as depleted: soft speech, limited eye contact, and a flat, tearful affect during difficult topics are typical of how she presents in clinic.\n\nOutside her mood symptoms, she also has treated hypothyroidism and takes levothyroxine regularly. She uses a combined oral contraceptive pill for birth control. She worries that something medical may be worsening her mood because endocrine problems can overlap with anxiety and depression presentations, and prior discussions about depression have emphasized checking general health and laboratory results when symptoms persist. She has never been pregnant and has had no recent childbirth, so there is no evidence of perinatal depression."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:132cd542-99dc-4e4e-9811-ef47f50d1f30",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has had several weeks of worsening low mood, fatigue, anxiety, loss of interest, hopelessness, and reduced concentration, consistent with a depressive episode lasting at least two weeks. She also endorses intermittent passive suicidal ideation without plan, intent, or prior self-harm behavior, and this is being actively screened and monitored. She has not had prior psychiatric hospitalization, detox admission, psychosis, or suicide attempt.\n\nHer history now suggests increased vulnerability to depression: at age 16, during a stressful school year, she experienced a milder 2- to 3-month period of depressed mood, social withdrawal, insomnia, and reduced academic performance that improved without hospitalization or formal medication treatment. She was seen by a school counselor at that time but did not remain in ongoing care. This makes the current presentation her second similar depressive episode.\n\nHer relevant comorbidity is hypothyroidism treated with levothyroxine. She also takes a combined oral contraceptive pill containing ethinylestradiol and levonorgestrel for contraception, with no clear temporal relationship between starting it and the current depressive symptoms. Previous blood work was described as healthy/normal, and her current thyroid testing remains in range.\n\nSocially, {patientName} is under academic stress after starting university and has become more isolated from friends. She lives in student housing, is unmarried, and has supportive family contact. She is a nonsmoker, does not use illicit drugs, and drinks caffeine heavily during exam periods. She has never been pregnant, is not postpartum, and has no history suggesting perinatal depression."
+          }
+        ]
+      }
+    }
+  ]
+}

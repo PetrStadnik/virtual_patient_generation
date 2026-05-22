@@ -1,0 +1,835 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "35"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Růžička",
+            "given": [
+              "Adam"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "B20.0",
+              "display": "HIV disease resulting in mycobacterial infection"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7670e38e-df65-459d-bb92-73e644045929",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Rifampicin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J04AB02"
+            }
+          ],
+          "text": "Rifampicin 600 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "600 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d06d3179-8bde-45e9-853d-1624dbda9fd6",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Isoniazid.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J04AC01"
+            }
+          ],
+          "text": "Isoniazid 300 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "300 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5111d3ec-7b2a-4074-953f-9007cc266f08",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Pyrazinamide.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J04AK01"
+            }
+          ],
+          "text": "Pyrazinamide 1500 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1500 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:19633d5b-6c84-445a-9467-cb5f1367769b",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Ethambutol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J04AK02"
+            }
+          ],
+          "text": "Ethambutol 1100 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1100 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fa7c9fb4-3d22-429e-8374-b645c38b3f09",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Dolutegravir.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J05AX12"
+            }
+          ],
+          "text": "Dolutegravir 50 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "50 mg oral twice daily (dose adjusted for rifampicin interaction)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4421aa18-0a58-4e8f-8279-31fdf2444d5b",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Trimethoprim-sulfamethoxazole.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01EE01"
+            }
+          ],
+          "text": "Trimethoprim-sulfamethoxazole 960 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "960 mg oral once daily (PCP prophylaxis)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f2b6338c-083c-421a-91fb-5c44d08f49ce",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">HIV 1 RNA panel in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "96557-4"
+            }
+          ],
+          "text": "HIV 1 RNA panel in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T22:13:06Z",
+        "valueString": "Viral load: 87,500 copies/mL (detectable, poorly suppressed)",
+        "note": [
+          {
+            "text": "Viral load: 87,500 copies/mL (detectable, poorly suppressed)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:dd0eab56-ac19-406f-b38c-f742faca07b8",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">CD4 cells [#/volume] in Blood</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "26570-2"
+            }
+          ],
+          "text": "CD4 cells [#/volume] in Blood"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T22:13:06Z",
+        "valueQuantity": {
+          "value": 118.0,
+          "unit": "cells/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "cells/uL"
+        },
+        "note": [
+          {
+            "text": "118 cells/µL — severely reduced, consistent with AIDS-defining immunosuppression"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:dfb7f97d-fba4-4c0a-bdb4-3ff2741e8b91",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mycobacterium tuberculosis DNA [Presence] in Sputum by NAA</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "14556-5"
+            }
+          ],
+          "text": "Mycobacterium tuberculosis DNA [Presence] in Sputum by NAA"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T22:13:06Z",
+        "valueString": "Detected — Mycobacterium tuberculosis complex confirmed; rifampicin resistance not detected (GeneXpert MTB/RIF)",
+        "note": [
+          {
+            "text": "Detected — Mycobacterium tuberculosis complex confirmed; rifampicin resistance not detected (GeneXpert MTB/RIF)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:69b7d231-f113-4927-873b-163698bea1a6",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body temperature</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T22:13:06Z",
+        "valueQuantity": {
+          "value": 38.6,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        },
+        "note": [
+          {
+            "text": "38.6 °C — low-grade fever consistent with active TB"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1e1e166c-0766-40a8-b3f5-daa18148e3a2",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52416-5"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T22:13:06Z",
+        "valueQuantity": {
+          "value": 57.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "57 kg — significant unintentional weight loss of ~8 kg over 2 months"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:624217f2-c57f-423b-ba9d-90df7ded7dca",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CE01"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Maculopapular rash"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ba0cbcc4-5eef-4254-a7a2-83571ab028fb",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: HIV disease</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "B20"
+                }
+              ],
+              "text": "HIV disease"
+            },
+            "onsetAge": {
+              "value": 42,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ac83183f-6bcc-49cf-b5c5-1c7dac2e76d3",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Respiratory tuberculosis</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "A15"
+                }
+              ],
+              "text": "Respiratory tuberculosis"
+            },
+            "onsetAge": {
+              "value": 38,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:46eb65af-4b6e-499f-85f4-87ab1fb61b1e",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brother: Depressive episode</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "BRO",
+              "display": "Brother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F32"
+                }
+              ],
+              "text": "Depressive episode"
+            },
+            "onsetAge": {
+              "value": 28,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b95ffa1d-93e4-465e-bcd7-c52063a46c56",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">HIV test</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "31676001"
+            }
+          ],
+          "text": "HIV test"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2020",
+        "note": [
+          {
+            "text": "Confirmatory HIV-1 antibody/antigen test performed at initial diagnosis 4 years ago; result positive."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:dcbf926f-eefc-4e54-9261-d681ea4862ee",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Chest X-ray</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "399208008"
+            }
+          ],
+          "text": "Chest X-ray"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "PA chest radiograph at current admission showing left upper lobe infiltrates with early cavitation, consistent with active pulmonary tuberculosis."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:07d13f8a-92af-4075-8198-5c842904f86e",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Bronchoscopy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "10847001"
+            }
+          ],
+          "text": "Bronchoscopy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Performed to obtain bronchoalveolar lavage samples for mycobacterial culture and NAAT following non-productive initial sputum attempts."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fda60a88-4996-47eb-9ddd-8414d26b7853",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sputum culture</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "104184002"
+            }
+          ],
+          "text": "Sputum culture"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Three sputum specimens collected for AFB smear and Mycobacterium tuberculosis culture; smear positive (2+), culture pending sensitivity results."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d7dd2e6d-07ce-4277-bbd4-3adffb81b9e9",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 35-year-old male who presents to the infectious disease clinic appearing visibly fatigued and underweight. He is pale, with sunken eyes and mild temporal wasting, wearing a loose-fitting jacket that no longer fits his slender frame. He speaks softly and is frequently interrupted by a persistent, productive cough that he attempts to suppress with a tissue. His skin shows faint hyperpigmented patches, and he has mild cervical lymphadenopathy palpable on examination.\n\n{patientName} works as a freelance graphic designer from home, spending long hours in front of a screen. He lives alone in a small urban apartment and maintains a limited social circle, largely due to increasing fatigue and social stigma related to his HIV diagnosis. He enjoys sketching, watching documentaries, and cooking — although his appetite has declined significantly over the past two months.\n\nHe was diagnosed with HIV four years ago after presenting with a flu-like illness and was initially started on antiretroviral therapy (ART), but he admits to periods of non-adherence due to financial constraints and depressive episodes. He has been smoking half a pack of cigarettes daily for over a decade and occasionally uses cannabis. He consumes alcohol socially but denies intravenous drug use.\n\nOver the past six weeks, {patientName} has experienced drenching night sweats, low-grade fever, worsening productive cough with occasional blood-tinged sputum, progressive weight loss (~8 kg over two months), and increasing breathlessness on exertion. He initially attributed the symptoms to a common cold but presented after a family member insisted he seek care.\n\nOn examination, his temperature is elevated at 38.6 °C, and he weighs only 57 kg. Lung auscultation reveals coarse crackles at the left upper lobe. Chest imaging and microbiological workup confirmed pulmonary tuberculosis superimposed on his HIV disease, consistent with ICD-10 B20.0. He is now being admitted for initiation of anti-tubercular therapy and ART optimization."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:28ca74af-d999-468f-b58d-62450a17fff7",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} was diagnosed with HIV infection at age 31 following an acute seroconversion illness. He was enrolled in an ART program but has had documented periods of non-adherence, leading to incomplete viral suppression. He has no prior history of opportunistic infections until the current presentation. He has a 12-pack-year smoking history and mild intermittent cannabis use. He has no prior hospitalizations. He was tested for tuberculosis at HIV diagnosis and was negative at that time. He has no known cardiac, renal, or hepatic disease. He reports a history of mild depression, for which he has never sought formal treatment. He has no surgical history. His vaccination history is incomplete, with no documented BCG booster in adulthood. He has a known penicillin allergy with a reported rash reaction. His baseline CD4 count at HIV diagnosis was 380 cells/µL; his most recent count (8 months ago) was 142 cells/µL, indicating progressive immunosuppression."
+          }
+        ]
+      }
+    }
+  ]
+}

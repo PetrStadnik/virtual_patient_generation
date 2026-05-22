@@ -1,0 +1,862 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "31"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Hrušková",
+            "given": [
+              "Ivona"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "N39.0",
+              "display": "Urinary tract infection, site not specified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:03e9a8bd-1859-4337-a704-cca2774649cd",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Nitrofurantoin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01XE01"
+            }
+          ],
+          "text": "Nitrofurantoin 100 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "100 mg oral twice daily for 5 days (modified-release formulation; take with food to reduce GI side effects)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d107a84e-cd9f-43fd-a07d-3ab0770d27b7",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Phenazopyridine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "G04BX06"
+            }
+          ],
+          "text": "Phenazopyridine 200 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "200 mg oral three times daily as needed for urinary pain, maximum 2 days; patient counselled that urine will turn orange"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:82bcfcb7-8b09-44b1-8835-1c8f269180ca",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Fosfomycin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01XX01"
+            }
+          ],
+          "text": "Fosfomycin 3 g"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "3 g oral single dose (alternative first-line agent if nitrofurantoin is not tolerated)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8746821c-d02b-4e76-90b8-b1530ec3b6bf",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Ethinylestradiol / Levonorgestrel.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "G03AA07"
+            }
+          ],
+          "text": "Ethinylestradiol / Levonorgestrel 30 mcg / 150 mcg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "30 mcg / 150 mcg oral once daily (ongoing contraception; patient advised to use additional barrier method during antibiotic course)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c8f3ac25-834f-4643-a435-479f00dcebd0",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Ibuprofen.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "M01AE01"
+            }
+          ],
+          "text": "Ibuprofen 400 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "400 mg oral every 8 hours as needed for suprapubic pain or dysuria, with food; maximum 3 days"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ae04dc2d-f9c8-4ff4-a510-78a55454b9a8",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Loratadine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R06AX13"
+            }
+          ],
+          "text": "Loratadine 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral once daily during allergy season (spring and autumn)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:af616a14-9ebf-417d-be48-0c828fa6b459",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Urinalysis with microscopy</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24357-6"
+            }
+          ],
+          "text": "Urinalysis with microscopy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T22:25:47Z",
+        "valueString": "Cloudy urine; positive nitrites; leukocyte esterase 2+; WBC >10/hpf; RBC 5/hpf (microscopic haematuria); bacteria present; no casts; pH 6.0; specific gravity 1.022",
+        "note": [
+          {
+            "text": "Cloudy urine; positive nitrites; leukocyte esterase 2+; WBC >10/hpf; RBC 5/hpf (microscopic haematuria); bacteria present; no casts; pH 6.0; specific gravity 1.022"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:afb6262f-d2c4-4e19-8fcc-0efa44b5afd5",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Urine culture and sensitivity</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "630-4"
+            }
+          ],
+          "text": "Urine culture and sensitivity"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T22:25:47Z",
+        "valueString": "Escherichia coli >100,000 CFU/mL; sensitive to nitrofurantoin, fosfomycin, ciprofloxacin; resistant to trimethoprim-sulfamethoxazole",
+        "note": [
+          {
+            "text": "Escherichia coli >100,000 CFU/mL; sensitive to nitrofurantoin, fosfomycin, ciprofloxacin; resistant to trimethoprim-sulfamethoxazole"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0d31023b-d07a-4aff-a92e-ec49020392db",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Urine pregnancy test (hCG)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2106-3"
+            }
+          ],
+          "text": "Urine pregnancy test (hCG)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T22:25:47Z",
+        "valueString": "Negative — no evidence of current pregnancy; required prior to antibiotic initiation in woman of reproductive age",
+        "note": [
+          {
+            "text": "Negative — no evidence of current pregnancy; required prior to antibiotic initiation in woman of reproductive age"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e3e649aa-8351-462b-907f-2df645ae2f6a",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body temperature</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T22:25:47Z",
+        "valueQuantity": {
+          "value": 37.2,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        },
+        "note": [
+          {
+            "text": "37.2 °C — afebrile; absence of fever consistent with lower urinary tract involvement without systemic spread"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:289fc091-8f70-4548-b3c1-caa1989599fc",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">White blood cell count</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2"
+            }
+          ],
+          "text": "White blood cell count"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T22:25:47Z",
+        "valueQuantity": {
+          "value": 11.2,
+          "unit": "10*9/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*9/L"
+        },
+        "note": [
+          {
+            "text": "11.2 x10^9/L — mild leukocytosis consistent with active bacterial infection; differential shows neutrophilia; no bands to suggest pyelonephritis or sepsis"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d2092ca7-ad3d-49ab-bcb3-13eee57d000f",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Trimethoprim-Sulfamethoxazole.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "intolerance",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01EE01"
+            }
+          ],
+          "text": "Trimethoprim-Sulfamethoxazole"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Nausea and gastrointestinal upset"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8d0e6491-a199-4f13-bc84-eb4ce15ac13c",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Lactose.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "intolerance",
+        "category": [
+          "food"
+        ],
+        "criticality": "low",
+        "code": {
+          "text": "Lactose"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Bloating, abdominal cramps, and diarrhoea following dairy ingestion"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cbfa3b7d-584f-432e-9d7f-d3e1dedd1883",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Recurrent urinary tract infections</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "N39.0"
+                }
+              ],
+              "text": "Recurrent urinary tract infections"
+            },
+            "onsetAge": {
+              "value": 28,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3f610689-62b3-49fb-b50b-37f2cabdde50",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Essential hypertension</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I10"
+                }
+              ],
+              "text": "Essential hypertension"
+            },
+            "onsetAge": {
+              "value": 52,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e93d75ef-5f5c-4b80-ae6c-b3236cc1d560",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandmother: Type 2 diabetes mellitus</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRMTH",
+              "display": "Grandmother"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "E11"
+                }
+              ],
+              "text": "Type 2 diabetes mellitus"
+            },
+            "onsetAge": {
+              "value": 60,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:90e3f223-65f7-433f-b3ff-0741e72de027",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandmother: Renal calculus (kidney stone)</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRMTH",
+              "display": "Grandmother"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "N20.0"
+                }
+              ],
+              "text": "Renal calculus (kidney stone)"
+            },
+            "onsetAge": {
+              "value": 55,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:10a8570d-596c-4311-86d1-81cd9a7892a9",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Urine dipstick point-of-care test</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "167271000"
+            }
+          ],
+          "text": "Urine dipstick point-of-care test"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Performed at triage; confirmed nitrite positivity and 2+ leukocyte esterase, supporting empirical antibiotic initiation prior to formal culture results."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d4f39c28-466a-43b6-a476-7e27e34ddc55",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "in-progress",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pelvic floor physiotherapy referral and counselling</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "370847001"
+            }
+          ],
+          "text": "Pelvic floor physiotherapy referral and counselling"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Patient counselled regarding referral to pelvic floor physiotherapy for stress urinary incontinence (N39.3). Formal pelvic floor assessment not yet undertaken; referral issued today to support long-term UTI prevention and continence management."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5c9b84ce-abb7-472a-8a3b-5fee1432291f",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 31-year-old woman who presents to the urgent care clinic appearing mildly uncomfortable and visibly restless. She shifts repeatedly in her seat due to persistent pelvic discomfort, and her complexion is faintly flushed. She is dressed in smart professional attire — a blazer and tailored trousers — suggesting she came directly from her workplace during a lunch break. She reports a burning, stinging sensation during urination that began approximately two days ago, accompanied by an almost constant urge to void that produces only small, unsatisfying amounts of urine each time — sometimes every 15 to 20 minutes. She also describes a nagging suprapubic pressure, cloudy and foul-smelling urine, and a persistent sensation that her bladder never fully empties even immediately after voiding. She explicitly denies flank pain, costovertebral angle tenderness, fever, or rigors, though she notes mild fatigue and a vague low-grade warmth she initially attributed to workplace stress.\n\n{patientName} works as a graphic designer at a busy downtown marketing agency, spending the majority of her working day seated at a dual-monitor workstation. She thrives under creative pressure but admits that deadline-driven workflow leads her to skip water breaks and delay bathroom trips for four to five hours at a stretch — a habit she acknowledges with some embarrassment. She is sexually active in a long-term relationship and notes that her symptoms appeared within 48 hours of a weekend getaway with her partner, mirroring a pattern she has experienced before. She uses spermicide-coated condoms alongside her combined oral contraceptive pill and has only recently learned that spermicidal agents can disrupt protective vaginal flora, increasing uropathogen colonisation. She does not routinely practise post-coital voiding, a preventive measure she was counselled about after her last UTI episode but has not consistently adopted.\n\n{patientName} shares a modern city apartment with her long-term partner and a rescue tabby cat. Her leisure activities include weekend hiking, hot-tub soaks after trails (a ritual she and her partner enjoy together), and Bikram yoga classes three times per week. After yoga sessions she frequently remains in tight synthetic athletic wear for extended periods, creating a warm, moist perineal environment that is a recognised risk factor for periurethral bacterial proliferation. She enjoys cooking plant-forward meals at home and socialises regularly — weekend brunches, evening runs with friends, and occasional wine bars where she limits herself to one or two glasses.\n\nShe considers herself health-conscious yet candidly admits her fluid intake drops to roughly one litre per day during demanding work weeks — well below the recommended two to two-and-a-half litres. She is a non-smoker, drinks alcohol only occasionally, and does not use recreational drugs. She was diagnosed with mild stress urinary incontinence approximately one year ago, causing small involuntary leakage during running and high-impact exercise; she has not yet commenced formal pelvic floor physiotherapy, and the associated perineal moisture and incomplete bladder emptying dynamics further compound her UTI risk.\n\nHer demeanour is cooperative and mildly anxious; she is preoccupied with returning to work and expresses genuine concern that this is her second UTI within a year, asking directly whether recurrent episodes can be prevented. At triage, vital signs are: temperature 37.2 °C, blood pressure 118/74 mmHg, heart rate 82 bpm, respiratory rate 16 breaths/min, weight 64 kg, height 167 cm (BMI approximately 23.0 kg/m²). She is afebrile and haemodynamically stable, with no signs of systemic or upper urinary tract involvement."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:50b7cc3a-a1eb-4f15-bc6c-a477c1f51204",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has a past medical history significant for recurrent lower urinary tract infections. Her first documented episode occurred approximately 10 months ago, treated with trimethoprim-sulfamethoxazole, which resolved the infection but caused notable nausea and gastrointestinal upset — an intolerance that is documented and must be factored into antibiotic selection. She has no prior history of pyelonephritis, urosepsis, nephrolithiasis, urological structural anomalies, or genitourinary surgery. Renal function has not previously been flagged as abnormal, and she has no known diabetes mellitus or other immunosuppressive conditions.\n\n{patientName} carries two clinically relevant comorbidities that directly increase her susceptibility to recurrent UTI. First, she has mild stress urinary incontinence (ICD-10: N39.3), diagnosed approximately one year ago, characterised by small involuntary urine leakage during running and high-impact exercise. This condition contributes to incomplete bladder emptying dynamics, chronic perineal moisture, and residual urinary pooling — all of which promote ascending uropathogen colonisation. She has not yet commenced pelvic floor physiotherapy or pharmacological management, and a referral for formal pelvic floor assessment has been initiated today. Second, she has a documented history of bacterial vaginosis (ICD-10: N76.0), with two treated episodes in the past 18 months managed with metronidazole. Disruption of the Lactobacillus-dominant vaginal flora — further compounded by combined oral contraceptive pill use and spermicide-coated condoms — creates a periurethral microenvironment permissive for E. coli and other uropathogen colonisation.\n\nCurrent regular medications include a combined oral contraceptive pill (ethinylestradiol 30 mcg / levonorgestrel 150 mcg) taken daily for three years with good tolerance, and loratadine 10 mg once daily for seasonal allergic rhinitis managed episodically in spring and autumn. She reports a mild lactose intolerance managed entirely through dietary avoidance. She has never been hospitalised and has had no surgical procedures. Vaccination history is up to date, including the full HPV vaccine series completed in adolescence.\n\nModifiable lifestyle risk factors for recurrent UTI in this patient include: significantly reduced fluid intake during working hours (as low as 1 L/day), prolonged voiding postponement (up to 4–5 hours), failure to void post-coitally, continued use of spermicidal condoms and hormonal contraception disrupting vaginal flora, frequent hot-tub use that may introduce bacteria into the periurethral region, and prolonged post-exercise retention of tight moisture-retaining synthetic athletic wear. A urine pregnancy test performed at today's visit is negative. There is a maternal family history of recurrent UTIs, suggesting a possible genetic predisposition related to uroepithelial receptor expression for uropathogenic E. coli, which has been discussed with the patient in the context of recurrence prevention."
+          }
+        ]
+      }
+    }
+  ]
+}

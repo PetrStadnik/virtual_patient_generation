@@ -1,0 +1,776 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "65"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Šimek",
+            "given": [
+              "Jindřich"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C61",
+              "display": "Malignant neoplasm of prostate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:36dab773-f355-48f8-b7da-d71508d3f30b",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Leuprolide.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "L02AE02"
+            }
+          ],
+          "text": "Leuprolide 22.5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "22.5 mg intramuscular every 3 months"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:908b54b5-8e4b-4b4d-9670-381fe9c2894b",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Bicalutamide.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "L02BB03"
+            }
+          ],
+          "text": "Bicalutamide 50 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "50 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d6ecf619-2063-468d-8a2a-74003e2d7c9f",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Abiraterone.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "L02BX03"
+            }
+          ],
+          "text": "Abiraterone 1000 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1000 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7244ae0b-a1b8-4300-b969-79a557d0b301",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Prednisone.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "H02AB07"
+            }
+          ],
+          "text": "Prednisone 5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "5 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a14fa206-ff40-44f1-b8c9-13414514fca9",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Aspirin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A01AD05"
+            }
+          ],
+          "text": "Aspirin 81 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "81 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1906f2e7-7a1c-4d7e-83c7-000c9ecbe6b4",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Prostate specific antigen [Mass/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "35741-8"
+            }
+          ],
+          "text": "Prostate specific antigen [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T22:09:39Z",
+        "valueQuantity": {
+          "value": 48.6,
+          "unit": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL"
+        },
+        "note": [
+          {
+            "text": "48.6 ng/mL (markedly elevated; baseline was 62 ng/mL prior to treatment)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fec09196-740e-4703-abe9-1fd9bf734284",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Gleason score Cancer</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "84904-2"
+            }
+          ],
+          "text": "Gleason score Cancer"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T22:09:39Z",
+        "valueString": "8 (4+4) — high-grade adenocarcinoma confirmed on biopsy",
+        "note": [
+          {
+            "text": "8 (4+4) — high-grade adenocarcinoma confirmed on biopsy"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c38f42a9-3c65-4052-9da9-dc965983b220",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Testosterone [Mass/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2986-8"
+            }
+          ],
+          "text": "Testosterone [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T22:09:39Z",
+        "valueQuantity": {
+          "value": 18.0,
+          "unit": "ng/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/dL"
+        },
+        "note": [
+          {
+            "text": "18 ng/dL (castrate level achieved with ADT)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2532dd9e-44ad-4781-8e75-b113fe538da7",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Bone scan</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "83302-0"
+            }
+          ],
+          "text": "Bone scan"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T22:09:39Z",
+        "valueString": "Increased uptake at L3–L4 consistent with osseous metastases; no new lesions compared to prior scan",
+        "note": [
+          {
+            "text": "Increased uptake at L3–L4 consistent with osseous metastases; no new lesions compared to prior scan"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:af4046ee-ca9f-4d98-9709-3ed02343be42",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6768-6"
+            }
+          ],
+          "text": "Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T22:09:39Z",
+        "valueQuantity": {
+          "value": 182.0,
+          "unit": "U/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "U/L"
+        },
+        "note": [
+          {
+            "text": "182 U/L (elevated, consistent with bone metastases)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:64e47255-db44-4efa-a757-c2eb73b90f13",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CE01"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Maculopapular rash"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:365ba13e-3db8-427c-9375-c9425a3ec6e0",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Malignant neoplasm of prostate</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "C61"
+                }
+              ],
+              "text": "Malignant neoplasm of prostate"
+            },
+            "onsetAge": {
+              "value": 70,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9c7ce390-c5fa-4378-b2e5-fb5005d74958",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brother: Atherosclerotic heart disease of native coronary artery</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "BRO",
+              "display": "Brother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I25.1"
+                }
+              ],
+              "text": "Atherosclerotic heart disease of native coronary artery"
+            },
+            "onsetAge": {
+              "value": 60,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:12e78e2a-6fe3-427c-af15-783f40763f4b",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Type 2 diabetes mellitus</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "E11"
+                }
+              ],
+              "text": "Type 2 diabetes mellitus"
+            },
+            "onsetAge": {
+              "value": 58,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:47f9ab56-6ba8-4b3b-9dfa-b989f57d1227",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Prostate needle biopsy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "236258004"
+            }
+          ],
+          "text": "Prostate needle biopsy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2023",
+        "note": [
+          {
+            "text": "Transrectal ultrasound-guided needle biopsy confirming Gleason 8 (4+4) adenocarcinoma of the prostate; 10 of 12 cores positive"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7572a26d-d688-4392-a95b-400fd25f8ba2",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">External beam radiation therapy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "33195004"
+            }
+          ],
+          "text": "External beam radiation therapy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Radiation therapy to the pelvis and lumbar spine (L3–L4 metastases); 28 fractions completed; tolerated with mild GI side effects"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:91a24cd5-a38e-477a-a9bc-f46223a24bd9",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "not-done",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Radical prostatectomy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "26294005"
+            }
+          ],
+          "text": "Radical prostatectomy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "note": [
+          {
+            "text": "Considered but not performed due to high Gleason score, bone metastases, and advanced local extent; patient managed with systemic therapy instead"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:49928e7e-ecf6-4aec-825f-b2fc8db1aad8",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 65-year-old retired civil engineer who lives with his wife of 38 years in a quiet suburban neighborhood. A broad-shouldered man of medium build, he has visibly lost weight over the past several months — down about 12 pounds — and carries a slightly fatigued expression beneath his gray mustache. He reports persistent lower back pain, urinary hesitancy, and nocturia that now wakes him two to three times per night, symptoms he initially dismissed as \"just getting older.\" He enjoys weekend woodworking in his garage, tending to his vegetable garden, and watching college football with his two adult sons.\n\n{patientName} worked for 35 years as a structural engineer for a municipal government and retired two years ago. He is a former light smoker (quit 20 years ago, approximately 10 pack-year history) and drinks one to two glasses of red wine per week. He describes himself as moderately active prior to his current illness but has curtailed his usual evening walks due to fatigue and hip discomfort. His diet is moderate in red meat, which his oncologist has advised him to reduce.\n\n{patientName} first noticed difficulty initiating urination approximately 18 months ago and sought evaluation from his primary care physician after his PSA came back markedly elevated at a routine check-up. A subsequent biopsy confirmed adenocarcinoma of the prostate with a Gleason score of 8 (4+4), and imaging revealed early evidence of bone metastases in the lumbar spine. He has since been started on androgen deprivation therapy and is currently being followed closely by his oncology team.\n\nHe is a devoted grandfather to three young grandchildren and draws emotional strength from his family. His wife accompanies him to every oncology appointment and has become a careful advocate in managing his medication schedule. {patientName} expresses cautious optimism about his prognosis but privately admits to anxiety about the future and the impact of his diagnosis on his family."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:80b48c86-8240-44f0-8d4b-f69ad02707bd",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has a history of well-controlled type 2 hypertension managed with lifestyle measures and previously with antihypertensives (discontinued after weight loss). He has a known allergy to penicillin (rash). He has no prior history of cardiovascular events, though he carries a family history of coronary artery disease. He underwent a transrectal ultrasound-guided prostate needle biopsy 14 months ago confirming Gleason 8 (4+4) adenocarcinoma. Given the Gleason score and early bone involvement (lumbar spine L3–L4), radical prostatectomy was not pursued; instead, {patientName} completed a course of external beam radiation therapy to the pelvis and lumbar spine 8 months ago and was initiated on androgen deprivation therapy with leuprolide and bicalutamide. He subsequently progressed to abiraterone plus prednisone for castration-resistant disease. He has no prior surgeries other than an appendectomy in his 30s. He is a former smoker (10 pack-years, quit at age 45) and a social drinker. BMI at presentation was 27.4; current BMI is approximately 25.1 following treatment-related weight loss."
+          }
+        ]
+      }
+    }
+  ]
+}

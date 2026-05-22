@@ -1,0 +1,772 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "63"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Krausová",
+            "given": [
+              "Miluše"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C50.9",
+              "display": "Malignant neoplasm: Breast, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:efeef589-5162-470e-9e96-5703236be90f",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Letrozole.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "L02BG04"
+            }
+          ],
+          "text": "Letrozole 2.5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "2.5 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:98eedfe3-ba19-4322-964f-438f6ca308c5",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Doxorubicin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "L01DB01"
+            }
+          ],
+          "text": "Doxorubicin 60 mg/m²"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "60 mg/m² intravenous every 21 days (4 cycles, now completed)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:09f22f59-b55d-42de-ab8d-db81ef0d0af7",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Cyclophosphamide.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "L01AA01"
+            }
+          ],
+          "text": "Cyclophosphamide 600 mg/m²"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "600 mg/m² intravenous every 21 days (4 cycles, now completed)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5019fb6a-9a28-4d3a-b2a7-b3491735590e",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Metformin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A10BA02"
+            }
+          ],
+          "text": "Metformin 1000 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1000 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2aca593f-09d5-4abd-b24d-1c503ef6fbee",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mammography</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "86462-9"
+            }
+          ],
+          "text": "Mammography"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:59:20Z",
+        "valueString": "Irregular spiculated mass in the upper outer quadrant of the right breast, approximately 2.3 cm. BIRADS 5 — highly suggestive of malignancy.",
+        "note": [
+          {
+            "text": "Irregular spiculated mass in the upper outer quadrant of the right breast, approximately 2.3 cm. BIRADS 5 — highly suggestive of malignancy."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8ed5e093-7215-4656-803e-dc471e443f8b",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Estrogen Receptor Status — Breast Cancer Specimen</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "85329-1"
+            }
+          ],
+          "text": "Estrogen Receptor Status — Breast Cancer Specimen"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:59:20Z",
+        "valueString": "Positive (ER+) — 85% of tumor cells staining strongly positive (Allred score 7/8)",
+        "note": [
+          {
+            "text": "Positive (ER+) — 85% of tumor cells staining strongly positive (Allred score 7/8)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d1d4e159-89d1-4894-8ad8-63cb86f3f883",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">HER2 Gene Copy Number — Breast Cancer</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "49683-6"
+            }
+          ],
+          "text": "HER2 Gene Copy Number — Breast Cancer"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:59:20Z",
+        "valueString": "Non-amplified (HER2-negative) — HER2/CEP17 ratio 1.4, average HER2 copy number 1.8 signals/cell",
+        "note": [
+          {
+            "text": "Non-amplified (HER2-negative) — HER2/CEP17 ratio 1.4, average HER2 copy number 1.8 signals/cell"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3a5188bd-16ae-47f9-a5cb-f813be3a294c",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">CA 15-3 Cancer Antigen</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "97749-6"
+            }
+          ],
+          "text": "CA 15-3 Cancer Antigen"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:59:20Z",
+        "valueQuantity": {
+          "value": 28.0,
+          "unit": "U/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "U/mL"
+        },
+        "note": [
+          {
+            "text": "28 U/mL (normal range <30 U/mL) — within normal limits at latest follow-up"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:eb562753-db97-491d-8a11-bab3a6599a50",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52416-5"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:59:20Z",
+        "valueQuantity": {
+          "value": 72.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "72 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a5cc8c89-6c67-4212-94c6-5a3c901ecaa0",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CE01"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Urticaria"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2d7d3c4b-319e-4965-bc86-f904f705bd01",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Malignant neoplasm of breast, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "C50.9"
+                }
+              ],
+              "text": "Malignant neoplasm of breast, unspecified"
+            },
+            "onsetAge": {
+              "value": 58,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0debdc98-6679-4969-84c3-704d83393eb0",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sister: Malignant neoplasm of breast, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "SIS",
+              "display": "Sister"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "C50.9"
+                }
+              ],
+              "text": "Malignant neoplasm of breast, unspecified"
+            },
+            "onsetAge": {
+              "value": 55,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:043f67a6-045a-49c5-8a2c-6041b988f6c1",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandfather: Type 2 diabetes mellitus</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRFTH",
+              "display": "Grandfather"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "E11"
+                }
+              ],
+              "text": "Type 2 diabetes mellitus"
+            },
+            "onsetAge": {
+              "value": 65,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e73d63af-7be4-4693-90c7-9d2dd2265084",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Core needle biopsy of breast</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "44578009"
+            }
+          ],
+          "text": "Core needle biopsy of breast"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Ultrasound-guided core needle biopsy of right breast mass confirming invasive ductal carcinoma, ER+/PR+/HER2−, Grade 2."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1dfb37f1-086a-43bb-bc4d-39c015bca6b7",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Lumpectomy of breast</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "392021009"
+            }
+          ],
+          "text": "Lumpectomy of breast"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Breast-conserving surgery (lumpectomy) of the right breast with clear surgical margins achieved. Performed following confirmed malignancy diagnosis."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:62e57152-0b46-4430-b62e-3dbc91d01ee3",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sentinel lymph node biopsy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "396487001"
+            }
+          ],
+          "text": "Sentinel lymph node biopsy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Intraoperative sentinel lymph node biopsy performed concurrently with lumpectomy. All sentinel nodes (3/3) negative for metastatic disease."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1a6d6baf-5907-4d17-906a-251072a267c1",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Radiation therapy to breast</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "785707001"
+            }
+          ],
+          "text": "Radiation therapy to breast"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Adjuvant whole-breast external beam radiation therapy (50 Gy in 25 fractions) delivered following completion of chemotherapy. Tolerated well with mild radiation dermatitis."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:06dc07d4-0839-45b0-9e40-069b307c06ed",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 63-year-old retired schoolteacher who lives alone in a quiet suburban neighborhood following her divorce twelve years ago. She is a warm, meticulous woman who fills her days gardening, attending a weekly watercolor painting class, and volunteering at her local library. She has two adult daughters with whom she maintains a close and loving relationship, and a tight-knit circle of friends from her years in education. Standing 5'4\" and weighing 72 kg, she has a medium build and carries herself with a composed dignity that belies the anxiety she has felt since her diagnosis. Her hair, which began thinning modestly after chemotherapy, is now covered by colorful headscarves she has embraced with characteristic grace.\n\n{patientName} first noticed a firm, painless lump in her right breast approximately eight months ago during her monthly self-examination routine — a habit she had maintained since her mother's breast cancer diagnosis decades earlier. She initially dismissed it as a benign cyst, but growing concern prompted her to seek medical attention after three weeks. She reports no nipple discharge or skin changes at presentation, though mild skin dimpling was subsequently identified on ultrasound-guided examination. She denies any systemic complaints such as bone pain, shortness of breath, or unintentional weight loss at this time.\n\nOn review of systems, {patientName} does report moderate fatigue, which she attributes partly to her chemotherapy regimen and partly to disrupted sleep driven by hot flashes — a combination of natural menopause (which occurred at age 51) and the hormonal effects of treatment. She also notes occasional nausea on chemotherapy days, managed with antiemetics. Her emotional wellbeing has been supported by a breast cancer support group she joined shortly after diagnosis, which she attends biweekly and describes as invaluable.\n\n{patientName}'s lifestyle is generally healthy: she follows a Mediterranean-style diet, walks 30 minutes daily when energy permits, and has never smoked. She drinks alcohol socially, rarely more than a single glass of wine per week. She has been a patient of her primary care physician for over 15 years and maintains compliance with annual check-ups. She has a past medical history notable for Type 2 diabetes mellitus (well-controlled on metformin) and mild essential hypertension managed with lifestyle modification alone. She has no prior history of benign breast disease or prior malignancies."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e60274b7-2110-40e2-b903-a435e8fe7aaf",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} was diagnosed with invasive ductal carcinoma of the right breast (ER-positive, PR-positive, HER2-negative, Grade 2) approximately eight months ago following a core needle biopsy. Staging workup confirmed Stage IIA disease (T2N0M0). She underwent breast-conserving surgery (lumpectomy) with concurrent sentinel lymph node biopsy, both of which were completed without major complications; sentinel nodes were negative for metastatic disease. Postoperatively, she received four cycles of adjuvant chemotherapy with doxorubicin and cyclophosphamide, followed by adjuvant whole-breast radiation therapy. She is currently transitioning to long-term hormonal maintenance therapy with letrozole, given her postmenopausal status and hormone receptor-positive tumor profile. \n\nPast medical history is significant for Type 2 diabetes mellitus diagnosed at age 57, currently managed with metformin 1000 mg twice daily with good glycemic control (HbA1c ~6.8%). She also carries a diagnosis of essential hypertension (mild), managed conservatively with dietary sodium restriction and regular aerobic exercise without pharmacological intervention at this time. She has no prior history of thromboembolic disease, cardiovascular events, or other malignancies. She has no known prior breast biopsies or abnormal mammograms prior to the current diagnosis. She is a lifelong non-smoker, drinks minimally, and has no history of illicit drug use. She is allergic to penicillin (urticaria)."
+          }
+        ]
+      }
+    }
+  ]
+}

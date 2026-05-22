@@ -1,0 +1,584 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "11"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Vacek",
+            "given": [
+              "Luděk"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "G40.9",
+              "display": "Epilepsy, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d3bb8477-08e1-4f9a-ab1a-eae42cc0e22d",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Cetirizine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R06AE07"
+            }
+          ],
+          "text": "Cetirizine 5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "5 mg oral once daily (seasonal, during pollen season)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b00e65e7-5310-49dd-a547-d8063f3ee24c",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Electroencephalogram (EEG)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "75949-8"
+            }
+          ],
+          "text": "Electroencephalogram (EEG)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T22:46:41Z",
+        "valueString": "Generalised 3-4 Hz spike-and-slow-wave discharges noted, enhanced on photic stimulation and hyperventilation; consistent with generalised epileptiform activity",
+        "note": [
+          {
+            "text": "Generalised 3-4 Hz spike-and-slow-wave discharges noted, enhanced on photic stimulation and hyperventilation; consistent with generalised epileptiform activity"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:52977698-27b8-489f-bf45-772ae2cda1e5",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">MRI brain</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11541-0"
+            }
+          ],
+          "text": "MRI brain"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T22:46:41Z",
+        "valueString": "No structural abnormality detected; normal myelination and cortical architecture for age",
+        "note": [
+          {
+            "text": "No structural abnormality detected; normal myelination and cortical architecture for age"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a33bc26f-6d8c-4904-8ff1-fe4609065579",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Complete blood count</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2"
+            }
+          ],
+          "text": "Complete blood count"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T22:46:41Z",
+        "valueString": "Within normal limits: Hb 13.2 g/dL, WBC 6.8 x10^9/L, Platelets 245 x10^9/L",
+        "note": [
+          {
+            "text": "Within normal limits: Hb 13.2 g/dL, WBC 6.8 x10^9/L, Platelets 245 x10^9/L"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a89827c6-e868-470b-a406-6c5de3d2dc5b",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Glucose serum</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72650-5"
+            }
+          ],
+          "text": "Glucose serum"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T22:46:41Z",
+        "valueQuantity": {
+          "value": 4.9,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "note": [
+          {
+            "text": "4.9 mmol/L — within normal range"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d6172454-3d86-406e-ba81-7a75810e002e",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sodium level serum</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "27042-1"
+            }
+          ],
+          "text": "Sodium level serum"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T22:46:41Z",
+        "valueQuantity": {
+          "value": 138.0,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "note": [
+          {
+            "text": "138 mmol/L — within normal limits"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:362eeea0-5b2c-43e9-b018-3e3f88e046a3",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Amoxicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CA04"
+            }
+          ],
+          "text": "Amoxicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Urticaria"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:999b9994-8eaf-492a-9dcc-d272fc0c4638",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandmother: Epilepsy, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRMTH",
+              "display": "Grandmother"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "G40.9"
+                }
+              ],
+              "text": "Epilepsy, unspecified"
+            },
+            "onsetAge": {
+              "value": 14,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f577d6eb-a188-4af3-8a74-c9bc3617f310",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Uncle: Generalised idiopathic epilepsy and epileptic syndromes (childhood absence epilepsy)</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "UNCLE",
+              "display": "Uncle"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "G40.3"
+                }
+              ],
+              "text": "Generalised idiopathic epilepsy and epileptic syndromes (childhood absence epilepsy)"
+            },
+            "onsetAge": {
+              "value": 9,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9aa28532-d4c2-4f3d-bdc5-8befda96937a",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Electroencephalography</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "54550000"
+            }
+          ],
+          "text": "Electroencephalography"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Performed to detect occult epileptic activity following episodes of nocturnal vomiting on awakening, morning myoclonic jerks, and witnessed tonic-clonic seizures with loss of consciousness; generalised epileptiform discharges identified."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:46a3b369-1740-4d99-a758-2500ba872833",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">MRI of brain</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "816077007"
+            }
+          ],
+          "text": "MRI of brain"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Performed to exclude structural brain lesion as an underlying cause of new-onset seizures; result was normal."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:29d23bb8-0ab3-4157-a2e6-828a28791bd3",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is an 11-year-old Czech boy with a slender build, short-cropped brown hair, and bright, curious dark eyes. He is in the fifth grade at a primary school in Brno, where he enjoys drawing, playing football with neighbourhood friends, and building LEGO models. His parents describe him as generally healthy and energetic, but over the past several months they have noticed episodes in which he suddenly seems \"absent,\" stares blankly into space, and occasionally experiences what he describes as seeing himself from a distance — a fleeting, unsettling sensation sometimes accompanied by a brief sensation of vertigo and spinning that lasts only seconds.\n\nFor the past four to five weeks, {patientName} has been waking from sleep in a panic and rushing to the bathroom to vomit, without any accompanying fever or feeling of general illness. His parents initially attributed this to stomach trouble; however, a pattern of recurrence on awakening prompted them to seek medical advice. On direct questioning, {patientName} also admits to occasional shock-like jerks of his arms when he wakes in the morning, sometimes causing him to drop objects. On two occasions witnessed by his parents, these morning episodes progressed to a generalised tonic-clonic seizure with loss of consciousness lasting approximately 90 seconds, followed by post-ictal confusion and fatigue lasting roughly 20 minutes.\n\nAt home, {patientName} lives with his parents and a younger sister in a flat in Brno. His father works as a civil engineer and his mother as a schoolteacher. The family is close-knit and socially active. {patientName} attends football practice twice a week and participates in an after-school art club. Sleep deprivation — from staying up late playing video games — has been noted as a possible precipitating factor by the attending paediatrician. He was also noted to have had a febrile seizure at age 18 months, which, although brief and self-limiting, is documented as a potential predisposing neurological event.\n\nOn examination, {patientName} appears well-nourished and alert. His neurological examination is unremarkable between episodes. There is no recent head trauma history, no fever, and no obvious focal neurological deficits. His weight is 38 kg and height 145 cm, consistent with age-appropriate growth."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1d0822e7-2c6e-4bff-8179-992705b84989",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has no prior hospitalizations apart from a brief emergency visit at age 18 months for a febrile seizure, which was a single, brief, generalised event associated with a high fever during a respiratory infection; no antiepileptic treatment was initiated at that time. The history of a prior febrile seizure is recognised as a neurological predisposing factor for the development of epilepsy. He has no history of significant head trauma, meningitis, or encephalitis. He was born at term via uncomplicated vaginal delivery with no neonatal complications. His developmental milestones were reached on time.\n\n{patientName} was diagnosed with mild allergic rhinitis at age 8, for which he takes cetirizine as needed during the pollen season. It is noted that antihistamines such as cetirizine, particularly first-generation agents, can lower the seizure threshold; while cetirizine is a second-generation antihistamine considered relatively safer, some data suggest even second-generation antihistamines may modestly influence CNS excitability in susceptible paediatric patients, representing a potential pharmacological contributing factor. He also had a brief course of omeprazole prescribed approximately six months ago for epigastric discomfort during a period of school stress, which has since resolved.\n\nThere is a family history of epilepsy on the maternal side (maternal grandmother). Additionally, {patientName}'s maternal uncle was diagnosed with attention deficit hyperactivity disorder (ADHD) and has a documented history of absence seizures in childhood — a neurological condition related to altered cortical excitability. Sleep deprivation secondary to late-night screen use has been identified as a potential trigger. {patientName} does not use alcohol, tobacco, or any other substances. Immunisations are up to date per the Czech national schedule."
+          }
+        ]
+      }
+    }
+  ]
+}

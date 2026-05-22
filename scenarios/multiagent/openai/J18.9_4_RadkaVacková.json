@@ -1,0 +1,770 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "4"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Vacková",
+            "given": [
+              "Radka"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "J18.9",
+              "display": "Pneumonia, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a0de6ab0-90bb-42e2-b725-aa5e8179d015",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Acetaminophen.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N02BE01"
+            }
+          ],
+          "text": "Acetaminophen 240 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "240 mg oral every 6 hours as needed for fever"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f987ae2d-e427-46e8-8381-cac895fda59c",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Albuterol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R03AC02"
+            }
+          ],
+          "text": "Albuterol 2 puffs"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "2 puffs inhaled every 4 to 6 hours as needed for wheeze"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ff7ff09d-8ed9-4213-9c8a-4ddb30ac005b",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Prednisolone.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "H02AB06"
+            }
+          ],
+          "text": "Prednisolone 15 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "15 mg oral once daily for 3 days, recently completed"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:42f95ad8-0684-4b37-93d0-e74edb01bce7",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Cefdinir.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01DD15"
+            }
+          ],
+          "text": "Cefdinir 115 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "115 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4b456c7e-3ec2-4e2c-9779-3b6bb37462cb",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Cetirizine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R06AE07"
+            }
+          ],
+          "text": "Cetirizine 2.5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "2.5 mg oral once daily as needed for seasonal allergy symptoms"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:52762304-e152-4a54-a889-f10d4e1dc7c6",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body temperature</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T21:43:09Z",
+        "valueQuantity": {
+          "value": 39.1,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        },
+        "note": [
+          {
+            "text": "39.1 °C"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:82556e6b-70b4-4de6-9177-92e00dc68124",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Respiratory rate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T21:43:09Z",
+        "valueQuantity": {
+          "value": 34.0,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "note": [
+          {
+            "text": "34 breaths/min"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:563688f7-0393-4f4d-8efd-d1904cf5d9cb",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Oxygen saturation in Arterial blood by Pulse oximetry</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "2708-6"
+            }
+          ],
+          "text": "Oxygen saturation in Arterial blood by Pulse oximetry"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T21:43:09Z",
+        "valueQuantity": {
+          "value": 93.0,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "note": [
+          {
+            "text": "SpO2 93% on room air"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ec5ad151-4c6c-4586-9323-dfe608625757",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Chest X-ray study</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "30745-4"
+            }
+          ],
+          "text": "Chest X-ray study"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T21:43:09Z",
+        "valueString": "Patchy right lower lobe airspace opacity consistent with pneumonia; no pleural effusion or lung abscess",
+        "note": [
+          {
+            "text": "Patchy right lower lobe airspace opacity consistent with pneumonia; no pleural effusion or lung abscess"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c0d96a5e-0fb9-4feb-8b46-4b131ca6bf6a",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Leukocytes [#/volume] in Blood</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2"
+            }
+          ],
+          "text": "Leukocytes [#/volume] in Blood"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T21:43:09Z",
+        "valueString": "14.8 x10^3/uL (mild leukocytosis)",
+        "note": [
+          {
+            "text": "14.8 x10^3/uL (mild leukocytosis)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0eefe5b2-0562-44c8-a6b7-3a317c1abb1a",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Amoxicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "high",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CA04"
+            }
+          ],
+          "text": "Amoxicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Generalized urticaria"
+              }
+            ],
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:eff2ecd3-8dc3-40b9-a941-cdd1e19a1bed",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Cat dander.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "environment"
+        ],
+        "criticality": "low",
+        "code": {
+          "text": "Cat dander"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Sneezing and itchy eyes"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a461bfb3-ef20-4a46-b290-f76136419456",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brother: Asthma</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "BRO",
+              "display": "Brother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "J45"
+                }
+              ],
+              "text": "Asthma"
+            },
+            "onsetAge": {
+              "value": 3,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:dfb4b157-612f-40cf-a081-e2c3a7c15cae",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Allergic rhinitis</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "J30.4"
+                }
+              ],
+              "text": "Allergic rhinitis"
+            },
+            "onsetAge": {
+              "value": 12,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5b35c244-5cfb-48e3-9765-d007a8f19828",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandmother: Recurrent pneumonia</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRMTH",
+              "display": "Grandmother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "J18.9"
+                }
+              ],
+              "text": "Recurrent pneumonia"
+            },
+            "onsetAge": {
+              "value": 60,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2ef6db93-831b-4bd5-8e4c-1164a63187ff",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Bilateral myringotomy with tympanostomy tube insertion</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "234697000"
+            }
+          ],
+          "text": "Bilateral myringotomy with tympanostomy tube insertion"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2023",
+        "note": [
+          {
+            "text": "Performed for recurrent acute otitis media with good recovery"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0f50a27d-5b84-4848-899c-a6f4ada7a9a9",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 4-year-old girl who appears tired, clingy, and less playful than usual. She is brought in by her mother after 4 days of fever with chills, worsening cough, and reduced appetite. Her cheeks are flushed, and she intermittently curls up against her mother between coughing spells. She looks mildly dehydrated with dry lips and has noticeably faster breathing than expected for her age. During the examination she is alert but irritable, preferring to sit upright in her mother’s lap.\n\nOver the past two days, {patientName} has developed shortness of breath with activity and occasional chest discomfort when coughing. Her mother reports poor sleep because of nighttime cough, nasal congestion, and noisy breathing with intermittent snoring when she lies flat during this illness. She has had less interest in food and fluids, though she still takes small sips of water and juice. There has been no vomiting. She has complained of a mild headache and has been more fatigued and has wanted to nap more often than usual. After several forceful coughing fits, her mother noticed a very small streak of blood in the mucus once, without ongoing bleeding. Her mother has also noticed mild belly discomfort during coughing spells, which is common in young children with lower respiratory infections.\n\nAt baseline, {patientName} is an active preschooler who attends daycare, enjoys drawing, building blocks, and playing outdoors with neighborhood children. She also likes pretend play in the family basement playroom, which can be dusty, and helps feed the family’s pet cat. She lives with her parents and an older brother in a smoke-free home, but her maternal grandmother who babysits some afternoons smokes outside and occasionally smells of cigarette smoke when she comes in. Several children at daycare recently had colds, and daycare attendance gives her frequent viral exposures. As a preschool child she does not have independent disease-causing habits such as smoking, but her routine behaviors and environment can still increase risk: frequent close-contact play at daycare, inconsistent hand-to-face hygiene typical for her age, and regular play in dusty spaces that can aggravate her airways during viral illnesses.\n\nShe is small but well nourished for age, weighing 16.4 kg, with clothing and hygiene appropriate to the season. She is fully ambulatory and developmentally appropriate, speaking in short sentences and interacting with familiar caregivers. She has a history of mild intermittent wheezing with viral infections, and today her presentation is consistent with an acute lower respiratory infection causing fever, cough, tachypnea, focal crackles, and mild respiratory distress. There are no signs suggesting lung abscess, no features of pneumonitis, and no signs of neglect or trauma. She has no loss of smell by history and no psychiatric symptoms; congenital anosmia and factitious psychosis are unrelated conditions and are not present."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:844b0d92-1227-46f9-89b5-6e9975487c05",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} was born at term without neonatal complications and has met developmental milestones appropriately. She has mild intermittent reactive airway disease with wheezing during viral illnesses and uses albuterol only during those episodes. Her immunizations are mostly up to date, though this season’s influenza vaccine was delayed. Since starting daycare she has had frequent upper respiratory infections and two prior clinician-diagnosed chest infections in the past year, one treated as presumed early pneumonia in an urgent care setting and another as viral bronchitis with wheeze. She has not required prior hospitalization.\n\nHer mother reports no history of choking, aspiration, seizure disorder, congenital heart disease, chronic liver disease, chronic kidney disease, or immunodeficiency. Over the last week, several sick contacts were noted at daycare, followed by nasal congestion and cough that progressed to fever, chills, and faster breathing. At home, acetaminophen has been given intermittently for fever with partial relief. She also has albuterol available by inhaler with spacer for viral wheeze, and she recently completed a short 3-day oral prednisolone burst prescribed by urgent care for wheezing earlier this week. Most recent available baseline laboratory information does not suggest renal or hepatic impairment, and there is no clinical history of medication metabolism problems.\n\n{patientName} lives in a stable home environment with both parents and one sibling. There is no household indoor smoking, no recent travel, and no known tuberculosis exposure. However, she has repeated close exposure to respiratory illnesses at daycare, occasional secondhand smoke residue exposure from a grandmother who babysits, and regular contact with a dusty basement play area that can aggravate her airway symptoms during viral infections. She eats a typical preschool diet and is usually active and sociable. Although she has no occupation because of her age, her daily daycare attendance functions as her main exposure setting, with crowded indoor contact, shared toys, and frequent circulation of respiratory pathogens that increase risk for community-acquired infections. Typical preschool behaviors such as close face-to-face play, inconsistent cough etiquette, and hand-to-mouth activity also contribute to transmission risk. Her family sought evaluation because of persistent fever, cough, and concern for increased work of breathing.\n\nFamily history is notable for asthma in her older brother, allergic rhinitis in her mother, and a maternal grandmother who had recurrent pneumonia as an adult in the setting of chronic smoking. These atopic and airway-reactive tendencies, along with frequent daycare exposure and prior wheezing-associated lower respiratory illnesses, modestly increase {patientName}'s risk for community-acquired pneumonia."
+          }
+        ]
+      }
+    }
+  ]
+}

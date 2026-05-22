@@ -1,0 +1,654 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "10"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Švec",
+            "given": [
+              "René"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "G40.9",
+              "display": "Epilepsy, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:458afbb0-4c17-49eb-9613-df600f69908f",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Salbutamol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R03AC02"
+            }
+          ],
+          "text": "Salbutamol 100 mcg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "100 mcg inhaled as needed (PRN), maximum 4 puffs per day"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0f869ded-dd13-4bfe-8562-81211f867dfc",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Cetirizine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R06AE07"
+            }
+          ],
+          "text": "Cetirizine 5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "5 mg oral once daily (seasonal use, spring and autumn)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:46e9f9bf-3dea-41dc-bf07-1fa7bfe869d8",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Electroencephalogram (EEG)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "19952-4"
+            }
+          ],
+          "text": "Electroencephalogram (EEG)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:30:48Z",
+        "valueString": "Abnormal interictal epileptiform discharges (spike-and-wave complexes) observed bilaterally, predominantly in the frontal regions. Background activity otherwise appropriate for age.",
+        "note": [
+          {
+            "text": "Abnormal interictal epileptiform discharges (spike-and-wave complexes) observed bilaterally, predominantly in the frontal regions. Background activity otherwise appropriate for age."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:04eafdac-5919-4493-a886-fc3bdb0428e7",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">MRI Brain without contrast</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24590-2"
+            }
+          ],
+          "text": "MRI Brain without contrast"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:30:48Z",
+        "valueString": "No structural abnormality identified. Normal cortical development and myelination pattern for age. No lesions, tumours, or areas of cortical dysplasia detected.",
+        "note": [
+          {
+            "text": "No structural abnormality identified. Normal cortical development and myelination pattern for age. No lesions, tumours, or areas of cortical dysplasia detected."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4fd42005-b7ec-4710-a6de-cc632686918b",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Comprehensive metabolic panel</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24323-8"
+            }
+          ],
+          "text": "Comprehensive metabolic panel"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:30:48Z",
+        "valueString": "Sodium 139 mmol/L, Potassium 4.1 mmol/L, Glucose 4.9 mmol/L, Calcium 2.38 mmol/L, Magnesium 0.85 mmol/L. All values within normal limits.",
+        "note": [
+          {
+            "text": "Sodium 139 mmol/L, Potassium 4.1 mmol/L, Glucose 4.9 mmol/L, Calcium 2.38 mmol/L, Magnesium 0.85 mmol/L. All values within normal limits."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bcdc0122-9132-424a-8df7-23323b78bece",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Heart rate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:30:48Z",
+        "valueQuantity": {
+          "value": 88.0,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "note": [
+          {
+            "text": "88 /min"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:59e40ec4-bec2-45b9-a760-a6ee841e3a1f",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:30:48Z",
+        "valueQuantity": {
+          "value": 34.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "34 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:963ecdd5-fd25-46a0-98b5-3a73955efad8",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Grass Pollen.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "environment"
+        ],
+        "criticality": "low",
+        "code": {
+          "text": "Grass Pollen"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Allergic rhinitis, sneezing, watery eyes"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:185ddf66-636e-4401-be35-66dbf822aea5",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Cat dander.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "environment"
+        ],
+        "criticality": "low",
+        "code": {
+          "text": "Cat dander"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Rhinorrhea, nasal congestion, mild bronchospasm"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fc548890-587f-4c9e-86c7-556c2c6b280b",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Uncle: Epilepsy, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "UNCLE",
+              "display": "Uncle"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "G40.9"
+                }
+              ],
+              "text": "Epilepsy, unspecified"
+            },
+            "onsetAge": {
+              "value": 12,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:59f8bc1e-32cc-4727-8f00-586437992c4a",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Allergic rhinitis due to pollen</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "J30.1"
+                }
+              ],
+              "text": "Allergic rhinitis due to pollen"
+            },
+            "onsetAge": {
+              "value": 15,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:024bb96c-6554-4fc6-b424-5474c4082e82",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Electroencephalography (EEG)</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "54550000"
+            }
+          ],
+          "text": "Electroencephalography (EEG)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Routine interictal EEG performed following first generalized tonic-clonic seizure. Demonstrated bilateral frontally predominant spike-and-wave discharges consistent with epileptiform activity."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c2335717-29e8-4caa-800e-21ad83314d12",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">MRI of brain</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "241601008"
+            }
+          ],
+          "text": "MRI of brain"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Brain MRI without contrast performed to exclude structural etiology for new-onset seizures. No abnormality detected."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:72e44572-5d1f-4a5c-8931-e1279726d989",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 10-year-old boy who presents to the pediatric neurology clinic accompanied by his mother and father. He is a bright, energetic child with short brown hair and a gap-toothed smile, wearing a superhero-themed t-shirt and sneakers. He appears alert and cooperative during the examination, though his parents look visibly anxious. {patientName} loves playing football with his school friends, drawing comic books, and building LEGO sets in his free time. He is in 5th grade at his local primary school, where he is described by his teachers as an enthusiastic and creative student, though he has recently had some difficulties concentrating after his seizure episodes.\n\n{patientName} lives at home with both parents and his younger sister in a suburban neighborhood. He enjoys weekend family outings to the park and occasional swimming trips, though his parents have become increasingly cautious about allowing him to swim unsupervised since his diagnosis. His mother reports that he sleeps approximately 9 hours per night but has been experiencing some nighttime restlessness. He has a healthy appetite and eats a balanced diet, with no significant dietary restrictions.\n\nHis parents first noticed something unusual approximately six months ago, when {patientName} suddenly stopped mid-sentence during a conversation, stared blankly for about 30 seconds, and then resumed speaking as if nothing had happened. These episodes initially occurred once or twice a month but have since increased in frequency to nearly twice a week. On two occasions, {patientName} experienced a generalized tonic-clonic seizure lasting approximately 90 seconds, during which he lost consciousness and had rhythmic jerking of his limbs. He was incontinent of urine during one of these episodes and was confused and fatigued for about 30 minutes afterward (postictal state).\n\n{patientName}'s parents are deeply concerned about his safety at school and during sports activities. His school has been informed, and a seizure action plan has been put in place. Both parents have been trained in seizure first aid. Despite the challenges, {patientName} remains a cheerful and resilient child who asks his neurologist when he will be able to \"play football again without mum watching every second.\""
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9f36800d-928b-4952-987b-2eac716509f9",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} was born at 39 weeks via normal vaginal delivery with no perinatal complications. His developmental milestones were all achieved within normal limits — he walked at 12 months and spoke his first words at 11 months. He has no prior history of febrile seizures, meningitis, encephalitis, or significant head trauma.\n\n{patientName} was diagnosed with mild intermittent asthma at age 7, for which he uses a salbutamol inhaler on an as-needed basis, primarily triggered by exercise and seasonal allergens. He was also diagnosed with allergic rhinitis around the same time and is managed with a daily antihistamine during spring and autumn. He has had no prior hospitalizations aside from one emergency department visit six weeks ago following his first generalized tonic-clonic seizure, where he was observed overnight and underwent initial neurological workup.\n\nHis immunization record is up to date according to the national childhood immunization schedule. He has no known drug allergies documented prior to this visit. Family history is notable for epilepsy in a paternal uncle. There is no family history of neurodegenerative disease or metabolic disorders. {patientName} does not smoke, consume alcohol, or use any illicit substances. His BMI is within the healthy range for his age and sex."
+          }
+        ]
+      }
+    }
+  ]
+}

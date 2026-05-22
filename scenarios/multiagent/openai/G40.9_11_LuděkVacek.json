@@ -1,0 +1,500 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "11"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Vacek",
+            "given": [
+              "Luděk"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "G40.9",
+              "display": "Epilepsy, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3d2f7323-dc3e-43b6-8c0e-eadc96bf50b1",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for loratadine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R06AX13"
+            }
+          ],
+          "text": "loratadine 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d20a8337-7c55-4fea-9efc-e491021c1a66",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for diphenhydramine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R06AA02"
+            }
+          ],
+          "text": "diphenhydramine 12.5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "12.5 mg oral at bedtime as needed during allergy flares"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:289f3eec-5d46-41ca-ae3a-b5c770543aca",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Electroencephalogram (EEG)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "75949-8"
+            }
+          ],
+          "text": "Electroencephalogram (EEG)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T22:42:33Z",
+        "valueString": "Abnormal study with epileptiform discharges, supporting epilepsy evaluation after recurrent nighttime and awakening events.",
+        "note": [
+          {
+            "text": "Abnormal study with epileptiform discharges, supporting epilepsy evaluation after recurrent nighttime and awakening events."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f010fef8-e131-49a9-b1aa-570892a22f84",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Magnetic resonance imaging of brain</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "37235-9"
+            }
+          ],
+          "text": "Magnetic resonance imaging of brain"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T22:42:33Z",
+        "valueString": "No acute structural brain abnormality identified.",
+        "note": [
+          {
+            "text": "No acute structural brain abnormality identified."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a5a66dc1-9249-47d3-aa7d-f80b96e4aee6",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Heart rate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T22:42:33Z",
+        "valueQuantity": {
+          "value": 88.0,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "note": [
+          {
+            "text": "Heart rate 88 /min"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fead0e6e-26e4-47a2-8eda-871f397cda0b",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T22:42:33Z",
+        "valueQuantity": {
+          "value": 36.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "Body weight 36 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e0de8b0e-87b5-424c-bbad-9415c40bb0cd",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Uncle: Epilepsy, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "UNCLE",
+              "display": "Uncle"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "G40.9"
+                }
+              ],
+              "text": "Epilepsy, unspecified"
+            },
+            "onsetAge": {
+              "value": 15,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e200d41d-a536-4103-a797-6edc46f669c6",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Migraine with aura</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "G43.1"
+                }
+              ],
+              "text": "Migraine with aura"
+            },
+            "onsetAge": {
+              "value": 19,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:be5a90f0-6de0-4f48-9dca-cc58679b4ac1",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandfather: Cerebral infarction, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRFTH",
+              "display": "Grandfather"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I63.9"
+                }
+              ],
+              "text": "Cerebral infarction, unspecified"
+            },
+            "onsetAge": {
+              "value": 68,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e8aef660-de11-4458-bb2b-6859409777d0",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is an 11-year-old boy from the Czech Republic who is brought in by his parents because of recurrent seizure episodes consistent with epilepsy, a brain disorder marked by recurring seizures [MEDLINEPLUS:G40.9]. Over the last week, he has had several nighttime events in which he wakes abruptly from sleep, appears frightened and panicked, says he briefly feels as if he is seeing himself from outside his body, complains that the room is spinning, and then vomits violently before becoming briefly unresponsive for about 30-60 seconds [MEDDIALOG:G40.9:1; MEDLINEPLUS:G40.9]. During some of these episodes his parents have noticed stiffening and brief muscle spasms of the arms and shoulders. They have also noticed brief shock-like jerks of the arms shortly after waking in the morning, sometimes making him seem clumsy with his hands [MEDDIALOG:G40.9:1].\n\nIn the clinic, {patientName} looks tired from interrupted sleep but is alert, cooperative, and developmentally appropriate for his age. He is neatly dressed in school sportswear and stays close to his mother during the interview. His parents say the episodes are more likely after nights of poor sleep and after long evening video-game sessions with flashing lights, and they have become more worried because the events are recurring rather than isolated [MEDDIALOG:G40.9:1; MEDLINEPLUS:G40.9].\n\n{patientName} is a primary school student who enjoys football, video games, and drawing at home. He lives with both parents and a younger sister, and the family describes a stable home routine, though recent late bedtimes have occurred during the school term. He has a small group of friends and usually functions well at school, but the family is now anxious about safety during sleep, on stairs, and during sports because of the possibility of loss of awareness during spells [MEDDIALOG:G40.9:1; MEDLINEPLUS:G40.9].\n\nThere are no signs of an acute infectious illness; specifically, the family denies fever during the nighttime vomiting episodes [MEDDIALOG:G40.9:1]. Because epilepsy can cause strange sensations, unusual behaviors, violent muscle spasms, or loss of consciousness, his parents are now keeping a diary of whether future episodes include vertigo, abnormal movements, impaired awareness, or unusual visual experiences."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a4268b9b-dfd2-48a1-a967-d3a0c441cb32",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has no previously documented chronic neurologic diagnosis, and this evaluation is prompted by recurrent nighttime episodes of abrupt awakening with panic, vertigo, vomiting, brief unresponsiveness, and occasional arm and shoulder spasms over 4 of the past 5 nights [MEDDIALOG:G40.9:1]. His family reports no fever and no generally sick behavior during these events [MEDDIALOG:G40.9:1]. They have also observed brief morning arm jerks after awakening, and on one occasion he described a fleeting sensation of seeing himself from outside his body before an episode, which raised concern for a seizure disorder.\n\nHis past history is notable for extreme prematurity at 30 weeks with a short neonatal intensive care stay, and he has a mild stable learning disorder requiring extra reading support at school; these neurodevelopmental factors modestly increase seizure risk. At age 3 he had a febrile seizure during a viral illness, with no recurrence until the current events. There is no known history of major head injury, CNS infection, or prior neurosurgery. He has never been hospitalized previously for afebrile seizures. Sleep schedule has been inconsistent recently, and the parents think episodes may follow sleep deprivation. The family also notes that some morning jerks seem more likely after prolonged evening exposure to rapidly flashing video games.\n\nHe also has seasonal allergic rhinitis treated with loratadine. During the spring his pediatrician occasionally prescribes diphenhydramine at night for breakthrough allergy symptoms, and the family has used it intermittently in the past week; sedating first-generation antihistamines can lower seizure threshold in susceptible children. Immunizations are reported as up to date by the family. No medication allergies are known.\n\nFamily history is notable for epilepsy in a maternal uncle beginning in adolescence and migraine with aura in his mother. A paternal grandfather had a remote ischemic stroke in later adulthood. The family denies known inherited metabolic disease."
+          }
+        ]
+      }
+    }
+  ]
+}

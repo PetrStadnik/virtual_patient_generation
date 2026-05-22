@@ -1,0 +1,331 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "5"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Nováková",
+            "given": [
+              "Ester"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "J00",
+              "display": "Acute nasopharyngitis [common cold]"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2bcfc2a5-37a3-4b90-a248-38c5e9e8e7b3",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for paracetamol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N02BE01"
+            }
+          ],
+          "text": "paracetamol 250 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "250 mg oral every 6 hours as needed for fever or throat pain"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5e168ab2-ff91-4af2-8e5c-8e2f8c9d0133",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for ibuprofen.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C01EB16"
+            }
+          ],
+          "text": "ibuprofen 100 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "100 mg oral every 8 hours as needed for fever or headache"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9cc38bb5-2c9a-4e3b-aa42-27f48bbcffc0",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body temperature</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T17:31:01Z",
+        "valueQuantity": {
+          "value": 37.8,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        },
+        "note": [
+          {
+            "text": "37.8 Cel, low-grade fever"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7199b8fc-52e3-447b-b7b6-601de351a810",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Respiratory rate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T17:31:01Z",
+        "valueQuantity": {
+          "value": 22.0,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "note": [
+          {
+            "text": "22 /min, normal work of breathing"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:01792049-925a-465b-8071-5bf2c32315e6",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Heart rate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T17:31:01Z",
+        "valueQuantity": {
+          "value": 108.0,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "note": [
+          {
+            "text": "108 /min"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b06a2098-9132-4c7c-9a7f-02e41c62731e",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 5-year-old girl brought in by her parent in the colder season with a short history of upper respiratory symptoms. She looks tired and a little clingy but is alert, breathing comfortably, and able to answer simple questions. Her parent reports nasal congestion and a runny nose, along with a sore throat and cough that began over the last 1-2 days, and she has also complained of a mild headache [MEDLINEPLUS:J00, SNOMED:J00, MEDDIALOG:J00:7].\n\nAt home, {patientName} usually attends kindergarten, plays with toys and coloring books, and spends time with her family. Several children around her have had recent cold-like symptoms, fitting with the fact that common colds spread easily through close personal contact and are especially common in children [MEDLINEPLUS:J00]. She has been drinking a bit less than usual because her throat is sore, but she is still taking small amounts of fluids [SNOMED:J00, MEDLINEPLUS:J00].\n\nOn examination, {patientName} has a stuffy nose, frequent sniffing, and an intermittent dry cough. She says her throat hurts when swallowing. She has a low-grade fever today, but there is no sign of severe distress. The overall picture is of a mild upper respiratory infection affecting the nose and throat [SNOMED:J00, MEDLINEPLUS:J00]."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:dd6d8043-dd4e-48ae-bafc-94fc2637dc10",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is previously healthy with no known chronic medical conditions and no prior hospitalizations, based on the available history. She is a kindergarten-aged child living with her family in the Czech Republic and has frequent exposure to other children, which is relevant because children commonly get more colds each year than adults and the illness spreads easily by close contact [MEDLINEPLUS:J00]. The current illness started recently with sore throat, headache, cough, and nasal congestion, followed by a low-grade fever today [MEDLINEPLUS:J00, SNOMED:J00, MEDDIALOG:J00:7].\n\nHer parent has been encouraging rest and fluids at home, which is appropriate supportive care for a common cold [MEDLINEPLUS:J00]. There is no evidence provided of asthma, recurrent ear infections, prior surgery, medication use, or drug allergies, so these are not reported."
+          }
+        ]
+      }
+    }
+  ]
+}

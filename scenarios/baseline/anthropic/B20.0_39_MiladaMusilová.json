@@ -1,0 +1,858 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "39"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Musilová",
+            "given": [
+              "Milada"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "B20.0",
+              "display": "HIV disease resulting in mycobacterial infection"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5e77b8ee-b8cf-41a5-9b4f-681381f5b45b",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Clarithromycin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01FA09"
+            }
+          ],
+          "text": "Clarithromycin 500 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "500 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:af736d0f-acce-4141-8075-7e773adf84a5",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Ethambutol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J04AK02"
+            }
+          ],
+          "text": "Ethambutol 800 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "800 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d69b7265-a152-471e-89ef-ef377b9a7b54",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Tenofovir disoproxil fumarate / Emtricitabine / Dolutegravir.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J05AR19"
+            }
+          ],
+          "text": "Tenofovir disoproxil fumarate / Emtricitabine / Dolutegravir 300 mg / 200 mg / 50 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "300 mg / 200 mg / 50 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:08012f29-23e5-478d-aaa7-0dffbea6986e",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Azithromycin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01FA10"
+            }
+          ],
+          "text": "Azithromycin 1200 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1200 mg oral once weekly (MAC prophylaxis bridging)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2494491c-24ab-4057-b0c9-d337e2a5a631",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Ferrous sulfate.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "B03AA07"
+            }
+          ],
+          "text": "Ferrous sulfate 200 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "200 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b13a0391-e8ba-440e-9b3e-10f5bf0a6ddc",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Paracetamol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N02BE01"
+            }
+          ],
+          "text": "Paracetamol 500 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "500 mg oral every 6 hours as needed for fever or pain"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:23e26e44-f033-4b23-82ff-d2bf865a9fac",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">CD4+ T-lymphocyte count</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24467-3"
+            }
+          ],
+          "text": "CD4+ T-lymphocyte count"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:58:53Z",
+        "valueQuantity": {
+          "value": 68.0,
+          "unit": "cells/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "cells/uL"
+        },
+        "note": [
+          {
+            "text": "68 cells/µL (critically low)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bb0e83c7-315c-4d71-967c-c03e656fbbe5",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">HIV-1 RNA viral load (quantitative)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "20447-9"
+            }
+          ],
+          "text": "HIV-1 RNA viral load (quantitative)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:58:53Z",
+        "valueQuantity": {
+          "value": 500000.0,
+          "unit": "copies/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "copies/mL"
+        },
+        "note": [
+          {
+            "text": ">500,000 copies/mL (high)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c8dd87f6-d849-44e2-9d3e-747e673dfbf0",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Blood culture for mycobacteria (MAC/MAI)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "17934-1"
+            }
+          ],
+          "text": "Blood culture for mycobacteria (MAC/MAI)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:58:53Z",
+        "valueString": "Mycobacterium avium complex isolated – positive",
+        "note": [
+          {
+            "text": "Mycobacterium avium complex isolated – positive"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c721c508-8844-4f2b-9004-7f804c913fcb",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Alkaline phosphatase [Enzymatic activity/volume] in serum</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6768-6"
+            }
+          ],
+          "text": "Alkaline phosphatase [Enzymatic activity/volume] in serum"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:58:53Z",
+        "valueQuantity": {
+          "value": 312.0,
+          "unit": "U/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "U/L"
+        },
+        "note": [
+          {
+            "text": "312 U/L (elevated; reference 44–147 U/L)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a1460d3e-b50d-4bf6-b7b6-655737c9fdf9",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:58:53Z",
+        "valueQuantity": {
+          "value": 47.5,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "47.5 kg (BMI 17.4, underweight)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0c1ff60f-c376-4407-a619-7ae618d6aff5",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Amoxicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "high",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CA04"
+            }
+          ],
+          "text": "Amoxicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Urticaria and facial angioedema"
+              }
+            ],
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f42499c6-636c-4d92-bbbe-c85c0e55193c",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Peanut.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "food"
+        ],
+        "criticality": "low",
+        "code": {
+          "text": "Peanut"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Oral pruritus and mild urticaria"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:da78941f-1b68-4008-9a52-9d2c6d621bd6",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: HIV disease</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "B20"
+                }
+              ],
+              "text": "HIV disease"
+            },
+            "onsetAge": {
+              "value": 44,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2399c201-9a9a-4c40-a1ab-c8efe1795e2f",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Essential hypertension</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I10"
+                }
+              ],
+              "text": "Essential hypertension"
+            },
+            "onsetAge": {
+              "value": 55,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:20a0f1a0-d036-497a-8166-87023a3459d7",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brother: Major depressive disorder</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "BRO",
+              "display": "Brother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F32.1"
+                }
+              ],
+              "text": "Major depressive disorder"
+            },
+            "onsetAge": {
+              "value": 31,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e6150523-b5b0-4420-9406-802afec78e49",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Caesarean section</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "11466000"
+            }
+          ],
+          "text": "Caesarean section"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2015",
+        "note": [
+          {
+            "text": "Performed in 2015 during second pregnancy; uncomplicated. Baby confirmed HIV-negative postnatally."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ca71a668-dcce-40b8-9f34-26088e00d893",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">HIV viral load measurement</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "398545005"
+            }
+          ],
+          "text": "HIV viral load measurement"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Serial viral load monitoring performed since HIV diagnosis in 2018; most recent result >500,000 copies/mL reflecting ART non-adherence."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:574e7a48-14b2-4714-80b8-7f89e9b4c14f",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Chest X-ray</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "399208008"
+            }
+          ],
+          "text": "Chest X-ray"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2025",
+        "note": [
+          {
+            "text": "Bilateral hilar lymphadenopathy and patchy infiltrates noted; consistent with disseminated mycobacterial infection in context of advanced HIV."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6ca305c0-b08a-4478-ab1d-80e40cd0beb1",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 39-year-old woman with a slender, noticeably thin build, appearing slightly older than her stated age. She presents with a chronic, productive cough, drenching night sweats, and significant unintentional weight loss of approximately 12 kg over the past four months. Her skin shows mild pallor and a few hyperpigmented patches on her forearms. She reports persistent low-grade fevers, profound fatigue, and occasional dyspnea on exertion. Her lymph nodes in the cervical and axillary regions are palpably enlarged bilaterally.\n\n{patientName} grew up in a mid-sized city and currently works part-time as a seamstress from home. She lives in a modest apartment with her two school-aged children (aged 9 and 12), and relies heavily on support from her sister and a close friend who assists with childcare during her frequent medical appointments. Her social circle is small but tight-knit, and she maintains strong ties with a local community health center that has been coordinating her care.\n\nHer daily life has been significantly impacted by her illness. She wakes frequently at night drenched in sweat and struggles to maintain appetite, subsisting largely on soft foods and nutritional supplements. She is a non-smoker and does not use recreational drugs; she drinks alcohol rarely, only on social occasions. She has no regular exercise routine due to fatigue.\n\n{patientName} was diagnosed with HIV infection approximately six years ago following a routine antenatal screen during her second pregnancy. She was started on antiretroviral therapy (ART) but experienced gaps in treatment adherence over the past two years due to financial instability, stigma-related anxiety, and difficulty accessing medications. Her most recent CD4 count was critically low at 68 cells/µL, and HIV RNA viral load was highly elevated. Three months ago, she presented with a persistent cough and fevers; sputum cultures eventually confirmed Mycobacterium avium complex (MAC) infection consistent with her current diagnosis of B20.0.\n\n{patientName} is generally cooperative and motivated to re-engage with care. She expresses guilt about gaps in her ART adherence but is now committed to resuming a structured treatment regimen. She regularly attends a patient support group for women living with HIV and finds it emotionally beneficial. Her primary concerns are protecting her children from her illness and returning to a functional daily routine."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d5ab2641-b8b1-4653-a964-5dacd2c8a853",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} was diagnosed with HIV-1 infection six years ago at age 33, identified incidentally during antenatal screening. She was linked to care and initiated on antiretroviral therapy (ART) with good initial virological response. However, over the past two years she experienced two prolonged gaps in ART adherence due to socioeconomic hardship, medication access difficulties, and psychosocial stressors including depression and HIV-related stigma.\n\nShe has no prior history of tuberculosis or prior AIDS-defining illnesses. She has a history of mild iron-deficiency anemia managed with oral supplementation. She experienced one episode of oral candidiasis approximately 18 months ago, which was treated with a short course of fluconazole. She has no history of diabetes, hypertension, or cardiovascular disease. She had a caesarean section during her second pregnancy (2015) without complications.\n\nHer most recent CD4+ T-cell count was 68 cells/µL (down from 340 cells/µL three years ago), and her HIV RNA viral load is currently >500,000 copies/mL. Sputum and blood cultures confirmed Mycobacterium avium complex. A chest X-ray showed bilateral hilar lymphadenopathy and patchy infiltrates. Liver function tests revealed elevated alkaline phosphatase. She has no known drug allergies on record at presentation, though a penicillin allergy was reported verbally.\n\nShe is currently a non-smoker, does not use illicit substances, and drinks alcohol infrequently. She takes no over-the-counter medications regularly except occasional paracetamol for fever and headache. She has two children (both HIV-negative, confirmed by neonatal testing) aged 9 and 12, and lives in a low-income urban setting. She is not currently in a relationship."
+          }
+        ]
+      }
+    }
+  ]
+}

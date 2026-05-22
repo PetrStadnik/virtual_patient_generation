@@ -1,0 +1,425 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "4"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Tichý",
+            "given": [
+              "Ján"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "J20.9",
+              "display": "Acute bronchitis, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d8fd51ff-e344-4e45-9f41-1a3fcc7b4d82",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for acetaminophen.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N02BE01"
+            }
+          ],
+          "text": "acetaminophen 160 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "160 mg oral every 6 hours as needed for fever"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5b824fbc-f50b-4adb-966a-20729d11fe8f",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for salbutamol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R03AC02"
+            }
+          ],
+          "text": "salbutamol 100 micrograms"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "100 micrograms inhaled 1-2 puffs every 4-6 hours as needed for wheezing"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2fa88222-6043-42a6-b3a6-3770b988e885",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body temperature</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T18:17:44Z",
+        "valueQuantity": {
+          "value": 37.8,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        },
+        "note": [
+          {
+            "text": "37.8 °C, low-grade fever"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c88e2c3b-ced2-4163-affe-9d0305bf5daa",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Oxygen saturation in Arterial blood by Pulse oximetry</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "2708-6"
+            }
+          ],
+          "text": "Oxygen saturation in Arterial blood by Pulse oximetry"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T18:17:44Z",
+        "valueQuantity": {
+          "value": 97.0,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "note": [
+          {
+            "text": "97% on room air"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3e7c9589-d0a7-4eae-8f83-762217718b1d",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Respiratory rate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T18:17:44Z",
+        "valueQuantity": {
+          "value": 26.0,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "note": [
+          {
+            "text": "26 breaths/min, mildly increased for age"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5ee60d5a-79fa-4550-a8a0-12fe86be2e9b",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Chest X-ray</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24565-4"
+            }
+          ],
+          "text": "Chest X-ray"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T18:17:44Z",
+        "valueString": "Not routinely required; considered to rule out other lung disease if symptoms worsen or diagnosis is uncertain",
+        "note": [
+          {
+            "text": "Not routinely required; considered to rule out other lung disease if symptoms worsen or diagnosis is uncertain"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:26ebb503-fe35-48bd-813e-c59bf31ce4e9",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pulmonary function test</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "20080-8"
+            }
+          ],
+          "text": "Pulmonary function test"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T18:17:44Z",
+        "valueString": "Not performed in this preschool-aged child; may be considered in older patients when evaluating wheeze or alternative diagnoses",
+        "note": [
+          {
+            "text": "Not performed in this preschool-aged child; may be considered in older patients when evaluating wheeze or alternative diagnoses"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c6258879-9d42-4200-a7e2-7067664124ab",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 4-year-old boy from the Czech Republic who is brought in by his parent because of an acute cough that often brings up mucus, with intermittent wheezing and mild shortness of breath [MEDLINEPLUS:J20.9, SNOMED:J20.9]. He has had a low fever at home and seems uncomfortable with a sense of chest tightness when coughing [MEDLINEPLUS:J20.9]. At times he has brief choking episodes from phlegm in his throat and occasionally says his tummy hurts [SNOMED:J20.9].\n\nHe appears tired and clingy in the exam room but remains alert, interactive, and consolable. He breathes a little faster than usual and has an occasional asthmatoid wheeze when upset or after a coughing fit [SNOMED:J20.9]. His parent reports that the cough started after a recent cold-like illness, which fits with the common viral cause of acute bronchitis [MEDLINEPLUS:J20.9].\n\n{patientName} lives with his parents and attends preschool, where he is around other children with frequent colds, making viral spread through coughing and physical contact plausible [MEDLINEPLUS:J20.9]. He likes toy cars, picture books, and playing indoors with blocks. His family says he is normally energetic, but during this illness he has been resting more and drinking fluids with encouragement, in line with supportive care for acute bronchitis [MEDLINEPLUS:J20.9]."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cebf2413-ae59-4b96-8710-7da78542b5ee",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} was previously healthy with no chronic medical conditions documented. His parent reports a recent cold-like illness before the onset of cough, consistent with the common viral trigger for acute bronchitis [MEDLINEPLUS:J20.9]. He attends preschool and has frequent exposure to other children with respiratory infections, which increases the chance of viral spread through coughing and contact [MEDLINEPLUS:J20.9].\n\nThere is no history suggesting chronic bronchitis or other long-standing lung disease. He has had occasional recurrent upper respiratory tract infections in the past, as can be associated with acute bronchitis presentations [SNOMED:J20.9]. No prior hospitalizations are reported. The family is advised to avoid tobacco smoke exposure because exposure to tobacco smoke, air pollution, dusts, vapors, and fumes can contribute to bronchitis [MEDLINEPLUS:J20.9]."
+          }
+        ]
+      }
+    }
+  ]
+}

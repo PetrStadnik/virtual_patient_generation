@@ -1,0 +1,412 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "17"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Burešová",
+            "given": [
+              "Milada"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "F32.9",
+              "display": "Depressive episode, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:be59e5d5-512a-43ef-a2bc-6ab4d3e5d206",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for sertraline.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N06AB06"
+            }
+          ],
+          "text": "sertraline 50 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "50 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d2d579d2-8143-4470-9fd3-ed38e9a5407c",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient Health Questionnaire 9 item score</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "44261-6"
+            }
+          ],
+          "text": "Patient Health Questionnaire 9 item score"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:08:19Z",
+        "valueString": "PHQ-9 score 17, indicating moderately severe depressive symptoms",
+        "note": [
+          {
+            "text": "PHQ-9 score 17, indicating moderately severe depressive symptoms"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:35e4fc27-b82d-4b7b-8fb4-e0456a20c13b",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Thyrotropin [Units/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3016-3"
+            }
+          ],
+          "text": "Thyrotropin [Units/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:08:19Z",
+        "valueString": "TSH 2.1 mIU/L, within reference range",
+        "note": [
+          {
+            "text": "TSH 2.1 mIU/L, within reference range"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e8594447-3ed2-4ad4-ad23-a2041b2d83c4",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Prolactin [Mass/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2842-3"
+            }
+          ],
+          "text": "Prolactin [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:08:19Z",
+        "valueString": "Prolactin 14 ng/mL, within reference range",
+        "note": [
+          {
+            "text": "Prolactin 14 ng/mL, within reference range"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8726183a-b4a8-406d-a65b-c438597f710c",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "unable-to-assess",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CE01"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Rash"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:954bd517-ad6b-4add-b378-638db99e2adf",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Depressive episode, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F32.9"
+                }
+              ],
+              "text": "Depressive episode, unspecified"
+            },
+            "onsetAge": {
+              "value": 34,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e7a50180-49cc-4d75-aff4-dbe6a633bcea",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Psychiatric evaluation</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "165171009"
+            }
+          ],
+          "text": "Psychiatric evaluation"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2026",
+        "note": [
+          {
+            "text": "Initial psychiatric assessment performed for depressed mood, anxiety, and suicidal thoughts"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4b377bc7-52ee-49ea-9f39-f676ef1a2ff7",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 17-year-old girl from the Czech Republic who arrives with a quiet, slowed demeanor and limited eye contact. Over the last few weeks she has had a persistently depressed mood lasting at least 2 weeks, and she describes feeling mentally tired, with poor motivation and difficulty concentrating at school; these features fit a depressive episode with impaired neurovegetative functioning, psychomotor activity, and cognition [PMID:36156484, MEDDIALOG:F32.9:0]. She also reports intermittent anxiety alongside the depression [MEDDIALOG:F32.9:0].\n\nShe is in secondary school and used to enjoy drawing and spending time with two close friends after classes, but recently she has withdrawn and spends more time alone in her room. Her mother says she seems slower getting ready in the morning and no longer shows much interest in hobbies. She has not been working a job and lives with her parents, which is a clinically plausible adolescent home setting.\n\nWhen speaking, {patientName} admits that dark thoughts have been present, including passive thoughts that life is not worth much, which is concerning because depressive episodes can include suicidal thoughts [PMID:36156484]. She denies hearing voices or having fixed false beliefs, and there is no history suggesting psychotic symptoms at present; severe depression can have psychotic symptoms, but this is not evident in her current presentation [MEDDIALOG:F32.9:2].\n\nHer family describes her as previously reliable and social, but now more tearful and isolated. They brought her in because the low mood has started to affect attendance, homework completion, and family interaction. There is no sign of intoxication, and the history does not suggest substance use as the main driver of symptoms, which is clinically plausible for this scenario."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:24df1dae-a94a-41b0-b74b-6749eebd3424",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has no documented chronic medical illness, prior psychiatric hospitalization, or previous suicide attempt, which are clinically plausible defaults because the provided evidence does not establish these features. The current episode is her first clearly recognized depressive episode, developing over several weeks with low mood, fatigue, anxiety, and impaired concentration [PMID:36156484, MEDDIALOG:F32.9:0].\n\nShe and her parents deny alcohol or illicit drug use, and there is no known recent head injury; this is relevant because psychiatric symptoms can be confused with other causes, but evidence suggests persistent depression may predate other acute events and need separate assessment [MEDDIALOG:F32.9:2]. She has regular menses and no amenorrhea, but endocrine screening is still reasonable because hyperprolactinemia has been associated with depressive symptoms in some patients [PMID:24182617].\n\n{patientName} is sleeping more than usual and has reduced appetite and motivation, which are clinically plausible neurovegetative symptoms consistent with depressive illness described in the evidence [PMID:36156484]. She has supportive parents and one close friend aware that she has been struggling. There have been no prior surgeries or major medical procedures."
+          }
+        ]
+      }
+    }
+  ]
+}

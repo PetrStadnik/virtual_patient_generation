@@ -1,0 +1,382 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "51"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Kučerová",
+            "given": [
+              "Milada"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "M54.5",
+              "display": "Low back pain"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:322dba2a-47ec-4ef8-8deb-dffecffb57a6",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for paracetamol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N02BE01"
+            }
+          ],
+          "text": "paracetamol 1000 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1000 mg oral every 8 hours as needed"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:357471ca-0c7d-4ccb-ac91-23a77123928b",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body temperature</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T18:46:12Z",
+        "valueQuantity": {
+          "value": 36.7,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        },
+        "note": [
+          {
+            "text": "36.7 Cel"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:20152c89-5ae6-4e4c-a709-2288d618b255",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Heart rate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T18:46:12Z",
+        "valueQuantity": {
+          "value": 78.0,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "note": [
+          {
+            "text": "78 /min"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c2c1060c-9a63-4210-a6d7-f4603dee2f00",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Respiratory rate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T18:46:12Z",
+        "valueQuantity": {
+          "value": 16.0,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "note": [
+          {
+            "text": "16 /min"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:10bfac57-c7ea-45c1-b29d-a80871211b32",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Blood pressure systolic and diastolic</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "55284-4"
+            }
+          ],
+          "text": "Blood pressure systolic and diastolic"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T18:46:12Z",
+        "dataAbsentReason": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+              "code": "unknown"
+            }
+          ]
+        },
+        "note": [
+          {
+            "text": "128/78 mm[Hg]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fe070575-80c9-4ff9-a8b0-dee915415b9a",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "not-done",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Lumbar spine magnetic resonance imaging</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "241648005"
+            }
+          ],
+          "text": "Lumbar spine magnetic resonance imaging"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "note": [
+          {
+            "text": "Not performed yet because current guidance recommends conservative treatment for about 6 weeks before MRI when no red flags are present [PMID:28375914]."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6ba6a5c3-fc8e-4f13-ba18-873c3de0029c",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 51-year-old woman in the Czech Republic who comes to clinic because of low back pain that has made ordinary movement difficult. She describes an aching pain centered in the lower lumbar area with local tenderness, and at times the pain seems to track into the leg in a sciatica-like pattern. The discomfort is worse with prolonged standing and sitting, and she looks guarded when changing position, although she is still able to walk into the room without assistance. Low back pain is very common in adults, is often nonspecific, and tenderness and sciatica can accompany it [PMID:34503841, SNOMED:M54.5].\n\nShe works at a desk-based administrative job and says long hours seated at the computer tend to aggravate her symptoms. At home she lives with her husband and keeps close contact with her adult daughter, who has been encouraging her to stay active instead of resting all day. She used to enjoy weekend walks and light gardening, but over the last two weeks she has scaled these back because bending and rising from a chair provoke pain. Initial management of acute low back pain emphasizes mobilization rather than prolonged inactivity [PMID:28375914].\n\nIn conversation, {patientName} appears worried that the pain could mean something serious, and she asks whether she needs immediate imaging. Her anxiety is noticeable but she is attentive and cooperative during the visit. Anxiety is listed among associated findings with low back pain, while evaluation should also consider red flags and serious alternative causes when symptoms or history suggest them [SNOMED:M54.5, PMID:34503841, PMID:28375914]."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6c4ab640-8ef6-47ed-8b01-87a86c926c7d",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} reports a recent episode of low back pain without a known major injury, with symptoms present for about 2 weeks. She denies known prior cancer, which is important because a prior history of cancer is a strong red flag in low back pain evaluation [PMID:28375914]. She has not had recent hospitalization and has not previously undergone spinal surgery. She has been using over-the-counter pain medicine with partial relief and has tried to remain mobile rather than staying in bed, consistent with conservative outpatient management recommendations [PMID:28375914].\n\nShe has no reported fever, unexplained weight loss, or other warning symptoms volunteered today, and she has come in mainly because the pain is interfering with work and sleep. Given that most low back pain is nonspecific and many cases improve with conservative care, she has not had imaging yet [PMID:34503841, PMID:28375914]. She does admit feeling more anxious since the pain began [SNOMED:M54.5].\n\nLifestyle-wise, {patientName} is a nonsmoker, drinks alcohol only occasionally, and is usually independent in daily activities. She lives an otherwise active routine, though she has curtailed walking and gardening since the onset of pain. Because low back pain can become influenced by psychological and social factors when it persists, her concerns about function and work are clinically relevant [PMID:16154380]."
+          }
+        ]
+      }
+    }
+  ]
+}

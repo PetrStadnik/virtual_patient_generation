@@ -1,0 +1,758 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "30"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Říhová",
+            "given": [
+              "Barbora"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "G43.9",
+              "display": "Migraine, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a87b118f-3944-426d-b89b-0fa2e2ef8892",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Sumatriptan.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N02CC01"
+            }
+          ],
+          "text": "Sumatriptan 50 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "50 mg oral at onset of migraine, may repeat after 2 hours if needed (max 200 mg/day)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b0acfff1-cb2b-435f-9e10-87c2269df405",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Topiramate.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N03AX11"
+            }
+          ],
+          "text": "Topiramate 50 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "50 mg oral once daily (preventive therapy)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bc49eb9a-aaf8-4995-a61e-b899c3b72b2e",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Amitriptyline.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N06AA09"
+            }
+          ],
+          "text": "Amitriptyline 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral once daily at bedtime (preventive therapy)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ef972828-c4c3-4b04-9416-760b18193902",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Ibuprofen.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C01EB16"
+            }
+          ],
+          "text": "Ibuprofen 400 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "400 mg oral every 8 hours as needed for mild-to-moderate migraine pain"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:94dcd699-30d2-4755-bf27-24f559e014c0",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Metoclopramide.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A03FA01"
+            }
+          ],
+          "text": "Metoclopramide 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral as needed for nausea during migraine episodes"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a4413b93-98d9-40a7-bfe1-d5e1f9159818",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brain MRI</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11541-0"
+            }
+          ],
+          "text": "Brain MRI"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:27:44Z",
+        "valueString": "No intracranial mass, hemorrhage, or structural abnormality identified. Minor non-specific white matter hyperintensities noted, consistent with migraine-related changes.",
+        "note": [
+          {
+            "text": "No intracranial mass, hemorrhage, or structural abnormality identified. Minor non-specific white matter hyperintensities noted, consistent with migraine-related changes."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:15b1baa6-f7e2-4398-8cab-4f06993c0630",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Complete blood count panel</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2"
+            }
+          ],
+          "text": "Complete blood count panel"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:27:44Z",
+        "valueString": "Within normal limits. Hemoglobin 13.2 g/dL, WBC 6.4 x10^9/L, Platelets 230 x10^9/L.",
+        "note": [
+          {
+            "text": "Within normal limits. Hemoglobin 13.2 g/dL, WBC 6.4 x10^9/L, Platelets 230 x10^9/L."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e5ded41f-63a6-494d-9ad9-1fb8b10e87eb",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pain severity - 0-10 verbal numeric rating</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72514-3"
+            }
+          ],
+          "text": "Pain severity - 0-10 verbal numeric rating"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:27:44Z",
+        "valueQuantity": {
+          "value": 7.0,
+          "unit": "{score}",
+          "system": "http://unitsofmeasure.org",
+          "code": "{score}"
+        },
+        "note": [
+          {
+            "text": "7/10 - Severe throbbing left-sided headache at time of assessment."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a1bfdecb-a532-4668-8c03-2ddfbfb12fad",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Blood pressure panel</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "96607-7"
+            }
+          ],
+          "text": "Blood pressure panel"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:27:44Z",
+        "valueQuantity": {
+          "value": 118.0,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        },
+        "note": [
+          {
+            "text": "118/74 mmHg - normotensive"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c37b86e0-a11e-4326-97d6-1f6a8385ac0b",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52416-5"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:27:44Z",
+        "valueQuantity": {
+          "value": 62.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "62 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:115e1a2f-81b7-489f-9339-1d16ed9693da",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Naproxen.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "G02CC02"
+            }
+          ],
+          "text": "Naproxen"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Urticaria (skin rash)"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:97268480-e231-4daf-a47e-a8084422fe26",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Codeine.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "intolerance",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R05DA04"
+            }
+          ],
+          "text": "Codeine"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Severe nausea and vomiting"
+              }
+            ],
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f337ceae-d490-40d3-b553-b2de8027ce2c",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Migraine, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "G43.9"
+                }
+              ],
+              "text": "Migraine, unspecified"
+            },
+            "onsetAge": {
+              "value": 25,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d9cefab4-d78c-4ac1-9d09-dbaa8a051157",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandmother: Migraine, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRMTH",
+              "display": "Grandmother"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "G43.9"
+                }
+              ],
+              "text": "Migraine, unspecified"
+            },
+            "onsetAge": {
+              "value": 30,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:84cfd7b1-9656-481e-ae6e-2b1e6973c086",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Electroencephalogram</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "54550000"
+            }
+          ],
+          "text": "Electroencephalogram"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2022",
+        "note": [
+          {
+            "text": "Performed to rule out epileptiform activity given visual aura symptoms. Results within normal limits; no epileptiform discharges detected."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ff6b0452-8832-4a73-b260-e8203f3099d3",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Neurological examination</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "84728005"
+            }
+          ],
+          "text": "Neurological examination"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Comprehensive neurological assessment performed at neurology clinic. Cranial nerves intact, no focal deficits, normal reflexes and coordination."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:415d92b2-796a-4f07-9472-2cfe8eeee2ae",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 30-year-old woman who works as a graphic designer at a busy digital marketing agency in the city. She is of medium build, with dark circles under her eyes that hint at many restless nights spent battling debilitating headaches. She lives with her partner and their cat in a small apartment, and she cherishes weekend hikes and yoga classes as stress outlets — though these activities are increasingly disrupted by her migraines. {patientName} is sociable and creative, enjoys cooking new recipes and attending live music events, but has found herself declining invitations more frequently as her headaches have become more unpredictable.\n\n{patientName} describes her migraines as a throbbing, pulsating pain that typically starts on the left side of her head and gradually builds in intensity over 30–60 minutes. The pain is often accompanied by significant nausea, photophobia, and phonophobia, forcing her to retreat to a darkened, quiet room. On particularly severe episodes, she also experiences visual disturbances — shimmering zigzag lines in her peripheral vision — prior to the onset of pain. These episodes last anywhere from 6 to 24 hours and leave her feeling exhausted and mentally foggy for a full day afterward.\n\n{patientName} reports experiencing approximately 4–6 migraine episodes per month, often triggered by hormonal fluctuations around her menstrual cycle, prolonged screen exposure at work, irregular sleep, and high-stress periods. She has noted that certain foods — especially aged cheeses, red wine, and processed meats — also seem to precipitate attacks. Despite trying over-the-counter pain relievers with variable success, her migraines have been increasing in frequency over the past year, leading her to seek specialist neurology care.\n\nAt today's clinic visit, {patientName} appears tired but alert and cooperative. She rates her current headache at 7/10 in severity. She is otherwise in good general health, maintains a mostly balanced diet (though often skips breakfast due to work demands), and is a non-smoker who drinks socially, roughly 3–4 glasses of wine per week."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4586ad86-f4d4-442d-a334-ce9c7f448cd8",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has a history of migraines dating back to age 17, initially presenting as infrequent tension-type headaches that evolved into classic migraines with visual aura in her early twenties. She has no history of epilepsy, stroke, or head trauma. She was previously evaluated by a general practitioner who recommended lifestyle modifications and over-the-counter analgesics, but has not previously received formal preventive migraine therapy.\n\n{patientName} has no significant comorbidities aside from mild anxiety managed with cognitive behavioral therapy. She takes an oral combined contraceptive pill, which she has used for the past 5 years; her neurologist has flagged this as a potential risk factor given her migraines with aura. She has no history of hypertension, cardiovascular disease, or diabetes. She does not smoke and drinks alcohol socially. She reports a family history of migraines on her maternal side. No prior hospitalizations or surgeries. She has a known intolerance to codeine (nausea and vomiting) and reports a mild allergy to naproxen (skin rash)."
+          }
+        ]
+      }
+    }
+  ]
+}

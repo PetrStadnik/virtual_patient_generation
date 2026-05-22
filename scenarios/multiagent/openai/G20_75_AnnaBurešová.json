@@ -1,0 +1,640 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "75"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Burešová",
+            "given": [
+              "Anna"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "G20",
+              "display": "Parkinson disease"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:269be5f0-7d60-4424-88ff-fea9ba47d1d3",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for amlodipine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C08CA01"
+            }
+          ],
+          "text": "amlodipine 5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "5 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e6f70316-98a2-4df0-a61e-258b9098c511",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for atorvastatin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C10AA05"
+            }
+          ],
+          "text": "atorvastatin 20 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "20 mg oral once daily at night"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:690bbf5d-8bd4-4cac-bbb1-692e3bd96c00",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for levothyroxine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "H03AA01"
+            }
+          ],
+          "text": "levothyroxine 75 microgram"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "75 microgram oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5ba6d1e2-de68-45e2-bf10-995f612b5e83",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for bisacodyl.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A06AB02"
+            }
+          ],
+          "text": "bisacodyl 5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "5 mg oral as needed for constipation"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7fbe95a6-dd19-491a-bbe1-48e046132103",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Neurologic assessment</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "67536-3"
+            }
+          ],
+          "text": "Neurologic assessment"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T22:55:01Z",
+        "valueString": "Neurologic examination shows asymmetric resting tremor, bradykinesia, cogwheel rigidity, masked facies, postural instability on pull test, reduced arm swing, gait initiation difficulty, functional gait abnormality with shuffling and en bloc turning, consistent with Parkinson disease.",
+        "note": [
+          {
+            "text": "Neurologic examination shows asymmetric resting tremor, bradykinesia, cogwheel rigidity, masked facies, postural instability on pull test, reduced arm swing, gait initiation difficulty, functional gait abnormality with shuffling and en bloc turning, consistent with Parkinson disease."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8243909f-4d65-45cc-bebe-c223a6ea8ba6",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Blood pressure systolic and diastolic</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "55284-4"
+            }
+          ],
+          "text": "Blood pressure systolic and diastolic"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T22:55:01Z",
+        "valueQuantity": {
+          "value": 138.0,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        },
+        "note": [
+          {
+            "text": "138/82 mmHg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bfc5f5d2-399b-44fc-9c55-2720a483b521",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T22:55:01Z",
+        "valueQuantity": {
+          "value": 67.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "67 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5b7c5d06-0bc3-4f69-bf8c-e4c03681e84e",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Thyrotropin (TSH) in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3016-3"
+            }
+          ],
+          "text": "Thyrotropin (TSH) in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T22:55:01Z",
+        "valueString": "2.1 mIU/L, within target range on levothyroxine therapy.",
+        "note": [
+          {
+            "text": "2.1 mIU/L, within target range on levothyroxine therapy."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a245a2fd-9b2e-4121-a501-ce26c188b0d0",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CE01"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Rash"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1a99a258-9aa2-4579-8056-767c642be0cc",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Uncle: Parkinson disease</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "UNCLE",
+              "display": "Uncle"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "G20"
+                }
+              ],
+              "text": "Parkinson disease"
+            },
+            "onsetAge": {
+              "value": 72,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4c7f427c-0e6b-428e-ac24-e0da6a86594b",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Essential tremor</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "G25.0"
+                }
+              ],
+              "text": "Essential tremor"
+            },
+            "onsetAge": {
+              "value": 66,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:937fa4b8-2df3-4b0b-834a-48078ffcf754",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Essential hypertension</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I10"
+                }
+              ],
+              "text": "Essential hypertension"
+            },
+            "onsetAge": {
+              "value": 58,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a0bc2951-07b5-4d85-b3d5-ba3f853cc369",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cataract extraction</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "404628003"
+            }
+          ],
+          "text": "Cataract extraction"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2018",
+        "note": [
+          {
+            "text": "Uncomplicated cataract surgery with good visual recovery."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5f2e034f-5f4a-4325-951c-369a2bb698a5",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 75-year-old woman in the Czech Republic who has developed symptoms gradually over the past several years, beginning with a subtle resting tremor and slowness of movement on the right side before becoming more noticeable on both sides of the body. She appears older than her stated age when walking into the clinic, moving with short, careful shuffling steps, reduced arm swing, and difficulty initiating gait, and she takes extra time to turn and sit down. When she rises from the chair, she hesitates briefly and needs to steady herself, reflecting postural instability. Her face is less expressive than before, her hands sometimes tremble at rest, and she describes stiffness in her arms and trunk that makes dressing and cooking slower than it used to be. Her walking has developed into a clear functional gait abnormality, especially in narrow spaces and when turning, where she sometimes seems briefly stuck before moving again.\n\nIn conversation, {patientName} is pleasant and cooperative but speaks more softly and slowly than before. She says simple daily tasks now take much longer because of bradykinesia, stiffness, poor balance, and decreased spontaneous movement. She reports increasing difficulty with walking and coordination, especially when she is tired, and worries about falling when outside alone or when turning in tight spaces. She has also noticed poor sleep, constipation, and low mood since her mobility worsened, which she understands can occur with Parkinson disease.\n\nShe is a retired primary-school teacher who lives with her husband and remains closely involved with her adult daughter and two grandchildren. Before retirement, she also spent many summers and school breaks helping on her family’s small orchard and vegetable plot, where she had repeated contact with agricultural pesticides and herbicides over many years. She still enjoys tending balcony plants, knitting, and short walks to a nearby market, though these activities have become limited by tremor, stiffness, slow movement, gait difficulty, and fear of losing balance. Friends from her neighborhood see her less often now because she needs more time to get ready and feels self-conscious about her shaking and slowed gait.\n\nDespite these limitations, {patientName} tries to stay independent with household routines. She keeps a written list to pace chores through the day because walking, talking, and simple tasks have become more difficult as symptoms progressed. She also describes longstanding reduced sense of smell and many years of chronic constipation predating the tremor, both of which in retrospect may have been early nonmotor features. Her family has encouraged medical evaluation because the gradual onset of tremor, rigidity, bradykinesia, postural instability, and gait difficulty has become increasingly disruptive to everyday life. She recalls that one older paternal uncle had Parkinson disease, and this family history has added to her concern about her own symptoms."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0fe8efc4-baf6-4c00-bd4f-314152252cf3",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} reports a gradual progression of resting tremor, rigidity, bradykinesia, constipation, and worsening gait over several years, consistent with the typical onset pattern of Parkinson disease. She says symptoms first seemed more prominent on one side and later involved both sides more clearly. Over the last year she has become more unsteady when turning or walking on uneven ground and has had several near-falls, though no major injury. She also describes gait initiation difficulty and brief freezing when approaching doorways or changing direction. She denies abrupt onset. She has not undergone deep brain stimulation or other surgical treatment for Parkinson disease.\n\nHer background medical problems include hypertension, hyperlipidemia, hypothyroidism, chronic constipation, and longstanding hyposmia. She has not previously been hospitalized for major neurological illness. She underwent cataract surgery in the past with good recovery. She is a retired teacher, but in addition to school work she spent decades helping with seasonal orchard and garden work involving repeated pesticide exposure, a plausible environmental risk factor for Parkinson disease. As a hobby, she has continued home gardening and has occasionally used weed killers and insect sprays without consistent protective equipment. She is a nonsmoker and drinks alcohol rarely. Family members have noticed that she walks more slowly, has less facial expression, and needs help with some errands because of balance and coordination problems.\n\nShe also reports low mood and poor sleep since her movement symptoms worsened, both of which can occur in Parkinson disease. Her current long-term medicines are for hypertension, hyperlipidemia, hypothyroidism, and constipation; she is not taking dopamine-blocking drugs such as metoclopramide or antipsychotics that would suggest drug-induced parkinsonism, although she previously used metoclopramide intermittently for nausea several years ago after a gastrointestinal illness, without a clear temporal relationship to symptom onset. Her father’s brother had Parkinson disease in later life, and her mother had an essential tremor diagnosis, providing family history of both the same disease and a related movement disorder."
+          }
+        ]
+      }
+    }
+  ]
+}

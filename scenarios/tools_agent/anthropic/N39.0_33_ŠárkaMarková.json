@@ -1,0 +1,671 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "33"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Marková",
+            "given": [
+              "Šárka"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "N39.0",
+              "display": "Urinary tract infection, site not specified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9342a076-7ae5-49e2-9e35-04b25db92751",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Nitrofurantoin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01XE01"
+            }
+          ],
+          "text": "Nitrofurantoin 100 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "100 mg oral twice daily for 5 days"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:48fcdb61-4790-4b04-9f4b-12009224c990",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Trimethoprim-sulfamethoxazole.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01EE01"
+            }
+          ],
+          "text": "Trimethoprim-sulfamethoxazole 160/800 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "160/800 mg oral twice daily for 3 days (reserve second-line)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a227a756-1000-4549-99a1-7a93169307f9",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Phenazopyridine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "G04BX06"
+            }
+          ],
+          "text": "Phenazopyridine 200 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "200 mg oral three times daily for up to 2 days for symptomatic relief"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f8d1519e-0f9b-4de1-8b9c-667cf3c3570b",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Ibuprofen.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C01EB16"
+            }
+          ],
+          "text": "Ibuprofen 400 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "400 mg oral every 8 hours as needed for pain and fever"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6506291a-b006-46ad-9f2e-d7e517f9c843",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Urinalysis complete panel</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24356-8"
+            }
+          ],
+          "text": "Urinalysis complete panel"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:07:43Z",
+        "valueString": "Cloudy yellow urine; pH 6.0; positive nitrites; WBC >10/hpf; RBC 3/hpf; bacteria present",
+        "note": [
+          {
+            "text": "Cloudy yellow urine; pH 6.0; positive nitrites; WBC >10/hpf; RBC 3/hpf; bacteria present"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:65a20d24-da62-4a8b-8b8a-64d2739ef237",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Nitrite urine</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "32710-6"
+            }
+          ],
+          "text": "Nitrite urine"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:07:43Z",
+        "valueString": "Positive",
+        "note": [
+          {
+            "text": "Positive"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6dc89122-60ac-4c42-a64d-fcecd9d98a10",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Urine culture bacteria</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "630-4"
+            }
+          ],
+          "text": "Urine culture bacteria"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:07:43Z",
+        "valueString": "Escherichia coli >100,000 CFU/mL; sensitive to nitrofurantoin and trimethoprim-sulfamethoxazole",
+        "note": [
+          {
+            "text": "Escherichia coli >100,000 CFU/mL; sensitive to nitrofurantoin and trimethoprim-sulfamethoxazole"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1877a17a-1eeb-4a1b-b281-b801c05a3c6d",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">White blood cell count</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "49498-9"
+            }
+          ],
+          "text": "White blood cell count"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:07:43Z",
+        "valueQuantity": {
+          "value": 11.2,
+          "unit": "10*9/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*9/L"
+        },
+        "note": [
+          {
+            "text": "11.2 x10^9/L (mildly elevated)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0d3d2707-7c36-4a8a-9684-732f81036d21",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body temperature</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:07:43Z",
+        "valueQuantity": {
+          "value": 37.9,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        },
+        "note": [
+          {
+            "text": "37.9 Cel (low-grade fever)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c14dd197-2a3c-48aa-b344-6fe1bb0cc05e",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CE01"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Maculopapular skin rash"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:77e45668-7681-43ce-b8d5-299c5b655ace",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Recurrent urinary tract infection</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "N39.0"
+                }
+              ],
+              "text": "Recurrent urinary tract infection"
+            },
+            "onsetAge": {
+              "value": 28,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bdb1c16c-688d-4c50-928e-df1f4ef9579e",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandfather: Type 2 diabetes mellitus</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRFTH",
+              "display": "Grandfather"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "E11"
+                }
+              ],
+              "text": "Type 2 diabetes mellitus"
+            },
+            "onsetAge": {
+              "value": 63,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a7b14c5a-f638-4863-9f9a-48a2a215f3d9",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Renal ultrasound</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "709640007"
+            }
+          ],
+          "text": "Renal ultrasound"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2023",
+        "note": [
+          {
+            "text": "Performed 12 months ago following first UTI episode; no structural abnormalities, hydronephrosis, or renal calculi identified."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c8b04b43-b5b1-4a80-a652-c3deac0a285c",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Urine culture</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "117010004"
+            }
+          ],
+          "text": "Urine culture"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Performed during current presentation; E. coli >100,000 CFU/mL isolated, sensitive to nitrofurantoin and trimethoprim-sulfamethoxazole, guiding antibiotic selection."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7c96b21a-d635-4b92-82ca-b31b816747c4",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 33-year-old woman who works as a graphic designer at a mid-sized marketing agency. She has a warm, energetic personality and is known among her friends and colleagues for her creativity and meticulous attention to detail. Outside of work, {patientName} enjoys yoga classes three times a week, weekend hiking with her partner, and cooking plant-forward meals at home. She lives in a shared apartment with her long-term partner and has a close-knit circle of friends she meets regularly for coffee and board game nights.\n\n{patientName} presents to the urgent care clinic today appearing visibly uncomfortable, shifting in her chair during the intake interview. She reports that over the past 2–3 days she has been experiencing a persistent burning sensation during urination (dysuria), an urgent and frequent need to urinate — sometimes every 20–30 minutes — and a feeling of incomplete bladder emptying. She notes that her urine appears cloudy and has an unusually strong, unpleasant odor. She rates her pelvic discomfort at 5/10 and describes a dull suprapubic ache that has been ongoing since symptom onset.\n\n{patientName} is otherwise healthy-appearing, alert, and fully oriented. Her vital signs today show a low-grade fever of 37.9 °C and a heart rate of 88 bpm. She denies any flank pain, chills, rigors, nausea, or vomiting — symptoms that might suggest upper urinary tract involvement such as pyelonephritis. She is not currently pregnant and uses barrier contraception. She reports drinking approximately 1.5 liters of water daily but acknowledges she sometimes forgets to urinate promptly when engrossed in a work deadline.\n\n{patientName} describes herself as generally health-conscious, though she admits to occasionally consuming sugary beverages and excess coffee during busy project periods. She does not smoke and drinks alcohol only socially, roughly once or twice a month. She takes no prescription medications regularly and denies any illicit substance use. This is the second UTI she has experienced in 12 months, which has prompted her to seek advice about prevention strategies in addition to treatment."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:77efcc38-cef4-4606-90bc-376a7422ec78",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has no significant chronic medical history. She had a single episode of urinary tract infection approximately 12 months prior, which was treated successfully with a 5-day course of nitrofurantoin. She has no history of kidney disease, urological structural abnormalities, diabetes, or immunosuppression. She has no prior hospitalizations or surgeries. A renal ultrasound performed at the time of her previous UTI episode revealed no structural abnormalities, hydronephrosis, or calculi.\n\n{patientName} is up to date on all routine vaccinations and had a normal cervical Pap smear 18 months ago. She reports no history of sexually transmitted infections. She is not currently on hormonal contraception and uses condoms consistently. Her menstrual cycles are regular with no dysmenorrhea. She has a known allergy to Penicillin causing a mild maculopapular rash. She is not pregnant; her last menstrual period was 10 days ago. Family history is notable for her mother having recurrent UTIs throughout adulthood, and her maternal grandfather having been diagnosed with type 2 diabetes mellitus in his early sixties."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,751 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "39"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Musilová",
+            "given": [
+              "Milada"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "B20.0",
+              "display": "HIV disease resulting in mycobacterial infection"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0785758f-3189-451c-b31b-aa6676d40010",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Albuterol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R03AC02"
+            }
+          ],
+          "text": "Albuterol 90 ug"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "90 ug inhaled 1-2 puffs every 6 hours as needed"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ae2aa310-e9c8-4ca4-8f51-4f4cedaf09a7",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Ferrous sulfate.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "B03AA07"
+            }
+          ],
+          "text": "Ferrous sulfate 325 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "325 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ae45f4ae-97b6-4d09-95b1-de96ee0784fa",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Ibuprofen.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "M01AE01"
+            }
+          ],
+          "text": "Ibuprofen 400 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "400 mg oral every 8 hours as needed"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a7a2e869-1c51-4126-bb2c-596effaabe8a",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Cholecalciferol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A11CC05"
+            }
+          ],
+          "text": "Cholecalciferol 1000 IU"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1000 IU oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:23c9caec-17e2-412c-a2c8-dd1cc799d6bc",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">CD4 cells [#/volume] in Blood</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8123-2"
+            }
+          ],
+          "text": "CD4 cells [#/volume] in Blood"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:57:44Z",
+        "valueString": "CD4 count 58 cells/uL",
+        "note": [
+          {
+            "text": "CD4 count 58 cells/uL"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d1d5a1f7-35be-4ac3-a640-72d41b031c19",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">HIV 1 RNA [#/volume] (viral load) in Plasma by Probe and target amplification method</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29539-4"
+            }
+          ],
+          "text": "HIV 1 RNA [#/volume] (viral load) in Plasma by Probe and target amplification method"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:57:44Z",
+        "valueString": "HIV-1 RNA 286,000 copies/mL",
+        "note": [
+          {
+            "text": "HIV-1 RNA 286,000 copies/mL"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fab8ec37-e9d2-48f2-9f71-754c4340363e",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mycobacterium tuberculosis complex DNA [Presence] in Sputum by NAA with probe detection</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "94500-6"
+            }
+          ],
+          "text": "Mycobacterium tuberculosis complex DNA [Presence] in Sputum by NAA with probe detection"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:57:44Z",
+        "valueString": "Detected",
+        "note": [
+          {
+            "text": "Detected"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5922cd17-8467-4a5f-856a-a598885a1142",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Acid fast stain [Presence] in Sputum by Microscopy</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "676-7"
+            }
+          ],
+          "text": "Acid fast stain [Presence] in Sputum by Microscopy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:57:44Z",
+        "valueString": "Positive, 2+ acid-fast bacilli",
+        "note": [
+          {
+            "text": "Positive, 2+ acid-fast bacilli"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6582b808-62cc-426d-bc2e-51314d98edf0",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Chest X-ray study</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "30746-2"
+            }
+          ],
+          "text": "Chest X-ray study"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-08T18:57:44Z",
+        "valueString": "Bilateral upper-lobe patchy infiltrates with cavitary change, concerning for active pulmonary tuberculosis",
+        "note": [
+          {
+            "text": "Bilateral upper-lobe patchy infiltrates with cavitary change, concerning for active pulmonary tuberculosis"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:87bf800b-8289-45ac-a886-216db445ef01",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Trimethoprim-sulfamethoxazole.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "high",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01EE01"
+            }
+          ],
+          "text": "Trimethoprim-sulfamethoxazole"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Diffuse urticarial rash"
+              }
+            ],
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a89da76e-6325-4824-ae1b-d61a5bdec038",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Shellfish.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "food"
+        ],
+        "criticality": "low",
+        "code": {
+          "text": "Shellfish"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Lip swelling and pruritus"
+              }
+            ],
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:25f87815-97fc-43df-9be1-4b983ad7edd3",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Type 2 diabetes mellitus</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "E11"
+                }
+              ],
+              "text": "Type 2 diabetes mellitus"
+            },
+            "onsetAge": {
+              "value": 52,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1c45aeb8-c86e-4193-905e-82b98300e5f8",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Essential hypertension</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I10"
+                }
+              ],
+              "text": "Essential hypertension"
+            },
+            "onsetAge": {
+              "value": 48,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e44cf34a-fe69-4378-9210-c15d3552db94",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandmother: Respiratory tuberculosis</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRMTH",
+              "display": "Grandmother"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "A15"
+                }
+              ],
+              "text": "Respiratory tuberculosis"
+            },
+            "onsetAge": {
+              "value": 63,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b19dbed8-84e3-464c-b59f-b4bbe4a8cf54",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cesarean section</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "11466000"
+            }
+          ],
+          "text": "Cesarean section"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2008",
+        "note": [
+          {
+            "text": "Low transverse cesarean delivery for prior pregnancy"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5880abb4-0518-43fa-8ff0-834b3789841f",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Packed red blood cell transfusion</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "430193006"
+            }
+          ],
+          "text": "Packed red blood cell transfusion"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2023",
+        "note": [
+          {
+            "text": "Transfusion during evaluation of symptomatic iron deficiency anemia"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:aa2a60bc-d937-4849-8d50-57e374a176aa",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 39-year-old woman who appears thinner than her stated age, with visible fatigue and mild temporal wasting. She has a persistent low-grade cough, intermittent fevers, drenching night sweats, and has noticed unintentional weight loss over the past several months. On examination she looks chronically ill but remains alert, cooperative, and determined to continue working despite worsening stamina. She sometimes becomes short of breath when climbing stairs and reports diffuse body aches and poor appetite.\n\nShe lives in a small apartment with her teenage daughter and works part-time as a hotel housekeeper, a physically demanding job she has struggled to maintain because of weakness and frequent illness. Her daily routine has become limited; she used to enjoy dancing, church choir, and weekend walks with friends, but lately spends most of her free time resting. She prepares simple meals, often skipping them when nausea or fatigue is worse. Financial stress and inconsistent transportation have contributed to delays in seeking care.\n\n{patientName} has a close relationship with her sister and daughter, though she has disclosed her HIV status only to a few trusted relatives. She denies injection drug use but reports a prior history of inconsistent condom use in past relationships. She does not smoke, drinks alcohol only occasionally, and has no current recreational drug use. She is worried about stigma, her ability to care for her child, and whether she will recover enough to return to a more active life.\n\nHer current symptoms are concerning for advanced HIV disease complicated by mycobacterial infection, most likely tuberculosis or disseminated Mycobacterium avium complex depending on immune status and exposure history. She describes progressive weakness, enlarged neck nodes she first noticed weeks ago, and episodes of chills followed by sweating at night. Despite being anxious, she is engaged in treatment planning and wants clear explanations about medications, infection control, and long-term prognosis."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:645d48bf-76f7-4e40-a44f-fc9196111d4c",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} was diagnosed with HIV approximately 4 years ago during an emergency department visit but had inconsistent follow-up and long gaps without antiretroviral therapy because of insurance instability, transportation barriers, and fear of disclosure. She reports recurrent oral thrush over the last year and two prior urgent care visits for prolonged cough and fever, neither of which led to sustained outpatient follow-up. Over the past 6 months she has had progressive weight loss, declining exercise tolerance, and several missed work shifts due to exhaustion.\n\nHer past medical history includes iron deficiency anemia and mild intermittent asthma since childhood. She has never been hospitalized for opportunistic infection before this illness, but she was treated for community-acquired pneumonia about 2 years ago. She has no known chronic kidney disease, diabetes, or hypertension. Gynecologic history includes two prior pregnancies and regular menses until recent months, when illness-related stress has made them somewhat irregular.\n\nShe takes an albuterol inhaler as needed and intermittently uses over-the-counter ibuprofen for musculoskeletal pain and headaches. She has not been reliably taking HIV therapy before presentation. She reports no prior surgeries except a cesarean delivery. Nutritional intake has been poor recently, and she estimates she has lost about 9 kg unintentionally over several months. She denies tobacco use, drinks 1-2 alcoholic drinks on some weekends, and is sexually active only intermittently.\n\nSocially, {patientName} faces moderate financial strain and occasional food insecurity. She was born outside the United States and has traveled back to visit family in a region with higher tuberculosis prevalence, which increases epidemiologic concern for mycobacterial exposure. She has no history of incarceration or homelessness, but she has had periods of crowded living conditions with extended family members. These factors, together with untreated HIV, increase her risk for active mycobacterial disease."
+          }
+        ]
+      }
+    }
+  ]
+}

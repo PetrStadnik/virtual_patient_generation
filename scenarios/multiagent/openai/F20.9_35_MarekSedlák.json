@@ -1,0 +1,545 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "35"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Sedlák",
+            "given": [
+              "Marek"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "F20.9",
+              "display": "Schizophrenia, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:aafc93ea-3669-448b-b138-8c246cbedfd4",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for lisinopril.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C09AA03"
+            }
+          ],
+          "text": "lisinopril 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2b23a248-0bfe-43e6-bf89-3a660d0d557c",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for cetirizine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R06AE07"
+            }
+          ],
+          "text": "cetirizine 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:50e5ca03-97b3-47d1-abd4-580d7867fff2",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Complete blood count</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2"
+            }
+          ],
+          "text": "Complete blood count"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T23:15:12Z",
+        "valueString": "Within normal limits; obtained as part of medical assessment for psychosis.",
+        "note": [
+          {
+            "text": "Within normal limits; obtained as part of medical assessment for psychosis."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4b33e534-79bf-4dfa-8f1e-f79996d479c8",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Comprehensive metabolic panel</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24323-8"
+            }
+          ],
+          "text": "Comprehensive metabolic panel"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T23:15:12Z",
+        "valueString": "No major electrolyte, renal, or hepatic abnormality identified.",
+        "note": [
+          {
+            "text": "No major electrolyte, renal, or hepatic abnormality identified."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:562f4799-9486-4a62-a808-7c314de98467",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">TSH</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3016-3"
+            }
+          ],
+          "text": "TSH"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T23:15:12Z",
+        "valueString": "Normal; no biochemical evidence of thyroid dysfunction contributing to symptoms.",
+        "note": [
+          {
+            "text": "Normal; no biochemical evidence of thyroid dysfunction contributing to symptoms."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1d9e2e2f-2068-4ad8-b1d0-720fa9080a2f",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Urine drugs of abuse screen</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "69739-1"
+            }
+          ],
+          "text": "Urine drugs of abuse screen"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T23:15:12Z",
+        "valueString": "Negative for common substances of abuse.",
+        "note": [
+          {
+            "text": "Negative for common substances of abuse."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f3e0fdeb-d29c-491c-a452-c93001253c4e",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Psychotic Symptom Rating Scales auditory hallucination subscale</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "89204-2"
+            }
+          ],
+          "text": "Psychotic Symptom Rating Scales auditory hallucination subscale"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T23:15:12Z",
+        "valueString": "Elevated severity of auditory hallucinations, with frequent distressing voices and impaired control over the experiences.",
+        "note": [
+          {
+            "text": "Elevated severity of auditory hallucinations, with frequent distressing voices and impaired control over the experiences."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:36c610a0-ca27-4d72-862f-5d1dac656d4d",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "unable-to-assess",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CE01"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Rash"
+              }
+            ],
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f95c711d-e2ce-41b9-b9da-145238b66ce3",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brother: Schizophrenia, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "BRO",
+              "display": "Brother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F20.9"
+                }
+              ],
+              "text": "Schizophrenia, unspecified"
+            },
+            "onsetAge": {
+              "value": 32,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a05d7e53-1eb7-40cf-bea5-557ecaf2e745",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Depressive disorder, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F32.9"
+                }
+              ],
+              "text": "Depressive disorder, unspecified"
+            },
+            "onsetAge": {
+              "value": 45,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:dd0ae3ca-8d7a-43b1-b774-0f820396544e",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 35-year-old man in the Czech Republic who appears guarded, intermittently suspicious, and internally preoccupied during interview. He reports frequent auditory hallucinations, usually multiple hostile voices commenting on him and sometimes giving frightening messages, and at times becomes so distressed by them that he covers his ears, hides in a small space, and panics. He also expresses fixed persecutory and passivity-type beliefs that other people may be trying to harm, monitor, or control him. His speech can become difficult to follow because of disorganized thinking, and his emotional expression is often blunted or incongruent with the topic, with occasional inappropriate smiling while describing frightening experiences.\n\nIn day-to-day life, {patientName} has become increasingly withdrawn and spends much of his time alone at home with limited social contact. Family members describe a clear decline from his previous level of functioning: he struggles to maintain regular work, has trouble concentrating, remembering tasks, and making decisions, and may sit still for long periods or resist simple requests when symptoms worsen, consistent with intermittent negativism. During severe episodes he has also had brief catatonic features, including periods of markedly reduced speech and posturing, alternating with short bursts of purposeless agitation and pacing consistent with catatonic excitement; relatives once described him standing rigidly and maintaining an imposed posture for an unusual length of time, with occasional waxy flexibility during examination. He can also become nearly mute for short periods during severe exacerbations, though this occurs in the context of catatonic symptoms rather than a separate dissociative disorder.\n\n{patientName} enjoys quiet solitary activities such as listening to music and basic computer use, but participation is inconsistent because he is distracted by voices and suspicious thoughts. He manages basic self-care inconsistently and sometimes needs reminders from family for meals, hygiene, and appointments. He lives with relatives who provide most of his practical support, and they remain worried about his safety, his poor insight during exacerbations, and his reluctance to engage consistently in care. He smokes cigarettes daily and previously used cannabis several times per week in his twenties, with family believing this often preceded worsening paranoia and social withdrawal; he currently drinks alcohol only occasionally and denies other substance use.\n\nOverall, he presents as a man with persistent positive, negative, cognitive, and occasional catatonic symptoms causing substantial impairment in work, relationships, and independent living. He does not report visual phenomena such as seeing a double of himself, and there is no evidence that his psychotic symptoms are intentionally produced or feigned."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8b4f5048-195b-4133-ac57-69b7c4384c1a",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName}'s psychiatric symptoms began in early adulthood, consistent with the usual age range for schizophrenia onset. Over time he has had recurring episodes of hearing voices, feeling that others are trying to hurt or control him, and becoming socially withdrawn. Family members report progressive functional decline, including difficulty holding a job, neglect of self-care during relapses, and spending long periods isolated in his room. He has had prior psychiatric hospitalization during symptom exacerbations, including one admission when he was minimally verbal, resistant to care, intermittently posturing, and noted to show mild waxy flexibility; family remains actively involved because his illness significantly affects daily functioning and insight.\n\nHe has a background history of hypertension and seasonal allergic rhinitis. He also has a neurodevelopmental vulnerability, with longstanding subtle social and cognitive difficulties since adolescence that predated the onset of frank psychosis, which may represent a premorbid risk profile, and a strong family predisposition given a brother with schizophrenia. His current non-psychiatric medications include lisinopril for blood pressure and cetirizine for allergic rhinitis. A recent short course of prednisone prescribed elsewhere for a severe allergy flare has been completed; clinicians noted that corticosteroids can precipitate or worsen psychotic symptoms in susceptible individuals, although they do not fully explain his chronic illness. He has no history of major surgery and no postoperative cognitive decline. He otherwise denies chronic medical illness.\n\nHe lives with family, is currently unemployed because of psychiatric disability, and has a history of daily tobacco use and past regular cannabis use, especially in his twenties, which relatives associate with worsening paranoia and behavioral disorganization. He denies stimulant or opioid use and drinks alcohol only occasionally. Medication adherence to psychiatric care has been inconsistent at times, and prior discussions with clinicians have emphasized ongoing psychiatric follow-up, relapse monitoring, and avoidance of psychoactive substances that may exacerbate psychosis. He denies persistent gastrointestinal symptoms such as diarrhea."
+          }
+        ]
+      }
+    }
+  ]
+}

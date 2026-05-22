@@ -1,0 +1,486 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "78"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Bureš",
+            "given": [
+              "Adam"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "G20",
+              "display": "Parkinson disease"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d99438c3-ad80-4587-8133-36c5abbab7bf",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for levodopa.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N04BA01"
+            }
+          ],
+          "text": "levodopa 100 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "100 mg oral three times daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:46face75-c984-4d91-9525-e127f65c214b",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for pramipexole.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N04BC05"
+            }
+          ],
+          "text": "pramipexole 0.125 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "0.125 mg oral three times daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:71f6dbf5-4f36-4a54-8ba1-45ef0786782b",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for rasagiline.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N04BD02"
+            }
+          ],
+          "text": "rasagiline 1 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fb409542-05f0-4fd7-85ad-629c532cfe16",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Neurologic evaluation note</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "57146-3"
+            }
+          ],
+          "text": "Neurologic evaluation note"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:05:54Z",
+        "valueString": "Neurologic examination documents resting tremor, rigidity/stiffness, bradykinesia, impaired balance/coordination, and short-stepped gait consistent with Parkinson disease.",
+        "note": [
+          {
+            "text": "Neurologic examination documents resting tremor, rigidity/stiffness, bradykinesia, impaired balance/coordination, and short-stepped gait consistent with Parkinson disease."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9537503a-c9ff-428d-96bc-3232fc808d8c",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Heart rate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:05:54Z",
+        "valueQuantity": {
+          "value": 72.0,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "note": [
+          {
+            "text": "72 /min"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ae45a598-2a4e-4f6e-a36b-9142a9cead33",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Blood pressure systolic and diastolic</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "55284-4"
+            }
+          ],
+          "text": "Blood pressure systolic and diastolic"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:05:54Z",
+        "valueQuantity": {
+          "value": 138.0,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        },
+        "note": [
+          {
+            "text": "138/82 mm[Hg]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f1a6c3c7-42c7-46dd-b5c4-c0e9ffd37d5a",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52416-5"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:05:54Z",
+        "valueQuantity": {
+          "value": 74.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "74 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8eeab2f9-0534-4bd4-9b56-c4150cea0071",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "unable-to-assess",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CE01"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Rash"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d460498b-1f4e-4987-9a2d-3577c1b89ade",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "not-done",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Deep brain stimulation</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "230861003"
+            }
+          ],
+          "text": "Deep brain stimulation"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "note": [
+          {
+            "text": "Discussed as a possible option for severe Parkinson disease in the future, but not performed."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bf06310e-30ba-4240-8410-a52da504d5b7",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 78-year-old man living in the Czech Republic who was brought to clinic by his wife because his movements have become noticeably slower over the past year, with a gradual onset of symptoms [MEDLINEPLUS:G20]. He sits quietly in the chair with a reduced spontaneous movement pattern and a visible tremor of one hand at rest, and when he rises to walk he takes short, slow steps and turns cautiously, showing a gait abnormality and poor balance/coordination [SNOMED:G20, PMID:40021571, MEDLINEPLUS:G20]. His wife says the problem first seemed worse on one side before becoming more noticeable on both sides, which matches the gradual progression often seen in Parkinson disease [MEDLINEPLUS:G20].\n\nAt home, {patientName} is a retired mechanical technician who enjoys tending a small garden, reading the newspaper, and meeting a few close friends for coffee, but lately simple tasks take him longer because of stiffness and slowness of movement [MEDLINEPLUS:G20]. He has also become more hesitant while walking outdoors because he feels unsteady and has trouble with balance and coordination [MEDLINEPLUS:G20]. He denies dramatic new complaints and instead describes a slow, creeping loss of ease with everyday movement, especially when starting to walk or turning [PMID:40021571, MEDLINEPLUS:G20].\n\nHis speech is softer than his family remembers, and over recent months he has had intermittent low mood and poor sleep, both of which his family has noticed along with the motor symptoms [MEDLINEPLUS:G20]. He has not had sudden episodes or unusual rare manifestations; rather, he shows the common pattern of tremor, stiffness, slowness, and worsening difficulty with walking and routine activities expected in Parkinson disease [SNOMED:G20, MEDLINEPLUS:G20].\n\nFamily life remains supportive: he lives with his wife, sees his adult daughter regularly, and values remaining independent in dressing, eating, and moving around the house, though these simple tasks now require more time and concentration as the disease affects walking and daily function [MEDLINEPLUS:G20]."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2ba49263-c2be-4330-b626-0d467898a091",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} reports that his symptoms came on gradually rather than abruptly, first with a subtle tremor and stiffness on one side, followed by increasing slowness of movement and worsening walking difficulty over time [MEDLINEPLUS:G20]. He now notices short steps and slower gait speed, especially when turning, consistent with the gait pattern described in parkinsonism [PMID:40021571, SNOMED:G20]. There is no history here suggesting a rare presentation; the clinical picture is the common syndrome of tremor, rigidity, bradykinesia, and balance difficulty [SNOMED:G20, MEDLINEPLUS:G20].\n\nHe has had no prior neurosurgical treatment for Parkinson disease. He and his family describe reduced activity because simple daily tasks have become harder, and he has had some sleep disturbance and depressive symptoms during the course of illness [MEDLINEPLUS:G20]. He is an older male, which fits the epidemiology that Parkinson disease usually begins around age 60 and is more common in men [MEDLINEPLUS:G20].\n\nThere is no definite family history of Parkinson disease reported; most cases do not seem to run in families, although some can be genetic [MEDLINEPLUS:G20]. He is a retired man with a generally steady home life and no recent hospitalization. He has not undergone deep brain stimulation, though it was discussed as a possible future option only if symptoms become severe despite medication [MEDLINEPLUS:G20]."
+          }
+        ]
+      }
+    }
+  ]
+}

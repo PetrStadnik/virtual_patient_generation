@@ -1,0 +1,608 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "72"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Dostál",
+            "given": [
+              "Vojtěch"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C18.9",
+              "display": "Malignant neoplasm: Colon, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:441439f7-b4f0-4831-93ca-adf4d7afd43c",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Amlodipine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C08CA01"
+            }
+          ],
+          "text": "Amlodipine 5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "5 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d2c8ab73-8815-4aba-a580-8ce90f12f610",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Metformin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A10BA02"
+            }
+          ],
+          "text": "Metformin 500 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "500 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:60190533-a9e1-47e9-ba06-7b9b7b636088",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Atorvastatin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C10AA05"
+            }
+          ],
+          "text": "Atorvastatin 20 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "20 mg oral once nightly"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a61c6d22-ef4b-465f-8145-36b0c13151d4",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Prednisone.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "H02AB07"
+            }
+          ],
+          "text": "Prednisone 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral intermittently during ulcerative colitis flares"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:158d7236-3270-4360-b083-095666af881b",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Hemoglobin [Mass/volume] in Blood</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "718-7"
+            }
+          ],
+          "text": "Hemoglobin [Mass/volume] in Blood"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-19T00:22:50Z",
+        "valueString": "10.1 g/dL, low, with microcytic pattern",
+        "note": [
+          {
+            "text": "10.1 g/dL, low, with microcytic pattern"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fb188e4a-2da3-40dc-bed2-213fb1194f43",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ferritin [Mass/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2276-4"
+            }
+          ],
+          "text": "Ferritin [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-19T00:22:50Z",
+        "valueString": "11 ng/mL, low, consistent with iron deficiency",
+        "note": [
+          {
+            "text": "11 ng/mL, low, consistent with iron deficiency"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:30e86004-f3fc-4840-b028-d4f0370b2834",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Carcinoembryonic Ag [Mass/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2039-6"
+            }
+          ],
+          "text": "Carcinoembryonic Ag [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-19T00:22:50Z",
+        "valueString": "12.8 ng/mL, elevated",
+        "note": [
+          {
+            "text": "12.8 ng/mL, elevated"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:13339614-ab08-4815-aba7-f6e34308d8ce",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Colonoscopy study</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "28023-0"
+            }
+          ],
+          "text": "Colonoscopy study"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-19T00:22:50Z",
+        "valueString": "Ulcerated bleeding mass in the sigmoid/descending colon region; biopsy obtained",
+        "note": [
+          {
+            "text": "Ulcerated bleeding mass in the sigmoid/descending colon region; biopsy obtained"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:62a4054b-0f11-4460-8221-077140e97e71",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">CT Abdomen and Pelvis with contrast</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "79065-9"
+            }
+          ],
+          "text": "CT Abdomen and Pelvis with contrast"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-19T00:22:50Z",
+        "valueString": "Focal colonic mass with regional lymphadenopathy, no frank perforation",
+        "note": [
+          {
+            "text": "Focal colonic mass with regional lymphadenopathy, no frank perforation"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c021cd94-b333-4d5d-bc6e-fe6e3d9dd192",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Malignant neoplasm of colon, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "C18.9"
+                }
+              ],
+              "text": "Malignant neoplasm of colon, unspecified"
+            },
+            "onsetAge": {
+              "value": 69,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1bc5eaae-a284-47b3-a7cf-66191eaf2998",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sister: Benign neoplasm of colon</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "SIS",
+              "display": "Sister"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "D12.6"
+                }
+              ],
+              "text": "Benign neoplasm of colon"
+            },
+            "onsetAge": {
+              "value": 58,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:69e4d1a0-5d2a-4492-accf-b503de036d01",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Colonoscopy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "73761001"
+            }
+          ],
+          "text": "Colonoscopy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2026",
+        "note": [
+          {
+            "text": "Performed as part of evaluation for persistent abdominal pain, rectal bleeding, weight loss, and altered bowel habits; revealed a colonic mass requiring tissue diagnosis."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:537d21ae-8496-4824-84a6-c8aeb7f9ce27",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Colon biopsy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "76164006"
+            }
+          ],
+          "text": "Colon biopsy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2026",
+        "note": [
+          {
+            "text": "Histopathological examination obtained to confirm the diagnosis, consistent with the need for biopsy and pathology in suspected malignant lesions [MEDDIALOG:C18.9:5, MEDDIALOG:C18.9:4]."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d8088658-fd15-4406-aee1-13c47a6bacbe",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 72-year-old man from the Czech Republic who comes in looking tired, pale, and somewhat worn down. Over recent months he has had ongoing abdominal problems, with a dull bruised-feeling pain that can become sharper when the area is pressed or after meals, and his bowel habits have become irregular, varying between diarrhea and near-constipation [MEDDIALOG:C18.9:7]. He also reports intermittent dark red blood mixed with the stool and has unintentionally lost about 7 kg over the past 6 months. He says he has become steadily weaker and cannot eat much at one sitting despite still having some appetite [MEDDIALOG:C18.9:2].\n\nAt home, {patientName} is a retired skilled worker who lives with his wife and keeps a fairly quiet routine. He used to enjoy gardening, walking to local shops, and meeting friends for coffee, but lately he has cut back because of fatigue, weight loss, and the unpredictability of his bowel movements [MEDDIALOG:C18.9:7, MEDDIALOG:C18.9:2]. His wife says he spends more time resting and looks thinner than he did a few months ago. He is worried because the symptoms have persisted rather than improved after prior evaluation and treatment attempts [MEDDIALOG:C18.9:7].\n\nIn conversation, {patientName} is practical and stoic, but clearly concerned that something more serious is going on. He describes the abdominal discomfort as not really cramping, more like a very bad bruised feeling, and says eating can aggravate it [MEDDIALOG:C18.9:7]. He admits he delayed mentioning the rectal bleeding at first because he thought it might be hemorrhoids. His family has noticed that he is less active than usual because of weakness, reduced meal size, and gradual weight loss [MEDDIALOG:C18.9:2].\n\nHe arrives with his wife, who helps fill in the story and emphasizes how long the gastrointestinal complaints have been present. Their main concerns are the persistent abdominal pain, altered bowel movements with swings between diarrhea and constipation, visible blood in the stool, ongoing fatigue, and his gradual decline in strength and weight [MEDDIALOG:C18.9:7, MEDDIALOG:C18.9:2]. He has a long-standing sedentary routine since retirement and describes a diet heavy in processed meats and low in fiber, with little formal exercise."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:49946ecc-4c27-46b7-916a-e0f6b454f6c9",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} reports about two years of abdominal issues, including abdominal pain and bowel movements that vary from diarrhea one day to near-constipation the next [MEDDIALOG:C18.9:7]. Over the last several months he has also noticed intermittent rectal bleeding, usually dark red blood mixed with stool, along with progressive fatigue and an unintentional 7 kg weight loss. Earlier in the course, he had a CT scan with contrast during an emergency evaluation and was told he had diverticulitis, but later colonoscopic evaluation did not support that explanation, and treatment directed at irritable bowel symptoms did not help [MEDDIALOG:C18.9:7]. More recently, he and his wife have noticed steady worsening weakness, and he can no longer eat much at one sitting although he still feels some appetite [MEDDIALOG:C18.9:2].\n\nHis background medical history includes hypertension, type 2 diabetes mellitus, hyperlipidemia, obesity, and a history of ulcerative colitis diagnosed many years ago, treated intermittently and followed as mild left-sided disease without recent hospitalization. He has not previously had chemotherapy or radiation. He is a retired man, former smoker, and drinks 2-3 alcoholic drinks most evenings. Since retirement he has become largely sedentary, exercises little, and describes a diet high in red and processed meat with low fiber intake. There is no documented prior cancer surgery in the chart. He has no known drug allergies recorded.\n\nFamily history is notable for his father having colon cancer in his late 60s and a sister with recurrent adenomatous colon polyps. These details increase concern for familial colorectal risk even though no formal hereditary cancer syndrome has been diagnosed in the family. His long-term medications include oral agents for hypertension, diabetes, hyperlipidemia, and intermittent corticosteroid exposure for ulcerative colitis flares."
+          }
+        ]
+      }
+    }
+  ]
+}

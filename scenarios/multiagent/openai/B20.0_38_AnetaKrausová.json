@@ -1,0 +1,583 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "38"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Krausová",
+            "given": [
+              "Aneta"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "B20.0",
+              "display": "HIV disease resulting in mycobacterial infection"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:dbfa59dd-9eae-4288-a48c-f2f93419375a",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for amlodipine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C08CA01"
+            }
+          ],
+          "text": "amlodipine 5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "5 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:427f0b09-e987-423b-857d-b62afa84c04a",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for levothyroxine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "H03AA01"
+            }
+          ],
+          "text": "levothyroxine 75 ug"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "75 ug oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:89c25644-d817-4e03-bf8f-4f63aae15bc7",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for cetirizine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R06AE07"
+            }
+          ],
+          "text": "cetirizine 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral once daily as needed"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9a7e0440-dd54-4c44-9d24-9e7504ff6ad3",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for prednisone.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "H02AB07"
+            }
+          ],
+          "text": "prednisone 20 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "20 mg oral intermittent short courses during allergy/wheezing flares"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cbc3cb1a-9ddf-4007-9c47-2963d50d040f",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">HIV 1 RNA [#/volume] (viral load) in Plasma by Probe and target amplification method</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "48510-2"
+            }
+          ],
+          "text": "HIV 1 RNA [#/volume] (viral load) in Plasma by Probe and target amplification method"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-19T00:37:08Z",
+        "valueString": "152,000 copies/mL",
+        "note": [
+          {
+            "text": "152,000 copies/mL"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b9dffce6-90ec-43d3-a2c0-6f226d002ebb",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">CD4 cells [#/volume] in Blood</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "26570-2"
+            }
+          ],
+          "text": "CD4 cells [#/volume] in Blood"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-19T00:37:08Z",
+        "valueString": "CD4 count 82 cells/uL",
+        "note": [
+          {
+            "text": "CD4 count 82 cells/uL"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:81cfd977-f3fe-4033-9d32-46a0bc669d5b",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Acid fast bacilli stain</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "23244-7"
+            }
+          ],
+          "text": "Acid fast bacilli stain"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-19T00:37:08Z",
+        "valueString": "Positive acid-fast bacilli seen in sputum smear",
+        "note": [
+          {
+            "text": "Positive acid-fast bacilli seen in sputum smear"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:675338dc-730e-4aa1-b471-8e2291ba881b",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Chest X-ray</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24565-4"
+            }
+          ],
+          "text": "Chest X-ray"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-19T00:37:08Z",
+        "valueString": "Abnormal chest radiograph with patchy upper-lobe infiltrates",
+        "note": [
+          {
+            "text": "Abnormal chest radiograph with patchy upper-lobe infiltrates"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a837cf66-f0ff-41ca-8d68-a890162ab402",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body temperature</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-19T00:37:08Z",
+        "valueQuantity": {
+          "value": 38.1,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        },
+        "note": [
+          {
+            "text": "38.1 Cel"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0c9a2413-0c46-452c-ac42-44efcfecd242",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cousin: Human immunodeficiency virus [HIV] disease</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "COUSN",
+              "display": "Cousin"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "B20"
+                }
+              ],
+              "text": "Human immunodeficiency virus [HIV] disease"
+            },
+            "onsetAge": {
+              "value": 29,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:728f9503-06c8-42b9-a254-0819d0716745",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Tuberculosis of lung</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "A15.0"
+                }
+              ],
+              "text": "Tuberculosis of lung"
+            },
+            "onsetAge": {
+              "value": 54,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d7f14a84-8bbd-48c8-acd7-a36e6ec843f5",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "in-progress",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Lymph node biopsy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "396484008"
+            }
+          ],
+          "text": "Lymph node biopsy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "note": [
+          {
+            "text": "Recommended because of a tender left chest/breast-adjacent lump requiring tissue diagnosis [MEDDIALOG:B20.0:6]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2106f5ed-11ca-415c-b41a-e20e8a5cd0ad",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 38-year-old woman in the Czech Republic who looks tired and drawn, with a chronic cough, intermittent low-grade fever, and occasional wheezing that have gradually worn her down; when she speaks, she pauses at times because of coughing, and she reports bouts of dizziness during more symptomatic days [MEDDIALOG:B20.0:0, MEDDIALOG:B20.0:3]. Over the past several weeks she has also noticed poor appetite with stomach pain and early fullness that make it hard for her to finish meals, and she has lost some of her usual energy [MEDDIALOG:B20.0:6].\n\nShe recently became worried about a tender lump on the left chest near the breast/axillary area that hurts when touched, along with a burning discomfort in the upper left chest that feels deeper than the skin [MEDDIALOG:B20.0:6, MEDDIALOG:B20.0:2]. She says the chest discomfort is unsettling but the cough, wheezing, and inability to eat normally bother her even more. She recalls a milder episode about a year earlier with several weeks of cough, fever, and weight loss that improved after urgent care visits and antibiotics prescribed in the community, but she was never fully evaluated and never tested for HIV at that time. Her symptoms have made her less active socially, and she has cut back on weekend walks and visits with friends because she tires easily.\n\n{patientName} works in an office administrative role and lives with her young child. She tries to keep a regular routine and remains attentive to family responsibilities, but the persistent cough, nasal congestion, intermittent wheeze, and reduced appetite have made daily tasks feel harder than usual [MEDDIALOG:B20.0:0, MEDDIALOG:B20.0:3]. She denies any dramatic recent injury and cannot identify a simple explanation for the chest findings.\n\nIn conversation, {patientName} is cooperative and concerned, especially because the symptoms have been ongoing rather than improving. She wants a clear diagnosis and is anxious about whether the chest lump and respiratory symptoms could be connected [MEDDIALOG:B20.0:6, MEDDIALOG:B20.0:2]. She also worries because a cousin has HIV infection and her father was treated for pulmonary tuberculosis years ago, making the current illness feel personally alarming."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8ee359d8-5135-4a2e-a472-643243f6a265",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has a background history of hypertension treated with amlodipine and hypothyroidism treated with levothyroxine. She also uses cetirizine as needed for seasonal nasal allergy symptoms and has intermittently used short courses of oral prednisone prescribed elsewhere for severe allergy or wheezing flares over the last 2 years, most recently several months ago; this immunosuppressive medication could have contributed to increased susceptibility to infection. In the months before presentation, she has experienced recurrent coughing and sneezing with heavy nasal congestion and nasal discharge, symptoms she initially associated with sensitive airways and allergy flares [MEDDIALOG:B20.0:3].\n\nShe reports one somewhat similar prior episode roughly a year ago, marked by prolonged cough, fever, and fatigue, but it resolved partially without a full workup and no HIV testing was performed. She has not had a recent traumatic injury to explain the chest discomfort and reports that the left chest burning sensation began without a clear trigger [MEDDIALOG:B20.0:2]. She describes several weeks of a tender lump under the left breast/chest region as well as stomach pain that limits eating because she feels full quickly and develops marked pain after meals [MEDDIALOG:B20.0:6].\n\n{patientName} is a nonsmoker by report and drinks alcohol only occasionally. There is no prior major surgery documented. Family history is notable for a cousin with HIV infection and a father previously treated for pulmonary tuberculosis, which is relevant given the current diagnosis and infectious risk context. Because of the current persistent respiratory symptoms, wheezing, constitutional decline, and chest lesion, she is presenting now for a more complete infectious and imaging evaluation [MEDDIALOG:B20.0:0, MEDDIALOG:B20.0:6]."
+          }
+        ]
+      }
+    }
+  ]
+}

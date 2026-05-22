@@ -1,0 +1,781 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "77"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Sedlák",
+            "given": [
+              "Lumír"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "G20",
+              "display": "Parkinson disease"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:32c9d80a-f5e5-46c8-8622-5cfd1f0ec5b0",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Levodopa.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N04BA01"
+            }
+          ],
+          "text": "Levodopa 250 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "250 mg oral four times daily (every 4 hours while awake)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5a7d8ee0-953b-49d6-acf1-cfe5e5df370f",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Pramipexole.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N04BC05"
+            }
+          ],
+          "text": "Pramipexole 0.5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "0.5 mg oral three times daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b977ce2a-a166-4a08-a9b6-779db4a4c1d7",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Rasagiline.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N04BD02"
+            }
+          ],
+          "text": "Rasagiline 1 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 mg oral once daily (morning)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:272ba771-818a-4ead-9369-756adfc98577",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Amantadine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N04BB01"
+            }
+          ],
+          "text": "Amantadine 100 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "100 mg oral twice daily (to manage dyskinesias)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2dae2ae4-90ef-4963-90f6-c0814f644f55",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Rivastigmine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N06DA03"
+            }
+          ],
+          "text": "Rivastigmine 4.6 mg/24h"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "4.6 mg/24h transdermal once daily (patch applied to upper arm)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:eae75f0e-29ab-49c2-ab82-d9780e801ad6",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Unified Parkinson's Disease Rating Scale (UPDRS) total score</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "77717-7"
+            }
+          ],
+          "text": "Unified Parkinson's Disease Rating Scale (UPDRS) total score"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:38:21Z",
+        "valueQuantity": {
+          "value": 52.0,
+          "unit": "{score}",
+          "system": "http://unitsofmeasure.org",
+          "code": "{score}"
+        },
+        "note": [
+          {
+            "text": "52 points (moderate-to-advanced disease; Part III motor score: 34)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:493ec70a-c196-4b9a-938e-fdee52706dbf",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Montreal Cognitive Assessment (MoCA) score</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72172-0"
+            }
+          ],
+          "text": "Montreal Cognitive Assessment (MoCA) score"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:38:21Z",
+        "valueQuantity": {
+          "value": 21.0,
+          "unit": "{score}",
+          "system": "http://unitsofmeasure.org",
+          "code": "{score}"
+        },
+        "note": [
+          {
+            "text": "21/30 — consistent with mild cognitive impairment"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0b440079-d02a-42c1-95f2-b2e0096d1bd7",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brain MRI</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11541-0"
+            }
+          ],
+          "text": "Brain MRI"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:38:21Z",
+        "valueString": "Mild generalized cerebral atrophy appropriate for age; no focal ischemic lesions, no hydrocephalus; substantia nigra shows subtle signal change on neuromelanin-sensitive sequences",
+        "note": [
+          {
+            "text": "Mild generalized cerebral atrophy appropriate for age; no focal ischemic lesions, no hydrocephalus; substantia nigra shows subtle signal change on neuromelanin-sensitive sequences"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b890cf56-4786-436c-90de-ead3de3ae465",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Heart rate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:38:21Z",
+        "valueQuantity": {
+          "value": 62.0,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "note": [
+          {
+            "text": "62 bpm"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e522c7c7-41dc-4204-8a24-ab1396abf910",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Blood pressure panel</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "96607-7"
+            }
+          ],
+          "text": "Blood pressure panel"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T21:38:21Z",
+        "valueQuantity": {
+          "value": 138.0,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        },
+        "note": [
+          {
+            "text": "Supine: 138/82 mmHg; Standing (2 min): 112/68 mmHg — orthostatic drop confirmed"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7ba8418b-7810-408e-bb3b-b752f8f0f352",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CE01"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Urticaria"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7169a11c-4bc7-4d4a-a271-6fe39f35dc33",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Parkinson's disease</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "G20"
+                }
+              ],
+              "text": "Parkinson's disease"
+            },
+            "onsetAge": {
+              "value": 72,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:10711def-96af-453e-bc28-86163088f342",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Dementia in Alzheimer's disease</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F00"
+                }
+              ],
+              "text": "Dementia in Alzheimer's disease"
+            },
+            "onsetAge": {
+              "value": 80,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bd72dd84-68c2-41f1-ac8c-ee1c21bfe611",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brother: Atherosclerotic heart disease</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "BRO",
+              "display": "Brother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I25.1"
+                }
+              ],
+              "text": "Atherosclerotic heart disease"
+            },
+            "onsetAge": {
+              "value": 69,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:61f99b2f-db90-427a-9531-025493048676",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "not-done",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Deep brain stimulation</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "230861003"
+            }
+          ],
+          "text": "Deep brain stimulation"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "note": [
+          {
+            "text": "Discussed for subthalamic nucleus stimulation; deferred two years ago due to borderline cognitive function. Remains under consideration pending cognitive re-evaluation."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:de0c4d55-82de-46f3-aeea-0f8f33fc8d04",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Physical therapy for Parkinson disease</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "416790000"
+            }
+          ],
+          "text": "Physical therapy for Parkinson disease"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2021",
+        "note": [
+          {
+            "text": "Enrolled in a structured Parkinson's-specific physiotherapy programme three years ago. Ongoing outpatient sessions focusing on gait training, balance, and fall prevention."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7a3eb7b1-a9e5-4881-a4ae-85baf4b316d3",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "in-progress",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Speech therapy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "5154007"
+            }
+          ],
+          "text": "Speech therapy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2022",
+        "note": [
+          {
+            "text": "Ongoing speech-language therapy (Lee Silverman Voice Treatment – LSVT LOUD) for hypophonia and dysarthria. Initiated two years ago."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7f9a9b6d-60b5-4b23-91f7-18c7e9e930ba",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 77-year-old retired civil engineer who spent 35 years designing bridges and urban infrastructure before stepping down a decade ago. He is a widower who lives alone in a modest single-story home on the outskirts of a mid-sized Midwestern city, having adapted his living space with grab bars, non-slip flooring, and a walk-in shower following several near-falls. His two adult children live in nearby cities and check in regularly, and a home health aide visits three times per week to assist with meal preparation and personal care.\n\nOnce an avid woodworker and amateur chess player, {patientName} now struggles to hold his carving tools steady and finds that the slow, deliberate thinking required for chess has become increasingly frustrating. He occasionally listens to jazz records and enjoys the company of his neighbor, who brings him homemade meals twice a week. He is a non-smoker and drinks only a small glass of red wine on special occasions.\n\nOn examination, {patientName} presents with a classic Parkinsonian resting tremor in his right hand (\"pill-rolling\"), bilateral cogwheel rigidity most prominent in the upper extremities, and marked bradykinesia. His posture is stooped with a slightly flexed trunk, and his gait is shuffling with reduced arm swing and occasional festination. His facial expression is hypomimic, giving him a characteristic \"masked face,\" and his speech is notably hypophonic and monotone.\n\n{patientName} reports significant difficulty with fine motor tasks such as buttoning his shirt and writing, both of which have deteriorated considerably over the past two years. He experiences moderate episodes of \"off\" periods in the late morning, typically 30–40 minutes before his next levodopa dose, during which tremor and rigidity worsen considerably. He also reports orthostatic lightheadedness when rising from a chair, constipation, and intermittent urinary urgency — all autonomic features consistent with his condition.\n\nHe sleeps poorly, often awakening during the night with vivid dreams and occasional acting-out behaviors consistent with REM sleep behavior disorder. His mood is generally stoic, though he admits to episodes of low mood and mild anxiety about his increasing dependence on others. Cognitively, he remains oriented and communicates clearly, though he notices mild slowing in his word retrieval and short-term memory."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:35d82020-e6a3-4d93-a45d-107cc08f76cf",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} was first evaluated by a neurologist approximately 9 years ago, at age 68, after his wife and family physician noticed a subtle right-hand tremor at rest and a slight slowing of his gait. He was diagnosed with Parkinson's disease at that time and was initiated on a low-dose dopamine agonist, later transitioning to a levodopa/carbidopa regimen as his symptoms progressed.\n\nHe has a history of well-controlled hypertension (on treatment for 15 years), type 2 diabetes mellitus managed with diet and oral agents, and dyslipidemia. He underwent a right total knee replacement at age 71 due to osteoarthritis. He has no history of stroke, head trauma, or toxic exposures. He has never smoked and does not use recreational drugs or excessive alcohol.\n\nOver the past two to three years, {patientName}'s disease has entered a moderately advanced stage, with increased motor fluctuations (\"wearing off\" phenomenon) and mild dyskinesias emerging in the early afternoon. He was enrolled in a Parkinson's disease physical therapy program three years ago and continues outpatient speech therapy for hypophonia. Deep brain stimulation was discussed with his neurology team two years ago; the procedure was deferred at the time due to borderline cognitive scores, though it remains under ongoing consideration.\n\nHe lives with mild cognitive impairment and has been started on a cholinesterase inhibitor. He has no prior history of falls with injury, though he has had several close calls. His neurologist reviews him every four months in a specialist clinic."
+          }
+        ]
+      }
+    }
+  ]
+}

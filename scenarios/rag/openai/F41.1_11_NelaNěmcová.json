@@ -1,0 +1,462 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "11"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Němcová",
+            "given": [
+              "Nela"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "F41.1",
+              "display": "Generalized anxiety disorder"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:65abc142-c7a1-4466-8ac8-1e15ad95b9e7",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for sertraline.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N06AB06"
+            }
+          ],
+          "text": "sertraline 25 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "25 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9ab62138-bceb-4431-8f89-35fb8e0b0f2a",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Complete blood count (CBC)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2"
+            }
+          ],
+          "text": "Complete blood count (CBC)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:11:28Z",
+        "valueString": "Within normal limits; ordered as baseline evaluation to rule out medical contributors to anxiety symptoms.",
+        "note": [
+          {
+            "text": "Within normal limits; ordered as baseline evaluation to rule out medical contributors to anxiety symptoms."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:154502fe-eb0b-4a29-b356-00b357fb974a",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Thyrotropin [Units/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3016-3"
+            }
+          ],
+          "text": "Thyrotropin [Units/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:11:28Z",
+        "valueString": "Normal; obtained because thyroid disease can mimic anxiety symptoms.",
+        "note": [
+          {
+            "text": "Normal; obtained because thyroid disease can mimic anxiety symptoms."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6348431e-2660-46cf-be13-c220bcf602d5",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Electrocardiogram study</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8606-6"
+            }
+          ],
+          "text": "Electrocardiogram study"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:11:28Z",
+        "valueString": "Normal sinus rhythm; performed because of reported palpitations during anxiety episodes.",
+        "note": [
+          {
+            "text": "Normal sinus rhythm; performed because of reported palpitations during anxiety episodes."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a23ff865-5c89-4d8e-9147-b84d2b04f93d",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Blood pressure</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58295-7"
+            }
+          ],
+          "text": "Blood pressure"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:11:28Z",
+        "valueQuantity": {
+          "value": 118.0,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        },
+        "note": [
+          {
+            "text": "118/74 mmHg in clinic; blood pressure can fluctuate with anxiety."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5dfa7314-6ab8-471d-8a00-34b5f8aebdf7",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "unable-to-assess",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CE01"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Rash"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:49461b6e-384e-4f30-b284-0c1aa003bf5b",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Generalized anxiety disorder</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F41.1"
+                }
+              ],
+              "text": "Generalized anxiety disorder"
+            },
+            "onsetAge": {
+              "value": 28,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f01661fb-3ea7-43c4-8e18-d4b9e3ad0c5b",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Electrocardiography</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "75444003"
+            }
+          ],
+          "text": "Electrocardiography"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2026",
+        "note": [
+          {
+            "text": "Baseline ECG obtained during evaluation of palpitations associated with anxiety symptoms."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:95d7035e-ff12-4b1b-bca4-7493b643cf56",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is an 11-year-old girl from the Czech Republic who comes to clinic with months of excessive worrying about everyday situations, especially school performance, whether something bad will happen to her parents, and small routine changes at home or in class; this pattern of excessive worry is characteristic of generalized anxiety disorder [PMID:39295670]. She often looks tense and tired during visits and says she cannot relax. Her mother reports that when stress builds up, {patientName} becomes irritable and has trouble falling asleep, and some mornings she seems sleepy in the daytime after a restless night; irritability, insomnia with difficulty falling asleep, and daytime sleepiness are described as accompanying features in anxiety presentations [PMID:39295670].\n\nShe usually presents more with physical complaints than with the word “anxiety.” On difficult school days she complains that her heart is racing, feels shaky and sweaty, and says she feels “sick” before tests or when several homework tasks pile up; anxiety can present with palpitations, sweating, tremors, and other physical complaints rather than obvious emotional language [PMID:3324127, MEDDIALOG:F41.1:2]. At a school nurse visit and again in clinic, her pulse has been fast when she is upset, which fits the autonomic symptoms seen with anxiety [MEDDIALOG:F41.1:2].\n\nAt home, {patientName} is a quiet but bright sixth-grade student who enjoys drawing, reading fantasy books, and playing simple games with one close friend after school. She lives with both parents and a younger brother, and her family is supportive, but everyone has noticed that she asks for reassurance repeatedly and has become more avoidant of unfamiliar situations. She is not using alcohol or other substances, and there is no history suggesting substance misuse; substance abuse can be a presenting problem in some patients with GAD, but none is reported for her [PMID:3324127].\n\nHer daily life has narrowed because worry occupies so much mental space. She still attends school, but homework takes much longer because she repeatedly checks it and seeks reassurance. She has not had major behavior problems, psychosis, or self-harm. The family is seeking help through primary care, which is a common setting in which people with generalized anxiety disorder are first recognized and managed [PMID:3324127]."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a430463c-bfbf-4bdd-8fad-902c3d399cb2",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has had gradual worsening worry over approximately 8 months, mainly related to school, family safety, and routine daily events; prolonged stress and persistent worry are consistent with generalized anxiety presentations [PMID:39295670, MEDDIALOG:F41.1:5]. Over the same period she has developed sleep difficulty, especially trouble falling asleep, along with daytime tiredness and irritability [PMID:39295670]. When very anxious, she reports episodes of palpitations, sweating, trembling, and feeling unwell; these physical symptoms are described in anxiety disorders [MEDDIALOG:F41.1:2].\n\nShe has no prior psychiatric hospitalization and no substance use. She has not undergone major surgery and has no known chronic medical disease. Because anxiety can mimic medical illness and may present with physical complaints, her clinician plans basic screening tests including CBC, thyroid profile, and ECG to exclude other causes [PMID:3324127, MEDDIALOG:F41.1:2].\n\nLifestyle history is notable for reduced participation in hobbies during stressful school periods and frequent reassurance-seeking at home. The family has begun supportive routines, regular exercise, and relaxation practice, as exercise and nonpharmacologic measures are commonly advised alongside counseling for anxiety [MEDDIALOG:F41.1:2, MEDDIALOG:F41.1:5]."
+          }
+        ]
+      }
+    }
+  ]
+}

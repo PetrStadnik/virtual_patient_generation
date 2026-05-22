@@ -1,0 +1,4 @@
+# Raw fetched data and built index can be regenerated; keep outputs/ for review.
+data/
+index/
+__pycache__/

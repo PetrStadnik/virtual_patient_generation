@@ -1,0 +1,859 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "74"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Kučerová",
+            "given": [
+              "Vanda"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C18.9",
+              "display": "Malignant neoplasm: Colon, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6961b68f-4fc7-4d33-aba9-81b134f0c23b",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Capecitabine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "L01BC06"
+            }
+          ],
+          "text": "Capecitabine 1250 mg/m²"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1250 mg/m² oral twice daily on days 1–14 of each 21-day cycle"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6329848a-406a-4d5a-87d2-5863f1c31d2c",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Oxaliplatin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "L01XA03"
+            }
+          ],
+          "text": "Oxaliplatin 130 mg/m²"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "130 mg/m² intravenous once on day 1 of each 21-day cycle (CAPOX regimen)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ddf947fb-b576-4cc1-8efa-bf71b5ed0ab5",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Bevacizumab.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "L01XC07"
+            }
+          ],
+          "text": "Bevacizumab 7.5 mg/kg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "7.5 mg/kg intravenous once every 3 weeks"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6993c92b-c569-4447-965c-f2b37b291534",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Ondansetron.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A04AA01"
+            }
+          ],
+          "text": "Ondansetron 8 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "8 mg oral every 8 hours on chemotherapy days and as needed for nausea"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f7e3d5a7-77a9-42c9-9c9b-83a8dd04113d",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Dexamethasone.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A01AC02"
+            }
+          ],
+          "text": "Dexamethasone 8 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "8 mg intravenous once prior to each chemotherapy infusion as antiemetic premedication"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c09b489d-ce62-4575-ac02-8d2c18ce29ae",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Pantoprazole.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A02BC02"
+            }
+          ],
+          "text": "Pantoprazole 40 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "40 mg oral once daily for gastrointestinal mucosal protection"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e908b749-4adc-446b-9e92-c9e0bed0a8bf",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Carcinoembryonic antigen [Mass/volume] in Serum or Plasma</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2039-6"
+            }
+          ],
+          "text": "Carcinoembryonic antigen [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T22:04:47Z",
+        "valueQuantity": {
+          "value": 48.3,
+          "unit": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL"
+        },
+        "note": [
+          {
+            "text": "48.3 ng/mL (markedly elevated; normal <5.0 ng/mL)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:250687f0-2bb4-484f-97cf-1d8109c80806",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Hemoglobin [Mass/volume] in Blood</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "718-7"
+            }
+          ],
+          "text": "Hemoglobin [Mass/volume] in Blood"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T22:04:47Z",
+        "valueQuantity": {
+          "value": 9.4,
+          "unit": "g/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "g/dL"
+        },
+        "note": [
+          {
+            "text": "9.4 g/dL (low; consistent with iron-deficiency anaemia secondary to chronic occult blood loss)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6df74b50-2ce7-4e3d-b442-b35e84fa9d25",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">KRAS gene mutation analysis</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "53620-1"
+            }
+          ],
+          "text": "KRAS gene mutation analysis"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T22:04:47Z",
+        "valueString": "KRAS mutation detected – Exon 2, codon 12, G12D variant (wild-type EGFR therapy not indicated)",
+        "note": [
+          {
+            "text": "KRAS mutation detected – Exon 2, codon 12, G12D variant (wild-type EGFR therapy not indicated)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:92de6e10-71ba-4309-a6c9-00a61fe05a6d",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Colonoscopy</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "67172-7"
+            }
+          ],
+          "text": "Colonoscopy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T22:04:47Z",
+        "valueString": "Large ulcerated, partially obstructing mass identified at the ascending colon. Biopsy: moderately differentiated adenocarcinoma.",
+        "note": [
+          {
+            "text": "Large ulcerated, partially obstructing mass identified at the ascending colon. Biopsy: moderately differentiated adenocarcinoma."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3d7bd03f-bef1-4fb3-b47c-316c27cb7b45",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52416-5"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-16T22:04:47Z",
+        "valueQuantity": {
+          "value": 54.2,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "54.2 kg (unintentional weight loss of ~7 kg over 4 months)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2f53900d-1d7d-495b-9214-abae4bd95c81",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "high",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CE01"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Anaphylaxis (throat swelling, urticaria, hypotension)"
+              }
+            ],
+            "severity": "severe"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:df33f1ec-0884-4941-8e50-595ee937e65d",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Aspirin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "intolerance",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A01AD05"
+            }
+          ],
+          "text": "Aspirin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Gastric irritation and epigastric pain"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2f1638a1-6472-4321-8034-dbfad47588f3",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Malignant neoplasm of colon, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "C18.9"
+                }
+              ],
+              "text": "Malignant neoplasm of colon, unspecified"
+            },
+            "onsetAge": {
+              "value": 70,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a63307ea-5088-493e-b90e-b31f66ee0cfb",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brother: Malignant neoplasm of ascending colon</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "BRO",
+              "display": "Brother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "C18.2"
+                }
+              ],
+              "text": "Malignant neoplasm of ascending colon"
+            },
+            "onsetAge": {
+              "value": 66,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a6f29325-49fe-480c-8278-05bcd69640d7",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Atherosclerotic heart disease of native coronary artery</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I25.1"
+                }
+              ],
+              "text": "Atherosclerotic heart disease of native coronary artery"
+            },
+            "onsetAge": {
+              "value": 72,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e249ab3c-755d-4c30-8a7b-58cebb53fa5c",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Colonoscopy with biopsy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "1209098000"
+            }
+          ],
+          "text": "Colonoscopy with biopsy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Colonoscopy performed for evaluation of rectal bleeding and altered bowel habit. Revealed a large ulcerated mass in the ascending colon; multiple biopsies taken confirming moderately differentiated adenocarcinoma."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0fbba37b-deef-4d04-842d-43d877c19c60",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Computed tomography of chest</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "169069000"
+            }
+          ],
+          "text": "Computed tomography of chest"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Staging CT of the chest performed alongside abdomen and pelvis CT. No pulmonary metastases identified. Mediastinal lymph nodes within normal limits."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:93789aed-053c-40cf-ae47-e1605714a8ba",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Partial colectomy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "43075005"
+            }
+          ],
+          "text": "Partial colectomy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Right hemicolectomy planned/recently completed for resection of ascending colon adenocarcinoma. Surgical margins to be assessed by pathology; lymph node dissection performed."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:577df018-8dd9-4df0-9ec0-2c9518f3a67e",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 74-year-old retired schoolteacher who lives alone in a modest suburban home, following the passing of her husband three years ago. She has two adult daughters who live nearby and are closely involved in her care. A warm and resilient woman, {patientName} has always been active in her community — she enjoys tending to her garden, attending weekly watercolor painting classes, and volunteering at the local library twice a week. She is a non-smoker and drinks only an occasional glass of wine on social occasions.\n\nOver the past six months, {patientName} has noticed a gradual but worrying change in her bowel habits — alternating between constipation and loose stools — accompanied by crampy lower abdominal discomfort that she initially attributed to \"getting older.\" More recently, she has experienced episodes of rectal bleeding (dark red streaks in stool), significant fatigue, and an unintentional weight loss of approximately 7 kg over four months. These symptoms finally prompted her daughters to insist she see her primary care physician.\n\nOn presentation, {patientName} appears pale and mildly cachectic, with a slightly distended abdomen and vague tenderness in the right lower quadrant. She is soft-spoken but anxious about her diagnosis, asking thoughtful questions at each appointment. She has mild bilateral ankle edema and moves slowly due to mild arthritic discomfort in her knees.\n\n{patientName} was referred promptly for colonoscopy, which revealed a large, partially obstructing, ulcerated mass in the ascending colon. Biopsy confirmed moderately differentiated adenocarcinoma. Subsequent staging CT of the chest, abdomen, and pelvis showed no distant metastases (Stage II–III). She is currently being evaluated by a multidisciplinary oncology team for surgical and adjuvant chemotherapy planning.\n\nDespite her diagnosis, {patientName} remains determined and positive. She continues her painting classes when energy allows and talks daily with her daughters by phone. Her primary concerns are maintaining her independence and quality of life throughout treatment."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:348986c6-d4b2-4266-9fe8-d5d454139524",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has a past medical history significant for type 2 hypertension (well-controlled on lifestyle measures alone), osteoarthritis of both knees, and hypercholesterolaemia managed with dietary modifications. She was diagnosed with a small tubular adenoma on colonoscopy five years ago but did not attend follow-up. There is no prior history of inflammatory bowel disease or prior malignancy. She underwent a total abdominal hysterectomy for uterine fibroids at age 58 with no postoperative complications. {patientName} has no history of smoking and reports moderate physical activity prior to her current illness. She is up to date with her pneumococcal and influenza vaccinations. She takes no regular prescription medications aside from occasional ibuprofen for arthritic pain. Her current ECOG performance status is 1–2."
+          }
+        ]
+      }
+    }
+  ]
+}

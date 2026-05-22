@@ -1,0 +1,713 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "4"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Kratochvíl",
+            "given": [
+              "Radek"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "J20.9",
+              "display": "Acute bronchitis, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:536327bc-0783-4af2-a420-9c76ca5820fc",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Acetaminophen.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N02BE01"
+            }
+          ],
+          "text": "Acetaminophen 160 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "160 mg oral every 6 hours as needed for fever or discomfort"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0f48b36f-f586-4bd1-9768-f0187f63219a",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Albuterol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R03AC02"
+            }
+          ],
+          "text": "Albuterol 90 mcg/actuation, 2 puffs"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "90 mcg/actuation, 2 puffs inhaled every 4-6 hours as needed for wheeze or cough-associated shortness of breath"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f1b80caa-4b8d-4170-bb4e-6d40bdaeacd2",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Hydrocortisone.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "D07AA02"
+            }
+          ],
+          "text": "Hydrocortisone 1% cream"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1% cream topical apply twice daily as needed for eczema flare"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e00f17bb-5953-4f37-9b40-9690b025af33",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T21:35:01Z",
+        "valueQuantity": {
+          "value": 16.2,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "Weight 16.2 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5874f1e5-1d88-4c5f-ae53-06625e42e43e",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body temperature</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T21:35:01Z",
+        "valueQuantity": {
+          "value": 38.1,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        },
+        "note": [
+          {
+            "text": "Mild fever, 38.1 °C"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cc08413a-c4fb-4ce7-8445-300c236fdfb7",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Respiratory rate</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T21:35:01Z",
+        "valueQuantity": {
+          "value": 26.0,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "note": [
+          {
+            "text": "Respiratory rate 26/min, mildly elevated for age during examination"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b22f0fe3-30b0-4157-8e6d-d1783de32a4e",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Oxygen saturation in Arterial blood by Pulse oximetry</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "2708-6"
+            }
+          ],
+          "text": "Oxygen saturation in Arterial blood by Pulse oximetry"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T21:35:01Z",
+        "valueQuantity": {
+          "value": 97.0,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "note": [
+          {
+            "text": "SpO2 97% on room air"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:66db9604-3562-4094-996d-131bee0258f1",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">SARS-CoV-2 and Influenza A+B RNA panel</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "95480-5"
+            }
+          ],
+          "text": "SARS-CoV-2 and Influenza A+B RNA panel"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T21:35:01Z",
+        "valueString": "Negative for SARS-CoV-2, Influenza A, and Influenza B",
+        "note": [
+          {
+            "text": "Negative for SARS-CoV-2, Influenza A, and Influenza B"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4fcc0373-bae5-4fe1-ba87-a42c9e7d2de2",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Amoxicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "unable-to-assess",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CA04"
+            }
+          ],
+          "text": "Amoxicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Maculopapular rash"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b5e0fd2d-a87f-43e1-8779-2b5e66faae4f",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Asthma</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "J45"
+                }
+              ],
+              "text": "Asthma"
+            },
+            "onsetAge": {
+              "value": 12,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c2cde039-7a4d-4d20-bb00-a3cdb06db194",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Atopic dermatitis</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "L20"
+                }
+              ],
+              "text": "Atopic dermatitis"
+            },
+            "onsetAge": {
+              "value": 8,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c5d6704a-e599-429f-9c1b-bd8c6673f7ee",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sister: Acute bronchitis, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "SIS",
+              "display": "Sister"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "J20.9"
+                }
+              ],
+              "text": "Acute bronchitis, unspecified"
+            },
+            "onsetAge": {
+              "value": 6,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f417ee82-3aa6-4210-b49b-17919d7481ef",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandfather: Essential hypertension</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRFTH",
+              "display": "Grandfather"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I10"
+                }
+              ],
+              "text": "Essential hypertension"
+            },
+            "onsetAge": {
+              "value": 58,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c2ebfe14-b07b-4e1c-964e-36af47f43f41",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Laceration repair of chin</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "302215000"
+            }
+          ],
+          "text": "Laceration repair of chin"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2023",
+        "note": [
+          {
+            "text": "Simple repair performed in the emergency department after minor fall; healed without complication"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3b29fd79-1f1b-42e9-8de4-6b424b397526",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 4-year-old boy brought to clinic by his mother during the winter after 5 days of worsening cough, nasal congestion, and poor sleep. He is small for his age but well nourished, shy at first, and sits on his mother's lap clutching a stuffed dinosaur. He appears tired and mildly irritable, with flushed cheeks and intermittent bursts of harsh, wet-sounding cough that are worse when he runs around, laughs hard, or lies down at night. During several coughing spells he briefly gags and seems to choke on throat mucus before settling, and his mother says he occasionally complains that his tummy hurts after prolonged coughing. Between episodes he remains interactive, makes eye contact, and drinks from a spill-proof cup.\n\nHe lives with his parents and an older sister in a suburban apartment and attends preschool 4 days a week, where several children have recently had colds and lingering coughs. He enjoys toy cars, picture books, building blanket forts with his sister, and helping his grandfather in a dusty garage workshop where they sort old boxes and sweep small areas while playing with toy tools; his mother has noticed that time in the dusty garage and on the cold porch near his grandfather's tobacco smoke residue can make his coughing more noticeable, even though he does not directly smoke. When he is well he is very active indoors and often runs around during play, which has made the cough and occasional noisy breathing more noticeable this week. His mother reports that he usually has good energy, but over the last several days he has been less active, has wanted extra naps, and has eaten less solid food while still taking fluids reasonably well. He has had low-grade fever at home, occasional post-tussive gagging, and mild shortness of breath only during coughing fits or active play, but no cyanosis, no true difficulty swallowing, and no lethargy.\n\nOn observation, {patientName} has clear rhinorrhea, mild throat irritation, and frequent coughing with scattered coarse breath sounds that partially clear after coughing. There is a faint intermittent expiratory wheeze during forced exhalation and after coughing, consistent with an asthmatoid wheeze sometimes seen with viral bronchitis in young children. He does not look toxic, and there are no retractions at rest, though he breathes a little faster than usual when upset; his shortness of breath severity is mild with a low CLASP-style clinical score, as symptoms are limited to exertion and coughing spells without distress at rest. His parents deny smoke exposure inside the home, but his grandfather, who visits weekly, smokes outside and sometimes smells strongly of tobacco, and {patientName} sometimes stays near him on the porch while playing. The family has a stable routine and good social support, with grandparents helping with childcare.\n\nHis family describes him as generally healthy, playful, and affectionate. He has no significant developmental concerns and is up to date on routine pediatric care. The current illness has mainly disrupted sleep for both {patientName} and his parents because the cough is most troublesome overnight, prompting this visit for reassurance, examination, and guidance on symptom management. His mother also notes that he often gets repeated colds from preschool with recurrent upper respiratory tract infections during the winter months, and that several relatives tend to \"go to the chest\" with colds."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:515800dc-1153-4486-8f0e-ac0e529ffdc3",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} was born at term without neonatal complications and has had normal developmental milestones. Current weight is 16.2 kg and height is 102 cm, which allows age-appropriate dose verification for medications. He has no history of chronic kidney disease, liver disease, congenital heart disease, or prior pneumonia. His immunizations are reported as current for age, including routine childhood vaccines, though he did not receive the current season's influenza vaccine.\n\nPast medical history is notable for mild intermittent eczema, recurrent upper respiratory tract infections since starting preschool, and recurrent viral-triggered wheeze, for which his pediatrician previously prescribed an albuterol inhaler with spacer to use during colds; he has not been given a formal asthma diagnosis. He had one prior emergency department visit at age 2 for viral croup that resolved without hospitalization. He has never been intubated. His mother says he often coughs longer than expected after colds and occasionally has mild wheeze with winter respiratory infections, making him somewhat more prone to symptomatic bronchitic episodes.\n\nHe takes no daily prescription medications. At home, his parents have been giving acetaminophen as needed for fever and honey in warm water for cough, with partial relief. They still have albuterol from a prior wheezing illness but have only used 2 puffs once during this illness when he seemed briefly short of breath while coughing, with some improvement. He attends preschool, where exposure to respiratory infections is frequent. He also spends time helping his grandfather in a dusty garage and on a covered porch near his grandfather, who smokes outside; dust, cold air, and third-hand tobacco residue appear to aggravate cough and bronchial irritation. No recent travel, choking episode with foreign body, or known exposure to pertussis has been reported.\n\nFamily history is notable for a mother with asthma and a father with atopic dermatitis. His mother reports that both she and {patientName}'s older sister tend to develop bronchitis-like chest colds after viral upper respiratory infections in the winter, although neither has chronic lung disease. Oral intake is slightly reduced during this illness, but urine output remains adequate. There are no known renal or hepatic disorders, and no history suggesting immunodeficiency. None of his current medications are known to have caused this episode of acute bronchitis."
+          }
+        ]
+      }
+    }
+  ]
+}

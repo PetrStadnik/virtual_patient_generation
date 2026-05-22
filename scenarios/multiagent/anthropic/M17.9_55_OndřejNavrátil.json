@@ -1,0 +1,849 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "55"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Navrátil",
+            "given": [
+              "Ondřej"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "M17.9",
+              "display": "Gonarthrosis, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ccd97dbf-746e-4741-b9b3-fdcb2123e3bb",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Metformin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A10BA02"
+            }
+          ],
+          "text": "Metformin 1000 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1000 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:700ea2d4-6111-44ec-b1e6-186688d28cf1",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Amlodipine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C08CA01"
+            }
+          ],
+          "text": "Amlodipine 5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "5 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d8bee492-4d58-4bd6-a062-700b162c5447",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Ramipril.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C09AA05"
+            }
+          ],
+          "text": "Ramipril 5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "5 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:25273e3a-933f-4a1e-9a8c-63843abda48f",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Atorvastatin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C10AA05"
+            }
+          ],
+          "text": "Atorvastatin 20 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "20 mg oral once daily at night"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b036f012-8831-4a78-8977-ef09870a2832",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Paracetamol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N02BE01"
+            }
+          ],
+          "text": "Paracetamol 1000 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1000 mg oral up to three times daily as needed for knee pain"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:585affae-cac5-47ee-bee6-c618964aa123",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Duloxetine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N06AX21"
+            }
+          ],
+          "text": "Duloxetine 30 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "30 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:183a5c0b-522a-471b-9c2a-7169d9bb7134",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">X-ray of bilateral knees (weight-bearing, AP and lateral views)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "36643-3"
+            }
+          ],
+          "text": "X-ray of bilateral knees (weight-bearing, AP and lateral views)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T00:48:06Z",
+        "valueString": "Moderate joint space narrowing medial compartment bilaterally (R > L), subchondral sclerosis, marginal osteophytes at femoral condyles and tibial plateaus, and small subchondral cyst right medial tibial plateau. Kellgren-Lawrence Grade III right knee, Grade II left knee. No acute fracture.",
+        "note": [
+          {
+            "text": "Moderate joint space narrowing medial compartment bilaterally (R > L), subchondral sclerosis, marginal osteophytes at femoral condyles and tibial plateaus, and small subchondral cyst right medial tibial plateau. Kellgren-Lawrence Grade III right knee, Grade II left knee. No acute fracture."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5bc8c669-a3e0-42a8-bc12-9a5c1f949896",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T00:48:06Z",
+        "valueQuantity": {
+          "value": 96.4,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "96.4 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b6ed6def-d3aa-4d9b-9e1c-1d84e18d36ad",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">C-reactive protein (CRP)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1988-5"
+            }
+          ],
+          "text": "C-reactive protein (CRP)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T00:48:06Z",
+        "valueQuantity": {
+          "value": 14.2,
+          "unit": "mg/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/L"
+        },
+        "note": [
+          {
+            "text": "14.2 mg/L (mildly elevated, consistent with low-grade synovial inflammation in the context of gonarthrosis and metabolic syndrome)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:08fb5d37-a32d-479a-bfaa-4bdbb9d1bdfe",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Haemoglobin A1c (HbA1c)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "41995-2"
+            }
+          ],
+          "text": "Haemoglobin A1c (HbA1c)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T00:48:06Z",
+        "valueQuantity": {
+          "value": 7.4,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "note": [
+          {
+            "text": "7.4% - borderline glycaemic control; consistent with known type 2 diabetes mellitus"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6fb9ed42-a654-4090-b0d6-ea2d2a7e8499",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Rheumatoid factor (RF)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11572-5"
+            }
+          ],
+          "text": "Rheumatoid factor (RF)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T00:48:06Z",
+        "valueString": "Negative (<14 IU/mL) - rheumatoid arthritis excluded as contributing aetiology",
+        "note": [
+          {
+            "text": "Negative (<14 IU/mL) - rheumatoid arthritis excluded as contributing aetiology"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f098edb5-e22a-431a-a3af-a77a82392ec8",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Ibuprofen.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "intolerance",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "M01AE01"
+            }
+          ],
+          "text": "Ibuprofen"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Gastric discomfort and epigastric pain"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3c26e4b4-5a6f-4f73-a32c-1b8634b2902d",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Primary osteoarthritis of the knee</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "M17.1"
+                }
+              ],
+              "text": "Primary osteoarthritis of the knee"
+            },
+            "onsetAge": {
+              "value": 60,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:935fa2eb-cc28-4609-8739-706e8e26c892",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Type 2 diabetes mellitus</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "E11"
+                }
+              ],
+              "text": "Type 2 diabetes mellitus"
+            },
+            "onsetAge": {
+              "value": 58,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c424cf91-c853-4b5c-8344-adf6e8644e5a",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brother: Essential (primary) hypertension</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "BRO",
+              "display": "Brother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I10"
+                }
+              ],
+              "text": "Essential (primary) hypertension"
+            },
+            "onsetAge": {
+              "value": 48,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:574099b3-29d7-4c6b-99c3-f61983ca98c3",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandmother: Bilateral primary osteoarthritis of the knee</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRMTH",
+              "display": "Grandmother"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "M17.0"
+                }
+              ],
+              "text": "Bilateral primary osteoarthritis of the knee"
+            },
+            "onsetAge": {
+              "value": 65,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d17fcdf0-47de-4fa0-92bb-87dcc6392a38",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Partial medial meniscectomy (right knee arthroscopy)</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "174432000"
+            }
+          ],
+          "text": "Partial medial meniscectomy (right knee arthroscopy)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2017",
+        "note": [
+          {
+            "text": "Right knee arthroscopy performed in 2017 following failure of conservative management of medial meniscus tear sustained during recreational football at age 38. Partial meniscectomy performed; post-operative recovery uncomplicated. Altered tibiofemoral load distribution post-meniscectomy is considered a key predisposing factor for current medial compartment gonarthrosis progression (KL Grade III right knee)."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6a876a66-20bb-4f3f-ab36-ef2c4d568ecc",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Intra-articular corticosteroid injection of knee joint</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "57368009"
+            }
+          ],
+          "text": "Intra-articular corticosteroid injection of knee joint"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2022",
+        "note": [
+          {
+            "text": "Intra-articular corticosteroid injection (triamcinolone acetonide 40 mg) administered to right knee in 2022 for symptomatic gonarthrosis flare with effusion. Provided approximately 8 weeks of moderate pain and inflammation relief before symptoms recurred."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a220df40-b1bf-4c62-b1bb-a5bb130c9368",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "in-progress",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Physiotherapy assessment and rehabilitation programme</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "229070002"
+            }
+          ],
+          "text": "Physiotherapy assessment and rehabilitation programme"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Ongoing structured physiotherapy programme commenced in 2024, focusing on quadriceps strengthening, hip abductor training, hydrotherapy, and gait retraining. Aimed at reducing peak articular contact stress and improving functional capacity. Partial benefit reported with reduction in start pain frequency."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bdf55a1e-5556-49c9-be2d-07cadab1689b",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 55-year-old male who presents to the orthopedic outpatient clinic with a chief complaint of bilateral knee pain that has progressively worsened over the past three years, now significantly limiting his daily activities. He is a stocky, broad-shouldered man with a visibly antalgic gait, slightly favoring his right leg. He appears mildly uncomfortable when rising from a seated position and reports morning stiffness lasting approximately 20–30 minutes. His knees show mild valgus deformity bilaterally, with palpable crepitus on range-of-motion testing and mild soft tissue swelling around the right knee joint. On direct questioning, he describes a characteristic \"start pain\" — sharp discomfort in both knees at the initiation of movement after prolonged rest — which eases somewhat after a few minutes of walking before returning with sustained activity. He also reports intermittent joint line tenderness on palpation, worse on the medial aspect of the right knee, and occasional giving-way sensations on uneven ground. Notably, he describes a coarse, grinding crepitus that is audible as well as palpable on stair descent — a finding he finds particularly distressing.\n\n{patientName} works as a warehouse shift supervisor for a large logistics company, a role he has held for over 20 years. His job historically involved heavy lifting and prolonged standing on concrete floors, which he now delegates to younger team members due to his knee pain. He drives to work rather than cycling or walking, further reducing his incidental physical activity. Outside of work, he was an avid recreational football (soccer) player until his late 40s, when knee discomfort forced him to retire from the sport. He currently enjoys amateur hiking on gentle trails on weekends — typically covering 5–8 km per outing — and occasional woodworking in his garage, which frequently involves prolonged kneeling on hard surfaces when fitting joints or working on floor-level projects. These activities continue to load his knee joints and likely contribute to ongoing cartilage stress and symptom flares. He has had to reduce the frequency and distance of his hikes over the past 12 months, as post-exertional knee pain now persists for one to two days following each outing.\n\nHe lives in a semi-detached house with his wife of 28 years and has two adult children who no longer live at home. He describes his home life as stable and supportive, though he admits his limited mobility has caused frustration and occasional low mood, for which he has been initiated on duloxetine. He relies on his wife for household chores that require prolonged standing or kneeling. Stair-climbing at home has become increasingly difficult, particularly on descent, which he describes as the most painful manoeuvre he performs daily. He has considered installing a stair rail on both sides of his staircase and has discussed with his GP whether a ground-floor bedroom might eventually be necessary. He uses a walking stick intermittently on longer outings, which he initially resisted but has found helpful in reducing his right knee load.\n\n{patientName} has a BMI of 31.2 kg/m², reflecting longstanding overweight status which he attributes to a sedentary lifestyle since retiring from football and a diet rich in processed foods and red meat. He drinks 3–4 units of alcohol per week, predominantly beer on weekends, and is a former smoker who quit 8 years ago after a 20-pack-year history. He denies recreational drug use and drinks approximately 4–5 cups of coffee daily. His sleep has been increasingly disturbed by nocturnal knee aching — particularly on turning in bed — which is an important hallmark symptom of moderate-to-severe gonarthrosis and has further contributed to daytime fatigue and reduced motivation to engage with his physiotherapy programme.\n\nOn examination, he is alert and cooperative. His vital signs are within acceptable limits, though his blood pressure is mildly elevated at 138/88 mmHg. Active range of motion in the right knee is reduced to 0–110° (normal 0–135°), and passive flexion beyond 115° elicits pain. A small effusion is detectable in the right knee on ballottement, consistent with low-grade synovial inflammation. The McMurray test is equivocal on the right. Quadriceps muscle bulk is visibly reduced bilaterally compared to his body habitus, consistent with disuse atrophy. He is motivated to avoid surgery and has expressed strong interest in a physiotherapy-led management plan — including quadriceps-strengthening and hydrotherapy — combined with pharmacological pain relief, to maintain his quality of life."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:683c5db4-d88e-426a-8fc8-908b39985ab8",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has a known history of hypertension diagnosed approximately 6 years ago, currently managed with amlodipine and ramipril, with reasonable but not optimal blood pressure control (138/88 mmHg at this visit). He was diagnosed with type 2 diabetes mellitus 4 years ago, managed with metformin, and maintains borderline glycaemic control (HbA1c 7.4%). Long-standing hyperglycaemia is recognised to impair cartilage matrix homeostasis through the accumulation of advanced glycation end-products (AGEs), which stiffen collagen cross-links in articular cartilage and accelerate its degradation — providing a plausible metabolic contribution of his diabetes to gonarthrosis progression. He has a history of dyslipidaemia treated with atorvastatin; emerging evidence links dyslipidaemia to chondrocyte dysfunction and low-grade synovial inflammation. The combination of obesity, hypertension, dyslipidaemia, and type 2 diabetes constitutes metabolic syndrome, which collectively creates a systemic pro-inflammatory state that promotes and accelerates osteoarthritic cartilage loss.\n\nImportantly, {patientName} was prescribed long-term oral corticosteroids (prednisolone) for approximately 18 months in his late 40s following a misdiagnosed inflammatory knee flare, before gonarthrosis was correctly identified as the underlying pathology. Chronic systemic corticosteroid use is a well-recognised contributor to cartilage degradation, suppression of chondrocyte anabolic activity, and subchondral bone loss — all considered to have accelerated the progression of his gonarthrosis. This prior corticosteroid exposure is now regarded as a significant pharmacological contributor to his current disease severity.\n\nHe sustained a right medial meniscus tear during a recreational football match at age 38, initially managed conservatively. Following failure of conservative management, he underwent elective right knee arthroscopy with partial medial meniscectomy in 2017; recovery was uncomplicated. Post-meniscectomy knees are known to have significantly altered load distribution across the tibiofemoral joint, predisposing to accelerated medial compartment cartilage loss — consistent with the observed Kellgren-Lawrence Grade III changes on his right knee radiograph. An intra-articular corticosteroid injection (triamcinolone) was administered to the right knee in 2022 during a symptomatic flare with confirmed effusion, providing approximately 8 weeks of moderate pain relief before symptoms recurred.\n\n{patientName} reports clinically significant functional impairment: stair descent is his most painful daily activity, he can no longer kneel comfortably, prolonged walking beyond 20–30 minutes reliably exacerbates his symptoms, and nocturnal aching regularly disrupts his sleep — particularly when turning in bed. He uses a walking stick intermittently for longer outings. His quadriceps muscle bulk is visibly reduced bilaterally compared to his body habitus, suggesting disuse atrophy consistent with chronic pain-limited activity — a recognised driver of disease progression. A small right knee effusion is detectable on ballottement, indicating active low-grade synovitis. He reports no history of inflammatory arthritis, gout, pseudogout, or other systemic joint disease. He has no known cardiac events. He sees his general practitioner every 3 months for chronic disease monitoring. He has a documented intolerance to ibuprofen (gastric discomfort), and NSAIDs are used with caution given his diabetes and hypertension. He uses paracetamol as his primary analgesic, duloxetine has been added for central pain sensitisation and low mood, and he has been referred for a structured physiotherapy programme with emphasis on quadriceps and hip abductor strengthening. Body weight is 96.4 kg with a BMI of 31.2 kg/m²."
+          }
+        ]
+      }
+    }
+  ]
+}

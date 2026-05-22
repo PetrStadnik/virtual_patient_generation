@@ -1,0 +1,891 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "55"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Ježek",
+            "given": [
+              "Adam"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "K29.7",
+              "display": "Gastritis, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7a09a10c-76b9-4ad9-b4dd-393330b170d1",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Omeprazole.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A02BC01"
+            }
+          ],
+          "text": "Omeprazole 20 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "20 mg oral twice daily before meals"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:631d9c92-9ed3-422c-8159-b160d98dc76e",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Metronidazole.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01XD01"
+            }
+          ],
+          "text": "Metronidazole 500 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "500 mg oral twice daily (H. pylori eradication — penicillin-free regimen)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d73173c4-b166-4a17-a2cf-1f05d08eee6f",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Clarithromycin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01FA09"
+            }
+          ],
+          "text": "Clarithromycin 500 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "500 mg oral twice daily (H. pylori eradication)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4f25ffde-baa3-4cab-ae9d-5c685e0a3675",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Amlodipine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C08CA01"
+            }
+          ],
+          "text": "Amlodipine 5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "5 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5e7f7294-3b9a-4166-8ab9-0465dddc5a87",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Atorvastatin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C10AA05"
+            }
+          ],
+          "text": "Atorvastatin 20 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "20 mg oral once daily at bedtime"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:27813498-aa7f-45a0-8e3a-5dcda84fbbfb",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Nicotine replacement patch.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N07BA01"
+            }
+          ],
+          "text": "Nicotine replacement patch 14 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "14 mg transdermal once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3465e90e-e33e-4d00-a180-069a97d41669",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Helicobacter pylori urea breath test</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "13335-3"
+            }
+          ],
+          "text": "Helicobacter pylori urea breath test"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T22:00:04Z",
+        "valueString": "Positive",
+        "note": [
+          {
+            "text": "Positive"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:928fd8ea-1d27-4a2f-9c8b-5549eb491364",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Esophagogastroduodenoscopy (EGD) with biopsy</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "18745-0"
+            }
+          ],
+          "text": "Esophagogastroduodenoscopy (EGD) with biopsy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T22:00:04Z",
+        "valueString": "Diffuse erythema and mild mucosal edema of the gastric antrum; biopsy consistent with chronic active gastritis; no ulceration or dysplasia noted",
+        "note": [
+          {
+            "text": "Diffuse erythema and mild mucosal edema of the gastric antrum; biopsy consistent with chronic active gastritis; no ulceration or dysplasia noted"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c8c7989c-c209-4e10-a3d6-960b9742e978",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Complete blood count (CBC)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2"
+            }
+          ],
+          "text": "Complete blood count (CBC)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T22:00:04Z",
+        "valueString": "Hemoglobin 13.4 g/dL (mildly low), MCV 81 fL, WBC 7.2 x10^9/L, Platelets 224 x10^9/L",
+        "note": [
+          {
+            "text": "Hemoglobin 13.4 g/dL (mildly low), MCV 81 fL, WBC 7.2 x10^9/L, Platelets 224 x10^9/L"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4f2e07af-495e-4a4a-8e0c-45bc177733fe",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Serum ferritin</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2276-4"
+            }
+          ],
+          "text": "Serum ferritin"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T22:00:04Z",
+        "valueQuantity": {
+          "value": 18.0,
+          "unit": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL"
+        },
+        "note": [
+          {
+            "text": "18 ng/mL (low normal)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1db29597-cae6-4375-98b6-2453e7ed8fa0",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Body weight</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-17T22:00:04Z",
+        "valueQuantity": {
+          "value": 87.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "87 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4cbd8fed-90e2-41cd-9d1a-e368c9b25e88",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "high",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CA04"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Urticaria and angioedema"
+              }
+            ],
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4504fb3d-a2a6-47b5-8a76-ea9aeea413bd",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Shellfish.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "food"
+        ],
+        "criticality": "high",
+        "code": {
+          "text": "Shellfish"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Anaphylaxis"
+              }
+            ],
+            "severity": "severe"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5e7bb7e7-a268-4163-9ed2-7d7add060f98",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Gastric ulcer</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "K25"
+                }
+              ],
+              "text": "Gastric ulcer"
+            },
+            "onsetAge": {
+              "value": 58,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:57c7b77c-838a-4deb-92fc-10fe1107e8cd",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Essential hypertension</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I10"
+                }
+              ],
+              "text": "Essential hypertension"
+            },
+            "onsetAge": {
+              "value": 50,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:da6f12e0-1877-48e6-a147-0f233f9bb32a",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brother: Gastritis, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "BRO",
+              "display": "Brother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "K29.7"
+                }
+              ],
+              "text": "Gastritis, unspecified"
+            },
+            "onsetAge": {
+              "value": 48,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:dc1ce8a2-55c6-489e-8f83-cf5f18097d50",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandfather: Malignant neoplasm of stomach</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRFTH",
+              "display": "Grandfather"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "C16"
+                }
+              ],
+              "text": "Malignant neoplasm of stomach"
+            },
+            "onsetAge": {
+              "value": 67,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8e400048-4751-4a6c-9601-aaafd1aee168",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Laparoscopic cholecystectomy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "45595009"
+            }
+          ],
+          "text": "Laparoscopic cholecystectomy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2017",
+        "note": [
+          {
+            "text": "Performed in 2017 for symptomatic cholelithiasis; uncomplicated recovery"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8e436a8c-cefe-4624-8514-d5580159a852",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Colonoscopy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "73761001"
+            }
+          ],
+          "text": "Colonoscopy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2019",
+        "note": [
+          {
+            "text": "Routine screening colonoscopy at age 50; no polyps or significant pathology identified"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a6c83c9a-361e-4819-8597-a2f6a4cdd305",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Esophagogastroduodenoscopy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "386831000"
+            }
+          ],
+          "text": "Esophagogastroduodenoscopy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Performed as part of current workup; revealed chronic active gastritis of the antrum; biopsies taken and sent for H. pylori and histopathology"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4558f7f4-dc5e-4250-b86d-3297da4fe748",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 55-year-old male who presents to the gastroenterology clinic with a several-week history of persistent epigastric discomfort, postprandial bloating, and intermittent nausea. He describes the pain as a dull, gnawing ache in the upper abdomen that worsens after meals, particularly following spicy foods or a glass of whiskey. He occasionally experiences early satiety, a sour taste in his mouth, and episodes of excessive belching after eating, which he initially dismissed as \"just stress.\" Over the past two weeks, he has also reported two episodes of vomiting, typically occurring in the morning or after a heavy evening meal. His appetite has markedly diminished — he has been deliberately avoiding food because the anticipation of eating triggers significant discomfort, and he has lost several kilograms over the past month due to this pronounced reduction in food intake. His wife has become alarmed by how little he is eating, noting that he sometimes goes entire days consuming only coffee. On examination, he appears mildly fatigued but is in no acute distress. His abdomen is soft with mild tenderness on deep palpation in the epigastric region. No guarding or rebound tenderness is noted.\n\n{patientName} works as a mid-level manager at a logistics company, a role he has held for nearly 15 years. His job is high-pressure and deadline-driven, often requiring him to skip lunch or eat hurriedly at his desk. He frequently travels for work and relies heavily on fast food, restaurant meals, and processed snacks. He admits to drinking 3–4 cups of strong black coffee daily and consuming alcohol socially 3–4 times per week, typically 2–3 drinks per occasion.\n\nOutside of work, {patientName} enjoys watching football, occasional weekend fishing trips with friends, and tinkering with vintage cars in his garage. His fishing hobby involves long hours outdoors with minimal food breaks — he often skips meals or snacks on highly processed crackers, chips, and energy drinks during these trips, habits that aggravate his gastric mucosa. Similarly, during his garage sessions restoring vintage cars, he frequently snacks on greasy takeaway food and drinks multiple cans of cola or energy drinks, compounding his caffeine and acid load. He smokes about half a pack of cigarettes per day — a habit he has maintained for roughly 25 years — and has made several unsuccessful attempts to quit. He gets limited physical exercise, describing himself as \"mostly sedentary\" during the workweek.\n\n{patientName} lives with his wife of 28 years in a suburban home. They have two adult children who live nearby. He describes his home life as generally supportive, though he acknowledges that work stress spills over and affects his mood and sleep. He sleeps approximately 5–6 hours per night and often wakes with heartburn, sometimes needing to prop himself up with pillows to get back to sleep.\n\nHe initially delayed seeking medical attention, attributing his symptoms to \"getting older,\" but was prompted to visit after his wife noticed he had significantly reduced his food intake over the past month due to the discomfort — at times refusing meals altogether, consistent with a marked anorexic pattern driven by pain avoidance. He denies any hematemesis, melena, or unintentional weight loss exceeding 3 kg over the past six months."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f17b4830-d5c7-410e-9087-91fb4c1725d8",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has a known history of hypertension, diagnosed approximately 8 years ago and currently managed with medication. He was also diagnosed with hyperlipidemia 5 years ago following a routine blood panel. He reports no prior history of peptic ulcer disease or gastrointestinal bleeding, though he recalls being told he had \"some stomach irritation\" after a period of heavy ibuprofen use 3 years ago following a shoulder injury. He has no prior hospitalizations related to gastrointestinal issues.\n\n{patientName} has a 25-pack-year smoking history and regularly consumes alcohol (estimated 10–14 units per week). He has no known diabetes, thyroid disease, or liver pathology. He underwent a cholecystectomy in 2017 for symptomatic gallstones, with an uneventful recovery. His last colonoscopy, performed at age 50, showed no polyps or significant findings.\n\nLifestyle factors significantly contributing to his current presentation include chronic cigarette smoking, regular alcohol intake, high caffeine consumption (coffee and energy drinks), irregular and high-fat dietary habits, chronic psychological stress, and inadequate sleep. Notably, his leisure activities further compound his gastric risk: prolonged fishing trips with meal-skipping and reliance on processed snacks, and garage sessions accompanied by greasy takeaway food and frequent caffeinated soft drinks, both serve as consistent mucosal irritant exposures outside of work. He takes ibuprofen intermittently (self-prescribed) for lower back pain, which is a likely aggravating factor for his gastric symptoms.\n\nOver the past month, {patientName}'s appetite has markedly declined, with deliberate and persistent food avoidance due to anticipatory pain — he will sometimes forgo meals entirely for the day, representing a clinically significant anorexic pattern secondary to his gastric condition. He has experienced two episodes of vomiting. He has a documented high-criticality allergy to penicillin (urticaria and angioedema); amoxicillin and all penicillin-class antibiotics are contraindicated. Current regular medications include antihypertensives and a statin."
+          }
+        ]
+      }
+    }
+  ]
+}

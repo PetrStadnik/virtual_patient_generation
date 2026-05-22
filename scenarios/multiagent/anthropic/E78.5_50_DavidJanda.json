@@ -1,0 +1,867 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "50"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Janda",
+            "given": [
+              "David"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "E78.5",
+              "display": "Hyperlipidaemia, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:37384db0-06b3-4a92-a5d8-51a780a240bc",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Amlodipine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C08CA01"
+            }
+          ],
+          "text": "Amlodipine 5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "5 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:48914404-4288-4349-9bbb-120e09757f16",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Hydrochlorothiazide.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C03AA03"
+            }
+          ],
+          "text": "Hydrochlorothiazide 12.5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "12.5 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6eefd2d0-2ae5-49bd-b9df-cb20f9c9b48c",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Aspirin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "B01AC06"
+            }
+          ],
+          "text": "Aspirin 81 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "81 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:97ddf680-2387-4bd1-8495-49ebab1ae9ce",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Pantoprazole.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A02BC02"
+            }
+          ],
+          "text": "Pantoprazole 40 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "40 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fa8de6aa-ae78-4a6e-b42e-c07fabbf362e",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Rosuvastatin.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C10AA07"
+            }
+          ],
+          "text": "Rosuvastatin 20 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "20 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a774fd22-dbce-4cee-af79-7cc85e11b5cf",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Fasting Lipid Panel</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "57698-3"
+            }
+          ],
+          "text": "Fasting Lipid Panel"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T00:15:52Z",
+        "valueString": "Total Cholesterol: 267 mg/dL; LDL-C: 178 mg/dL; HDL-C: 38 mg/dL; Triglycerides: 254 mg/dL",
+        "note": [
+          {
+            "text": "Total Cholesterol: 267 mg/dL; LDL-C: 178 mg/dL; HDL-C: 38 mg/dL; Triglycerides: 254 mg/dL"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:716dbdae-03e2-4813-bd75-c8146b1d62e1",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Fasting Blood Glucose</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1558-6"
+            }
+          ],
+          "text": "Fasting Blood Glucose"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T00:15:52Z",
+        "valueQuantity": {
+          "value": 112.0,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "note": [
+          {
+            "text": "112 mg/dL (Impaired fasting glucose)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6b9109ff-d6c1-4716-a8a6-0503c451828b",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Hemoglobin A1c</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4"
+            }
+          ],
+          "text": "Hemoglobin A1c"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T00:15:52Z",
+        "valueQuantity": {
+          "value": 5.9,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "note": [
+          {
+            "text": "5.9% (Pre-diabetic range)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:02c40212-8229-4486-ac3b-0d6f68b14aba",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Thyroid Stimulating Hormone (TSH)</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3016-3"
+            }
+          ],
+          "text": "Thyroid Stimulating Hormone (TSH)"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T00:15:52Z",
+        "valueQuantity": {
+          "value": 2.1,
+          "unit": "mIU/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mIU/L"
+        },
+        "note": [
+          {
+            "text": "2.1 mIU/L (Normal)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9d554d04-8522-49e7-a01a-f657a4b49057",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">MRI Brain</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24590-5"
+            }
+          ],
+          "text": "MRI Brain"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T00:15:52Z",
+        "valueString": "Small left-hemisphere lacunar infarct consistent with ischemic stroke. No haemorrhagic transformation. Changes consistent with small vessel disease in the context of hypertension and dyslipidaemia.",
+        "note": [
+          {
+            "text": "Small left-hemisphere lacunar infarct consistent with ischemic stroke. No haemorrhagic transformation. Changes consistent with small vessel disease in the context of hypertension and dyslipidaemia."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3d7f5372-2e43-481c-87a2-b7dc05d3362a",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "high",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CA04"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Urticaria and angioedema"
+              }
+            ],
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1eb73e8d-7d1a-4639-821b-dd4e0587e73a",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Shellfish.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "food"
+        ],
+        "criticality": "high",
+        "code": {
+          "text": "Shellfish"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Anaphylaxis"
+              }
+            ],
+            "severity": "severe"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ac0eb94b-ae0f-4680-b9d2-ddc66f0c9f33",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Acute myocardial infarction, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I21.9"
+                }
+              ],
+              "text": "Acute myocardial infarction, unspecified"
+            },
+            "onsetAge": {
+              "value": 63,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2be89739-3119-4045-9209-6e4cfb246797",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandfather: Stroke, not specified as haemorrhage or infarction</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRFTH",
+              "display": "Grandfather"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I64"
+                }
+              ],
+              "text": "Stroke, not specified as haemorrhage or infarction"
+            },
+            "onsetAge": {
+              "value": 70,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b467f60b-d3f9-4e80-b24e-6942b3437f7b",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Type 2 diabetes mellitus without complications</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "E11.9"
+                }
+              ],
+              "text": "Type 2 diabetes mellitus without complications"
+            },
+            "onsetAge": {
+              "value": 58,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:de7000c2-88cf-43a1-aff1-05805e6e064e",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Hyperlipidaemia, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "E78.5"
+                }
+              ],
+              "text": "Hyperlipidaemia, unspecified"
+            },
+            "onsetAge": {
+              "value": 57,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:372bf35f-c83d-4670-a375-adf35e9089a5",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Laparoscopic Cholecystectomy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "45595009"
+            }
+          ],
+          "text": "Laparoscopic Cholecystectomy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2017",
+        "note": [
+          {
+            "text": "Performed in 2017 for symptomatic cholelithiasis. Uncomplicated procedure with full recovery."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9aef9014-4bf7-4ff9-b8b2-f2abbcf98473",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Carotid Duplex Ultrasound</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "241501005"
+            }
+          ],
+          "text": "Carotid Duplex Ultrasound"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Performed as part of cardiovascular risk stratification following diagnosis of hyperlipidaemia. Demonstrated bilateral increased carotid intima-media thickness consistent with early subclinical atherosclerosis. Findings correlated with prior ischemic stroke and prompted ongoing vascular neurology review."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0b27d156-9b3d-4731-8200-0dcf8cd78a7c",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">MRI Brain</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "241601008"
+            }
+          ],
+          "text": "MRI Brain"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Performed following acute presentation with right-hand weakness, facial droop, and slurred speech. Confirmed small left-hemisphere lacunar infarct consistent with ischemic stroke in the setting of carotid atherosclerosis and hyperlipidaemia. No haemorrhagic transformation identified."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:633f91d7-818f-4d66-8049-c5063ba991e2",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 50-year-old male who presents with a stocky, slightly overweight build, standing approximately 5'11\" and weighing 215 lbs. He has a ruddy complexion, mild periorbital xanthelasma, and carries most of his excess weight around his abdomen. He works as a senior project manager at a mid-sized construction firm, a demanding desk-bound job that involves long hours, frequent client dinners, and a great deal of occupational stress. He commutes roughly 45 minutes each way by car and rarely finds time for structured exercise beyond the occasional weekend round of golf.\n\n{patientName} lives in a suburban home with his wife of 22 years and their two teenage children. The household is busy and meals are often hurried; he admits to relying heavily on takeout, fast food, and processed snacks during the workweek. He enjoys craft beers on weekends and typically consumes 3–4 standard drinks per week — a habit he acknowledges may be worsening his lipid profile. He is a former smoker who quit approximately 8 years ago after a 15-pack-year history. He drinks 2–3 cups of coffee daily.\n\nHe reports no current chest pain or shortness of breath at rest. However, he acknowledges persistent fatigue, mild afternoon headaches, and occasional \"brain fog,\" which he initially attributed to his demanding schedule. Of particular clinical significance, he experienced a confirmed ischemic stroke event approximately 6 months ago — a small left-hemisphere lacunar infarct identified on MRI — which presented acutely with right-hand weakness, mild facial droop, and transient slurred speech lasting several hours before partial resolution. He was hospitalised briefly, made a near-complete functional recovery, and was subsequently referred for outpatient vascular neurology follow-up. He also reports two earlier, briefer episodes over the preceding year involving transient right-hand weakness and fleeting slurred speech lasting only a few minutes, which he had dismissed as stress-related but are now understood as likely preceding TIA events. These events, in the context of his confirmed subclinical carotid atherosclerosis and now-confirmed hyperlipidaemia, prompted urgent initiation of statin therapy and antiplatelet treatment.\n\nSince his stroke and lipid diagnosis, {patientName} has expressed significant anxiety about his cardiovascular health, including a recurring fear of having a further stroke or heart attack given his father's cardiac history. He finds himself frequently researching heart disease online and has become more acutely aware of any chest discomfort or neurological symptom, however fleeting. He has also been told that early signs of atherosclerosis were noted on a carotid duplex ultrasound performed recently, which has heightened his concern.\n\n{patientName} enjoys watching football, weekend barbecues with friends, and coaching his son's youth soccer team on Saturday mornings — one of his few consistent physical activities. His weekend barbecues are a particular dietary trigger, typically involving high quantities of red meat, full-fat cheeses, and creamy side dishes paired with craft beers, all of which contribute meaningfully to his saturated fat and caloric intake. He is sociable, moderately health-conscious when reminded, and highly motivated to make changes after his stroke and lipid results. He is moderately health-literate and open to both lifestyle modification and medication if explained clearly."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9d155f4e-916c-4805-9fd4-0b2d9ac2c0fa",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} has a known history of mild essential hypertension, diagnosed approximately 4 years ago and currently managed with amlodipine. He has no prior confirmed history of coronary artery disease or peripheral vascular disease. He was diagnosed with pre-diabetes (impaired fasting glucose) 2 years ago following a routine screen and has been advised on dietary management but has not commenced pharmacological therapy for this. His BMI is calculated at approximately 30.0 kg/m², placing him in the obese category.\n\nAlthough this is the first formal diagnosis of hyperlipidaemia, a review of prior occupational health records revealed mildly elevated total cholesterol (approximately 225 mg/dL) noted at a workplace health check roughly 5 years ago. At that time, no follow-up was pursued and no formal diagnosis was recorded. The current presentation therefore represents a progression of a previously unaddressed lipid abnormality rather than a truly new finding.\n\nOf major clinical significance, {patientName} sustained a confirmed ischemic stroke approximately 6 months ago. MRI brain imaging demonstrated a small left-hemisphere lacunar infarct in the context of confirmed carotid atherosclerosis and untreated hyperlipidaemia. He was hospitalised for a short period, received acute stroke management, and made a near-complete functional recovery with only mild residual fatigue. This event followed two earlier episodes of transient focal neurological deficits (right-hand weakness and transient slurred speech) over the prior year that had not been investigated at the time. The ischemic stroke has substantially elevated his cardiovascular risk classification to high-risk and prompted urgent initiation of statin and antiplatelet therapy.\n\nHe has no prior hospitalizations other than his stroke admission and his elective cholecystectomy. He has no known history of liver or renal disease. He underwent an uneventful laparoscopic cholecystectomy in 2017 for symptomatic gallstones. A recent carotid duplex ultrasound demonstrated early intima-media thickening consistent with subclinical atherosclerosis, raising his cardiovascular risk profile further. These findings are consistent with the mechanism underlying his confirmed lacunar ischemic stroke.\n\nHis family history is significant for his father suffering a myocardial infarction in his early 60s and his paternal grandfather dying of a stroke. His mother has type 2 diabetes and was also diagnosed with hyperlipidaemia in her late 50s and is currently managed with a statin — a detail that underscores the probable familial component to {patientName}'s own dyslipidaemia.\n\nRegarding his current medications: he is prescribed hydrochlorothiazide as a secondary antihypertensive agent alongside amlodipine. Thiazide diuretics are recognised as contributing to mild dyslipidaemia — particularly elevated LDL-C and triglycerides — and may have contributed incrementally to his current lipid abnormalities. He is also on low-dose aspirin for secondary cardiovascular and cerebrovascular risk reduction and pantoprazole for gastroprotection. Rosuvastatin was initiated following his ischemic stroke for secondary prevention and LDL-C lowering.\n\n{patientName} is a former smoker (quit 8 years ago, 15 pack-year history) and consumes alcohol at low-to-moderate levels. His weekend barbecue habits and reliance on high-fat takeout foods during the workweek represent significant dietary triggers for hyperlipidaemia. He leads a predominantly sedentary lifestyle due to occupational demands but is highly motivated to improve following his stroke. He reports a penicillin allergy and a severe shellfish allergy. His 10-year ASCVD risk is classified as high given the constellation of risk factors including age, sex, hypertension, pre-diabetes, family history, early atherosclerosis on imaging, confirmed ischemic stroke, and confirmed hyperlipidaemia."
+          }
+        ]
+      }
+    }
+  ]
+}

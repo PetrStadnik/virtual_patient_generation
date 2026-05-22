@@ -1,0 +1,700 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "38"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Brož",
+            "given": [
+              "Vlastimil"
+            ]
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "F20.9",
+              "display": "Schizophrenia, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8de6b206-e2b0-4ea9-9c1b-35270c4e6150",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Olanzapine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N05AH03"
+            }
+          ],
+          "text": "Olanzapine 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5e8d8976-2aa0-4dc3-90fa-38adf41b5ca4",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Risperidone.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N05AX08"
+            }
+          ],
+          "text": "Risperidone 3 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "3 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:24d09437-e6e6-4283-8cb4-f886f7c45fdd",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Biperiden.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N04AA02"
+            }
+          ],
+          "text": "Biperiden 2 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "2 mg oral twice daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fc1638d7-3f03-47e9-896f-538d5c06b3a5",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for Lorazepam.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N05BA06"
+            }
+          ],
+          "text": "Lorazepam 1 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 mg oral once daily at bedtime"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:68a91b28-ced8-4a02-8b07-d1154bccf0e7",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Psychiatric evaluation</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "52331-6"
+            }
+          ],
+          "text": "Psychiatric evaluation"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:16:34Z",
+        "valueString": "Positive symptoms prominent: auditory hallucinations, persecutory delusions; negative symptoms: blunted affect, social withdrawal; disorganised speech noted",
+        "note": [
+          {
+            "text": "Positive symptoms prominent: auditory hallucinations, persecutory delusions; negative symptoms: blunted affect, social withdrawal; disorganised speech noted"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4b32bdc7-7949-4b5c-92f2-7fdade3795a0",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Complete blood count panel</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2"
+            }
+          ],
+          "text": "Complete blood count panel"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:16:34Z",
+        "valueString": "WBC 6.4 x10^9/L, Hgb 138 g/L, Plt 220 x10^9/L – within normal limits",
+        "note": [
+          {
+            "text": "WBC 6.4 x10^9/L, Hgb 138 g/L, Plt 220 x10^9/L – within normal limits"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:61152bd7-ae95-451f-be77-899cca3ad747",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic metabolic panel</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24320-4"
+            }
+          ],
+          "text": "Basic metabolic panel"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:16:34Z",
+        "valueString": "Na 139 mmol/L, K 4.0 mmol/L, Creatinine 82 µmol/L – all within normal limits",
+        "note": [
+          {
+            "text": "Na 139 mmol/L, K 4.0 mmol/L, Creatinine 82 µmol/L – all within normal limits"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e36c1b97-3485-426e-9a2c-e230995dd833",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Fasting glucose</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "16913-6"
+            }
+          ],
+          "text": "Fasting glucose"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:16:34Z",
+        "valueQuantity": {
+          "value": 5.8,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "note": [
+          {
+            "text": "5.8 mmol/L (borderline; monitoring recommended given antipsychotic use)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:315b1480-8a4d-4a0c-b0c2-ff452c9eaa96",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Prolactin level</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "38926-2"
+            }
+          ],
+          "text": "Prolactin level"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:16:34Z",
+        "valueQuantity": {
+          "value": 28.0,
+          "unit": "ug/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "ug/L"
+        },
+        "note": [
+          {
+            "text": "28 µg/L (mildly elevated, consistent with antipsychotic use)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fffb5764-7d9f-43d7-8b22-81ff6d5bd112",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CE01"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Urticaria"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:eaf3b7ce-9c76-4c1c-9cf4-6dc2692322b2",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Recurrent depressive disorder</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F33"
+                }
+              ],
+              "text": "Recurrent depressive disorder"
+            },
+            "onsetAge": {
+              "value": 45,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a216b975-74b7-4148-a3f3-3df95af0ce07",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Uncle: Schizophrenia, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "UNCLE",
+              "display": "Uncle"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "F20.9"
+                }
+              ],
+              "text": "Schizophrenia, unspecified"
+            },
+            "onsetAge": {
+              "value": 30,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4a25c7a4-6174-4cc5-a3e8-7136886a5a9f",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Psychiatric admission</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "183455007"
+            }
+          ],
+          "text": "Psychiatric admission"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2021",
+        "note": [
+          {
+            "text": "Second compulsory inpatient admission at Psychiatrická nemocnice Bohnice due to acute psychotic decompensation with prominent persecutory delusions and refusal of outpatient care [MEDDIALOG:F20.9:7]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:86b62213-a7a9-4f78-89a1-c58863054513",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Psychological assessment</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "405783006"
+            }
+          ],
+          "text": "Psychological assessment"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2022",
+        "note": [
+          {
+            "text": "Formal neuropsychological testing confirming cognitive dysfunction, disorganised thinking, and language disorder associated with thought disorder [SNOMED:F20.9, MEDLINEPLUS:F20.9]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9e793aa9-61a4-4686-86a0-6c1e9b7ad35d",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Administration of antipsychotic drug</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "182832007"
+            }
+          ],
+          "text": "Administration of antipsychotic drug"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2021",
+        "note": [
+          {
+            "text": "Initiation of antipsychotic therapy during inpatient stay; medication changes made due to partial response and patient non-adherence [MEDDIALOG:F20.9:2, MEDLINEPLUS:F20.9]"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b71d6174-5d23-4abb-a49e-3c08d110239a",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 38-year-old Czech man of medium build, appearing somewhat dishevelled and unkempt during today's psychiatric outpatient visit in Prague. He is dressed in mismatched, unwashed clothing, his dark hair is long and unbrushed, and there is noticeable psychomotor retardation in his movements. His affect is clearly inappropriate — he sometimes laughs when discussing distressing topics and appears emotionally blunted at other times [SNOMED:F20.9]. He speaks in a fragmented, disorganised manner, occasionally producing sentences that do not follow logically, consistent with language disorder associated with thought disorder [SNOMED:F20.9].\n\n{patientName} reports hearing frightening voices that comment on his behaviour and issue commands [MEDDIALOG:F20.9:3, MEDLINEPLUS:F20.9]. He is convinced that a secret government agency is monitoring him through hidden electronic devices in his apartment and believes his neighbours are conspiring against him — classic persecutory delusions [MEDDIALOG:F20.9:7, MEDLINEPLUS:F20.9]. He has been largely socially withdrawn for several years, rarely leaving his small rented flat in the Žižkov district of Prague, and has been unable to maintain any form of employment for the past four years [MEDLINEPLUS:F20.9].\n\nBefore the onset of his illness in his late twenties, {patientName} was a keen amateur footballer and enjoyed hiking in the Bohemian countryside. He used to work as a warehouse logistics coordinator. Now, his days are spent in near-isolation; he spends long hours lying in bed, neglects basic hygiene, and has an irregular sleep-wake cycle [MEDLINEPLUS:F20.9]. He has no close friends remaining and only sporadic contact with his mother and younger brother, who are concerned about his deteriorating condition [MEDDIALOG:F20.9:7].\n\n{patientName} has poor insight into his condition, often refusing medication because he believes doctors are trying to control him through drugs [MEDDIALOG:F20.9:7]. However, following the most recent hospitalisation, he has shown partial compliance with oral antipsychotic therapy. He smokes approximately 15 cigarettes per day and drinks moderate amounts of beer, though no evidence of dependency was established."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bf6fcf11-f4f1-436e-bc11-725582991cf4",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} first presented with prodromal symptoms around age 29, including increasing social isolation, suspicious ideation, and sleep disturbances. A full psychotic episode with prominent persecutory delusions and auditory hallucinations was documented at age 31 [MEDDIALOG:F20.9:7, MEDLINEPLUS:F20.9]. He has since had two compulsory psychiatric admissions at the Psychiatrická nemocnice Bohnice in Prague (the most recent in 2021) triggered by behavioural disorganisation and refusal of outpatient care [MEDDIALOG:F20.9:7]. Between episodes, {patientName} has been reluctantly managed on various antipsychotic regimens but has frequently self-discontinued medication, believing doctors were attempting to control him [MEDDIALOG:F20.9:7].\n\n{patientName} has no known organic neurological conditions, no head trauma, and no history of substance-induced psychosis; alcohol use is moderate. He is a current smoker (15 cigarettes/day). No significant cardiovascular or metabolic comorbidities are currently documented, though metabolic monitoring is indicated given antipsychotic use. His mother has a history of major depressive disorder and a paternal uncle was reportedly treated for a psychotic illness. {patientName} has no known drug allergies except a documented hypersensitivity reaction to penicillin (urticaria). He currently attends a community mental health centre (CMHC) in Prague on a monthly basis and is under the care of a consultant psychiatrist [MEDLINEPLUS:F20.9]."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,612 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "71"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Čechová",
+            "given": [
+              "Miroslava"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C18.9",
+              "display": "Malignant neoplasm: Colon, unspecified"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7c2063c0-0371-4fe3-82d6-1d2448c21835",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for capecitabine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "L01BC06"
+            }
+          ],
+          "text": "capecitabine 1250 mg/m2"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1250 mg/m2 oral twice daily on days 1-14 of a 21-day cycle"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4e86c3ef-671e-4def-9761-ce402d5ccd5c",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for ondansetron.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "A04AA01"
+            }
+          ],
+          "text": "ondansetron 8 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "8 mg oral twice daily as needed"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7e442d39-e103-40df-83de-a58c43a554ae",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for paracetamol.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "N02BE01"
+            }
+          ],
+          "text": "paracetamol 500 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "500 mg oral every 8 hours as needed"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:176b35e3-3c3a-4fec-8735-8f79f8e0f5c1",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Complete blood count</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2"
+            }
+          ],
+          "text": "Complete blood count"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:27:53Z",
+        "valueString": "Hemoglobin 96 g/L, mild anemia; platelet count 168 x10^9/L; white blood cell count 7.8 x10^9/L",
+        "note": [
+          {
+            "text": "Hemoglobin 96 g/L, mild anemia; platelet count 168 x10^9/L; white blood cell count 7.8 x10^9/L"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e3eedf7d-a412-45cd-a92e-60f1d43bbab9",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Carcinoembryonic antigen</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "5520-2"
+            }
+          ],
+          "text": "Carcinoembryonic antigen"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:27:53Z",
+        "valueString": "CEA 18.4 ug/L, elevated",
+        "note": [
+          {
+            "text": "CEA 18.4 ug/L, elevated"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a9cb64e9-c867-440f-813f-021e9c2c8238",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Colonoscopy</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "67172-7"
+            }
+          ],
+          "text": "Colonoscopy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:27:53Z",
+        "valueString": "Ulcerated circumferential mass in the ascending colon; biopsies obtained for histopathological examination",
+        "note": [
+          {
+            "text": "Ulcerated circumferential mass in the ascending colon; biopsies obtained for histopathological examination"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d61edebc-5565-49ff-9953-8982cfbb5a02",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">CT abdomen and pelvis with contrast</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "79065-9"
+            }
+          ],
+          "text": "CT abdomen and pelvis with contrast"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T19:27:53Z",
+        "valueString": "Focal colonic wall thickening with regional lymphadenopathy, suspicious for colon malignancy",
+        "note": [
+          {
+            "text": "Focal colonic wall thickening with regional lymphadenopathy, suspicious for colon malignancy"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7e5d2491-84da-4fac-bc80-ca0c32c73330",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "unable-to-assess",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CE01"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Rash"
+              }
+            ],
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:65e58c54-6650-4afa-ae0f-8d3d4791ea52",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Melanoma</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "C43"
+                }
+              ],
+              "text": "Melanoma"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:75c36055-1b92-428a-b81a-ee593f24c3b5",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sister: Melanoma</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "SIS",
+              "display": "Sister"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "C43"
+                }
+              ],
+              "text": "Melanoma"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:062c4405-156b-4b6d-b12e-8f8a1f103055",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Grandfather: Malignant neoplasm of colon, unspecified</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "GRFTH",
+              "display": "Grandfather"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "C18.9"
+                }
+              ],
+              "text": "Malignant neoplasm of colon, unspecified"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d1e51801-19ee-4eb3-9e95-26dc61727662",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Colonoscopy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "73761001"
+            }
+          ],
+          "text": "Colonoscopy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2026",
+        "note": [
+          {
+            "text": "Diagnostic endoscopy performed for evaluation of suspected colon malignancy; biopsies sent for histopathological examination."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:96c4b607-5e45-45ff-a131-423cdcab76aa",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "in-progress",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Right hemicolectomy</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "359571009"
+            }
+          ],
+          "text": "Right hemicolectomy"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2026",
+        "note": [
+          {
+            "text": "Planned surgical management after tissue diagnosis and staging workup for colon cancer."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0ff0d9f2-deb6-4621-aa3f-5cdf38fa75ba",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 71-year-old woman from the Czech Republic who has recently become more tired and less active, describing a steady decline in stamina and a reduced ability to eat much at one sitting, with progressive weakness over the last several weeks [MEDDIALOG:C18.9:2]. She has also noticed intermittent unexplained bruising on her thighs in the past, which made her worry about cancer because of a strong family history of malignancy [MEDDIALOG:C18.9:1]. Her appearance is that of an older adult who is alert and cooperative but looks fatigued, with a cautious gait and concern about her health.\n\nShe is retired from office work and lives with her husband, spending much of her time helping with household routines, gardening in warmer months, and speaking regularly with her adult daughter by phone. Lately she has cut back on these activities because of her weakness and poor endurance [MEDDIALOG:C18.9:2]. She still tries to maintain social contact with a few close friends, but her recent symptoms have made her more withdrawn and anxious.\n\nIn conversation, {patientName} is practical and somewhat stoic, but she is increasingly worried by how little she can manage at meals and by her generalized weakness [MEDDIALOG:C18.9:2]. She denies dramatic acute complaints and instead describes a gradual change that has begun to affect her daily routines. Her main goal is to understand the cause of her decline and whether treatment can help.\n\nHer family relationships are important to her, and cancer has shaped her health concerns because multiple relatives have died from malignancy, including one with colon cancer [MEDDIALOG:C18.9:1]. That family history has made her attentive to new symptoms and motivated to follow through with testing and specialist evaluation."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:941c8848-219a-4068-92bd-3fe7557016a3",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} reports several weeks of progressive weakness and says she still has some appetite but cannot eat much at one sitting [MEDDIALOG:C18.9:2]. She also recalls episodes of spontaneous bruising on the insides and backs of her thighs in the past, a symptom that prompted medical evaluation because spontaneous bruises can indicate thrombocytopenia or a coagulation problem [MEDDIALOG:C18.9:1]. She has no documented prior cancer treatment in the record available for this scenario.\n\nHer family history is notable for several relatives who died from cancer, including her mother, half-sister, and paternal grandfather; the reported cancers included melanoma and colon cancer [MEDDIALOG:C18.9:1]. This background has contributed to her concern about malignant disease and her willingness to undergo diagnostic testing.\n\nLifestyle-wise, {patientName} is retired and previously independent in activities of daily living, but her recent weakness has limited her exercise tolerance and social activity [MEDDIALOG:C18.9:2]. No smoking or alcohol misuse is documented in the available evidence, so these are not emphasized in this case."
+          }
+        ]
+      }
+    }
+  ]
+}

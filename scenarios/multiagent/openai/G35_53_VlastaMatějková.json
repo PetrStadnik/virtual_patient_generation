@@ -1,0 +1,585 @@
+{
+  "resourceType": "Bundle",
+  "id": "virtual-patient-001",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:fhir:tags",
+        "code": "age",
+        "display": "53"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:11111111-1111-4111-8111-111111111111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "virtual-patient-001",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Basic patient demographic data.</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Matějková",
+            "given": [
+              "Vlasta"
+            ]
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22222222-2222-4222-8222-222222222222",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "G35",
+              "display": "Multiple sclerosis"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "onsetDateTime": "2026-04-04T06:15:00Z"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cbf2089a-366a-4ebf-9bca-1a77cf21692a",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for amlodipine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "C08CA01"
+            }
+          ],
+          "text": "amlodipine 5 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "5 mg oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5af2f7f5-ec2d-4055-95d6-146cdc1c258f",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for levothyroxine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "H03AA01"
+            }
+          ],
+          "text": "levothyroxine 75 ug"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "75 ug oral once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4e986157-36f2-43a5-96e0-8c93cc23fbd6",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "intent": "order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication order for cetirizine.</div>"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "R06AE07"
+            }
+          ],
+          "text": "cetirizine 10 mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg oral once daily as needed"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:79a565eb-0b5e-4f26-b650-3096eb5c0e6c",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Magnetic resonance imaging of brain</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "37235-9"
+            }
+          ],
+          "text": "Magnetic resonance imaging of brain"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T22:48:39Z",
+        "valueString": "MRI brain shows multiple demyelinating-appearing white matter lesions consistent with multiple sclerosis.",
+        "note": [
+          {
+            "text": "MRI brain shows multiple demyelinating-appearing white matter lesions consistent with multiple sclerosis."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cb7dd48c-3160-46b5-8e56-3ed4796c51e7",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Neurologic assessment</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "67536-3"
+            }
+          ],
+          "text": "Neurologic assessment"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T22:48:39Z",
+        "valueString": "Neurologic exam notable for mild distal lower-extremity weakness, reduced vibration sensation, impaired tandem gait, and mild limb ataxia.",
+        "note": [
+          {
+            "text": "Neurologic exam notable for mild distal lower-extremity weakness, reduced vibration sensation, impaired tandem gait, and mild limb ataxia."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:46221559-386a-4f4c-8eee-4965907b01d4",
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Visual acuity</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "64843-6"
+            }
+          ],
+          "text": "Visual acuity"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+          }
+        ],
+        "effectiveDateTime": "2026-05-18T22:48:39Z",
+        "valueString": "Mild reduction in visual acuity during symptomatic periods; patient reports intermittent blurred vision.",
+        "note": [
+          {
+            "text": "Mild reduction in visual acuity during symptomatic periods; patient reports intermittent blurred vision."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:73c5445a-fbc0-4415-bf82-7cfc37ad1c9c",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy to Penicillin.</div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "J01CE01"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Maculopapular rash"
+              }
+            ],
+            "severity": "mild"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:99a465a7-cb02-43c9-905b-113818d4b7b0",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sister: Multiple sclerosis</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "SIS",
+              "display": "Sister"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "G35"
+                }
+              ],
+              "text": "Multiple sclerosis"
+            },
+            "onsetAge": {
+              "value": 41,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a128566a-a5ed-4e13-870d-0f81a2832ce6",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother: Hypothyroidism</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH",
+              "display": "Mother"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "E03.9"
+                }
+              ],
+              "text": "Hypothyroidism"
+            },
+            "onsetAge": {
+              "value": 50,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c39940bc-58bf-446e-93aa-ec39abd9d83a",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Father: Essential hypertension</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "FTH",
+              "display": "Father"
+            }
+          ]
+        },
+        "deceasedBoolean": true,
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I10"
+                }
+              ],
+              "text": "Essential hypertension"
+            },
+            "onsetAge": {
+              "value": 58,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f5694110-809d-4647-b2c5-38905b0e7e47",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Magnetic resonance imaging of brain</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "448306001"
+            }
+          ],
+          "text": "Magnetic resonance imaging of brain"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2024",
+        "note": [
+          {
+            "text": "Performed as part of diagnostic evaluation and interval monitoring for multiple sclerosis."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3a7ca0d7-9cd4-426c-a345-df5e787d909d",
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Lumbar puncture</div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "277762005"
+            }
+          ],
+          "text": "Lumbar puncture"
+        },
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "performedDateTime": "2023",
+        "note": [
+          {
+            "text": "Performed during neurologic workup when demyelinating disease was being evaluated."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:44369cb8-aa61-4e73-b39f-2d3cbc6ec40e",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-description</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-description"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} is a 53-year-old woman in the Czech Republic who comes across as careful and slightly fatigued, speaking deliberately because her symptoms tend to fluctuate from day to day. She describes intermittent numbness and prickling sensations in her arms and legs, periods of muscle weakness, and episodes of unsteadiness with a mildly ataxic gait, especially when she is tired or walking on uneven ground, all of which fit the pattern of messages being slowed or blocked between the brain and body in multiple sclerosis [MEDLINEPLUS:G35]. She also reports chronic burning, neuropathic-type pain that is especially bothersome at night [SNOMED:G35].\n\nShe works part-time in a municipal office and spends most of the day indoors with limited daylight exposure, and earlier in adulthood she also worked for several years on rotating night shifts in an administrative call-center role, contributing to irregular sleep and little time outside. She has a long history of smoking, currently about half a pack per day, and understands this may worsen overall neurologic health. At home she enjoys light gardening, listening to the radio, and short walks with a friend from her neighborhood, although she is more cautious on uneven ground because of balance trouble, weakness, and occasional missteps related to ataxia [MEDLINEPLUS:G35]. She keeps notes on her phone to compensate for mild forgetfulness and occasional trouble concentrating, which she has noticed over the last few years [MEDLINEPLUS:G35].\n\n{patientName} lives with her husband, and her adult daughter visits often. Her family has noticed that she sometimes squints when reading and occasionally asks people to repeat things after a tiring day, and she herself reports episodes of visual disturbance that come and go [MEDLINEPLUS:G35]. She is frustrated by the unpredictability of relapsing neurologic symptoms but remains engaged with her neurologic follow-up and tries to maintain a steady daily schedule.\n\nAlthough she has never had frank psychosis, she is aware that psychiatric symptoms can occur in some people with multiple sclerosis or during treatment, which makes her attentive to changes in mood, thinking, or behavior [PMID:31302591]. She is generally pragmatic and organized, bringing written symptom timelines to appointments and asking direct questions about what new neurologic symptoms might mean."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:665519c9-564d-4a64-9a41-2993f111a3f4",
+      "resource": {
+        "resourceType": "Communication",
+        "status": "completed",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">patient-history</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:virpat:fhir:doc-type",
+                "code": "patient-history"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:11111111-1111-4111-8111-111111111111"
+        },
+        "payload": [
+          {
+            "contentString": "{patientName} reports that her neurologic symptoms have waxed and waned over time, with episodes of numbness, tingling, weakness, visual disturbance, imbalance, and intermittent ataxia rather than a single continuous deficit [MEDLINEPLUS:G35, PMID:37966451]. She recalls prior MRI evaluations as part of her workup and follow-up, and she previously underwent lumbar puncture during assessment of suspected demyelinating disease, consistent with the standard diagnostic approach to multiple sclerosis [MEDLINEPLUS:G35]. She has not had documented psychotic episodes, but this possibility has been reviewed with her because psychiatric symptoms can occur either from the disease itself or from treatment in some cases [PMID:31302591].\n\nHer background medical problems include hypertension, hypothyroidism, and prior vitamin D insufficiency, for which she was advised supplementation in the past. She has a family history notable for a sister with multiple sclerosis, which increases her concern about her own disease course. She has smoked for many years and currently continues to smoke about half a pack per day despite repeated counseling; she drinks alcohol only occasionally. Much of her employment has been office-based and indoors, and she reports limited sunlight exposure for years, especially during winter. Her hobbies are generally low impact, but she spends long stretches indoors and is less physically active than before because heat and fatigue tend to aggravate her symptoms. She has not had a recent hospitalization, but she has had outpatient neurology follow-up for chronic symptoms and monitoring of disease course, which is appropriate because multiple sclerosis commonly requires ongoing assessment with history, neurologic exam, and MRI [MEDLINEPLUS:G35].\n\nHer current long-term medications are for comorbid conditions and do not typically cause multiple sclerosis. She remains independent in basic activities of daily living, though she occasionally uses a handrail on stairs during periods of worsened balance."
+          }
+        ]
+      }
+    }
+  ]
+}
