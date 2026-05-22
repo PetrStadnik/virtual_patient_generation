@@ -1,4 +1,4 @@
-# Virtual Patient Pipeline
+# Virtual Patient Generation Pipeline
 
 A research pipeline that generates synthetic FHIR R4 patient scenarios using LLMs, evaluates them with a multi-agent evaluation suite, and benchmarks doctor-diagnosis accuracy via a simulated consultation app.
 
@@ -7,7 +7,6 @@ A research pipeline that generates synthetic FHIR R4 patient scenarios using LLM
 ## Project structure
 
 ```
-fhir1/
 ├── main.py                        # Entry point — batch generation
 ├── .env                           # API keys (not included)
 ├── data/                          # GBD / IHME source datasets 
